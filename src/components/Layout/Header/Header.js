@@ -1,18 +1,15 @@
 // import { Stack } from "@mui/material";
 import { AppBar } from "@mui/material";
 import Navigation from "./Navigation";
-// import { makeStyles } from "@material-ui/core/styles";
 import { ReactComponent as LogoSvg } from "../../../media/Logo.svg";
 import { Stack } from "@mui/system";
 import { Typography } from "@mui/material";
-
-// import { theme } from "../../theme/theme";
-// import { ThemeProvider } from "@mui/material/styles";
-import GradientButton from "../../button";
+import GradientButton from "../../buttons/button";
+import DropdownButton from "../../buttons/dropdownButton";
 
 function Header() {
 	return (
-		<AppBar position="static">
+		<AppBar position="static" maxHe>
 			<Stack
 				direction="row"
 				justifyContent="space-between"
@@ -24,12 +21,12 @@ function Header() {
 					<LogoSvg />
 					<Navigation />
 				</Stack>
-				<GradientButton type="primary" variant="contained">
-					<Typography>clients area</Typography>
-				</GradientButton>
-				<GradientButton variant="contained">
-					<Typography>clients area</Typography>
-				</GradientButton>
+				<Stack direction="row" spacing={3}>
+					<DropdownButton variant="contained"></DropdownButton>
+					<GradientButton variant="contained">
+						<Typography>clients area</Typography>
+					</GradientButton>
+				</Stack>
 			</Stack>
 		</AppBar>
 	);

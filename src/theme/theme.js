@@ -23,6 +23,13 @@ export const theme = createTheme({
 		},
 	},
 	components: {
+		MuiContainer: {
+			styleOverrides: {
+				maxWidthLg: {
+					maxWidth: "1400px", // Set your desired width here
+				},
+			},
+		},
 		MuiAppBar: {
 			styleOverrides: {
 				colorPrimary: {

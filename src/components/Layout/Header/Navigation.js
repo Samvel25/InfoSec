@@ -7,14 +7,20 @@ function Navigation() {
 	return (
 		<nav className={classes.navBar}>
 			<NavLink className={classes.navLink} to="/home">
-				Home
+				HOME
 			</NavLink>
 			<NavLink className={classes.navLink} to="/about">
-				About
+				ABOUT US
 			</NavLink>
 			<NavLink className={classes.navLink} to="/contact">
-				Contact
+				SERVICES
 			</NavLink>
+			{/* <NavLink className={classes.navLink} to="/contact">
+				clients
+			</NavLink>
+			<NavLink className={classes.navLink} to="/contact">
+				certificates
+			</NavLink> */}
 		</nav>
 	);
 }

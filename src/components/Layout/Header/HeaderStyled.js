@@ -7,6 +7,7 @@ export const useStyles = makeStyles((theme) => ({
 	},
 	navLink: {
 		color: "#ffffff",
+		textTransform: "uppercase",
 		textDecoration: "none",
 		padding: "0 20px",
 		"&:hover": {
