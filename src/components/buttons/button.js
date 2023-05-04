@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme) => ({
 		position: "relative",
 		zIndex: 0,
 		textDecoration: "none",
+		minWidth: "140px",
 		// padding: "20px auto",
 
 		"&:before": {
@@ -30,7 +31,7 @@ function CustomButton(props) {
 	return (
 		<Button
 			className={classes.root}
-			sx={{ p: "10px 24px" }}
+			sx={{ p: "10px 23px" }}
 			classes={{ root: classes.root }}
 			variant="contained"
 			color="primary"
