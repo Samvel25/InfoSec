@@ -6,10 +6,10 @@ export const useStyles = makeStyles((theme) => ({
 		alignItems: "center",
 	},
 	navLink: {
-		color: "#ffffff",
 		textTransform: "uppercase",
 		textDecoration: "none",
 		padding: "0 20px",
+
 		"&:hover": {
 			color: theme.palette.secondary.main,
 		},

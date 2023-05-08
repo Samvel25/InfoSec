@@ -9,7 +9,7 @@ import DropdownButton from "../../buttons/dropdownButton";
 
 function Header() {
 	return (
-		<AppBar position="static" maxHe>
+		<AppBar position="static">
 			<Stack
 				direction="row"
 				justifyContent="space-between"
@@ -18,7 +18,7 @@ function Header() {
 				sx={{ py: "16px" }}
 			>
 				<Stack direction="row" spacing={6}>
-					<LogoSvg />
+					<LogoSvg width="182px" height="39px" />
 					<Navigation />
 				</Stack>
 				<Stack direction="row" spacing={3}>

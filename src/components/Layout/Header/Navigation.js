@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useStyles } from "./HeaderStyled";
+import { Typography } from "@mui/material";
 
 function Navigation() {
 	const classes = useStyles();
@@ -7,13 +8,13 @@ function Navigation() {
 	return (
 		<nav className={classes.navBar}>
 			<NavLink className={classes.navLink} to="/home">
-				HOME
+				<Typography>HOME</Typography>
 			</NavLink>
 			<NavLink className={classes.navLink} to="/about">
-				ABOUT US
+				<Typography>ABOUT US</Typography>
 			</NavLink>
 			<NavLink className={classes.navLink} to="/contact">
-				SERVICES
+				<Typography>SERVICES</Typography>
 			</NavLink>
 			{/* <NavLink className={classes.navLink} to="/contact">
 				clients

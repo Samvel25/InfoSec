@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
 		zIndex: 0,
 		textDecoration: "none",
 		minWidth: "140px",
+
 		// padding: "20px auto",
 
 		"&:before": {
@@ -22,10 +23,14 @@ const useStyles = makeStyles((theme) => ({
 		"&:hover": {
 			background: "none",
 		},
+		// "&:active": {
+		// 	boxShadow: "inset 0 3px 5px rgba(0,0,0,.125)",
+		// 	background: "#005cbf",
+		// },
 	},
 }));
 
-function CustomButton(props) {
+function GradientButton(props) {
 	const classes = useStyles(props.type);
 
 	return (
@@ -39,4 +44,4 @@ function CustomButton(props) {
 		/>
 	);
 }
-export default CustomButton;
+export default GradientButton;

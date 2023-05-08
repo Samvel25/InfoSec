@@ -2,10 +2,15 @@ import { styled } from "@mui/material/styles";
 import GradientButton from "../buttons/button";
 import { Typography, Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
+import { ReactComponent as Language } from "../../media/language.svg";
+import { ReactComponent as ArrowDown } from "../../media/arrowDown.svg";
+
+import { Stack } from "@mui/system";
 
 const GrayBorder = styled(GradientButton)({
 	"&:before": {
 		background: "#C0C1C2 !important",
+		// display: "flex",
 	},
 });
 
@@ -22,7 +27,16 @@ function DropdownButton() {
 	return (
 		<>
 			<GrayBorder onClick={handleOpenMenu}>
-				<Typography>asd</Typography>
+				<Stack
+					direction={"row"}
+					spacing={1}
+					alignItems="center"
+					justifyContent={"center"}
+				>
+					<Language />
+					<Typography>asd</Typography>
+					<ArrowDown />
+				</Stack>
 			</GrayBorder>
 			<Menu
 				anchorEl={anchorEl}
