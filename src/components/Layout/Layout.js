@@ -1,8 +1,9 @@
 import * as React from "react";
-import Header from "./Header/Header";
 import Footer from "./Footer";
 import { Box, Container } from "@mui/material";
-import WhyChooseUs from "../main/whyChooseUsSection";
+import Header from "./Header";
+import WhyChooseUs from "../../pages/main/index";
+// import Header from "./header/index";
 
 const Layout = () => {
 	return (

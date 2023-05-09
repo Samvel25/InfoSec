@@ -1,15 +1,16 @@
 // import { Stack } from "@mui/material";
-import { AppBar } from "@mui/material";
+// import { AppBar } from "@mui/material";
 import Navigation from "./Navigation";
 import { ReactComponent as LogoSvg } from "../../../media/Logo.svg";
 import { Stack } from "@mui/system";
 import { Typography } from "@mui/material";
-import GradientButton from "../../buttons/button";
-import DropdownButton from "../../buttons/dropdownButton";
+import GradientButton from "../../Buttons";
+import DropdownButton from "../../Buttons/dropdownButton";
+import * as Styled from "./style";
 
 function Header() {
 	return (
-		<AppBar position="static">
+		<Styled.Header position="static">
 			<Stack
 				direction="row"
 				justifyContent="space-between"
@@ -28,7 +29,7 @@ function Header() {
 					</GradientButton>
 				</Stack>
 			</Stack>
-		</AppBar>
+		</Styled.Header>
 	);
 }
 export default Header;

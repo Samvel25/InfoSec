@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { useStyles } from "./HeaderStyled";
+import { useStyles } from "./style";
+
 import { Typography } from "@mui/material";
 
 function Navigation() {

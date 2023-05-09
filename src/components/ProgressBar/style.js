@@ -1,5 +1,8 @@
-import { Grid } from "@mui/material";
+import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import ProgresBarLine from "../../media/progressBarLine.svg";
+
+// import { keyframes } from "@mui/system";
 
 export const Lazer = styled("div")({
 	position: "absolute",
@@ -38,7 +41,7 @@ export const Lazer = styled("div")({
 		},
 
 		"30%": {
-			width: "180px",
+			width: "200px",
 			boxShadow:
 				"0 0 6px 4px rgba(212, 37, 48, 0.4), " +
 				"0 0 12px 8px rgba(212, 37, 48, 0.3), " +
@@ -62,23 +65,14 @@ export const Lazer = styled("div")({
 	},
 });
 
-export const MyBox = styled("div")(`
+export const MyBox = styled(Box)(`
+	background-image: url(${ProgresBarLine});
+	background-repeat: repeat-x;
 	margin-bottom: 20px;
+	height: 18px;
+	width: 100%	;
 	position: relative;
 	&:hover > div:first-child {
 		animation: pulse 1.5s infinite;
 	}
 `);
-
-export const MyLine = styled("span")({
-	height: "18px",
-	width: "0",
-	background: "#3C3C3C",
-	marginRight: "6.8px",
-	borderLeft: "1px solid #3C3C3C",
-});
-
-export const WhyChooseUs = styled(Grid)({
-	padding: "100px 0",
-	// borderBottom: "0.899933px solid rgba(255, 255, 255, 0.1)",
-});

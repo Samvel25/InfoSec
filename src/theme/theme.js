@@ -1,5 +1,16 @@
 import { createTheme } from "@mui/material/styles";
 
+const commonStyles = {
+	fontWeight: 700,
+	fontSize: "34px",
+	lineHeight: "36px",
+	backgroundClip: "text",
+	WebkitBackgroundClip: "text",
+	color: "transparent",
+	textTransform: "uppercase",
+	marginBottom: "20px",
+};
+
 export const theme = createTheme({
 	breakpoints: {
 		values: {
@@ -35,49 +46,52 @@ export const theme = createTheme({
 			textTransform: "uppercase",
 		},
 		h1: {
-			fontWeight: 700,
-			fontSize: "34px",
-			lineHeight: "36px",
 			background:
 				"linear-gradient(90.7deg, #FFFFFF -0.78%, rgba(255, 255, 255, 0.45) 125.46%)",
-			backgroundClip: "text",
-			WebkitBackgroundClip: "text",
-			color: "transparent",
-			textTransform: "uppercase",
-			marginBottom: "20px",
+			...commonStyles,
 		},
-		h1GradientLight: {
-			fontWeight: 700,
-			fontSize: "34px",
-			lineHeight: 3.6,
+		GradientLight: {
 			background: "linear-gradient(90.28deg, #FF0D1C -2.34%, #FFFFFF 88.65%)",
-			backgroundClip: "text",
-			WebkitBackgroundClip: "text",
-			color: "transparent",
-			textTransform: "uppercase",
+			...commonStyles,
 		},
-		h1GradientStrong: {
-			fontWeight: 700,
-			fontSize: "34px",
-			lineHeight: 3.6,
+		GradientStrong: {
 			background:
 				"linear-gradient(93.74deg, #D42530 2.68%, #F10413 52.05%, #490005 104.6%)",
+			...commonStyles,
+		},
+		Head: {
+			fontWeight: 400,
+			fontSize: "16px",
+			lineHeight: "22px",
+			color: "#C0C1C2",
+			marginBottom: "45px",
+			display: "inline",
+		},
+		GradientHead: {
+			background:
+				"linear-gradient(93.74deg, #D42530 2.68%, #F10413 52.05%, #490005 104.6%)",
+			display: "inline",
+			fontWeight: 400,
+			fontSize: "16px",
+			lineHeight: "22px",
 			backgroundClip: "text",
 			WebkitBackgroundClip: "text",
 			color: "transparent",
+			textTransform: "uppercase",
+			marginBottom: "45px",
 		},
 	},
 	components: {
-		MuiAppBar: {
-			styleOverrides: {
-				colorPrimary: {
-					backgroundColor: "#000000",
-				},
-				root: {
-					borderBottom: "0.9px solid rgba(255, 255, 255, 0.1)",
-				},
-			},
-		},
+		// MuiAppBar: {
+		// 	styleOverrides: {
+		// 		colorPrimary: {
+		// 			backgroundColor: "#000000",
+		// 		},
+		// 		root: {
+		// 			borderBottom: "px solid rgba(255, 255, 255, 0.1)",
+		// 		},
+		// 	},
+		// },
 		MuiButton: {
 			styleOverrides: {
 				root: {
