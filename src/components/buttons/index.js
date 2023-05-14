@@ -12,12 +12,12 @@ const commonStyles = {
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		display: "inline-block",
+		display: "block",
 		position: "relative",
 		zIndex: 0,
 		textDecoration: "none",
+		padding: "10px 23px",
 		minWidth: "140px",
-
 		"&:hover": {
 			background: "none",
 		},
@@ -42,11 +42,11 @@ function GradientButton(props) {
 	return (
 		<Button
 			className={`${classes.root} ${
-				props.backgroundType === "backgroundOne"
+				props.backgroundtype === "backgroundOne"
 					? classes.backgroundOne
 					: classes.backgroundTwo
 			}`}
-			sx={{ p: "10px 23px" }}
+			// sx={{ p: "10px 23px" }}
 			variant="contained"
 			color="primary"
 			{...props}

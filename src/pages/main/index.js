@@ -1,22 +1,40 @@
 // import { styled } from "@mui/material/styles";
-import { Box, Stack, Typography } from "@mui/material";
-import { ReactComponent as DiamondAnimation } from "../../media/diamondAnimation.svg";
+import { Box, Hidden, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
 import GradientButton from "../../components/Buttons";
 import * as Styled from "./style";
+import Clients from "../../components/Carousel";
+import Achivments from "../../components/Carousel/Achivments";
+import BigCardWrapper from "../../components/Card/BogCard";
+import cybersecurity from "../../media/cybersecurity.png";
+import cybersecurity2 from "../../media/cybersecurity2.png";
+
+import AchievementsCardWrapper from "../../components/Card/CaruselCard";
+// import { ReactComponent as CardSquare } from "../../media/cardSquare.svg";
+
+// import { ReactComponent as CardImmage } from "../../media/asd/bigCardImg.svg";
+
+// import { ReactComponent as CardImmage } from "../../media/diamondAnimation.svg";
 
 function WhyChooseUs() {
 	return (
 		<Box>
-			<Styled.WhyChooseUs
+			{/* ///1 section/////// */}
+			<Grid
+				sx={{ py: "100px" }}
 				container
-				spacing={2}
 				justifyContent={"space-around"}
 				direction={"row"}
 				alignItems="center"
 			>
-				<Grid item xs={5}>
+				<Grid
+					item
+					md={5}
+					xs={12}
+					sm={8}
+					textAlign={{ sm: "center", md: "start" }}
+				>
 					<Typography variant="h1">
 						Proactive Cyber Security Solutions for Your Business
 					</Typography>
@@ -29,26 +47,274 @@ function WhyChooseUs() {
 							potential risks before they cause harm.
 						</Typography>
 					</Grid>
-					<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
-						<GradientButton>
-							<Typography>Pick a product</Typography>
-						</GradientButton>
-						<GradientButton backgroundType="backgroundOne">
-							<Typography>To get a consultation</Typography>
-						</GradientButton>
-					</Stack>
+					<Hidden mdDown>
+						<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
+							<GradientButton>
+								<Typography>Pick a product</Typography>
+							</GradientButton>
+							<GradientButton backgroundtype="backgroundOne">
+								<Typography>To get a consultation</Typography>
+							</GradientButton>
+						</Stack>
+					</Hidden>
 				</Grid>
-				<Styled.DiamondWraper>
-					<DiamondAnimation />
+				<Styled.DiamondWraper
+					item
+					md={5}
+					xs={12}
+					textAlign={{ md: "end", xs: "center" }}
+				>
+					<Styled.Diamond />
 				</Styled.DiamondWraper>
-			</Styled.WhyChooseUs>
+				<Hidden mdUp>
+					<Grid item sm={7} xs={12} sx={{ mt: "20px" }}>
+						<Box textItems={"center"} direction={"row"} sx={{ mt: "20px" }}>
+							<GradientButton sx={{ mb: "20px", width: "100%" }}>
+								<Typography>Pick a product</Typography>
+							</GradientButton>
+							<GradientButton
+								sx={{ width: "100%" }}
+								backgroundtype="backgroundOne"
+							>
+								<Typography>To get a consultation</Typography>
+							</GradientButton>
+						</Box>
+					</Grid>
+				</Hidden>
+			</Grid>
 
-			<Styled.Achievements direction={"row"}>
+			{/* ///2 section/////// */}
+
+			<Styled.Achievements>
 				<Styled.HeadText>
 					<Typography variant="Head"> OUR</Typography>
 					<Typography variant="GradientHead"> CLIENTS</Typography>
 				</Styled.HeadText>
+				<Clients item xs={12} />
+				<Styled.Description>
+					<Styled.DescriptionText>
+						<Typography
+							variant="GradientLight"
+							component="h1"
+							sx={{ mb: "20px" }}
+						>
+							Secure Your Online World
+						</Typography>
+						<Typography>
+							We provide cyber security solutions to safeguard your online world
+							against viruses, malware, and cyber attacks. Our services cover
+							threat prevention, data protection, and network security,
+							supported by 24/7 monitoring and expert assistance. Trust us to
+							keep your sensitive information and online activities secure.
+						</Typography>
+					</Styled.DescriptionText>
+				</Styled.Description>
+				<Styled.CardCarousel>
+					<Achivments />
+				</Styled.CardCarousel>
 			</Styled.Achievements>
+
+			{/*3 /// section/////// */}
+
+			<Styled.ExportCyberSecurity
+				container
+				justifyContent={"space-around"}
+				direction={"row"}
+				alignItems="center"
+			>
+				<Styled.ExportCyberSecurityDescription
+					item
+					md={5}
+					xs={12}
+					sm={8}
+					textAlign={{ sm: "center", md: "start" }}
+				>
+					<Typography
+						sx={{ margin: 0 }}
+						variant="GradientStrong"
+						component={"h1"}
+					>
+						Expert Cybersecurity
+					</Typography>
+					<Typography variant="h1">Solutions for Your Peace of Mind</Typography>
+					<ProgreeBar />
+					<Grid>
+						<Typography>
+							INFOSEC LLC, we understand how important it is to keep your
+							business safe from cyber threats. That's why we offer a range of
+							expert cybersecurity solutions designed to give you peace of mind.
+							Whether you're looking for network security, endpoint protection,
+							or incident response services, our team of experts has the
+							knowledge and experience to help you stay one step ahead of the
+							hackers. Contact us today to learn more.
+						</Typography>
+					</Grid>
+					<Hidden mdDown>
+						<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
+							<GradientButton backgroundtype="backgroundOne">
+								<Typography>Read more</Typography>
+							</GradientButton>
+						</Stack>
+					</Hidden>
+				</Styled.ExportCyberSecurityDescription>
+				<Styled.BigCardImgWrapper>
+					<BigCardWrapper
+						img={
+							<Styled.BigCardImg src={cybersecurity} alt="Girl in a jacket" />
+						}
+					/>
+				</Styled.BigCardImgWrapper>
+			</Styled.ExportCyberSecurity>
+
+			{/*4 /// section/////// */}
+
+			<Styled.CyberSecurityServices
+				container
+				justifyContent={"space-around"}
+				direction={{ md: "row-reverse" }}
+				alignItems="center"
+			>
+				<Styled.CyberSecurityServicesDescription
+					item
+					md={5}
+					xs={12}
+					sm={8}
+					textAlign={{ sm: "center", md: "start" }}
+				>
+					<Typography
+						sx={{ margin: 0 }}
+						variant="GradientLight"
+						component={"h1"}
+					>
+						Cybersecurity Services
+					</Typography>
+					<Typography variant="h1">Tailored to Your Business Needs</Typography>
+					<ProgreeBar />
+					<Grid>
+						<Typography>
+							INFOSEC LLC, we understand how important it is to keep your
+							business safe from cyber threats. That's why we offer a range of
+							expert cybersecurity solutions designed to give you peace of mind.
+							Whether you're looking for network security, endpoint protection,
+							or incident response services, our team of experts has the
+							knowledge and experience to help you stay one step ahead of the
+							hackers. Contact us today to learn more.
+						</Typography>
+					</Grid>
+					<Hidden mdDown>
+						<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
+							<GradientButton backgroundtype="backgroundOne">
+								<Typography>Read more</Typography>
+							</GradientButton>
+						</Stack>
+					</Hidden>
+				</Styled.CyberSecurityServicesDescription>
+
+				<Styled.BigCardImgWrapper>
+					<BigCardWrapper
+						img={
+							<Styled.BigCardImg src={cybersecurity2} alt="Girl in a jacket" />
+						}
+					/>
+				</Styled.BigCardImgWrapper>
+			</Styled.CyberSecurityServices>
+
+			{/*5 /// section/////// */}
+
+			<Styled.Services
+				container
+				justifyContent={{ sm: "center", md: "space-between" }}
+				direction={"row"}
+				alignItems="center"
+			>
+				<Styled.HeadText>
+					<Typography variant="Head">OUR SERVICES</Typography>
+				</Styled.HeadText>
+				<Styled.ServicesCard
+					boxpadding="boxpadding"
+					backgroundtype="backgroundOne"
+				>
+					<Box sx={{ maxWidth: "330px" }}>
+						<Typography variant="ServicesCardHead">Network Security</Typography>
+						<Typography variant="ServicesCard">
+							Protecting your company's network and data from unauthorized
+							access and attacks, including firewalls, intrusion detection and
+							prevention, and VPNs.
+						</Typography>
+					</Box>
+					<Styled.CardSquareImg />
+				</Styled.ServicesCard>
+				<Styled.ServicesCard
+					boxpadding="boxpadding"
+					backgroundtype="backgroundOne"
+				>
+					<Box sx={{ maxWidth: "330px" }}>
+						<Typography variant="ServicesCardHead">Network Security</Typography>
+						<Typography variant="ServicesCard">
+							Protecting your company's network and data from unauthorized
+							access and attacks, including firewalls, intrusion detection and
+							prevention, and VPNs.
+						</Typography>
+					</Box>
+					<Styled.CardSquareImg />
+				</Styled.ServicesCard>
+				<Styled.ServicesCard
+					boxpadding="boxpadding"
+					backgroundtype="backgroundOne"
+				>
+					<Box sx={{ maxWidth: "330px" }}>
+						<Typography variant="ServicesCardHead">Network Security</Typography>
+						<Typography variant="ServicesCard">
+							Protecting your company's network and data from unauthorized
+							access and attacks, including firewalls, intrusion detection and
+							prevention, and VPNs.
+						</Typography>
+					</Box>
+					<Styled.CardSquareImg />
+				</Styled.ServicesCard>
+				<Styled.ServicesCard
+					boxpadding="boxpadding"
+					backgroundtype="backgroundOne"
+				>
+					<Box sx={{ maxWidth: "330px" }}>
+						<Typography variant="ServicesCardHead">Network Security</Typography>
+						<Typography variant="ServicesCard">
+							Protecting your company's network and data from unauthorized
+							access and attacks, including firewalls, intrusion detection and
+							prevention, and VPNs.
+						</Typography>
+					</Box>
+					<Styled.CardSquareImg />
+				</Styled.ServicesCard>
+				<Styled.ServicesCard
+					boxpadding="boxpadding"
+					backgroundtype="backgroundOne"
+				>
+					<Box sx={{ maxWidth: "330px" }}>
+						<Typography variant="ServicesCardHead">Network Security</Typography>
+						<Typography variant="ServicesCard">
+							Protecting your company's network and data from unauthorized
+							access and attacks, including firewalls, intrusion detection and
+							prevention, and VPNs.
+						</Typography>
+					</Box>
+					<Styled.CardSquareImg />
+				</Styled.ServicesCard>
+				<Styled.ServicesCard
+					boxpadding="boxpadding"
+					backgroundtype="backgroundOne"
+				>
+					<Box sx={{ maxWidth: "330px" }}>
+						<Typography variant="ServicesCardHead">Network Security</Typography>
+						<Typography variant="ServicesCard">
+							Protecting your company's network and data from unauthorized
+							access and attacks, including firewalls, intrusion detection and
+							prevention, and VPNs.
+						</Typography>
+					</Box>
+					<Styled.CardSquareImg />
+				</Styled.ServicesCard>
+			</Styled.Services>
 		</Box>
 	);
 }

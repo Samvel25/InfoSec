@@ -19,7 +19,7 @@ function DropdownButton() {
 	};
 	return (
 		<>
-			<GradientButton onClick={handleOpenMenu} backgroundType="backgroundOne">
+			<GradientButton onClick={handleOpenMenu} backgroundtype="backgroundOne">
 				<Stack
 					direction={"row"}
 					spacing={1}

@@ -41,7 +41,7 @@ export const Lazer = styled("div")({
 		},
 
 		"30%": {
-			width: "200px",
+			width: "50%",
 			boxShadow:
 				"0 0 6px 4px rgba(212, 37, 48, 0.4), " +
 				"0 0 12px 8px rgba(212, 37, 48, 0.3), " +

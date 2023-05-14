@@ -1,14 +1,22 @@
 import { createTheme } from "@mui/material/styles";
+// import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
-const commonStyles = {
-	fontWeight: 700,
-	fontSize: "34px",
-	lineHeight: "36px",
+const gradientText = {
 	backgroundClip: "text",
 	WebkitBackgroundClip: "text",
 	color: "transparent",
 	textTransform: "uppercase",
+};
+
+const commonStyles = {
+	...gradientText,
+	fontWeight: 700,
+	fontSize: "34px",
+	lineHeight: "36px",
 	marginBottom: "20px",
+	"@media (max-width:600px)": {
+		fontSize: "24px",
+	},
 };
 
 export const theme = createTheme({
@@ -16,9 +24,9 @@ export const theme = createTheme({
 		values: {
 			xs: 0,
 			sm: 600,
-			md: 900,
-			lg: 1440,
-			xl: 1536,
+			md: 1000,
+			lg: 1250,
+			xl: 1440,
 		},
 	},
 	palette: {
@@ -37,7 +45,6 @@ export const theme = createTheme({
 		fontFamily: "Quantico",
 		body1: {
 			fontSize: "14px",
-
 			fontStyle: "normal",
 			lineHeight: 2.4,
 			margin: 0,
@@ -74,11 +81,33 @@ export const theme = createTheme({
 			fontWeight: 400,
 			fontSize: "16px",
 			lineHeight: "22px",
-			backgroundClip: "text",
-			WebkitBackgroundClip: "text",
-			color: "transparent",
-			textTransform: "uppercase",
+			color: "#C0C1C2",
 			marginBottom: "45px",
+			...gradientText,
+		},
+		CardRate: {
+			fontWeight: 400,
+			fontSize: "31px",
+			lineHeight: "28px",
+			"@media (max-width:600px)": {
+				fontSize: "28px",
+			},
+		},
+		ServicesCard: {
+			background:
+				"linear-gradient(92.98deg, #575757 2.17%, #616161 42.05%, #292929 84.51%)",
+			fontSize: "12px",
+			lineHeight: "21px",
+			marginBottom: "17px",
+			display: "block",
+			...gradientText,
+		},
+		ServicesCardHead: {
+			color: "#FFFFFF",
+			marginBottom: "25px",
+			fontSize: "20px",
+			lineHeight: "31px",
+			fontWeight: 700,
 		},
 	},
 	components: {
