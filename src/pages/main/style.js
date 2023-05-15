@@ -84,7 +84,7 @@ export const Achievements = styled(Box)(({ theme }) => ({
 	position: "relative",
 	padding: "60px 0 140px",
 	display: "block",
-	textAlign: "center",
+
 	"&: before": {
 		...grayLines,
 		bottom: "2%",
@@ -100,6 +100,7 @@ export const Description = styled(Box)(({ theme }) => ({
 	width: "100%",
 	display: "flex",
 	justifyContent: "center",
+	textAlign: "center",
 	position: "relative",
 
 	"&: before": {
@@ -131,11 +132,6 @@ export const HeadText = styled("div")({
 	background: "black",
 	padding: "0 10px",
 });
-
-export const CardCarousel = styled(Box)(({ theme }) => ({
-	alignItems: "center",
-	marginTop: "135px",
-}));
 
 export const BigCardImg = styled("img")(({ theme }) => ({
 	width: "38vw",
@@ -223,9 +219,13 @@ export const CyberSecurityServicesDescription = styled(Grid)(({ theme }) => ({
 		width: "620px",
 		height: "610px",
 		opacity: "0.6",
-		[theme.breakpoints.down("sm")]: {
-			top: "-20%",
+		[theme.breakpoints.down("md")]: {
+			left: "35%",
 			height: "500px",
+			maxWidth: "80%",
+		},
+		[theme.breakpoints.down("sm")]: {
+			display: "none",
 		},
 	},
 }));
@@ -234,6 +234,51 @@ export const Services = styled(Grid)(({ theme }) => ({
 	borderTop: "1px solid rgba(255, 255, 255, 0.1)",
 	position: "relative",
 	padding: "80px 0 130px",
+	"&:before": {
+		position: "absolute",
+		backgroundImage: `url(${Net})`,
+		transform: "translate(-100%, -50%)",
+		content: '""',
+		zIndex: "-1",
+		left: "13%",
+		top: "-10%",
+		maxWidth: "100%",
+		width: "620px",
+		height: "610px",
+		opacity: "0.6",
+		[theme.breakpoints.down("sm")]: {
+			height: "500px",
+			left: "28%",
+			top: "-16%",
+		},
+	},
+	"&:after": {
+		position: "absolute",
+		backgroundImage: `url(${Net})`,
+		transform: "rotate(-90deg) translateX(-50%);",
+
+		content: '""',
+		zIndex: "-1",
+		left: "-10%",
+		bottom: "10%",
+		maxWidth: "80%",
+		width: "786px",
+		height: "610px",
+		opacity: "0.6",
+		[theme.breakpoints.down("md")]: {
+			height: "500px",
+			bottom: 0,
+		},
+		[theme.breakpoints.down("850")]: {
+			bottom: "-5%",
+		},
+		[theme.breakpoints.down("sm")]: {
+			display: "none",
+		},
+	},
+	[theme.breakpoints.down("sm")]: {
+		padding: "20px 0 0px",
+	},
 }));
 
 export const CardSquareImg = styled(CardSquare)(({ theme }) => ({
@@ -253,3 +298,54 @@ export const ServicesCard = styled(AchievementsCardWrapper)(({ theme }) => ({
 		width: "100%",
 	},
 }));
+
+//6 Section////////
+
+export const Certificates = styled(Box)(({ theme }) => ({
+	padding: "130px 0 80px",
+
+	[theme.breakpoints.down("sm")]: {
+		padding: "90px 0 120px",
+	},
+}));
+
+export const CertificatesDescription = styled(Box)(({ theme }) => ({
+	width: "100%",
+	display: "flex",
+	justifyContent: "center",
+	textAlign: "center",
+	position: "relative",
+
+	"&: before": {
+		...grayLines,
+		left: 0,
+		bottom: "-5px",
+		transform: "translateY(100%) rotateY(180deg)",
+
+		[theme.breakpoints.down("md")]: {
+			width: "265px",
+			height: "45px",
+			bottom: "-15px",
+		},
+		[theme.breakpoints.down("700")]: {
+			display: "none",
+		},
+	},
+	"&: after": {
+		...grayLines,
+		right: 0,
+		bottom: "-10px",
+		transform: "translateY(100%)",
+
+		[theme.breakpoints.down("md")]: {
+			width: "265px",
+			height: "45px",
+			bottom: "-15px",
+		},
+		[theme.breakpoints.down("700")]: {
+			display: "none",
+		},
+	},
+}));
+
+// transform: "rotateY(180deg)",

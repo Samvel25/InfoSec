@@ -1,0 +1,33 @@
+.slick-slide {
+	margin: 0 19px;
+}
+
+.slick-track {
+	justify-content: center;
+	display: flex;
+}
+
+.slick-list {
+	margin: 0 -19px;
+	padding: 0 0 70px !important;
+}
+@media (max-width: 700px) {
+	& .slick-slide {
+		margin: 0 13px;
+	}
+
+	.slick-list {
+		margin: 0 -13px;
+	}
+}
+@media (min-width: 1440px) {
+	.slick-slide {
+		margin: 0 22px;
+	}
+
+	.slick-list {
+		text-align: center;
+		margin: 0 -22px;
+		padding-bottom: 70px;
+	}
+}

@@ -5,17 +5,10 @@ import ProgreeBar from "../../components/ProgressBar";
 import GradientButton from "../../components/Buttons";
 import * as Styled from "./style";
 import Clients from "../../components/Carousel";
-import Achivments from "../../components/Carousel/Achivments";
+import Achivments from "../../components/Carousel/Achivments/index";
 import BigCardWrapper from "../../components/Card/BogCard";
 import cybersecurity from "../../media/cybersecurity.png";
 import cybersecurity2 from "../../media/cybersecurity2.png";
-
-import AchievementsCardWrapper from "../../components/Card/CaruselCard";
-// import { ReactComponent as CardSquare } from "../../media/cardSquare.svg";
-
-// import { ReactComponent as CardImmage } from "../../media/asd/bigCardImg.svg";
-
-// import { ReactComponent as CardImmage } from "../../media/diamondAnimation.svg";
 
 function WhyChooseUs() {
 	return (
@@ -90,7 +83,7 @@ function WhyChooseUs() {
 					<Typography variant="Head"> OUR</Typography>
 					<Typography variant="GradientHead"> CLIENTS</Typography>
 				</Styled.HeadText>
-				<Clients item xs={12} />
+				<Clients />
 				<Styled.Description>
 					<Styled.DescriptionText>
 						<Typography
@@ -109,9 +102,9 @@ function WhyChooseUs() {
 						</Typography>
 					</Styled.DescriptionText>
 				</Styled.Description>
-				<Styled.CardCarousel>
+				<Box alignItems={"center"} sx={{ mt: "135px" }}>
 					<Achivments />
-				</Styled.CardCarousel>
+				</Box>
 			</Styled.Achievements>
 
 			{/*3 /// section/////// */}
@@ -315,6 +308,27 @@ function WhyChooseUs() {
 					<Styled.CardSquareImg />
 				</Styled.ServicesCard>
 			</Styled.Services>
+			{/*6 /// section/////// */}
+			<Styled.Certificates>
+				<Styled.CertificatesDescription>
+					<Styled.DescriptionText sx={{ pt: 0 }}>
+						<Typography
+							variant="GradientLight"
+							component="h1"
+							sx={{ mb: "20px" }}
+						>
+							Certificates and licenses
+						</Typography>
+						<Typography>
+							We provide cyber security solutions to safeguard your online world
+							against viruses, malware, and cyber attacks. Our services cover
+							threat prevention, data protection, and network security,
+							supported by 24/7 monitoring and expert assistance. Trust us to
+							keep your sensitive information and online activities secure.
+						</Typography>
+					</Styled.DescriptionText>
+				</Styled.CertificatesDescription>
+			</Styled.Certificates>
 		</Box>
 	);
 }

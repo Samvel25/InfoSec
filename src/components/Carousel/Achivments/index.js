@@ -1,11 +1,12 @@
 import Slider from "react-slick";
 import React, { Component } from "react";
 import { styled } from "@mui/material/styles";
-import AchievementsCard from "../Card/CaruselCard";
+import AchievementsCard from "../../Card/CaruselCard";
 import { Box, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import LedLine from "../Other/Led";
+import LedLine from "../../Other/Led";
+import "./index.css";
 
 export default class Achivments extends Component {
 	render() {
@@ -17,26 +18,19 @@ export default class Achivments extends Component {
 			swipeToSlide: true,
 			variableWidth: true,
 			focusOnSelect: true,
-			afterChange: function (index) {
-				console.log(
-					`Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-				);
-			},
 			responsive: [
 				{
 					breakpoint: 1350,
 					settings: {
 						slidesToShow: 3,
 						centerPadding: "90px",
-						centerMode: true,
 					},
 				},
 				{
 					breakpoint: 1200,
 					settings: {
-						slidesToShow: 2.5,
+						slidesToShow: 3,
 						centerPadding: "70px",
-						centerMode: true,
 					},
 				},
 				{
@@ -44,21 +38,20 @@ export default class Achivments extends Component {
 					settings: {
 						slidesToShow: 2,
 						centerPadding: "90px",
-						centerMode: true,
 					},
 				},
 				{
 					breakpoint: 900,
 					settings: {
-						slidesToShow: 1.5,
+						slidesToShow: 2,
 						centerPadding: "100px",
-						centerMode: true,
 					},
 				},
 				{
 					breakpoint: 650,
 					settings: {
-						slidesToShow: 1.3,
+						slidesToShow: 1,
+						centerPadding: "60px",
 					},
 				},
 				{
@@ -66,44 +59,10 @@ export default class Achivments extends Component {
 					settings: {
 						slidesToShow: 1,
 						centerPadding: "20px",
-						centerMode: false,
 					},
 				},
 			],
 		};
-
-		const StyledSlider = styled(Slider)`
-			& .slick-slide {
-				margin: 0 19px;
-			}
-
-			& .slick-track {
-				justify-content: center;
-				display: flex;
-			}
-
-			/* the parent */
-			& .slick-list {
-				margin: 0 -19px;
-				padding: 0 0 70px !important;
-			}
-			@media (min-width: 1440px) {
-				& .slick-slide {
-					margin: 0 22px;
-				}
-
-				/* the parent */
-				&.slick-list {
-					text-align: center;
-					margin: 0 -22px;
-					padding-bottom: 70px;
-				}
-			}
-		`;
-
-		// @media (max-width:600px): {
-		//   margin: "0 23px",
-		// },
 
 		const Wraper = styled(Box)({
 			width: "max-content",
@@ -113,7 +72,7 @@ export default class Achivments extends Component {
 			},
 		});
 		return (
-			<StyledSlider {...settings}>
+			<Slider {...settings}>
 				<Wraper>
 					<AchievementsCard backgroundtype="backgroundOne" ledtype="ledOne">
 						<LedLine ledtype="ledOne" />
@@ -178,7 +137,7 @@ export default class Achivments extends Component {
 						</Box>
 					</AchievementsCard>
 				</Wraper>
-			</StyledSlider>
+			</Slider>
 		);
 	}
 }

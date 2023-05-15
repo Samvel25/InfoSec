@@ -50,7 +50,6 @@ export const theme = createTheme({
 			margin: 0,
 			marginBottom: "0",
 			color: "#C0C1C2",
-			textTransform: "uppercase",
 		},
 		h1: {
 			background:
@@ -108,6 +107,22 @@ export const theme = createTheme({
 			fontSize: "20px",
 			lineHeight: "31px",
 			fontWeight: 700,
+		},
+		FooterHead: {
+			color: "#FFFFFF",
+			fontSize: "16px",
+			lineHeight: "22px",
+			marginBottom: "20px",
+			textDecoration: "none",
+			display: "block",
+		},
+		FooterLink: {
+			marginBottom: "10px",
+			color: "#C0C1C2",
+			fontSize: "14px",
+			lineHeight: "24px",
+			textDecoration: "none",
+			display: "block",
 		},
 	},
 	components: {

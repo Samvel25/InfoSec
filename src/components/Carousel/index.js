@@ -12,10 +12,14 @@ export default class Clients extends Component {
 			dots: false,
 			arrows: false,
 			infinite: false,
-			speed: 500,
+			focusOnSelect: true,
+			swipeToSlide: true,
+			autoplay: true,
 			slidesToShow: 8,
 			slidesToScroll: 1,
 			initialSlide: 0,
+			speed: 2000,
+			autoplaySpeed: 2000,
 			afterChange: function (index) {
 				console.log(
 					`Slider Changed to: ${index + 1}, background: #222; color: #bada55`
@@ -25,10 +29,7 @@ export default class Clients extends Component {
 				{
 					breakpoint: 1200,
 					settings: {
-						centerMode: true,
-
 						slidesToShow: 5,
-						centerPadding: "70px",
 						infinite: true,
 					},
 				},
@@ -36,17 +37,22 @@ export default class Clients extends Component {
 					breakpoint: 900,
 					settings: {
 						slidesToShow: 3,
-						centerPadding: "90px",
 						slidesToScroll: 2,
 						infinite: true,
-						centerMode: true,
 					},
 				},
 				{
 					breakpoint: 650,
 					settings: {
 						slidesToShow: 2,
-						centerPadding: "70px",
+						slidesToScroll: 2,
+						infinite: true,
+					},
+				},
+				{
+					breakpoint: 450,
+					settings: {
+						slidesToShow: 1,
 						slidesToScroll: 2,
 						infinite: true,
 						centerMode: true,
