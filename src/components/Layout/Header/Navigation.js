@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useStyles } from "./style";
 
 import { Typography } from "@mui/material";

@@ -1,12 +1,11 @@
 import Slider from "react-slick";
 import React, { Component } from "react";
 import { styled } from "@mui/material/styles";
-import AchievementsCard from "../../Card/CaruselCard";
+import AchievementsCard from "../../Card/CarouselCard";
 import { Box, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LedLine from "../../Other/Led";
-import "./index.css";
 
 export default class Achivments extends Component {
 	render() {
@@ -64,6 +63,39 @@ export default class Achivments extends Component {
 			],
 		};
 
+		const StyledSlider = styled(Slider)`
+			.slick-slide {
+				margin: 0 19px;
+
+				@media (max-width: 700px) {
+					margin: 0 13px;
+				}
+
+				@media (min-width: 1440px) {
+					margin: 0 22px;
+				}
+			}
+
+			.slick-list {
+				margin: 0 -19px;
+				padding: 0 0 70px !important;
+
+				@media (max-width: 700px) {
+					margin: 0 -13px;
+				}
+
+				@media (min-width: 1440px) {
+					text-align: center;
+					margin: 0 -22px;
+					padding-bottom: 70px;
+				}
+			}
+			.slick-track {
+				justify-content: center;
+				display: flex;
+			}
+		`;
+
 		const Wraper = styled(Box)({
 			width: "max-content",
 			textAlign: "start",
@@ -72,7 +104,7 @@ export default class Achivments extends Component {
 			},
 		});
 		return (
-			<Slider {...settings}>
+			<StyledSlider {...settings}>
 				<Wraper>
 					<AchievementsCard backgroundtype="backgroundOne" ledtype="ledOne">
 						<LedLine ledtype="ledOne" />
@@ -137,9 +169,7 @@ export default class Achivments extends Component {
 						</Box>
 					</AchievementsCard>
 				</Wraper>
-			</Slider>
+			</StyledSlider>
 		);
 	}
 }
-
-//

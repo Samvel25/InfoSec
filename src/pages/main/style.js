@@ -6,7 +6,7 @@ import Net from "../../media/net.svg";
 import RadLine from "../../media/radLine.svg";
 import GrayLine from "../../media/grayLine.svg";
 import { ReactComponent as CardSquare } from "../../media/cardSquare.svg";
-import AchievementsCardWrapper from "../../components/Card/CaruselCard";
+import CaruselCard from "../../components/Card/CarouselCard";
 
 //1 section*/*/*/*/*/*/
 
@@ -246,6 +246,7 @@ export const Services = styled(Grid)(({ theme }) => ({
 		width: "620px",
 		height: "610px",
 		opacity: "0.6",
+
 		[theme.breakpoints.down("sm")]: {
 			height: "500px",
 			left: "28%",
@@ -276,6 +277,9 @@ export const Services = styled(Grid)(({ theme }) => ({
 			display: "none",
 		},
 	},
+	[theme.breakpoints.down("1300")]: {
+		justifyContent: "space-around",
+	},
 	[theme.breakpoints.down("sm")]: {
 		padding: "20px 0 0px",
 	},
@@ -288,7 +292,7 @@ export const CardSquareImg = styled(CardSquare)(({ theme }) => ({
 	height: "62px",
 }));
 
-export const ServicesCard = styled(AchievementsCardWrapper)(({ theme }) => ({
+export const ServicesCard = styled(CaruselCard)(({ theme }) => ({
 	width: "auto",
 	margin: "28px 10px",
 	[theme.breakpoints.down("md")]: {
@@ -334,7 +338,7 @@ export const CertificatesDescription = styled(Box)(({ theme }) => ({
 	"&: after": {
 		...grayLines,
 		right: 0,
-		bottom: "-10px",
+		bottom: "-5px",
 		transform: "translateY(100%)",
 
 		[theme.breakpoints.down("md")]: {
@@ -348,4 +352,7 @@ export const CertificatesDescription = styled(Box)(({ theme }) => ({
 	},
 }));
 
+export const Maps = styled(Map)(({ theme }) => ({
+	background: "black",
+}));
 // transform: "rotateY(180deg)",

@@ -29,7 +29,7 @@ const AchievementsCard = styled(Box)(
 				padding:
 					boxpadding === "boxpadding" ? "15px 20px" : "55px 20px 60px 30px",
 			},
-			"&:before": {
+			"&:after": {
 				...commonStyles,
 				background:
 					backgroundtype === "backgroundOne"
@@ -44,7 +44,7 @@ const AchievementsCard = styled(Box)(
 	}
 );
 
-function AchievementsCardWrapper(props) {
+function CaruselCard(props) {
 	const { backgroundtype, ledtype, boxpadding } = props;
 
 	return (
@@ -59,4 +59,4 @@ function AchievementsCardWrapper(props) {
 	);
 }
 
-export default AchievementsCardWrapper;
+export default CaruselCard;

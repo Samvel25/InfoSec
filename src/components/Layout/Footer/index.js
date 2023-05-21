@@ -1,11 +1,37 @@
 import Grid from "@mui/material/Grid";
-import { Typography } from "@mui/material";
-import { Logo } from "./style";
+import { Stack, Typography, Paper, Divider, Box, Hidden } from "@mui/material";
+import * as Styled from "./style";
+import Map from "../../../components/Maps/index";
+import { useJsApiLoader } from "@react-google-maps/api";
+import { styled } from "@mui/material/styles";
+import CorporateEmail from "../../Input";
+import { ReactComponent as FacebookLogo } from "../../../media/logo/facebookLogo.svg";
+import { ReactComponent as InstagramLogo } from "../../../media/logo/instagramLogo.svg";
+import { ReactComponent as TwitterLogo } from "../../../media/logo/twitterLogo.svg";
+
+const APY_KEY = process.env.REACT_APP_API_KEY;
+
+const defaultCenter = {
+	lat: 40.183333,
+	lng: 44.516667,
+};
+
+const Item = styled(Paper)(({ theme }) => ({
+	backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+	...theme.typography.body2,
+	padding: theme.spacing(1),
+	textAlign: "center",
+	color: theme.palette.text.secondary,
+}));
 
 const Footer = () => {
+	const { isLoaded } = useJsApiLoader({
+		id: "google-map-script",
+		googleMapsApiKey: APY_KEY,
+	});
 	return (
 		<footer>
-			<Grid
+			<Styled.FooterLinkes
 				container
 				direction={"row"}
 				justifyContent={{ sm: "start", md: "space-between" }}
@@ -13,7 +39,7 @@ const Footer = () => {
 				sx={{ pt: "90px", borderTop: "1px solid rgba(255, 255, 255, 0.1)" }}
 			>
 				<Grid item lg={3} xs={12} sx={{ mb: "45px" }}>
-					<Logo />
+					<Styled.Logo />
 				</Grid>
 				<Grid item lg={2} md={3} sm={6} xs={12} sx={{ mb: "40px" }}>
 					<Typography variant="FooterHead" component={"p"}>
@@ -104,9 +130,95 @@ const Footer = () => {
 						Company
 					</Typography>
 				</Grid>
-			</Grid>
+				<Styled.LineWrapper item xs={12}>
+					<Styled.FooterLineLeft />
+					<Styled.FooterLineRight />
+				</Styled.LineWrapper>
+			</Styled.FooterLinkes>
+			<Styled.ContactUs
+				container
+				direction={"row"}
+				justifyContent={{
+					md: "space-between",
+					sm: "center",
+					xs: "start",
+				}}
+			>
+				<Grid item xs={12} md={5.5} sm={8} sx={{ mt: "20px", mb: "30px" }}>
+					{isLoaded ? (
+						<Map center={defaultCenter}></Map>
+					) : (
+						<Typography variant="h1">Loading</Typography>
+					)}
+				</Grid>
+				<Hidden mdDown>
+					<Divider
+						orientation={"vertical"}
+						variant="middle"
+						flexItem
+						sx={{ background: "rgba(255, 255, 255, 0.1)" }}
+					/>
+				</Hidden>
+				<Hidden mdUp>
+					<Grid item xs={12}>
+						<Divider sx={{ background: "rgba(255, 255, 255, 0.1)" }} />
+					</Grid>
+				</Hidden>
+
+				<Grid
+					item
+					xs={12}
+					md={5.5}
+					sm={8}
+					sx={{ mt: { md: "20px", xs: "30px" } }}
+				>
+					<Typography sx={{ mb: "20px" }} variant="FooterHead" component={"p"}>
+						Subscribe
+					</Typography>
+					<Typography sx={{ mb: "60px" }}>
+						Subscribe to our newsletter to be the first to know about the latest
+						cyber threats and investigations
+					</Typography>
+					<Box
+						component="form"
+						sx={{
+							"& > :not(style)": { m: 1, width: "100%", mb: "40px" },
+						}}
+						noValidate
+						autoComplete="off"
+					>
+						<CorporateEmail />
+					</Box>
+					<Typography sx={{ mb: "16px" }} variant="FooterHead" component={"p"}>
+						Solutions
+					</Typography>
+					<Stack direction={"row"} spacing={3}>
+						<FacebookLogo />
+						<InstagramLogo />
+						<TwitterLogo />
+					</Stack>
+				</Grid>
+				<Styled.LineWrapper
+					sx={{
+						transform: " rotateX(180deg)",
+						mt: "30px",
+						mb: "5px",
+					}}
+				>
+					<Styled.FooterLineLeft />
+					<Styled.FooterLineRight />
+					<Styled.LineText>
+						© Infosec LLC is one of the world's leading cybercrime and fraud
+						prevention and investigation companies using high technology.
+					</Styled.LineText>
+				</Styled.LineWrapper>
+			</Styled.ContactUs>
 		</footer>
 	);
 };
 
+<Styled.LineText>
+	© Infosec LLC is one of the world's leading cybercrime and fraud prevention
+	and investigation companies using high technology.
+</Styled.LineText>;
 export default Footer;

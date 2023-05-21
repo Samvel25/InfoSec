@@ -2,8 +2,8 @@ import Slider from "react-slick";
 import React, { Component } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { ReactComponent as NameAm } from "../../media/clients-logo/nameAmLogo.svg";
-import { ReactComponent as DomainDesk } from "../../media/clients-logo/domainDeskLogo.svg";
+import { ReactComponent as NameAm } from "../../../media/logo/nameAmLogo.svg";
+import { ReactComponent as DomainDesk } from "../../../media/logo/domainDeskLogo.svg";
 import { styled } from "@mui/material/styles";
 
 export default class Clients extends Component {

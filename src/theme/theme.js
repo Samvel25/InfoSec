@@ -46,7 +46,7 @@ export const theme = createTheme({
 		body1: {
 			fontSize: "14px",
 			fontStyle: "normal",
-			lineHeight: 2.4,
+			lineHeight: "24px",
 			margin: 0,
 			marginBottom: "0",
 			color: "#C0C1C2",
@@ -88,11 +88,12 @@ export const theme = createTheme({
 			fontWeight: 400,
 			fontSize: "31px",
 			lineHeight: "28px",
+
 			"@media (max-width:600px)": {
 				fontSize: "28px",
 			},
 		},
-		ServicesCard: {
+		CardDescription: {
 			background:
 				"linear-gradient(92.98deg, #575757 2.17%, #616161 42.05%, #292929 84.51%)",
 			fontSize: "12px",
@@ -101,12 +102,13 @@ export const theme = createTheme({
 			display: "block",
 			...gradientText,
 		},
-		ServicesCardHead: {
+		CardHead: {
 			color: "#FFFFFF",
 			marginBottom: "25px",
 			fontSize: "20px",
 			lineHeight: "31px",
 			fontWeight: 700,
+			display: "inline",
 		},
 		FooterHead: {
 			color: "#FFFFFF",
@@ -124,8 +126,25 @@ export const theme = createTheme({
 			textDecoration: "none",
 			display: "block",
 		},
+
+		ButtonNew: {
+			fontSize: "12px",
+			lineHeight: "25px",
+			fontWeight: 700,
+			color: "#FFFFFF",
+			textDecoration: "none",
+			textTransform: "uppercase",
+			display: "inline-block",
+		},
 	},
 	components: {
+		MuiCheckbox: {
+			styleOverrides: {
+				checked: {
+					color: "red", // Change the color to your desired color
+				},
+			},
+		},
 		// MuiAppBar: {
 		// 	styleOverrides: {
 		// 		colorPrimary: {

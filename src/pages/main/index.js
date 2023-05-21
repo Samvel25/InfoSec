@@ -4,11 +4,12 @@ import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
 import GradientButton from "../../components/Buttons";
 import * as Styled from "./style";
-import Clients from "../../components/Carousel";
+import Clients from "../../components/Carousel/Clients";
 import Achivments from "../../components/Carousel/Achivments/index";
 import BigCardWrapper from "../../components/Card/BogCard";
 import cybersecurity from "../../media/cybersecurity.png";
 import cybersecurity2 from "../../media/cybersecurity2.png";
+import SlidCertificatesCaruselers from "../../components/Carousel/Certificates/index";
 
 function WhyChooseUs() {
 	return (
@@ -152,9 +153,7 @@ function WhyChooseUs() {
 				</Styled.ExportCyberSecurityDescription>
 				<Styled.BigCardImgWrapper>
 					<BigCardWrapper
-						img={
-							<Styled.BigCardImg src={cybersecurity} alt="Girl in a jacket" />
-						}
+						img={<Styled.BigCardImg src={cybersecurity} alt="Cybersecurity" />}
 					/>
 				</Styled.BigCardImgWrapper>
 			</Styled.ExportCyberSecurity>
@@ -205,9 +204,7 @@ function WhyChooseUs() {
 
 				<Styled.BigCardImgWrapper>
 					<BigCardWrapper
-						img={
-							<Styled.BigCardImg src={cybersecurity2} alt="Girl in a jacket" />
-						}
+						img={<Styled.BigCardImg src={cybersecurity2} alt="Cybersecurity" />}
 					/>
 				</Styled.BigCardImgWrapper>
 			</Styled.CyberSecurityServices>
@@ -228,8 +225,10 @@ function WhyChooseUs() {
 					backgroundtype="backgroundOne"
 				>
 					<Box sx={{ maxWidth: "330px" }}>
-						<Typography variant="ServicesCardHead">Network Security</Typography>
-						<Typography variant="ServicesCard">
+						<Typography variant="CardHead" component={"h5"}>
+							Network Security
+						</Typography>
+						<Typography variant="CardDescription">
 							Protecting your company's network and data from unauthorized
 							access and attacks, including firewalls, intrusion detection and
 							prevention, and VPNs.
@@ -242,8 +241,10 @@ function WhyChooseUs() {
 					backgroundtype="backgroundOne"
 				>
 					<Box sx={{ maxWidth: "330px" }}>
-						<Typography variant="ServicesCardHead">Network Security</Typography>
-						<Typography variant="ServicesCard">
+						<Typography variant="CardHead" component={"h5"}>
+							Network Security
+						</Typography>
+						<Typography variant="CardDescription">
 							Protecting your company's network and data from unauthorized
 							access and attacks, including firewalls, intrusion detection and
 							prevention, and VPNs.
@@ -256,8 +257,10 @@ function WhyChooseUs() {
 					backgroundtype="backgroundOne"
 				>
 					<Box sx={{ maxWidth: "330px" }}>
-						<Typography variant="ServicesCardHead">Network Security</Typography>
-						<Typography variant="ServicesCard">
+						<Typography variant="CardHead" component={"h5"}>
+							Network Security
+						</Typography>
+						<Typography variant="CardDescription">
 							Protecting your company's network and data from unauthorized
 							access and attacks, including firewalls, intrusion detection and
 							prevention, and VPNs.
@@ -270,8 +273,10 @@ function WhyChooseUs() {
 					backgroundtype="backgroundOne"
 				>
 					<Box sx={{ maxWidth: "330px" }}>
-						<Typography variant="ServicesCardHead">Network Security</Typography>
-						<Typography variant="ServicesCard">
+						<Typography variant="CardHead" component={"h5"}>
+							Network Security
+						</Typography>
+						<Typography variant="CardDescription">
 							Protecting your company's network and data from unauthorized
 							access and attacks, including firewalls, intrusion detection and
 							prevention, and VPNs.
@@ -284,8 +289,10 @@ function WhyChooseUs() {
 					backgroundtype="backgroundOne"
 				>
 					<Box sx={{ maxWidth: "330px" }}>
-						<Typography variant="ServicesCardHead">Network Security</Typography>
-						<Typography variant="ServicesCard">
+						<Typography variant="CardHead" component={"h5"}>
+							Network Security
+						</Typography>
+						<Typography variant="CardDescription">
 							Protecting your company's network and data from unauthorized
 							access and attacks, including firewalls, intrusion detection and
 							prevention, and VPNs.
@@ -298,8 +305,10 @@ function WhyChooseUs() {
 					backgroundtype="backgroundOne"
 				>
 					<Box sx={{ maxWidth: "330px" }}>
-						<Typography variant="ServicesCardHead">Network Security</Typography>
-						<Typography variant="ServicesCard">
+						<Typography variant="CardHead" component={"h5"}>
+							Network Security
+						</Typography>
+						<Typography variant="CardDescription">
 							Protecting your company's network and data from unauthorized
 							access and attacks, including firewalls, intrusion detection and
 							prevention, and VPNs.
@@ -328,6 +337,9 @@ function WhyChooseUs() {
 						</Typography>
 					</Styled.DescriptionText>
 				</Styled.CertificatesDescription>
+				<Box>
+					<SlidCertificatesCaruselers></SlidCertificatesCaruselers>
+				</Box>
 			</Styled.Certificates>
 		</Box>
 	);

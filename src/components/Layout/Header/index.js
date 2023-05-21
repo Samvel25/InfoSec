@@ -7,6 +7,7 @@ import { Typography } from "@mui/material";
 import GradientButton from "../../Buttons";
 import DropdownButton from "../../Buttons/dropdownButton";
 import * as Styled from "./style";
+import { Outlet } from "react-router-dom";
 
 function Header() {
 	return (
@@ -29,6 +30,7 @@ function Header() {
 					</GradientButton>
 				</Stack>
 			</Stack>
+			{/* <Outlet /> */}
 		</Styled.Header>
 	);
 }

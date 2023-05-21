@@ -5,6 +5,7 @@ import Layout from "./components/Layout/Layout";
 import { Stack } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import "./index.css";
+import About from "./pages/About/index";
 // import { ThemeProvider } from "@mui/material/styles";
 // import { theme } from "./theme/theme";
 const router = createBrowserRouter([
@@ -17,8 +18,8 @@ const router = createBrowserRouter([
 				element: <Root />,
 			},
 			{
-				path: "/about",
-				element: <Root />,
+				path: "/about", // Update the path to "/about" by adding a leading slash
+				element: <About />,
 			},
 		],
 	},
