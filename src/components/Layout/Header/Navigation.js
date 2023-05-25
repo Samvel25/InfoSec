@@ -1,38 +1,10 @@
-// import { Link, NavLink } from "react-router-dom";
-// import { useStyles } from "./style";
-
-// import { Typography } from "@mui/material";
-
-// function Navigation() {
-
-// 	return (
-// 		<Styled>
-// 			<NavLink className={classes.navLink} to="/">
-// 				<Typography>HOME</Typography>
-// 			</NavLink>
-// 			<NavLink className={classes.navLink} to="/about">
-// 				<Typography>ABOUT US</Typography>
-// 			</NavLink>
-// 			<NavLink className={classes.navLink} to="/contact">
-// 				<Typography>SERVICES</Typography>
-// 			</NavLink>
-// 			<NavLink className={classes.navLink} to="/contact">
-// 				<Typography>SERVICES</Typography>
-// 			</NavLink>
-// 			<NavLink className={classes.navLink} to="/contact">
-// 				<Typography>SERVICES</Typography>
-// 			</NavLink>
-// 		</Styled>
-// 	);
-// }
-// export default Navigation;
-
 import * as Styled from "./style";
 import { Typography } from "@mui/material";
+// import { styled } from "@mui/material/styles";
 
-function Navigation() {
+function Navigation({ isMenuOpen }) {
 	return (
-		<Styled.Navigation>
+		<Styled.Navigation className={isMenuOpen ? "open" : ""}>
 			<Styled.NavigationItem to="/">
 				<Typography>HOME</Typography>
 			</Styled.NavigationItem>

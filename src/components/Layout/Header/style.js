@@ -2,12 +2,12 @@ import { AppBar } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ReactComponent as UserSvg } from "../../../media/user.svg";
 import { NavLink } from "react-router-dom";
-import { Stack, Typography, IconButton, Drawer, Hidden } from "@mui/material";
+import { Drawer } from "@mui/material";
 
-export const Navigation = styled("nav")({
+export const Navigation = styled("nav")(({ theme }) => ({
 	display: "flex",
 	alignItems: "center",
-});
+}));
 
 export const NavigationItem = styled(NavLink)(({ theme }) => ({
 	textTransform: "uppercase",
@@ -19,13 +19,12 @@ export const NavigationItem = styled(NavLink)(({ theme }) => ({
 	},
 }));
 
-// export const BurgerMenu = styled(Drawer)(({ theme }) => ({
-// 	background: "#000000",
-
-// 	// "&:hover": {
-// 	// 	color: theme.palette.secondary.main,
-// 	// },
-// }));
+export const BurgerMenu = styled(Drawer)(({ theme }) => ({
+	"& .MuiDrawer-paper": {
+		width: "250px",
+		background: "linear-gradient(45deg,#575757,#616161,#292929)", // Customize the background color
+	},
+}));
 
 export const UserLogo = styled(UserSvg)({
 	cursor: "pointer",

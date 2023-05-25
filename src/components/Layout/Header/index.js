@@ -4,9 +4,9 @@ import { Stack, Typography, IconButton, Drawer, Hidden } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import GradientButton from "../../Buttons";
 import DropdownButton from "../../Buttons/dropdownButton";
-
 import * as Styled from "./style";
 import { useState } from "react";
+import DrawerNavigation from "./DrawerNavigation ";
 
 function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,23 +25,22 @@ function Header() {
 				sx={{ py: "16px" }}
 			>
 				<Stack direction="row" spacing={{ lg: 6, md: 3 }} alignItems="center">
-					<Hidden mdUp>
-						<IconButton
-							sx={{ mr: "15px" }}
-							edge="start"
-							color="inherit"
-							aria-label="menu"
-							onClick={handleMenuToggle}
-						>
-							<MenuIcon />
-						</IconButton>
-					</Hidden>
+					{/* <Hidden mdUp> */}
+					<IconButton
+						sx={{ mr: "15px" }}
+						edge="start"
+						color="inherit"
+						aria-label="menu"
+						onClick={handleMenuToggle}
+					>
+						<MenuIcon />
+					</IconButton>
+					{/* </Hidden> */}
 					<LogoSvg width="182px" height="39px" />
 					<Hidden mdDown>
 						<Navigation />
 					</Hidden>
 				</Stack>
-
 				<Stack direction="row" spacing={3}>
 					<DropdownButton />
 					<Hidden mdDown>
@@ -53,7 +52,7 @@ function Header() {
 						<Styled.UserLogo width={"20px"} height={"20px"}></Styled.UserLogo>
 					</Hidden>
 				</Stack>
-				<Drawer
+				<Styled.BurgerMenu
 					anchor="left"
 					open={isMenuOpen}
 					onClose={handleMenuToggle}
@@ -62,8 +61,8 @@ function Header() {
 						keepMounted: true,
 					}}
 				>
-					<Navigation isMenuOpen={isMenuOpen} />
-				</Drawer>
+					<DrawerNavigation isMenuOpen={isMenuOpen} />
+				</Styled.BurgerMenu>
 			</Stack>
 		</Styled.Header>
 	);
