@@ -57,5 +57,19 @@ export const LineText = styled(Typography)(({ theme }) => ({
 	},
 }));
 
+// export const MapWrapper = styled("Box")(({ theme }) => ({
+// 	position: "relative",
+// 	zIndex: 1,
+// 	background: "rgba(0, 0, 0, 0.5)",
+// }));
+
+// export const GoogleMaps = styled("div")(({ theme }) => ({
+// 	position: "absolute",
+// 	top: "20px",
+// 	bottom: "20px",
+// 	left: "20px",
+// 	right: "20px",
+// 	background: "rgba(0, 0, 0, 0.0)",
+// }));
 // FooterLinkes
 // translateY(100%)

@@ -11,7 +11,7 @@ import cybersecurity from "../../media/cybersecurity.png";
 import cybersecurity2 from "../../media/cybersecurity2.png";
 import SlidCertificatesCaruselers from "../../components/Carousel/Certificates/index";
 
-function WhyChooseUs() {
+function Home() {
 	return (
 		<Box>
 			{/* ///1 section/////// */}
@@ -345,4 +345,4 @@ function WhyChooseUs() {
 	);
 }
 
-export default WhyChooseUs;
+export default Home;

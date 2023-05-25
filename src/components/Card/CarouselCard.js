@@ -53,9 +53,7 @@ function CaruselCard(props) {
 			ledtype={ledtype}
 			boxpadding={boxpadding}
 			{...props}
-		>
-			{/* Content goes here */}
-		</AchievementsCard>
+		></AchievementsCard>
 	);
 }
 

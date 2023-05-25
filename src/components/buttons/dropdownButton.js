@@ -1,6 +1,6 @@
 // import { styled } from "@mui/material/styles";
 import GradientButton from ".";
-import { Typography, Menu, MenuItem } from "@mui/material";
+import { Typography, Menu, MenuItem, Hidden } from "@mui/material";
 import { useState } from "react";
 import { ReactComponent as Language } from "../../media/language.svg";
 import { ReactComponent as ArrowDown } from "../../media/arrowDown.svg";
@@ -19,18 +19,33 @@ function DropdownButton() {
 	};
 	return (
 		<>
-			<GradientButton onClick={handleOpenMenu} backgroundtype="backgroundOne">
+			<Hidden mdDown>
+				<GradientButton onClick={handleOpenMenu} backgroundtype="backgroundOne">
+					<Stack
+						direction={"row"}
+						spacing={1}
+						alignItems="center"
+						justifyContent={"center"}
+					>
+						<Language />
+						<Typography>asd</Typography>
+						<ArrowDown />
+					</Stack>
+				</GradientButton>
+			</Hidden>
+			<Hidden mdUp>
 				<Stack
+					sx={{ cursor: "pointer" }}
+					onClick={handleOpenMenu}
 					direction={"row"}
 					spacing={1}
 					alignItems="center"
 					justifyContent={"center"}
 				>
-					<Language />
-					<Typography>asd</Typography>
+					<Typography>ENG</Typography>
 					<ArrowDown />
 				</Stack>
-			</GradientButton>
+			</Hidden>
 			<Menu
 				anchorEl={anchorEl}
 				open={Boolean(anchorEl)}

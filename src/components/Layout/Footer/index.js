@@ -145,11 +145,42 @@ const Footer = () => {
 				}}
 			>
 				<Grid item xs={12} md={5.5} sm={8} sx={{ mt: "20px", mb: "30px" }}>
+					<Typography sx={{ mb: "20px" }} variant="FooterHead" component={"p"}>
+						Contact Us
+					</Typography>
 					{isLoaded ? (
 						<Map center={defaultCenter}></Map>
 					) : (
 						<Typography variant="h1">Loading</Typography>
 					)}
+					<Stack direction={"row"} spacing={5} sx={{ mt: "15px" }}>
+						<Box>
+							<Typography sx={{ color: "#C0C1C2" }} variant="ButtonNew">
+								Email
+							</Typography>
+							<Typography
+								href="mailto:infosec@gmail.com"
+								sx={{ fontSize: "12px", mb: "0" }}
+								variant="FooterHead"
+								component={"a"}
+							>
+								infosec@gmail.com
+							</Typography>
+						</Box>
+						<Box>
+							<Typography sx={{ color: "#C0C1C2" }} variant="ButtonNew">
+								Phone
+							</Typography>
+							<Typography
+								href="tel:+374 066 666 666"
+								sx={{ fontSize: "12px", mb: "0" }}
+								variant="FooterHead"
+								component={"a"}
+							>
+								+374 066 666 666
+							</Typography>
+						</Box>
+					</Stack>
 				</Grid>
 				<Hidden mdDown>
 					<Divider

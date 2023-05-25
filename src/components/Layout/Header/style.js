@@ -1,25 +1,36 @@
-import { makeStyles } from "@material-ui/core/styles";
 import { AppBar } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import { ReactComponent as UserSvg } from "../../../media/user.svg";
+import { NavLink } from "react-router-dom";
+import { Stack, Typography, IconButton, Drawer, Hidden } from "@mui/material";
 
-export const useStyles = makeStyles((theme) => ({
-	navBar: {
-		display: "flex",
-		alignItems: "center",
-	},
-	navLink: {
-		textTransform: "uppercase",
-		textDecoration: "none",
-		padding: "0 20px",
+export const Navigation = styled("nav")({
+	display: "flex",
+	alignItems: "center",
+});
 
-		"&:hover": {
-			color: theme.palette.secondary.main,
-		},
+export const NavigationItem = styled(NavLink)(({ theme }) => ({
+	textTransform: "uppercase",
+	textDecoration: "none",
+	padding: "0 20px",
+
+	"&:hover": {
+		color: theme.palette.secondary.main,
 	},
 }));
 
-export const Header = styled(AppBar)(`
+// export const BurgerMenu = styled(Drawer)(({ theme }) => ({
+// 	background: "#000000",
 
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+// 	// "&:hover": {
+// 	// 	color: theme.palette.secondary.main,
+// 	// },
+// }));
 
-`);
+export const UserLogo = styled(UserSvg)({
+	cursor: "pointer",
+});
+
+export const Header = styled(AppBar)({
+	borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+});

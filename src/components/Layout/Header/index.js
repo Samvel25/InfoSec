@@ -1,15 +1,20 @@
-// import { Stack } from "@mui/material";
-// import { AppBar } from "@mui/material";
 import Navigation from "./Navigation";
 import { ReactComponent as LogoSvg } from "../../../media/Logo.svg";
-import { Stack } from "@mui/system";
-import { Typography } from "@mui/material";
+import { Stack, Typography, IconButton, Drawer, Hidden } from "@mui/material";
+import { Menu as MenuIcon } from "@mui/icons-material";
 import GradientButton from "../../Buttons";
 import DropdownButton from "../../Buttons/dropdownButton";
+
 import * as Styled from "./style";
-import { Outlet } from "react-router-dom";
+import { useState } from "react";
 
 function Header() {
+	const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+	const handleMenuToggle = () => {
+		setIsMenuOpen(!isMenuOpen);
+	};
+
 	return (
 		<Styled.Header position="static">
 			<Stack
@@ -19,19 +24,49 @@ function Header() {
 				spacing={2}
 				sx={{ py: "16px" }}
 			>
-				<Stack direction="row" spacing={6}>
+				<Stack direction="row" spacing={{ lg: 6, md: 3 }} alignItems="center">
+					<Hidden mdUp>
+						<IconButton
+							sx={{ mr: "15px" }}
+							edge="start"
+							color="inherit"
+							aria-label="menu"
+							onClick={handleMenuToggle}
+						>
+							<MenuIcon />
+						</IconButton>
+					</Hidden>
 					<LogoSvg width="182px" height="39px" />
-					<Navigation />
+					<Hidden mdDown>
+						<Navigation />
+					</Hidden>
 				</Stack>
+
 				<Stack direction="row" spacing={3}>
-					<DropdownButton variant="contained"></DropdownButton>
-					<GradientButton variant="contained">
-						<Typography>clients area</Typography>
-					</GradientButton>
+					<DropdownButton />
+					<Hidden mdDown>
+						<GradientButton>
+							<Typography>clients area</Typography>
+						</GradientButton>
+					</Hidden>
+					<Hidden mdUp>
+						<Styled.UserLogo width={"20px"} height={"20px"}></Styled.UserLogo>
+					</Hidden>
 				</Stack>
+				<Drawer
+					anchor="left"
+					open={isMenuOpen}
+					onClose={handleMenuToggle}
+					variant="temporary"
+					ModalProps={{
+						keepMounted: true,
+					}}
+				>
+					<Navigation isMenuOpen={isMenuOpen} />
+				</Drawer>
 			</Stack>
-			{/* <Outlet /> */}
 		</Styled.Header>
 	);
 }
+
 export default Header;
