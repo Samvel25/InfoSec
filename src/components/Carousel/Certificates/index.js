@@ -1,11 +1,30 @@
 import React, { Component } from "react";
 import * as Styled from "./style";
-
+import { ReactComponent as Arrow } from "../../../media/sliderArrow.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Certificate from "../../../media/certificate.png";
 import { Stack, Typography } from "@mui/material";
 import GradientButton from "../../Buttons";
+
+const GalleryPrevArrow = ({ currentSlide, slideCount, ...props }) => {
+	const { className, onClick } = props;
+
+	return (
+		<div {...props} className="custom-prevArrow" onClick={onClick}>
+			<Arrow />
+		</div>
+	);
+};
+const GalleryNextArrow = ({ currentSlide, slideCount, ...props }) => {
+	const { className, onClick } = props;
+
+	return (
+		<div {...props} className="custom-nextArrow" onClick={onClick}>
+			<Arrow />
+		</div>
+	);
+};
 
 export default class CertificatesCarusel extends Component {
 	render() {
@@ -17,18 +36,17 @@ export default class CertificatesCarusel extends Component {
 			centerPadding: "100px",
 			variableWidth: true,
 			slidesToShow: 3,
-			speed: 500,
-			// nextArrow: <GalleryNextArrow />,
-			// prevArrow: <GalleryPrevArrow />
+			speed: 800,
+			autoplay: true,
+			pauseOnHover: true,
+			nextArrow: <GalleryNextArrow />,
+			prevArrow: <GalleryPrevArrow />,
 			responsive: [
 				{
 					breakpoint: 600,
 					settings: {
 						centerMode: true,
 						slidesToShow: 3,
-						speed: 1500,
-						autoplay: true,
-						pauseOnHover: true,
 					},
 				},
 			],

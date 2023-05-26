@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
 import GradientButton from "../../components/Buttons";
 import * as Styled from "./style";
+import * as GlobalStyled from "../style";
 import Clients from "../../components/Carousel/Clients";
 import Achivments from "../../components/Carousel/Achivments/index";
 import BigCardWrapper from "../../components/Card/BogCard";
@@ -26,14 +27,14 @@ function Home() {
 					item
 					md={5}
 					xs={12}
-					sm={8}
+					sm={10}
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography variant="h1">
 						Proactive Cyber Security Solutions for Your Business
 					</Typography>
 					<ProgreeBar />
-					<Grid item xs={11}>
+					<Grid item lg={11} md={12}>
 						<Typography>
 							We provide comprehensive cyber security services to protect your
 							business from cyber threats. Our team of experts has years of
@@ -79,14 +80,18 @@ function Home() {
 
 			{/* ///2 section/////// */}
 
-			<Styled.Achievements>
-				<Styled.HeadText>
+			<GlobalStyled.Achievements
+				sx={{ p: { md: "60px 0 140px", xs: "60px 0 100px" } }}
+			>
+				<GlobalStyled.HeadText>
 					<Typography variant="Head"> OUR</Typography>
 					<Typography variant="GradientHead"> CLIENTS</Typography>
-				</Styled.HeadText>
+				</GlobalStyled.HeadText>
 				<Clients />
-				<Styled.Description>
-					<Styled.DescriptionText>
+				<GlobalStyled.Description>
+					<GlobalStyled.DescriptionText
+						sx={{ pt: { md: "145px", xs: "100px" } }}
+					>
 						<Typography
 							variant="GradientLight"
 							component="h1"
@@ -101,12 +106,12 @@ function Home() {
 							supported by 24/7 monitoring and expert assistance. Trust us to
 							keep your sensitive information and online activities secure.
 						</Typography>
-					</Styled.DescriptionText>
-				</Styled.Description>
+					</GlobalStyled.DescriptionText>
+				</GlobalStyled.Description>
 				<Box alignItems={"center"} sx={{ mt: "135px" }}>
 					<Achivments />
 				</Box>
-			</Styled.Achievements>
+			</GlobalStyled.Achievements>
 
 			{/*3 /// section/////// */}
 
@@ -120,7 +125,7 @@ function Home() {
 					item
 					md={5}
 					xs={12}
-					sm={8}
+					sm={10}
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography
@@ -151,11 +156,18 @@ function Home() {
 						</Stack>
 					</Hidden>
 				</Styled.ExportCyberSecurityDescription>
-				<Styled.BigCardImgWrapper>
+				<Grid item md={5} sm={8} sx={{ mt: { md: "0px", sm: "40px" } }}>
 					<BigCardWrapper
-						img={<Styled.BigCardImg src={cybersecurity} alt="Cybersecurity" />}
+						img={
+							<img
+								src={cybersecurity}
+								alt="Cybersecurity"
+								width={"100%"}
+								sx={{ paddingBottom: "100%" }}
+							/>
+						}
 					/>
-				</Styled.BigCardImgWrapper>
+				</Grid>
 			</Styled.ExportCyberSecurity>
 
 			{/*4 /// section/////// */}
@@ -170,7 +182,7 @@ function Home() {
 					item
 					md={5}
 					xs={12}
-					sm={8}
+					sm={10}
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography
@@ -202,11 +214,18 @@ function Home() {
 					</Hidden>
 				</Styled.CyberSecurityServicesDescription>
 
-				<Styled.BigCardImgWrapper>
+				<Grid item md={5} sm={8} sx={{ mt: { md: "0px", sm: "40px" } }}>
 					<BigCardWrapper
-						img={<Styled.BigCardImg src={cybersecurity2} alt="Cybersecurity" />}
+						img={
+							<img
+								src={cybersecurity2}
+								alt="Cybersecurity"
+								width={"100%"}
+								sx={{ paddingBottom: "100%" }}
+							/>
+						}
 					/>
-				</Styled.BigCardImgWrapper>
+				</Grid>
 			</Styled.CyberSecurityServices>
 
 			{/*5 /// section/////// */}
@@ -217,9 +236,9 @@ function Home() {
 				direction={"row"}
 				alignItems="center"
 			>
-				<Styled.HeadText>
+				<GlobalStyled.HeadText>
 					<Typography variant="Head">OUR SERVICES</Typography>
-				</Styled.HeadText>
+				</GlobalStyled.HeadText>
 				<Styled.ServicesCard
 					boxpadding="boxpadding"
 					backgroundtype="backgroundOne"
@@ -320,7 +339,7 @@ function Home() {
 			{/*6 /// section/////// */}
 			<Styled.Certificates>
 				<Styled.CertificatesDescription>
-					<Styled.DescriptionText sx={{ pt: 0 }}>
+					<GlobalStyled.DescriptionText sx={{ pt: 0 }}>
 						<Typography
 							variant="GradientLight"
 							component="h1"
@@ -335,7 +354,7 @@ function Home() {
 							supported by 24/7 monitoring and expert assistance. Trust us to
 							keep your sensitive information and online activities secure.
 						</Typography>
-					</Styled.DescriptionText>
+					</GlobalStyled.DescriptionText>
 				</Styled.CertificatesDescription>
 				<Box>
 					<SlidCertificatesCaruselers></SlidCertificatesCaruselers>

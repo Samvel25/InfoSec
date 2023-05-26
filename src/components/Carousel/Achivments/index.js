@@ -17,6 +17,9 @@ export default class Achivments extends Component {
 			swipeToSlide: true,
 			variableWidth: true,
 			focusOnSelect: true,
+			speed: 800,
+			autoplay: true,
+			pauseOnHover: true,
 			responsive: [
 				{
 					breakpoint: 1350,
@@ -99,9 +102,9 @@ export default class Achivments extends Component {
 		const Wraper = styled(Box)({
 			width: "max-content",
 			textAlign: "start",
-			"& AchievementsCard": {
-				"& Box": {},
-			},
+			// "& AchievementsCard": {
+			// 	"& Box": {},
+			// },
 		});
 		return (
 			<StyledSlider {...settings}>

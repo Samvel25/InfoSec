@@ -8,12 +8,10 @@ const commonStyles = {
 	inset: 0,
 	zIndex: -1,
 	overflow: "visible",
-	clipPath:
-		"polygon(0 0,calc(100% - 16.00px) 0,100% 16.00px,100% 100%,16.00px 100%,0 calc(100% - 16.00px),0 0,1px  1px ,1px calc(100% - 16.00px - 0.41px),calc(16.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(16.00px + 0.41px),calc(100% - 16.00px - 0.41px) 1px,1px 1px)",
 };
 
 const AchievementsCard = styled(Box)(
-	({ theme, backgroundtype, ledtype, boxpadding }) => {
+	({ theme, backgroundtype, ledtype, boxpadding, cutedcorner }) => {
 		const animation = keyframes`
   ${ledtype === "ledOne" ? boxShadow1 : boxShadow2}
 `;
@@ -31,6 +29,10 @@ const AchievementsCard = styled(Box)(
 			},
 			"&:after": {
 				...commonStyles,
+				clipPath:
+					cutedcorner === "right"
+						? "polygon(0 22.00px,22.00px 0,100% 0,100% calc(100% - 22.00px),calc(100% - 22.00px) 100%,0 100%,0 22.00px,1px  calc(22.00px + 0.41px),1px calc(100% - 1px),calc(100% - 22.00px - 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 22.00px - 0.41px),calc(100% - 1px) 1px,calc(22.00px + 0.41px) 1px,1px calc(22.00px + 0.41px))"
+						: "polygon(0 0,calc(100% - 16.00px) 0,100% 16.00px,100% 100%,16.00px 100%,0 calc(100% - 16.00px),0 0,1px  1px ,1px calc(100% - 16.00px - 0.41px),calc(16.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(16.00px + 0.41px),calc(100% - 16.00px - 0.41px) 1px,1px 1px)",
 				background:
 					backgroundtype === "backgroundOne"
 						? "linear-gradient(45deg,#575757,#616161,#292929)"
@@ -45,10 +47,11 @@ const AchievementsCard = styled(Box)(
 );
 
 function CaruselCard(props) {
-	const { backgroundtype, ledtype, boxpadding } = props;
+	const { backgroundtype, ledtype, boxpadding, cutedcorner } = props;
 
 	return (
 		<AchievementsCard
+			cutedcorner={cutedcorner}
 			backgroundtype={backgroundtype}
 			ledtype={ledtype}
 			boxpadding={boxpadding}

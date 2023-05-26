@@ -79,70 +79,6 @@ export const MyLine = styled("span")({
 
 // 2 section*/*/*/*/*/*/
 
-export const Achievements = styled(Box)(({ theme }) => ({
-	borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-	position: "relative",
-	padding: "60px 0 140px",
-	display: "block",
-
-	"&: before": {
-		...grayLines,
-		bottom: "2%",
-		right: 0,
-		[theme.breakpoints.down("md")]: {
-			width: "265px",
-			height: "45px",
-		},
-	},
-}));
-
-export const Description = styled(Box)(({ theme }) => ({
-	width: "100%",
-	display: "flex",
-	justifyContent: "center",
-	textAlign: "center",
-	position: "relative",
-
-	"&: before": {
-		...radLines,
-		left: 0,
-		bottom: "-10px",
-		transform: "translateY(100%)",
-		[theme.breakpoints.down("md")]: {
-			width: "265px",
-			height: "45px",
-		},
-	},
-}));
-
-export const DescriptionText = styled(Stack)(({ theme }) => ({
-	paddingTop: "145px",
-	width: "55%",
-	[theme.breakpoints.down("md")]: {
-		width: "100%",
-	},
-}));
-
-export const HeadText = styled("div")({
-	position: "absolute",
-	content: "''",
-	transform: "translate(-50%, -50%)",
-	top: 0,
-	left: "50%",
-	background: "black",
-	padding: "0 10px",
-});
-
-export const BigCardImg = styled("img")(({ theme }) => ({
-	width: "38vw",
-	maxWidth: "560px",
-	minWidth: "320px",
-	height: "max-content",
-	[theme.breakpoints.up("md")]: {
-		minWidth: "420px",
-	},
-}));
-
 export const BigCardImgWrapper = styled(Box)(({ theme }) => ({
 	[theme.breakpoints.down("md")]: {
 		paddingTop: "40px",
@@ -167,7 +103,6 @@ export const ExportCyberSecurity = styled(Grid)(({ theme }) => ({
 
 export const ExportCyberSecurityDescription = styled(Grid)(({ theme }) => ({
 	position: "relative",
-
 	"&:after": {
 		position: "absolute",
 		backgroundImage: `url(${Net})`,
@@ -178,8 +113,7 @@ export const ExportCyberSecurityDescription = styled(Grid)(({ theme }) => ({
 		top: "3%",
 		width: "620px",
 		height: "610px",
-		opacity: "0.6",
-
+		opacity: "0.4",
 		[theme.breakpoints.down("sm")]: {
 			top: "-15%",
 			height: "500px",
@@ -218,7 +152,7 @@ export const CyberSecurityServicesDescription = styled(Grid)(({ theme }) => ({
 		maxWidth: "90%",
 		width: "620px",
 		height: "610px",
-		opacity: "0.6",
+		opacity: "0.4",
 		[theme.breakpoints.down("md")]: {
 			left: "35%",
 			height: "500px",
@@ -245,7 +179,7 @@ export const Services = styled(Grid)(({ theme }) => ({
 		maxWidth: "100%",
 		width: "620px",
 		height: "610px",
-		opacity: "0.6",
+		opacity: "0.4",
 
 		[theme.breakpoints.down("sm")]: {
 			height: "500px",
@@ -265,7 +199,7 @@ export const Services = styled(Grid)(({ theme }) => ({
 		maxWidth: "80%",
 		width: "786px",
 		height: "610px",
-		opacity: "0.6",
+		opacity: "0.4",
 		[theme.breakpoints.down("md")]: {
 			height: "500px",
 			bottom: 0,

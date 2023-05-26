@@ -9,7 +9,65 @@ export const StyledSlider = styled(Slider)`
 	display: flex;
 	// justify-content: center;
 	// align-items: center;
-	padding: 0 5px;
+	// padding: 0 5px;
+
+	.custom-prevArrow,
+	.custom-nextArrow {
+		position: absolute;
+		bottom: 40px;
+		z-index: 99999;
+	}
+
+	.custom-prevArrow {
+		left: 48%;
+		transform: translateX(-50%);
+	}
+
+	.custom-nextArrow {
+		right: 48%;
+		transform: translateX(50%);
+	}
+	@media screen and (max-width: 1050px) {
+		.custom-nextArrow {
+			right: 47%;
+		}
+		.custom-prevArrow {
+			left: 47%;
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		.custom-nextArrow {
+			right: 46%;
+		}
+		.custom-prevArrow {
+			left: 46%;
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		.custom-prevArrow,
+		.custom-nextArrow {
+			bottom: 60px;
+		}
+		.custom-nextArrow {
+			right: 44%;
+		}
+		.custom-prevArrow {
+			left: 44%;
+		}
+	}
+
+	.slick-prev,
+	.slick-next {
+		display: none !important;
+	}
+
+	.custom-prevArrow:hover,
+	.custom-nextArrow:hover {
+		fill: red;
+		cursor: pointer;
+	}
 
 	.slick-list {
 		position: relative;
@@ -110,32 +168,6 @@ export const StyledSlider = styled(Slider)`
 		z-index: 999;
 		transform: scale(1.7);
 		transition: 0.5s;
-	}
-
-	.slick-prev,
-	.slick-next {
-		display: none !important;
-	}
-
-	.custom-prevArrow,
-	.custom-nextArrow {
-		position: relative;
-		z-index: 99999;
-		top: -10px;
-	}
-
-	.custom-prevArrow {
-		left: -10px;
-	}
-
-	.custom-nextArrow {
-		right: -10px;
-	}
-
-	.custom-prevArrow:hover,
-	.custom-nextArrow:hover {
-		fill: red;
-		cursor: pointer;
 	}
 `;
 
