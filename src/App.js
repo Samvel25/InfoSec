@@ -5,6 +5,10 @@ import { Stack } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import "./index.css";
 import About from "./pages/About/index";
+import Services from "./pages/Services";
+import Clients from "./pages/Clients";
+import Certificates from "./pages/Certificates";
+
 import Home from "./pages/Home";
 
 const router = createBrowserRouter([
@@ -17,8 +21,20 @@ const router = createBrowserRouter([
 				element: <Home />,
 			},
 			{
-				path: "about", // Update the path to "/about" by adding a leading slash
+				path: "about",
 				element: <About />,
+			},
+			{
+				path: "services",
+				element: <Services />,
+			},
+			{
+				path: "clients",
+				element: <Clients />,
+			},
+			{
+				path: "certificates",
+				element: <Certificates />,
 			},
 		],
 	},

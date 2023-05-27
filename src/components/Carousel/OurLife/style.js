@@ -11,6 +11,13 @@ export const StyledSlider = styled(Slider)`
 		z-index: 99999;
 	}
 
+	.custom-prevArrow svg:hover,
+	.custom-nextArrow svg:hover {
+		fill: red;
+		cursor: pointer;
+		background: "black";
+	}
+
 	.custom-prevArrow {
 		left: 48%;
 		transform: translateX(-50%);
@@ -57,6 +64,8 @@ export const StyledSlider = styled(Slider)`
 		overflow: hidden;
 		padding: 100px !important;
 		width: 100%;
+		margin: 0 -15px;
+		// padding: 0 0 70px !important;
 	}
 
 	.slick-track {
@@ -76,20 +85,9 @@ export const StyledSlider = styled(Slider)`
 		margin: 0 15px;
 	}
 
-	.slick-list {
-		margin: 0 -15px;
-		// padding: 0 0 70px !important;
-	}
-
 	.slick-track {
 		justify-content: center;
 		display: flex;
-	}
-
-	.custom-prevArrow:hover,
-	.custom-nextArrow:hover {
-		fill: red;
-		cursor: pointer;
 	}
 `;
 export const OurLifeCaruselCard = styled(CaruselCard)(({ theme }) => ({

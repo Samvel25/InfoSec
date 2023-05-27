@@ -4,7 +4,7 @@ import ProgreeBar from "../../components/ProgressBar";
 import GradientButton from "../../components/Buttons";
 import * as Styled from "./style";
 import * as GlobalStyled from "../style";
-import Achivments from "../../components/Carousel/Achivments/index";
+import AchivmentsCarousel from "../../components/Carousel/Achivments/index";
 
 import GlobeImg from "../../media/globe.png";
 import OurLifeCarusel from "../../components/Carousel/OurLife";
@@ -105,11 +105,11 @@ const About = () => {
 					</GlobalStyled.DescriptionText>
 				</GlobalStyled.Description>
 				<Box alignItems={"center"} sx={{ mt: "135px" }}>
-					<Achivments />
+					<AchivmentsCarousel />
 				</Box>
 			</GlobalStyled.Achievements>
 
-			{/* ///3 section/////// */}
+			{/* ///4 section/////// */}
 			<Box sx={{ pb: "100px" }}>
 				<GlobalStyled.Description sx={{ "&: before": { content: "none" } }}>
 					<GlobalStyled.DescriptionText>

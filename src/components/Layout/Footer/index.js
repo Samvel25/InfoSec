@@ -131,8 +131,7 @@ const Footer = () => {
 					</Typography>
 				</Grid>
 				<Styled.LineWrapper item xs={12}>
-					<Styled.FooterLineLeft />
-					<Styled.FooterLineRight />
+					<Styled.FooterLine />
 				</Styled.LineWrapper>
 			</Styled.FooterLinkes>
 			<Styled.ContactUs
@@ -236,8 +235,7 @@ const Footer = () => {
 						mb: "5px",
 					}}
 				>
-					<Styled.FooterLineLeft />
-					<Styled.FooterLineRight />
+					<Styled.FooterLine />
 					<Styled.LineText>
 						© Infosec LLC is one of the world's leading cybercrime and fraud
 						prevention and investigation companies using high technology.

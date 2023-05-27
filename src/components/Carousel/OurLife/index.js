@@ -4,6 +4,7 @@ import { ReactComponent as Arrow } from "../../../media/sliderArrow.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import OurLifeImg from "../../../media/ourLIfe.png";
+import OurLifeImg2 from "../../../media/ourLife2.png";
 
 const GalleryPrevArrow = ({ currentSlide, slideCount, ...props }) => {
 	const { className, onClick } = props;
@@ -27,7 +28,7 @@ const GalleryNextArrow = ({ currentSlide, slideCount, ...props }) => {
 export default class OurLifeCarusel extends Component {
 	render() {
 		var settings = {
-			// className: "center",
+			className: "center",
 			centerMode: true,
 			focusOnSelect: true,
 			// infinite: false,
@@ -49,7 +50,10 @@ export default class OurLifeCarusel extends Component {
 				{
 					breakpoint: 600,
 					settings: {
+						centerMode: true,
+
 						slidesToShow: 1,
+						centerPadding: "60px",
 					},
 				},
 			],
@@ -65,7 +69,21 @@ export default class OurLifeCarusel extends Component {
 					>
 						<img
 							width={"300px"}
-							// sx={{ pb: "143%" }}
+							sx={{ pb: "143%" }}
+							src={OurLifeImg2}
+							alt="Our life immage"
+						/>
+					</Styled.OurLifeCaruselCard>
+				</div>
+				<div>
+					<Styled.OurLifeCaruselCard
+						backgroundtype="backgroundOne"
+						ledtype="ledOne"
+						cutedcorner="right"
+					>
+						<img
+							width={"300px"}
+							sx={{ pb: "143%" }}
 							src={OurLifeImg}
 							alt="Our life immage"
 						/>
@@ -79,7 +97,21 @@ export default class OurLifeCarusel extends Component {
 					>
 						<img
 							width={"300px"}
-							// sx={{ pb: "143%" }}
+							sx={{ pb: "143%" }}
+							src={OurLifeImg2}
+							alt="Our life immage"
+						/>
+					</Styled.OurLifeCaruselCard>
+				</div>
+				<div>
+					<Styled.OurLifeCaruselCard
+						backgroundtype="backgroundOne"
+						ledtype="ledOne"
+						cutedcorner="right"
+					>
+						<img
+							width={"300px"}
+							sx={{ pb: "143%" }}
 							src={OurLifeImg}
 							alt="Our life immage"
 						/>
@@ -93,36 +125,8 @@ export default class OurLifeCarusel extends Component {
 					>
 						<img
 							width={"300px"}
-							// sx={{ pb: "143%" }}
-							src={OurLifeImg}
-							alt="Our life immage"
-						/>
-					</Styled.OurLifeCaruselCard>
-				</div>
-				<div>
-					<Styled.OurLifeCaruselCard
-						backgroundtype="backgroundOne"
-						ledtype="ledOne"
-						cutedcorner="right"
-					>
-						<img
-							width={"300px"}
-							// sx={{ pb: "143%" }}
-							src={OurLifeImg}
-							alt="Our life immage"
-						/>
-					</Styled.OurLifeCaruselCard>
-				</div>
-				<div>
-					<Styled.OurLifeCaruselCard
-						backgroundtype="backgroundOne"
-						ledtype="ledOne"
-						cutedcorner="right"
-					>
-						<img
-							width={"300px"}
-							// sx={{ pb: "143%" }}
-							src={OurLifeImg}
+							sx={{ pb: "143%" }}
+							src={OurLifeImg2}
 							alt="Our life immage"
 						/>
 					</Styled.OurLifeCaruselCard>

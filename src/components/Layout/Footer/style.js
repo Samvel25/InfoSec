@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { ReactComponent as LogoSvg } from "../../../media/Logo.svg";
+import { ReactComponent as LogoSvg } from "../../../media/logo/Logo.svg";
 import { ReactComponent as Line } from "../../../media/footerLine.svg";
 import { Grid, Box, Typography } from "@mui/material";
 
@@ -14,22 +14,13 @@ export const FooterLinkes = styled(Grid)(({ theme }) => ({
 	marginBottom: "50px",
 }));
 export const LineWrapper = styled(Grid)(({ theme }) => ({
-	display: "flex",
 	position: "relative",
 }));
 
-export const FooterLineLeft = styled(Line)(({ theme }) => ({
-	width: "50.5%",
+export const FooterLine = styled(Line)(({ theme }) => ({
+	width: "100%",
 	height: "64px",
 	transform: " rotateY(180deg)",
-	[theme.breakpoints.down("sm")]: {
-		height: "26px",
-	},
-}));
-
-export const FooterLineRight = styled(Line)(({ theme }) => ({
-	width: "50.5%",
-	height: "64px",
 	[theme.breakpoints.down("sm")]: {
 		height: "26px",
 	},

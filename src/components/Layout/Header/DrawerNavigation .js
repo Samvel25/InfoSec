@@ -13,8 +13,14 @@ export const DrawerNavigationItem = styled(NavigationItem)(({ theme }) => ({
 	textDecoration: "none",
 	padding: "0 20px",
 
-	"&:hover": {
-		color: theme.palette.secondary.main,
+	"&.active > p": {
+		color: "#D42530", // Active color
+	},
+
+	"& p": {
+		"&:hover": {
+			color: "#D42530",
+		},
 	},
 }));
 

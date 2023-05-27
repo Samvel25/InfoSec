@@ -13,9 +13,14 @@ export const NavigationItem = styled(NavLink)(({ theme }) => ({
 	textTransform: "uppercase",
 	textDecoration: "none",
 	padding: "0 20px",
+	"&.active > p": {
+		color: "#D42530", // Active color
+	},
 
-	"&:hover": {
-		color: theme.palette.secondary.main,
+	"& p": {
+		"&:hover": {
+			color: "#D42530",
+		},
 	},
 }));
 
