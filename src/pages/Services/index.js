@@ -54,12 +54,12 @@ const Services = () => {
 			<GlobalStyled.Achievements
 				sx={{
 					borderTop: "none",
-					p: { lg: "0px 0 250px", xs: "0px 0 200px" },
-					"&: before": { bottom: { lg: "14%", xs: "10%" } },
+					p: { md: "0px 0 250px", xs: "0px 0 150px" },
+					"&: before": { bottom: { md: "120px", xs: "100px" } },
 				}}
 			>
 				<GlobalStyled.Description
-					sx={{ "&: before": { bottom: { lg: "-20px", xs: "15px" } } }}
+					sx={{ "&: before": { bottom: { md: "-20px", xs: "-30px" } } }}
 				>
 					<Typography
 						variant="GradientLight"
@@ -70,7 +70,7 @@ const Services = () => {
 						response experts as soon as possible.
 					</Typography>
 				</GlobalStyled.Description>
-				<Box alignItems={"center"} sx={{ mt: "200px" }}>
+				<Box alignItems={"center"} sx={{ mt: { md: "200px", xs: "150px" } }}>
 					<Experts />
 				</Box>
 			</GlobalStyled.Achievements>
