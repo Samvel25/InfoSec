@@ -22,6 +22,9 @@ export const NavigationItem = styled(NavLink)(({ theme }) => ({
 			color: "#D42530",
 		},
 	},
+	[theme.breakpoints.down(1150)]: {
+		padding: "0 9px",
+	},
 }));
 
 export const BurgerMenu = styled(Drawer)(({ theme }) => ({

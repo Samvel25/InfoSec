@@ -1,18 +1,21 @@
 import { Box, Hidden, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
-// import GradientButton from "../../components/Buttons";
 import * as Styled from "./style";
+
 import * as GlobalStyled from "../style";
 import IncidebtsImg from "../../media/incidebts.png";
 import Experts from "../../components/Carousel/Experts";
+import GradientButton from "../../components/Buttons";
+import { ReactComponent as CardImmage } from "../../media/cardLogo.svg";
+import Form from "../../components/Form";
 
 const Services = () => {
 	return (
 		<Box>
 			{/* ///1 section/////// */}
 			<Grid
-				sx={{ p: "130px 0 230px" }}
+				sx={{ p: { md: "130px 0 230px", xs: "70px 0 140px" } }}
 				container
 				justifyContent={"space-around"}
 				direction={"row"}
@@ -51,15 +54,18 @@ const Services = () => {
 					</Box>
 				</Grid>
 			</Grid>
+
+			{/* ///2 section/////// */}
+
 			<GlobalStyled.Achievements
 				sx={{
 					borderTop: "none",
-					p: { lg: "0px 0 250px", xs: "0px 0 200px" },
-					"&: before": { bottom: { lg: "14%", xs: "10%" } },
+					p: { md: "0px 0 250px", xs: "0px 0 200px" },
+					"&: before": { bottom: { md: "170px", xs: "100px" } },
 				}}
 			>
 				<GlobalStyled.Description
-					sx={{ "&: before": { bottom: { lg: "-20px", xs: "15px" } } }}
+					sx={{ "&: before": { bottom: { md: "-20px", xs: "-30px" } } }}
 				>
 					<Typography
 						variant="GradientLight"
@@ -70,10 +76,139 @@ const Services = () => {
 						response experts as soon as possible.
 					</Typography>
 				</GlobalStyled.Description>
-				<Box alignItems={"center"} sx={{ mt: "200px" }}>
-					<Experts />
+				<Box sx={{ mt: "200px" }} alignItems={"center"}>
+					<Experts sx={{ pb: "70px" }} />
+					<GradientButton sx={{ m: "0 auto" }}>
+						Report an Incident
+					</GradientButton>
 				</Box>
 			</GlobalStyled.Achievements>
+
+			{/* ///3 section/////// */}
+
+			<Box>
+				<Typography
+					textAlign={"center"}
+					variant="GradientLight"
+					component="h1"
+					sx={{ mb: "0px" }}
+				>
+					Results of work on the results of the response
+				</Typography>
+				<GlobalStyled.Services
+					container
+					justifyContent={{ sm: "center", md: "space-between" }}
+					direction={"row"}
+					alignItems="center"
+					sx={{
+						pt: { md: "80px", xs: "35px" },
+						m: { md: "80px 0 300px", xs: "60px 0 150px" },
+					}}
+				>
+					<GlobalStyled.HeadText>
+						<Typography variant="Head">OUR SERVICES</Typography>
+					</GlobalStyled.HeadText>
+					<GlobalStyled.ServicesCard
+						boxpadding="boxpadding"
+						backgroundtype="backgroundOne"
+					>
+						<Box sx={{ maxWidth: "330px" }}>
+							<Typography variant="CardHead" component={"h5"}>
+								Network Security
+							</Typography>
+							<Typography variant="CardDescription">
+								Protecting your company's network and data from unauthorized
+								access and attacks, including firewalls, intrusion detection and
+								prevention, and VPNs.
+							</Typography>
+						</Box>
+						<CardImmage display={"block"} width={"60px"} height={"53px"} />
+					</GlobalStyled.ServicesCard>
+					<GlobalStyled.ServicesCard
+						boxpadding="boxpadding"
+						backgroundtype="backgroundOne"
+					>
+						<Box sx={{ maxWidth: "330px" }}>
+							<Typography variant="CardHead" component={"h5"}>
+								Network Security
+							</Typography>
+							<Typography variant="CardDescription">
+								Protecting your company's network and data from unauthorized
+								access and attacks, including firewalls, intrusion detection and
+								prevention, and VPNs.
+							</Typography>
+						</Box>
+						<CardImmage display={"block"} width={"60px"} height={"53px"} />
+					</GlobalStyled.ServicesCard>
+					<GlobalStyled.ServicesCard
+						boxpadding="boxpadding"
+						backgroundtype="backgroundOne"
+					>
+						<Box sx={{ maxWidth: "330px" }}>
+							<Typography variant="CardHead" component={"h5"}>
+								Network Security
+							</Typography>
+							<Typography variant="CardDescription">
+								Protecting your company's network and data from unauthorized
+								access and attacks, including firewalls, intrusion detection and
+								prevention, and VPNs.
+							</Typography>
+						</Box>
+						<CardImmage display={"block"} width={"60px"} height={"53px"} />
+					</GlobalStyled.ServicesCard>
+					<GlobalStyled.ServicesCard
+						boxpadding="boxpadding"
+						backgroundtype="backgroundOne"
+					>
+						<Box sx={{ maxWidth: "330px" }}>
+							<Typography variant="CardHead" component={"h5"}>
+								Network Security
+							</Typography>
+							<Typography variant="CardDescription">
+								Protecting your company's network and data from unauthorized
+								access and attacks, including firewalls, intrusion detection and
+								prevention, and VPNs.
+							</Typography>
+						</Box>
+						<CardImmage display={"block"} width={"60px"} height={"53px"} />
+					</GlobalStyled.ServicesCard>
+					<GlobalStyled.ServicesCard
+						boxpadding="boxpadding"
+						backgroundtype="backgroundOne"
+					>
+						<Box sx={{ maxWidth: "330px" }}>
+							<Typography variant="CardHead" component={"h5"}>
+								Network Security
+							</Typography>
+							<Typography variant="CardDescription">
+								Protecting your company's network and data from unauthorized
+								access and attacks, including firewalls, intrusion detection and
+								prevention, and VPNs.
+							</Typography>
+						</Box>
+						<CardImmage display={"block"} width={"60px"} height={"53px"} />
+					</GlobalStyled.ServicesCard>
+					<GlobalStyled.ServicesCard
+						boxpadding="boxpadding"
+						backgroundtype="backgroundOne"
+					>
+						<Box sx={{ maxWidth: "330px" }}>
+							<Typography variant="CardHead" component={"h5"}>
+								Network Security
+							</Typography>
+							<Typography variant="CardDescription">
+								Protecting your company's network and data from unauthorized
+								access and attacks, including firewalls, intrusion detection and
+								prevention, and VPNs.
+							</Typography>
+						</Box>
+						<CardImmage display={"block"} width={"60px"} height={"53px"} />
+					</GlobalStyled.ServicesCard>
+				</GlobalStyled.Services>
+				<Styled.FormBackgroundBox>
+					<Form height={"max-content"} />
+				</Styled.FormBackgroundBox>
+			</Box>
 		</Box>
 	);
 };

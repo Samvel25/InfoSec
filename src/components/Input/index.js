@@ -78,14 +78,18 @@ const CorporateEmail = () => {
 				}
 				label={
 					<Typography
-						sx={{ color: "#C0C1C2", cursor: "default" }}
+						sx={{ color: "#C0C1C2", cursor: "default", textTransform: "none" }}
 						variant="ButtonNew"
 						component={"p"}
 					>
 						I consent to the processing of my personal data and confirm that I
 						have read and agree to the terms of the{" "}
 						<Typography
-							sx={{ color: "#D42530", cursor: "pointer" }}
+							sx={{
+								color: "#D42530",
+								cursor: "pointer",
+								textTransform: "none",
+							}}
 							variant="ButtonNew"
 							component={"a"}
 							href="#"
@@ -94,7 +98,11 @@ const CorporateEmail = () => {
 						</Typography>{" "}
 						and{" "}
 						<Typography
-							sx={{ color: "#D42530", cursor: "pointer" }}
+							sx={{
+								color: "#D42530",
+								cursor: "pointer",
+								textTransform: "none",
+							}}
 							variant="ButtonNew"
 							component={"a"}
 							href="#"

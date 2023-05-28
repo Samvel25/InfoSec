@@ -25,17 +25,17 @@ function Header() {
 				sx={{ py: "16px" }}
 			>
 				<Stack direction="row" spacing={{ lg: 6, md: 3 }} alignItems="center">
-					{/* <Hidden mdUp> */}
-					<IconButton
-						sx={{ mr: "15px" }}
-						edge="start"
-						color="inherit"
-						aria-label="menu"
-						onClick={handleMenuToggle}
-					>
-						<MenuIcon />
-					</IconButton>
-					{/* </Hidden> */}
+					<Hidden mdUp>
+						<IconButton
+							sx={{ mr: "15px" }}
+							edge="start"
+							color="inherit"
+							aria-label="menu"
+							onClick={handleMenuToggle}
+						>
+							<MenuIcon />
+						</IconButton>
+					</Hidden>
 					<LogoSvg width="182px" height="39px" />
 					<Hidden mdDown>
 						<Navigation />

@@ -6,7 +6,6 @@ import Net from "../../media/net.svg";
 import RadLine from "../../media/radLine.svg";
 import GrayLine from "../../media/grayLine.svg";
 import { ReactComponent as CardSquare } from "../../media/cardSquare.svg";
-import CaruselCard from "../../components/Card/CarouselCard";
 
 //1 section*/*/*/*/*/*/
 
@@ -164,61 +163,6 @@ export const CyberSecurityServicesDescription = styled(Grid)(({ theme }) => ({
 	},
 }));
 
-export const Services = styled(Grid)(({ theme }) => ({
-	borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-	position: "relative",
-	padding: "80px 0 130px",
-	"&:before": {
-		position: "absolute",
-		backgroundImage: `url(${Net})`,
-		transform: "translate(-100%, -50%)",
-		content: '""',
-		zIndex: "-1",
-		left: "13%",
-		top: "-10%",
-		maxWidth: "100%",
-		width: "620px",
-		height: "610px",
-		opacity: "0.4",
-
-		[theme.breakpoints.down("sm")]: {
-			height: "500px",
-			left: "28%",
-			top: "-16%",
-		},
-	},
-	"&:after": {
-		position: "absolute",
-		backgroundImage: `url(${Net})`,
-		transform: "rotate(-90deg) translateX(-50%);",
-
-		content: '""',
-		zIndex: "-1",
-		left: "-10%",
-		bottom: "10%",
-		maxWidth: "80%",
-		width: "786px",
-		height: "610px",
-		opacity: "0.4",
-		[theme.breakpoints.down("md")]: {
-			height: "500px",
-			bottom: 0,
-		},
-		[theme.breakpoints.down("850")]: {
-			bottom: "-5%",
-		},
-		[theme.breakpoints.down("sm")]: {
-			display: "none",
-		},
-	},
-	[theme.breakpoints.down("1300")]: {
-		justifyContent: "space-around",
-	},
-	[theme.breakpoints.down("sm")]: {
-		padding: "20px 0 0px",
-	},
-}));
-
 export const CardSquareImg = styled(CardSquare)(({ theme }) => ({
 	width: "62px",
 	display: "block",
@@ -226,26 +170,7 @@ export const CardSquareImg = styled(CardSquare)(({ theme }) => ({
 	height: "62px",
 }));
 
-export const ServicesCard = styled(CaruselCard)(({ theme }) => ({
-	width: "auto",
-	margin: "28px 10px",
-	[theme.breakpoints.down("md")]: {
-		margin: "20px 10px",
-	},
-	[theme.breakpoints.down("sm")]: {
-		width: "100%",
-	},
-}));
-
 //6 Section////////
-
-export const Certificates = styled(Box)(({ theme }) => ({
-	padding: "130px 0 80px",
-
-	[theme.breakpoints.down("sm")]: {
-		padding: "90px 0 120px",
-	},
-}));
 
 export const CertificatesDescription = styled(Box)(({ theme }) => ({
 	width: "100%",

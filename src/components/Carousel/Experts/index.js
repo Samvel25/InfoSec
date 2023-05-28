@@ -86,6 +86,7 @@ export default class Experts extends Component {
 
 				@media (max-width: 700px) {
 					margin: 0 -13px;
+					padding: 0 0 35px !important;
 				}
 
 				@media (min-width: 1440px) {

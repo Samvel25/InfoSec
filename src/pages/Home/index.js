@@ -230,16 +230,17 @@ function Home() {
 
 			{/*5 /// section/////// */}
 
-			<Styled.Services
+			<GlobalStyled.Services
 				container
 				justifyContent={{ sm: "center", md: "space-between" }}
 				direction={"row"}
 				alignItems="center"
+				sx={{ m: "80px 0 130px" }}
 			>
 				<GlobalStyled.HeadText>
 					<Typography variant="Head">OUR SERVICES</Typography>
 				</GlobalStyled.HeadText>
-				<Styled.ServicesCard
+				<GlobalStyled.ServicesCard
 					boxpadding="boxpadding"
 					backgroundtype="backgroundOne"
 				>
@@ -254,8 +255,8 @@ function Home() {
 						</Typography>
 					</Box>
 					<Styled.CardSquareImg />
-				</Styled.ServicesCard>
-				<Styled.ServicesCard
+				</GlobalStyled.ServicesCard>
+				<GlobalStyled.ServicesCard
 					boxpadding="boxpadding"
 					backgroundtype="backgroundOne"
 				>
@@ -270,8 +271,8 @@ function Home() {
 						</Typography>
 					</Box>
 					<Styled.CardSquareImg />
-				</Styled.ServicesCard>
-				<Styled.ServicesCard
+				</GlobalStyled.ServicesCard>
+				<GlobalStyled.ServicesCard
 					boxpadding="boxpadding"
 					backgroundtype="backgroundOne"
 				>
@@ -286,8 +287,8 @@ function Home() {
 						</Typography>
 					</Box>
 					<Styled.CardSquareImg />
-				</Styled.ServicesCard>
-				<Styled.ServicesCard
+				</GlobalStyled.ServicesCard>
+				<GlobalStyled.ServicesCard
 					boxpadding="boxpadding"
 					backgroundtype="backgroundOne"
 				>
@@ -302,8 +303,8 @@ function Home() {
 						</Typography>
 					</Box>
 					<Styled.CardSquareImg />
-				</Styled.ServicesCard>
-				<Styled.ServicesCard
+				</GlobalStyled.ServicesCard>
+				<GlobalStyled.ServicesCard
 					boxpadding="boxpadding"
 					backgroundtype="backgroundOne"
 				>
@@ -318,8 +319,8 @@ function Home() {
 						</Typography>
 					</Box>
 					<Styled.CardSquareImg />
-				</Styled.ServicesCard>
-				<Styled.ServicesCard
+				</GlobalStyled.ServicesCard>
+				<GlobalStyled.ServicesCard
 					boxpadding="boxpadding"
 					backgroundtype="backgroundOne"
 				>
@@ -334,10 +335,11 @@ function Home() {
 						</Typography>
 					</Box>
 					<Styled.CardSquareImg />
-				</Styled.ServicesCard>
-			</Styled.Services>
+				</GlobalStyled.ServicesCard>
+			</GlobalStyled.Services>
 			{/*6 /// section/////// */}
-			<Styled.Certificates>
+
+			<Box sx={{ p: { md: "130px 0 80px", xs: "80px 0 120px" } }}>
 				<Styled.CertificatesDescription>
 					<GlobalStyled.DescriptionText sx={{ pt: 0 }}>
 						<Typography
@@ -359,7 +361,7 @@ function Home() {
 				<Box>
 					<SlidCertificatesCaruselers></SlidCertificatesCaruselers>
 				</Box>
-			</Styled.Certificates>
+			</Box>
 		</Box>
 	);
 }

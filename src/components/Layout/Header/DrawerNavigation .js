@@ -27,20 +27,20 @@ export const DrawerNavigationItem = styled(NavigationItem)(({ theme }) => ({
 function DrawerNavigation() {
 	return (
 		<DrawerNavigationWrapper>
-			<DrawerNavigationItem to="/">
-				<Typography>HOME</Typography>
+			<DrawerNavigationItem to="/" exact>
+				<Typography>home</Typography>
 			</DrawerNavigationItem>
 			<DrawerNavigationItem to="/about">
-				<Typography>ABOUT US</Typography>
+				<Typography>about us</Typography>
 			</DrawerNavigationItem>
-			<DrawerNavigationItem to="/contact">
-				<Typography>SERVICES</Typography>
+			<DrawerNavigationItem to="/services">
+				<Typography>services</Typography>
 			</DrawerNavigationItem>
-			<DrawerNavigationItem to="/contact">
-				<Typography>SERVICES</Typography>
+			<DrawerNavigationItem to="/clients">
+				<Typography>clients</Typography>
 			</DrawerNavigationItem>
-			<DrawerNavigationItem to="/contact">
-				<Typography>SERVICES</Typography>
+			<DrawerNavigationItem to="/certificates">
+				<Typography>certificates</Typography>
 			</DrawerNavigationItem>
 		</DrawerNavigationWrapper>
 	);
