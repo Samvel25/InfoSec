@@ -1,9 +1,8 @@
 import Grid from "@mui/material/Grid";
-import { Stack, Typography, Paper, Divider, Box, Hidden } from "@mui/material";
+import { Stack, Typography, Divider, Box, Hidden } from "@mui/material";
 import * as Styled from "./style";
 import Map from "../../../components/Maps/index";
 import { useJsApiLoader } from "@react-google-maps/api";
-import { styled } from "@mui/material/styles";
 import CorporateEmail from "../../Input";
 import { ReactComponent as FacebookLogo } from "../../../media/logo/facebookLogo.svg";
 import { ReactComponent as InstagramLogo } from "../../../media/logo/instagramLogo.svg";
@@ -16,13 +15,13 @@ const defaultCenter = {
 	lng: 44.516667,
 };
 
-const Item = styled(Paper)(({ theme }) => ({
-	backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-	...theme.typography.body2,
-	padding: theme.spacing(1),
-	textAlign: "center",
-	color: theme.palette.text.secondary,
-}));
+// const Item = styled(Paper)(({ theme }) => ({
+// 	backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+// 	...theme.typography.body2,
+// 	padding: theme.spacing(1),
+// 	textAlign: "center",
+// 	color: theme.palette.text.secondary,
+// }));
 
 const Footer = () => {
 	const { isLoaded } = useJsApiLoader({

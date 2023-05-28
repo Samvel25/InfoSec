@@ -1,4 +1,4 @@
-import { Box, Hidden, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
 import * as Styled from "./style";
@@ -60,13 +60,8 @@ const Services = () => {
 			<GlobalStyled.Achievements
 				sx={{
 					borderTop: "none",
-<<<<<<< HEAD
 					p: { md: "0px 0 250px", xs: "0px 0 200px" },
 					"&: before": { bottom: { md: "170px", xs: "100px" } },
-=======
-					p: { md: "0px 0 250px", xs: "0px 0 150px" },
-					"&: before": { bottom: { md: "120px", xs: "100px" } },
->>>>>>> 0f434e27986e0b4e8c3e9389358907b570e713d5
 				}}
 			>
 				<GlobalStyled.Description
@@ -81,16 +76,11 @@ const Services = () => {
 						response experts as soon as possible.
 					</Typography>
 				</GlobalStyled.Description>
-<<<<<<< HEAD
 				<Box sx={{ mt: "200px" }} alignItems={"center"}>
 					<Experts sx={{ pb: "70px" }} />
 					<GradientButton sx={{ m: "0 auto" }}>
 						Report an Incident
 					</GradientButton>
-=======
-				<Box alignItems={"center"} sx={{ mt: { md: "200px", xs: "150px" } }}>
-					<Experts />
->>>>>>> 0f434e27986e0b4e8c3e9389358907b570e713d5
 				</Box>
 			</GlobalStyled.Achievements>
 

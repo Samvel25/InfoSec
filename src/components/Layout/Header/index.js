@@ -1,6 +1,6 @@
 import Navigation from "./Navigation";
 import { ReactComponent as LogoSvg } from "../../../media/logo/Logo.svg";
-import { Stack, Typography, IconButton, Drawer, Hidden } from "@mui/material";
+import { Stack, Typography, IconButton, Hidden } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import GradientButton from "../../Buttons";
 import DropdownButton from "../../Buttons/dropdownButton";

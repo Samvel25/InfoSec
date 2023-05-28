@@ -1,4 +1,4 @@
-import { Box, Grid, Stack } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ReactComponent as DiamondAnimation } from "../../media/diamondAnimation.svg";
 import Net1 from "../../media/backgroundNet.svg";

@@ -1,6 +1,6 @@
 import FormBackground from "../../media/incidentBackground.png";
 import { styled } from "@mui/material";
-import { Box, Grid, Stack } from "@mui/material";
+import { Box } from "@mui/material";
 
 export const FormBackgroundBox = styled(Box)(({ theme }) => ({
 	backgroundImage: `url(${FormBackground})`,
