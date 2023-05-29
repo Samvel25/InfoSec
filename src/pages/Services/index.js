@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
 import * as Styled from "./style";
@@ -205,9 +205,11 @@ const Services = () => {
 						<CardImmage display={"block"} width={"60px"} height={"53px"} />
 					</GlobalStyled.ServicesCard>
 				</GlobalStyled.Services>
-				<Styled.FormBackgroundBox>
-					<Form height={"max-content"} />
+				{/* <Container maxWidth="xxl"> */}
+				<Styled.FormBackgroundBox sx={{ mb: "100px" }}>
+					<Form />
 				</Styled.FormBackgroundBox>
+				{/* </Container> */}
 			</Box>
 		</Box>
 	);

@@ -1,5 +1,6 @@
 import { styled } from "@mui/material";
 import { TextField } from "@mui/material";
+import GradientButton from "../Buttons/index";
 
 export const StyledForm = styled("form")({
 	display: "flex",
@@ -46,4 +47,8 @@ export const Input = styled(TextField)(({ theme }) => ({
 			borderColor: "rgba(255, 255, 255, 0.3)",
 		},
 	},
+}));
+
+export const FormGradientButton = styled(GradientButton)(({ theme }) => ({
+	margin: "0 !important",
 }));

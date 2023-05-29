@@ -1,28 +1,3 @@
-// import React, { useState } from "react";
-// import {
-// 	InputAdornment,
-// 	Typography,
-// 	Checkbox,
-// 	FormControlLabel,
-// 	Grid,
-// } from "@mui/material";
-// import * as Styled from "./style";
-
-// const Form = () => {
-// 	<Grid
-// 		sx={{ p: { md: "130px 0 230px", xs: "70px 0 140px" } }}
-// 		container
-// 		justifyContent={"space-between"}
-// 		direction={"row"}
-// 		alignItems="center"
-// 		spacing={2}
-// 	>
-
-//   </Grid>;
-// };
-
-// export default Form;
-
 import React, { useState } from "react";
 import {
 	Container,
@@ -33,7 +8,6 @@ import {
 	Divider,
 } from "@mui/material";
 import * as Styled from "./style";
-import GradientButton from "../Buttons";
 
 const Form = () => {
 	const [formData, setFormData] = useState({
@@ -143,7 +117,7 @@ const Form = () => {
 		<Container maxWidth="md">
 			<Styled.StyledForm
 				sx={{
-					p: "35px",
+					p: { md: "35px", sm: "25px 15px", xs: "20px 10px" },
 					background: "rgba(0, 0, 0, 0.64)",
 					backdropFilter: "blur(19.0734px)",
 				}}
@@ -178,7 +152,7 @@ const Form = () => {
 							Phone: +374 066 666 666
 						</Typography>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item xs={12} sm={6}>
 						<Styled.Input
 							required
 							label="Name"
@@ -189,7 +163,7 @@ const Form = () => {
 							helperText={formErrors.name ? "Name is required" : ""}
 						/>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item xs={12} sm={6}>
 						<Styled.Input
 							required
 							label="Surname"
@@ -201,7 +175,7 @@ const Form = () => {
 							fullWidth
 						/>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item xs={12} sm={6}>
 						<Styled.Input
 							required
 							label="Email"
@@ -214,7 +188,7 @@ const Form = () => {
 							fullWidth
 						/>
 					</Grid>
-					<Grid item xs={6}>
+					<Grid item xs={12} sm={6}>
 						<Styled.Input
 							required
 							label="Phone Number"
@@ -312,12 +286,12 @@ const Form = () => {
 						)}
 					</Grid>
 					<Grid item xs={12} display={"flex"} justifyContent={"end"}>
-						<GradientButton
+						<Styled.FormGradientButton
 							type="submit"
-							sx={{ background: "transparent", marginTop: 0 }}
+							sx={{ background: "transparent" }}
 						>
 							<Typography variant="ButtonNew">send</Typography>
-						</GradientButton>
+						</Styled.FormGradientButton>
 					</Grid>
 				</Grid>
 			</Styled.StyledForm>
