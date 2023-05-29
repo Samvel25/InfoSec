@@ -24,7 +24,9 @@ const Clients = () => {
 					sm={10}
 					textAlign={{ sm: "center", md: "start" }}
 				>
-					<Typography sx={{ mb: "12px" }}>our clients</Typography>
+					<Typography sx={{ mb: "12px", textTransform: "uppercase" }}>
+						our clients
+					</Typography>
 					<Typography variant="h1">
 						Trusted by thousands of companies
 					</Typography>

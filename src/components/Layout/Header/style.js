@@ -4,6 +4,10 @@ import { ReactComponent as UserSvg } from "../../../media/user.svg";
 import { NavLink } from "react-router-dom";
 import { Drawer } from "@mui/material";
 
+export const Logo = styled("a")(({ theme }) => ({
+	display: "flex",
+}));
+
 export const Navigation = styled("nav")(({ theme }) => ({
 	display: "flex",
 	alignItems: "center",

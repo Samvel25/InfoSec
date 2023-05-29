@@ -28,7 +28,9 @@ const Services = () => {
 					sm={10}
 					textAlign={{ sm: "center", md: "start" }}
 				>
-					<Typography sx={{ mb: "12px" }}>About the services</Typography>
+					<Typography sx={{ mb: "12px", textTransform: "uppercase" }}>
+						About the services
+					</Typography>
 					<Typography variant="h1">
 						We eliminate incidebts of any scale and level of complecity
 					</Typography>

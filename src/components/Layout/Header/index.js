@@ -36,7 +36,9 @@ function Header() {
 							<MenuIcon />
 						</IconButton>
 					</Hidden>
-					<LogoSvg width="182px" height="39px" />
+					<Styled.Logo sx={{ display: "flex" }} href="/">
+						<LogoSvg width="182px" height="39px" />
+					</Styled.Logo>
 					<Hidden mdDown>
 						<Navigation />
 					</Hidden>
