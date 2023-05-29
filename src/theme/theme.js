@@ -41,7 +41,7 @@ export const theme = createTheme({
 		},
 	},
 	typography: {
-		fontWeight: "400",
+		// fontWeight: "400",
 		fontFamily: "Quantico",
 		body1: {
 			fontSize: "14px",
