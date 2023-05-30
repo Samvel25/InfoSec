@@ -156,7 +156,7 @@ function Home() {
 						</Stack>
 					</Hidden>
 				</Styled.ExportCyberSecurityDescription>
-				<Grid item md={5} sm={8} sx={{ mt: { md: "0px", sm: "40px" } }}>
+				<Grid item md={5} sm={8} sx={{ mt: { md: "0px", xs: "40px" } }}>
 					<BigCardWrapper
 						img={
 							<img
@@ -214,7 +214,7 @@ function Home() {
 					</Hidden>
 				</Styled.CyberSecurityServicesDescription>
 
-				<Grid item md={5} sm={8} sx={{ mt: { md: "0px", sm: "40px" } }}>
+				<Grid item md={5} sm={8} sx={{ mt: { md: "0px", xs: "40px" } }}>
 					<BigCardWrapper
 						img={
 							<img
