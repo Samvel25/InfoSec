@@ -11,10 +11,11 @@ import BigCardWrapper from "../../components/Card/BogCard";
 import cybersecurity from "../../media/cybersecurity.png";
 import cybersecurity2 from "../../media/cybersecurity2.png";
 import SlidCertificatesCaruselers from "../../components/Carousel/Certificates/index";
+import PageTransition from "../../components/PageTransition";
 
 function Home() {
 	return (
-		<Box>
+		<PageTransition>
 			{/* ///1 section/////// */}
 			<Grid
 				sx={{ py: "100px" }}
@@ -362,7 +363,7 @@ function Home() {
 					<SlidCertificatesCaruselers></SlidCertificatesCaruselers>
 				</Box>
 			</Box>
-		</Box>
+		</PageTransition>
 	);
 }
 

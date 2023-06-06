@@ -174,7 +174,7 @@ export const StyledSlider = styled(Slider)`
 export const CertificatesCaruselCard = styled(CaruselCard)(({ theme }) => ({
 	width: "auto",
 	padding: "57px 20px 37px",
-	// transform: "scale(0.6)",
+	transform: "scale(0.6)",
 	[theme.breakpoints.down("sm")]: {
 		maxWidth: "330px",
 		padding: " 50px  10px 20px",

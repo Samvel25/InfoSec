@@ -8,10 +8,11 @@ import AchivmentsCarousel from "../../components/Carousel/Achivments/index";
 
 import GlobeImg from "../../media/globe.png";
 import OurLifeCarusel from "../../components/Carousel/OurLife";
+import PageTransition from "../../components/PageTransition";
 
 const About = () => {
 	return (
-		<Box>
+		<PageTransition>
 			{/* ///1 section/////// */}
 			<Grid
 				sx={{ p: "70px 0 40px" }}
@@ -131,7 +132,7 @@ const About = () => {
 					<OurLifeCarusel />
 				</Box>
 			</Box>
-		</Box>
+		</PageTransition>
 	);
 };
 

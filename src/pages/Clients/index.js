@@ -2,13 +2,15 @@ import * as Styled from "./style";
 import ProgreeBar from "../../components/ProgressBar";
 import * as GlobalStyled from "../style";
 import Grid from "@mui/material/Grid";
-import { Box, Typography } from "@mui/material";
+import { Box, Hidden, Stack, Typography } from "@mui/material";
 import ClientsImg from "../../media/clientsImg.png";
 import ClientsSlide from "../../components/Carousel/Clients";
+import GradientButton from "../../components/Buttons";
+import PageTransition from "../../components/PageTransition";
 
 const Clients = () => {
 	return (
-		<Box>
+		<PageTransition>
 			{/* ///1 section/////// */}
 			<Grid
 				sx={{ p: { md: "40px 0 150px", xs: "60px 0 100px" } }}
@@ -58,6 +60,8 @@ const Clients = () => {
 					</Box>
 				</Grid>
 			</Grid>
+
+			{/* ///2 section/////// */}
 			<Box>
 				<Typography
 					textAlign={"center"}
@@ -69,7 +73,46 @@ const Clients = () => {
 				</Typography>
 				<ClientsSlide />
 			</Box>
-		</Box>
+
+			{/* ///3 section/////// */}
+
+			<Styled.OurGoalsSection
+				sx={{ p: { md: "330px 0 300px", xs: "60px 0 100px" } }}
+				container
+				justifyContent={"space-around"}
+				direction={"row"}
+				// alignItems="center"
+			>
+				<Grid
+					item
+					md={5}
+					xs={12}
+					sm={10}
+					textAlign={{ sm: "center", md: "start" }}
+				>
+					<Typography variant="h1">
+						Proactive Cyber Security Solutions for Your Business
+					</Typography>
+					<ProgreeBar />
+					<Grid item lg={11} md={12}>
+						<Typography>
+							We provide comprehensive cyber security services to protect your
+							business from cyber threats. Our team of experts has years of
+							experience in the field and can help you identify and mitigate
+							potential risks before they cause harm.
+						</Typography>
+					</Grid>
+					<Hidden mdDown>
+						<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
+							<GradientButton backgroundtype="backgroundOne">
+								<Typography>To get a consultation</Typography>
+							</GradientButton>
+						</Stack>
+					</Hidden>
+				</Grid>
+				<Grid></Grid>
+			</Styled.OurGoalsSection>
+		</PageTransition>
 	);
 };
 

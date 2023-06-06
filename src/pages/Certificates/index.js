@@ -1,5 +1,7 @@
+import PageTransition from "../../components/PageTransition";
+
 const Certificates = () => {
-	return <h1>certificates Page</h1>;
+	return <PageTransition></PageTransition>;
 };
 
 export default Certificates;

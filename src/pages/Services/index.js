@@ -9,10 +9,11 @@ import Experts from "../../components/Carousel/Experts";
 import GradientButton from "../../components/Buttons";
 import { ReactComponent as CardImmage } from "../../media/cardLogo.svg";
 import Form from "../../components/Form";
+import PageTransition from "../../components/PageTransition";
 
 const Services = () => {
 	return (
-		<Box>
+		<PageTransition>
 			{/* ///1 section/////// */}
 			<Grid
 				sx={{ p: { md: "130px 0 230px", xs: "70px 0 140px" } }}
@@ -213,7 +214,7 @@ const Services = () => {
 				</Styled.FormBackgroundBox>
 				{/* </Container> */}
 			</Box>
-		</Box>
+		</PageTransition>
 	);
 };
 
