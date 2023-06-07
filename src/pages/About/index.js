@@ -7,7 +7,7 @@ import * as GlobalStyled from "../style";
 import AchivmentsCarousel from "../../components/Carousel/Achivments/index";
 
 import GlobeImg from "../../media/globe.png";
-import OurLifeCarusel from "../../components/Carousel/OurLife";
+import OurLifeCarousel from "../../components/Carousel/OurLife";
 import PageTransition from "../../components/PageTransition";
 
 const About = () => {
@@ -129,7 +129,7 @@ const About = () => {
 					</GlobalStyled.DescriptionText>
 				</GlobalStyled.Description>
 				<Box alignItems={"center"} sx={{ mt: "70px" }}>
-					<OurLifeCarusel />
+					<OurLifeCarousel />
 				</Box>
 			</Box>
 		</PageTransition>

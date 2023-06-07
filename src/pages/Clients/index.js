@@ -7,6 +7,7 @@ import ClientsImg from "../../media/clientsImg.png";
 import ClientsSlide from "../../components/Carousel/Clients";
 import GradientButton from "../../components/Buttons";
 import PageTransition from "../../components/PageTransition";
+import GoalCards from "../../components/CardExamples";
 
 const Clients = () => {
 	return (
@@ -110,7 +111,9 @@ const Clients = () => {
 						</Stack>
 					</Hidden>
 				</Grid>
-				<Grid></Grid>
+				<Grid item md={6} xs={12} sm={10}>
+					<GoalCards />
+				</Grid>
 			</Styled.OurGoalsSection>
 		</PageTransition>
 	);

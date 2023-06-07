@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import RadLine from "../media/radLine.svg";
 import GrayLine from "../media/grayLine.svg";
 import Net from "../media/net.svg";
-import CaruselCard from "../components/Card/CarouselCard";
+import CarouselCard from "../components/Card/CarouselCard";
 
 export const grayLines = {
 	backgroundImage: `url(${GrayLine})`,
@@ -133,7 +133,7 @@ export const Services = styled(Grid)(({ theme }) => ({
 	},
 }));
 
-export const ServicesCard = styled(CaruselCard)(({ theme }) => ({
+export const ServicesCard = styled(CarouselCard)(({ theme }) => ({
 	width: "auto",
 	margin: "28px 10px",
 	[theme.breakpoints.down("md")]: {

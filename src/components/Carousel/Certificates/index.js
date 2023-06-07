@@ -26,7 +26,7 @@ const GalleryNextArrow = ({ currentSlide, slideCount, ...props }) => {
 	);
 };
 
-export default class CertificatesCarusel extends Component {
+export default class CertificatesCarousel extends Component {
 	render() {
 		var settings = {
 			className: "center",
@@ -55,7 +55,7 @@ export default class CertificatesCarusel extends Component {
 		return (
 			<Styled.StyledSlider {...settings}>
 				<div>
-					<Styled.CertificatesCaruselCard
+					<Styled.CertificatesCarouselCard
 						backgroundtype="backgroundOne"
 						ledtype="ledOne"
 					>
@@ -94,10 +94,10 @@ export default class CertificatesCarusel extends Component {
 								dOWNLOAD <Typography component={"a"}>PDF</Typography>
 							</Styled.ButtonText>
 						</GradientButton>
-					</Styled.CertificatesCaruselCard>
+					</Styled.CertificatesCarouselCard>
 				</div>
 				<div>
-					<Styled.CertificatesCaruselCard
+					<Styled.CertificatesCarouselCard
 						backgroundtype="backgroundOne"
 						ledtype="ledOne"
 					>
@@ -136,10 +136,10 @@ export default class CertificatesCarusel extends Component {
 								dOWNLOAD <Typography component={"a"}>PDF</Typography>
 							</Styled.ButtonText>
 						</GradientButton>
-					</Styled.CertificatesCaruselCard>
+					</Styled.CertificatesCarouselCard>
 				</div>
 				<div>
-					<Styled.CertificatesCaruselCard
+					<Styled.CertificatesCarouselCard
 						backgroundtype="backgroundOne"
 						ledtype="ledOne"
 					>
@@ -178,10 +178,10 @@ export default class CertificatesCarusel extends Component {
 								dOWNLOAD <Typography component={"a"}>PDF</Typography>
 							</Styled.ButtonText>
 						</GradientButton>
-					</Styled.CertificatesCaruselCard>
+					</Styled.CertificatesCarouselCard>
 				</div>
 				<div>
-					<Styled.CertificatesCaruselCard
+					<Styled.CertificatesCarouselCard
 						backgroundtype="backgroundOne"
 						ledtype="ledOne"
 					>
@@ -220,10 +220,10 @@ export default class CertificatesCarusel extends Component {
 								dOWNLOAD <Typography component={"a"}>PDF</Typography>
 							</Styled.ButtonText>
 						</GradientButton>
-					</Styled.CertificatesCaruselCard>
+					</Styled.CertificatesCarouselCard>
 				</div>
 				<div>
-					<Styled.CertificatesCaruselCard
+					<Styled.CertificatesCarouselCard
 						backgroundtype="backgroundOne"
 						ledtype="ledOne"
 					>
@@ -262,7 +262,7 @@ export default class CertificatesCarusel extends Component {
 								dOWNLOAD <Typography component={"a"}>PDF</Typography>
 							</Styled.ButtonText>
 						</GradientButton>
-					</Styled.CertificatesCaruselCard>
+					</Styled.CertificatesCarouselCard>
 				</div>
 			</Styled.StyledSlider>
 		);

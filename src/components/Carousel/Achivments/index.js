@@ -17,33 +17,21 @@ export default class Achivments extends Component {
 			swipeToSlide: true,
 			variableWidth: true,
 			focusOnSelect: true,
+			centerMode: true,
 			speed: 800,
 			autoplay: true,
 			pauseOnHover: true,
+
 			responsive: [
 				{
 					breakpoint: 1350,
 					settings: {
 						slidesToShow: 3,
-						centerPadding: "90px",
-					},
-				},
-				{
-					breakpoint: 1200,
-					settings: {
-						slidesToShow: 3,
-						centerPadding: "70px",
+						centerPadding: "100px",
 					},
 				},
 				{
 					breakpoint: 1100,
-					settings: {
-						slidesToShow: 2,
-						centerPadding: "90px",
-					},
-				},
-				{
-					breakpoint: 900,
 					settings: {
 						slidesToShow: 2,
 						centerPadding: "100px",
@@ -53,53 +41,42 @@ export default class Achivments extends Component {
 					breakpoint: 650,
 					settings: {
 						slidesToShow: 1,
-						centerPadding: "60px",
+						centerPadding: "100px",
 					},
 				},
-				{
-					breakpoint: 450,
-					settings: {
-						slidesToShow: 1,
-						centerPadding: "20px",
-					},
-				},
+				// {
+				// 	breakpoint: 450,
+				// 	settings: {
+				// 		slidesToShow: 1,
+				// 		centerPadding: "10px",
+				// 	},
+				// },
 			],
 		};
 
 		const StyledSlider = styled(Slider)`
-			.slick-slide {
-				margin: 0 19px;
-
-				@media (max-width: 700px) {
-					margin: 0 13px;
-				}
-
-				@media (min-width: 1440px) {
-					margin: 0 22px;
-				}
-			}
-
 			.slick-list {
-				margin: 0 -19px;
-				padding: 0 0 70px !important;
-
-				@media (max-width: 700px) {
-					margin: 0 -13px;
-				}
-
-				@media (min-width: 1440px) {
-					text-align: center;
-					margin: 0 -22px;
-					padding-bottom: 70px;
+				position: relative;
+				display: block !important;
+				overflow: hidden;
+				padding: 100px !important;
+				width: 100%;
+				@media (min-width: 1350px) {
+					padding: 0 0 60px !important;
 				}
 			}
+
 			.slick-track {
-				justify-content: center;
+				position: relative;
+				align-items: center;
+				top: 0;
+				left: 0;
 				display: flex;
 			}
 		`;
 
 		const Wraper = styled(Box)({
+			margin: "auto 10px",
 			width: "max-content",
 			textAlign: "start",
 			// "& AchievementsCard": {
@@ -113,7 +90,7 @@ export default class Achivments extends Component {
 						<LedLine ledtype="ledOne" />
 						<Typography sx={{ mb: "10px" }}>TRUSTED BY</Typography>
 						<Box sx={{ display: "flex", width: "max-content" }}>
-							<Typography variant="CardRate" component={"h4"}>
+							<Typography variant="CardRate" component={"h6"}>
 								7/10
 							</Typography>
 							<Typography
@@ -129,7 +106,7 @@ export default class Achivments extends Component {
 						<LedLine />
 						<Typography sx={{ mb: "10px" }}>DELIVERING </Typography>
 						<Box sx={{ display: "flex", width: "max-content" }}>
-							<Typography variant="CardRate" component={"h4"}>
+							<Typography variant="CardRate" component={"h6"}>
 								100K
 							</Typography>
 							<Typography
@@ -145,7 +122,7 @@ export default class Achivments extends Component {
 						<LedLine ledtype="ledOne" />
 						<Typography sx={{ mb: "10px" }}>TRUSTED BY</Typography>
 						<Box sx={{ display: "flex", width: "max-content" }}>
-							<Typography variant="CardRate" component={"h4"}>
+							<Typography variant="CardRate" component={"h6"}>
 								2/3
 							</Typography>
 							<Typography
@@ -161,7 +138,7 @@ export default class Achivments extends Component {
 						<LedLine />
 						<Typography sx={{ mb: "10px" }}>DELIVERING BY</Typography>
 						<Box sx={{ display: "flex", width: "max-content" }}>
-							<Typography variant="CardRate" component={"h4"}>
+							<Typography variant="CardRate" component={"h6"}>
 								300+
 							</Typography>
 							<Typography

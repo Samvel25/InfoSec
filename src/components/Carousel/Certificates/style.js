@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import CaruselCard from "../../Card/CarouselCard";
+import CarouselCard from "../../Card/CarouselCard";
 import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 
@@ -85,8 +85,6 @@ export const StyledSlider = styled(Slider)`
 		display: flex;
 	}
 
-	.slick-slide div div {
-	}
 	.slick-slide div:first-child {
 		display: flex !important;
 		flex-direction: column;
@@ -171,7 +169,7 @@ export const StyledSlider = styled(Slider)`
 	}
 `;
 
-export const CertificatesCaruselCard = styled(CaruselCard)(({ theme }) => ({
+export const CertificatesCarouselCard = styled(CarouselCard)(({ theme }) => ({
 	width: "auto",
 	padding: "57px 20px 37px",
 	transform: "scale(0.6)",

@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { ReactComponent as NameAm } from "../../../media/logo/nameAmLogo.svg";
 import { ReactComponent as DomainDesk } from "../../../media/logo/domainDeskLogo.svg";
-import { styled } from "@mui/material/styles";
+import * as Styled from "./style";
 
 export default class Clients extends Component {
 	render() {
@@ -61,41 +61,32 @@ export default class Clients extends Component {
 			],
 		};
 
-		const LogoWraper = styled("span")({
-			width: "max-content",
-			textAlign: "center",
-			"& svg": {
-				filter: "grayscale(100%)",
-				height: "22px",
-				width: "115px",
-			},
-		});
 		return (
 			<Slider {...settings}>
-				<LogoWraper>
+				<Styled.LogoWraper>
 					<NameAm />
-				</LogoWraper>
-				<LogoWraper>
+				</Styled.LogoWraper>
+				<Styled.LogoWraper>
 					<DomainDesk />
-				</LogoWraper>
-				<LogoWraper>
+				</Styled.LogoWraper>
+				<Styled.LogoWraper>
 					<NameAm />
-				</LogoWraper>
-				<LogoWraper>
+				</Styled.LogoWraper>
+				<Styled.LogoWraper>
 					<DomainDesk />
-				</LogoWraper>
-				<LogoWraper>
+				</Styled.LogoWraper>
+				<Styled.LogoWraper>
 					<NameAm />
-				</LogoWraper>
-				<LogoWraper>
+				</Styled.LogoWraper>
+				<Styled.LogoWraper>
 					<DomainDesk />
-				</LogoWraper>
-				<LogoWraper>
+				</Styled.LogoWraper>
+				<Styled.LogoWraper>
 					<NameAm />
-				</LogoWraper>
-				<LogoWraper>
+				</Styled.LogoWraper>
+				<Styled.LogoWraper>
 					<DomainDesk />
-				</LogoWraper>
+				</Styled.LogoWraper>
 			</Slider>
 		);
 	}

@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import CaruselCard from "../../Card/CarouselCard";
+import CarouselCard from "../../Card/CarouselCard";
 import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
 
@@ -58,14 +58,20 @@ export const StyledSlider = styled(Slider)`
 		}
 	}
 
+	.slick-prev,
+	.slick-next {
+		display: none !important;
+	}
+
 	.slick-list {
 		position: relative;
 		display: block !important;
 		overflow: hidden;
 		padding: 100px !important;
 		width: 100%;
-		margin: 0 -15px;
-		// padding: 0 0 70px !important;
+		// @media (min-width: 1350px) {
+		// 	padding: 0 0 60px !important;
+		// }
 	}
 
 	.slick-track {
@@ -76,25 +82,20 @@ export const StyledSlider = styled(Slider)`
 		display: flex;
 	}
 
-	.slick-prev,
-	.slick-next {
-		display: none !important;
-	}
-
-	.slick-slide {
-		margin: 0 15px;
-	}
-
-	.slick-track {
-		justify-content: center;
-		display: flex;
-	}
+	// .slick-track {
+	// 	justify-content: center;
+	// 	display: flex;
+	// }
 `;
-export const OurLifeCaruselCard = styled(CaruselCard)(({ theme }) => ({
-	width: "auto",
+export const OurLifeCarouselCard = styled(CarouselCard)(({ theme }) => ({
+	width: "94%",
 	padding: "0px",
 	[theme.breakpoints.down("sm")]: {
 		// maxWidth: "330px",
 		padding: "0px",
 	},
+}));
+
+export const Wrapper = styled("div")(({ theme }) => ({
+	margin: "0 10px",
 }));

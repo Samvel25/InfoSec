@@ -1,11 +1,10 @@
-import Slider from "react-slick";
 import React, { Component } from "react";
-import { styled } from "@mui/material/styles";
 import AchievementsCard from "../../Card/CarouselCard";
 import { Box, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LedLine from "../../Other/Led";
+import * as Styled from "./style";
 import { ReactComponent as CardLogo } from "../../../media/cardLogo.svg";
 
 export default class Experts extends Component {
@@ -18,33 +17,13 @@ export default class Experts extends Component {
 			swipeToSlide: true,
 			variableWidth: true,
 			focusOnSelect: true,
-			// speed: 800,
-			// autoplay: true,
-			// pauseOnHover: true,
+			centerMode: true,
+			speed: 800,
+			autoplay: true,
+			pauseOnHover: true,
 			responsive: [
 				{
 					breakpoint: 1350,
-					settings: {
-						slidesToShow: 3,
-						centerPadding: "90px",
-					},
-				},
-				{
-					breakpoint: 1200,
-					settings: {
-						slidesToShow: 3,
-						centerPadding: "70px",
-					},
-				},
-				{
-					breakpoint: 1100,
-					settings: {
-						slidesToShow: 2,
-						centerPadding: "90px",
-					},
-				},
-				{
-					breakpoint: 900,
 					settings: {
 						slidesToShow: 2,
 						centerPadding: "100px",
@@ -54,60 +33,15 @@ export default class Experts extends Component {
 					breakpoint: 650,
 					settings: {
 						slidesToShow: 1,
-						centerPadding: "60px",
-					},
-				},
-				{
-					breakpoint: 450,
-					settings: {
-						slidesToShow: 1,
-						centerPadding: "20px",
+						centerPadding: "100px",
 					},
 				},
 			],
 		};
 
-		const StyledSlider = styled(Slider)`
-			.slick-slide {
-				margin: 0 19px;
-
-				@media (max-width: 700px) {
-					margin: 0 13px;
-				}
-
-				@media (min-width: 1440px) {
-					margin: 0 40px;
-				}
-			}
-
-			.slick-list {
-				margin: 0 -19px;
-				padding: 0 0 70px !important;
-
-				@media (max-width: 700px) {
-					margin: 0 -13px;
-					padding: 0 0 35px !important;
-				}
-
-				@media (min-width: 1440px) {
-					text-align: center;
-					margin: 0 -40px;
-					padding-bottom: 70px;
-				}
-			}
-			.slick-track {
-				justify-content: center;
-				display: flex;
-			}
-		`;
-
-		const Wraper = styled(Box)({
-			width: "max-content",
-			textAlign: "start",
-		});
 		return (
-			<StyledSlider {...settings}>
-				<Wraper>
+			<Styled.ExpertsSlider {...settings}>
+				<Styled.Wraper>
 					<AchievementsCard
 						sx={{
 							p: { sm: "45px 30px", xs: "30px 20px" },
@@ -134,8 +68,8 @@ export default class Experts extends Component {
 						</Box>
 						<CardLogo width={"60px"} height={"53px"} />
 					</AchievementsCard>
-				</Wraper>
-				<Wraper>
+				</Styled.Wraper>
+				<Styled.Wraper>
 					<AchievementsCard
 						sx={{
 							p: { sm: "45px 30px", xs: "30px 20px" },
@@ -162,8 +96,8 @@ export default class Experts extends Component {
 						</Box>
 						<CardLogo width={"60px"} height={"53px"} />
 					</AchievementsCard>
-				</Wraper>
-				<Wraper>
+				</Styled.Wraper>
+				<Styled.Wraper>
 					<AchievementsCard
 						sx={{
 							p: { sm: "45px 30px", xs: "30px 20px" },
@@ -190,8 +124,8 @@ export default class Experts extends Component {
 						</Box>
 						<CardLogo width={"60px"} height={"53px"} />
 					</AchievementsCard>
-				</Wraper>
-			</StyledSlider>
+				</Styled.Wraper>
+			</Styled.ExpertsSlider>
 		);
 	}
 }

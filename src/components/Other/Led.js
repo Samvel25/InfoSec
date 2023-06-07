@@ -105,7 +105,7 @@ const Led = styled(Box)(({ theme, ledtype }) => {
 
 function LedLine(props) {
 	const { ledtype } = props;
-	return <Led ledtype={ledtype} {...props}></Led>;
+	return <Led component={"span"} ledtype={ledtype} {...props}></Led>;
 }
 
 export default LedLine;

@@ -38,7 +38,7 @@ const AchievementsCard = styled(Box)(
 						? "linear-gradient(45deg,#575757,#616161,#292929)"
 						: "linear-gradient(45deg,#D42530,#F10413,#490005)",
 			},
-			"&:hover > div:first-child": {
+			"&:hover > span:first-child": {
 				animation:
 					boxpadding === "boxpadding" ? "none" : `${animation} 1.5s infinite`,
 			},
@@ -46,7 +46,7 @@ const AchievementsCard = styled(Box)(
 	}
 );
 
-function CaruselCard(props) {
+function CarouselCard(props) {
 	const { backgroundtype, ledtype, boxpadding, cutedcorner } = props;
 
 	return (
@@ -60,4 +60,4 @@ function CaruselCard(props) {
 	);
 }
 
-export default CaruselCard;
+export default CarouselCard;

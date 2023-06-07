@@ -7,10 +7,10 @@ import * as Styled from "./style";
 import * as GlobalStyled from "../style";
 import Clients from "../../components/Carousel/Clients";
 import Achivments from "../../components/Carousel/Achivments/index";
-import BigCardWrapper from "../../components/Card/BogCard";
+import BigCardWrapper from "../../components/Card/BigCard";
 import cybersecurity from "../../media/cybersecurity.png";
 import cybersecurity2 from "../../media/cybersecurity2.png";
-import SlidCertificatesCaruselers from "../../components/Carousel/Certificates/index";
+import SlidCertificatesCarouselers from "../../components/Carousel/Certificates/index";
 import PageTransition from "../../components/PageTransition";
 
 function Home() {
@@ -360,7 +360,7 @@ function Home() {
 					</GlobalStyled.DescriptionText>
 				</Styled.CertificatesDescription>
 				<Box>
-					<SlidCertificatesCaruselers></SlidCertificatesCaruselers>
+					<SlidCertificatesCarouselers></SlidCertificatesCarouselers>
 				</Box>
 			</Box>
 		</PageTransition>
