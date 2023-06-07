@@ -33,6 +33,7 @@ export const OurGoalsSection = styled(Grid)(({ theme }) => ({
 		top: "140px",
 		right: 0,
 		[theme.breakpoints.down("md")]: {
+			top: "40px",
 			width: "265px",
 			height: "45px",
 		},
@@ -45,6 +46,7 @@ export const OurGoalsSection = styled(Grid)(({ theme }) => ({
 		[theme.breakpoints.down("md")]: {
 			width: "265px",
 			height: "45px",
+			bottom: "30px",
 		},
 	},
 	// [theme.breakpoints.up("md")]: {

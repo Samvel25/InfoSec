@@ -16,7 +16,7 @@ const expandAnimation = keyframes`
 `;
 
 export const RedCard = styled(CarouselCard)(({ theme }) => ({
-	width: "max-content",
+	width: "auto",
 	padding: "52px 52px 80px 60px",
 	transformstyle: "preserve-3d",
 	"&:after": {
@@ -56,15 +56,36 @@ export const RedCard = styled(CarouselCard)(({ theme }) => ({
 	"&:hover sh:before": {
 		animation: `${expandAnimation} 1.5s infinite`,
 	},
+	[theme.breakpoints.down(1250)]: {
+		paddingLeft: "20px",
+	},
+	[theme.breakpoints.down("md")]: {
+		paddingLeft: "60px",
+	},
+	[theme.breakpoints.down(700)]: {
+		paddingLeft: "20px",
+	},
+	[theme.breakpoints.down("sm")]: {
+		padding: "52px 52px 80px 60px",
+	},
 }));
 
 export const Card = styled(CarouselCard)(({ theme }) => ({
-	width: "max-content",
+	width: "auto",
 	padding: "52px 52px 80px 60px",
 
-	// [theme.breakpoints.up("md")]: {
-	// 	minWidth: "400px",
-	// },
+	[theme.breakpoints.down(1250)]: {
+		paddingLeft: "20px",
+	},
+	[theme.breakpoints.down("md")]: {
+		paddingLeft: "60px",
+	},
+	[theme.breakpoints.down(700)]: {
+		paddingLeft: "20px",
+	},
+	[theme.breakpoints.down("sm")]: {
+		padding: "52px 52px 80px 60px",
+	},
 }));
 
 export const Text = styled(Typography)(({ theme }) => ({

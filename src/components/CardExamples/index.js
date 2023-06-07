@@ -1,80 +1,98 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Hidden } from "@mui/material";
 import * as Styled from "./style";
 
 function GoalCards() {
 	return (
-		<Grid container direction={"row"} rowSpacing={3} columnSpacing={3}>
-			<Grid item xs={6}>
+		<Grid
+			container
+			direction={"row"}
+			rowSpacing={3}
+			columnSpacing={3}
+			justifyContent={"center"}
+		>
+			<Grid item xs={10} sm={6}>
 				<Styled.RedCard>
 					<sh></sh>
 					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
-					<Box sx={{ display: "flex", width: "max-content" }}>
+					<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
 						<Styled.Text variant="CardRate" component={"h6"}>
 							7/10
 						</Styled.Text>
 
-						<Styled.Text
-							sx={{ ml: "10px", maxWidth: "140px", lineHeight: "14px" }}
-						>
+						<Styled.Text sx={{ ml: "10px", lineHeight: "14px" }}>
 							TOP ARMENIAN BANKS
 						</Styled.Text>
 					</Box>
 				</Styled.RedCard>
 			</Grid>
-			<Grid item xs={6}>
+			<Hidden smDown>
+				<Grid item xs={10} sm={6}>
+					<Styled.Card backgroundtype="backgroundOne">
+						<sh></sh>
+
+						<Styled.Text sx={{ mb: "11px" }}>DELIVERING </Styled.Text>
+						<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
+							<Styled.Text variant="CardRate" component={"h6"}>
+								100K
+							</Styled.Text>
+
+							<Styled.Text sx={{ ml: "10px", lineHeight: "14px" }}>
+								ANNUAL CLIENT TESTING HOURS
+							</Styled.Text>
+						</Box>
+					</Styled.Card>
+				</Grid>
+			</Hidden>
+			<Grid item xs={10} sm={6}>
 				<Styled.Card backgroundtype="backgroundOne">
 					<sh></sh>
 
 					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
-					<Box sx={{ display: "flex", width: "max-content" }}>
+					<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
 						<Styled.Text variant="CardRate" component={"h6"}>
-							7/10
+							2/3
 						</Styled.Text>
 
-						<Styled.Text
-							sx={{ ml: "10px", maxWidth: "140px", lineHeight: "14px" }}
-						>
+						<Styled.Text sx={{ ml: "10px", lineHeight: "14px" }}>
 							TOP ARMENIAN BANKS
 						</Styled.Text>
 					</Box>
 				</Styled.Card>
 			</Grid>
-			<Grid item xs={6}>
-				<Styled.Card backgroundtype="backgroundOne">
-					<sh></sh>
-
-					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
-					<Box sx={{ display: "flex", width: "max-content" }}>
-						<Styled.Text variant="CardRate" component={"h6"}>
-							7/10
-						</Styled.Text>
-
-						<Styled.Text
-							sx={{ ml: "10px", maxWidth: "140px", lineHeight: "14px" }}
-						>
-							TOP ARMENIAN BANKS
-						</Styled.Text>
-					</Box>
-				</Styled.Card>
-			</Grid>
-			<Grid item xs={6}>
+			<Grid item xs={10} sm={6}>
 				<Styled.RedCard>
 					<sh></sh>
 
-					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
-					<Box sx={{ display: "flex", width: "max-content" }}>
+					<Styled.Text sx={{ mb: "11px" }}>DELIVERING BY</Styled.Text>
+					<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
 						<Styled.Text variant="CardRate" component={"h6"}>
-							7/10
+							300+
 						</Styled.Text>
 
-						<Styled.Text
-							sx={{ ml: "10px", maxWidth: "140px", lineHeight: "14px" }}
-						>
-							TOP ARMENIAN BANKS
+						<Styled.Text sx={{ ml: "10px", lineHeight: "14px" }}>
+							ORIGNAL RESEARCH ARTICLES
 						</Styled.Text>
 					</Box>
 				</Styled.RedCard>
 			</Grid>
+			<Hidden smUp>
+				<Grid item xs={10} sm={6}>
+					<Styled.Card backgroundtype="backgroundOne">
+						<sh></sh>
+
+						<Styled.Text sx={{ mb: "11px" }}>DELIVERING </Styled.Text>
+						<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
+							<Styled.Text variant="CardRate" component={"h6"}>
+								100K
+							</Styled.Text>
+
+							<Styled.Text sx={{ ml: "10px", lineHeight: "14px" }}>
+								ANNUAL CLIENT TESTING HOURS
+							</Styled.Text>
+						</Box>
+					</Styled.Card>
+				</Grid>
+			</Hidden>
 		</Grid>
 	);
 }

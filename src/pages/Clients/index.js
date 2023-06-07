@@ -78,7 +78,7 @@ const Clients = () => {
 			{/* ///3 section/////// */}
 
 			<Styled.OurGoalsSection
-				sx={{ p: { md: "330px 0 300px", xs: "60px 0 100px" } }}
+				sx={{ p: { md: "330px 0 300px", xs: "120px 0" } }}
 				container
 				justifyContent={"space-around"}
 				direction={"row"}
@@ -89,7 +89,7 @@ const Clients = () => {
 					md={5}
 					xs={12}
 					sm={10}
-					textAlign={{ sm: "center", md: "start" }}
+					textAlign={{ xs: "center", md: "start" }}
 				>
 					<Typography variant="h1">
 						Proactive Cyber Security Solutions for Your Business
@@ -111,8 +111,9 @@ const Clients = () => {
 						</Stack>
 					</Hidden>
 				</Grid>
-				<Grid item md={6} xs={12} sm={10}>
-					<GoalCards />
+
+				<Grid item md={6.5} xs={12} sx={{ pt: { xs: "50px", md: "0" } }}>
+					<GoalCards textAlign={{ xs: "center", sm: "start" }} />
 				</Grid>
 			</Styled.OurGoalsSection>
 		</PageTransition>
