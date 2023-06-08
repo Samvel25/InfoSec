@@ -8,6 +8,7 @@ import ClientsSlide from "../../components/Carousel/Clients";
 import GradientButton from "../../components/Buttons";
 import PageTransition from "../../components/PageTransition";
 import GoalCards from "../../components/CardExamples";
+import ClientsReview from "../../components/Carousel/ClientsReview";
 
 const Clients = () => {
 	return (
@@ -116,6 +117,17 @@ const Clients = () => {
 					<GoalCards textAlign={{ xs: "center", sm: "start" }} />
 				</Grid>
 			</Styled.OurGoalsSection>
+			<Box>
+				<Typography
+					textAlign={"center"}
+					variant="GradientLight"
+					component="h1"
+					sx={{ mb: "40px" }}
+				>
+					review from our client
+				</Typography>
+				<ClientsReview />
+			</Box>
 		</PageTransition>
 	);
 };

@@ -57,16 +57,19 @@ export const RedCard = styled(CarouselCard)(({ theme }) => ({
 		animation: `${expandAnimation} 1.5s infinite`,
 	},
 	[theme.breakpoints.down(1250)]: {
-		paddingLeft: "20px",
+		padding: "52px 52px 80px 20px",
 	},
 	[theme.breakpoints.down("md")]: {
-		paddingLeft: "60px",
+		padding: "52px 52px 80px 60px",
 	},
 	[theme.breakpoints.down(700)]: {
-		paddingLeft: "20px",
+		padding: "52px 52px 80px 20px",
 	},
 	[theme.breakpoints.down("sm")]: {
 		padding: "52px 52px 80px 60px",
+	},
+	[theme.breakpoints.down("sm")]: {
+		padding: "52px 52px 80px 25px",
 	},
 }));
 
@@ -75,16 +78,19 @@ export const Card = styled(CarouselCard)(({ theme }) => ({
 	padding: "52px 52px 80px 60px",
 
 	[theme.breakpoints.down(1250)]: {
-		paddingLeft: "20px",
+		padding: "52px 52px 80px 20px",
 	},
 	[theme.breakpoints.down("md")]: {
-		paddingLeft: "60px",
+		padding: "52px 52px 80px 60px",
 	},
 	[theme.breakpoints.down(700)]: {
-		paddingLeft: "20px",
+		padding: "52px 52px 80px 20px",
 	},
 	[theme.breakpoints.down("sm")]: {
 		padding: "52px 52px 80px 60px",
+	},
+	[theme.breakpoints.down("sm")]: {
+		padding: "52px 52px 80px 25px",
 	},
 }));
 
