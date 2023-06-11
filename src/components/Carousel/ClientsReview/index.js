@@ -64,7 +64,7 @@ export default class ClientsReview extends Component {
 								<Styled.RateStars grayscale={true} />
 							</Stack>
 							<Typography sx={{ mt: "10px" }}>
-								INFOSEC LLC, is best and give good solutions for my company
+								INFOSEC LLC, is the best and give good solutions for my company
 							</Typography>
 						</Box>
 					</CarouselCard>
@@ -91,7 +91,7 @@ export default class ClientsReview extends Component {
 								<Styled.RateStars />
 							</Stack>
 							<Typography sx={{ mt: "10px" }}>
-								INFOSEC LLC, is best and give good solutions for my company
+								INFOSEC LLC, is the best and give good solutions for my company
 							</Typography>
 						</Box>
 					</CarouselCard>
@@ -118,7 +118,7 @@ export default class ClientsReview extends Component {
 								<Styled.RateStars grayscale={true} />
 							</Stack>
 							<Typography sx={{ mt: "10px" }}>
-								INFOSEC LLC, is best and give good solutions for my company
+								INFOSEC LLC, is the best and give good solutions for my company
 							</Typography>
 						</Box>
 					</CarouselCard>

@@ -117,7 +117,7 @@ const Clients = () => {
 					<GoalCards textAlign={{ xs: "center", sm: "start" }} />
 				</Grid>
 			</Styled.OurGoalsSection>
-			<Box>
+			<Styled.Review sx={{pb: {xs: '150px', md: "250px"}}}>
 				<Typography
 					textAlign={"center"}
 					variant="GradientLight"
@@ -127,7 +127,7 @@ const Clients = () => {
 					review from our client
 				</Typography>
 				<ClientsReview />
-			</Box>
+			</Styled.Review>
 		</PageTransition>
 	);
 };

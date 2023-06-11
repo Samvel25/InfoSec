@@ -1,8 +1,9 @@
-import { Grid } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import RadLine from "../../media/radLine.svg";
 import GrayLine from "../../media/grayLine.svg";
 import Card from "../../components/Card/CarouselCard";
+import Net from "../../media/net.svg";
 
 export const grayLines = {
 	backgroundImage: `url(${GrayLine})`,
@@ -59,6 +60,56 @@ export const GoalCard = styled(Card)(({ theme }) => ({
 		clipPath:
 			"polygon(0 32.00px,32.00px 0,calc(100% - 32.00px) 0,100% 32.00px,100% calc(100% - 32.00px),calc(100% - 32.00px) 100%,32.00px 100%,0 calc(100% - 32.00px))",
 	},
+	// [theme.breakpoints.up("md")]: {
+	// 	minWidth: "400px",
+	// },
+}));
+
+export const Review = styled(Box)(({ theme }) => ({
+	position: 'relative',
+	"&:before": {
+		position: "absolute",
+		backgroundImage: `url(${Net})`,
+		transform: "translate(-25%, -60%)",
+		maxWidth: "90%",
+		left: "0",
+		content: '""',
+		zIndex: "-1",
+		top: "0",
+		width: "620px",
+		height: "610px",
+		opacity: "0.4",
+		[theme.breakpoints.down("md")]: {
+			top: "100px",
+			left: '-180px',
+		},
+		[theme.breakpoints.down("sm")]: {
+			height: "500px",
+		},
+	},
+
+	"&:after": {
+		position: "absolute",
+		backgroundImage: `url(${Net})`,
+		transform: "translateY(50%)",
+		maxWidth: "90%",
+		right: "-50px",
+		content: '""',
+		zIndex: "-1",
+		bottom: "50px",
+		width: "620px",
+		height: "610px",
+		opacity: "0.4",
+		[theme.breakpoints.down("md")]: {
+			height: "500px",
+
+		},
+		[theme.breakpoints.down("sm")]: {
+			right: '-15px',
+
+		},
+	},
+	
 	// [theme.breakpoints.up("md")]: {
 	// 	minWidth: "400px",
 	// },
