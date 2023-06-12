@@ -16,14 +16,8 @@ const ButtonGradient = styled(Button)(
 		textDecoration: "none",
 		padding: "14px 30px",
 		minWidth: "140px",
-		// cursor: "pointer",
-		// "&:active": {
-		// 	borderStyle: "outset",
-		// 	boxShadow: "none",
-		// },
 		"&:hover": {
 			background: "none",
-			// pointerEvents: "none",
 		},
 		"&:before": {
 			...commonStyles,

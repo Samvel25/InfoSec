@@ -209,11 +209,13 @@ const Services = () => {
 					</GlobalStyled.ServicesCard>
 				</GlobalStyled.Services>
 				{/* <Container maxWidth="xxl"> */}
-				<Styled.FormBackgroundBox sx={{ mb: "100px" }}>
-					<Form />
-				</Styled.FormBackgroundBox>
-				{/* </Container> */}
 			</Box>
+			{/* ///4 section/////// */}
+
+			<Styled.FormBackgroundBox sx={{ mb: "100px" }}>
+				<Form />
+			</Styled.FormBackgroundBox>
+			{/* </Container> */}
 		</PageTransition>
 	);
 };
