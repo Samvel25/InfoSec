@@ -4,9 +4,9 @@ import * as Styled from "./style";
 import pdfFile from "../../../media/sample.pdf";
 import GradientButton from "../../Buttons";
 
-const CardItem = ({ title, content, certificateimg }) => {
+const CardItem = ({ title, content, certificateimg, className }) => {
 	return (
-		<Styled.SortingCard>
+		<Styled.SortingCard className={className}>
 			<Styled.CertificateImg src={certificateimg} alt="Certificate" />
 			<Stack
 				flexDirection={"row"}

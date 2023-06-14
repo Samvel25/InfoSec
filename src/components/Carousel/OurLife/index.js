@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import * as Styled from "./style";
 import { ReactComponent as Arrow } from "../../../media/sliderArrow.svg";
 import "slick-carousel/slick/slick.css";
@@ -25,135 +25,135 @@ const GalleryNextArrow = ({ currentSlide, slideCount, ...props }) => {
 	);
 };
 
-export default class OurLifeCarousel extends Component {
-	render() {
-		var settings = {
-			className: "center",
-			centerMode: true,
-			focusOnSelect: true,
-			centerPadding: "100px",
-			variableWidth: true,
-			slidesToShow: 4,
-			speed: 800,
-			autoplay: true,
-			pauseOnHover: true,
-			nextArrow: <GalleryNextArrow />,
-			prevArrow: <GalleryPrevArrow />,
-			responsive: [
-				{
-					breakpoint: 1350,
-					settings: {
-						slidesToShow: 3,
-						centerPadding: "100px",
-					},
+const OurLifeCarousel = () => {
+	var settings = {
+		className: "center",
+		centerMode: true,
+		focusOnSelect: true,
+		centerPadding: "100px",
+		variableWidth: true,
+		slidesToShow: 4,
+		speed: 800,
+		autoplay: true,
+		pauseOnHover: true,
+		nextArrow: <GalleryNextArrow />,
+		prevArrow: <GalleryPrevArrow />,
+		responsive: [
+			{
+				breakpoint: 1350,
+				settings: {
+					slidesToShow: 3,
+					centerPadding: "100px",
 				},
-				{
-					breakpoint: 1100,
-					settings: {
-						slidesToShow: 2,
-						centerPadding: "100px",
-					},
+			},
+			{
+				breakpoint: 1100,
+				settings: {
+					slidesToShow: 2,
+					centerPadding: "100px",
 				},
-				{
-					breakpoint: 650,
-					settings: {
-						slidesToShow: 1,
-						centerPadding: "100px",
-					},
+			},
+			{
+				breakpoint: 650,
+				settings: {
+					slidesToShow: 1,
+					centerPadding: "100px",
 				},
-				// {
-				// 	breakpoint: 450,
-				// 	settings: {
-				// 		slidesToShow: 1,
-				// 		centerPadding: "10px",
-				// 	},
-				// },
-			],
-		};
+			},
+			// {
+			// breakpoint: 450,
+			// settings: {
+			// slidesToShow: 1,
+			// centerPadding: "10px",
+			// },
+			// },
+		],
+	};
 
-		return (
-			<Styled.StyledSlider {...settings}>
-				<Styled.Wrapper>
-					<div>
-						<Styled.OurLifeCarouselCard
-							backgroundtype="backgroundOne"
-							ledtype="ledOne"
-							cutedcorner="right"
-						>
-							<img
-								width={"300px"}
-								sx={{ pb: "143%" }}
-								src={OurLifeImg2}
-								alt="Our life immage"
-							/>
-						</Styled.OurLifeCarouselCard>
-					</div>
-				</Styled.Wrapper>
-				<Styled.Wrapper>
-					<div>
-						<Styled.OurLifeCarouselCard
-							backgroundtype="backgroundOne"
-							ledtype="ledOne"
-							cutedcorner="right"
-						>
-							<img
-								width={"300px"}
-								sx={{ pb: "143%" }}
-								src={OurLifeImg}
-								alt="Our life immage"
-							/>
-						</Styled.OurLifeCarouselCard>
-					</div>
-				</Styled.Wrapper>
-				<Styled.Wrapper>
-					<div>
-						<Styled.OurLifeCarouselCard
-							backgroundtype="backgroundOne"
-							ledtype="ledOne"
-							cutedcorner="right"
-						>
-							<img
-								width={"300px"}
-								sx={{ pb: "143%" }}
-								src={OurLifeImg2}
-								alt="Our life immage"
-							/>
-						</Styled.OurLifeCarouselCard>
-					</div>
-				</Styled.Wrapper>
-				<Styled.Wrapper>
-					<div>
-						<Styled.OurLifeCarouselCard
-							backgroundtype="backgroundOne"
-							ledtype="ledOne"
-							cutedcorner="right"
-						>
-							<img
-								width={"300px"}
-								sx={{ pb: "143%" }}
-								src={OurLifeImg}
-								alt="Our life immage"
-							/>
-						</Styled.OurLifeCarouselCard>
-					</div>
-				</Styled.Wrapper>
-				<Styled.Wrapper>
-					<div>
-						<Styled.OurLifeCarouselCard
-							backgroundtype="backgroundOne"
-							ledtype="ledOne"
-							cutedcorner="right"
-						>
-							<img
-								width={"300px"}
-								sx={{ pb: "143%" }}
-								src={OurLifeImg2}
-								alt="Our life immage"
-							/>
-						</Styled.OurLifeCarouselCard>
-					</div>
-				</Styled.Wrapper>
-			</Styled.StyledSlider>
-		);
-	}
-}
+	return (
+		<Styled.StyledSlider {...settings}>
+			<Styled.Wrapper>
+				<div>
+					<Styled.OurLifeCarouselCard
+						backgroundtype="backgroundOne"
+						ledtype="ledOne"
+						cutedcorner="right"
+					>
+						<img
+							width={"300px"}
+							sx={{ pb: "143%" }}
+							src={OurLifeImg2}
+							alt="Our life"
+						/>
+					</Styled.OurLifeCarouselCard>
+				</div>
+			</Styled.Wrapper>
+			<Styled.Wrapper>
+				<div>
+					<Styled.OurLifeCarouselCard
+						backgroundtype="backgroundOne"
+						ledtype="ledOne"
+						cutedcorner="right"
+					>
+						<img
+							width={"300px"}
+							sx={{ pb: "143%" }}
+							src={OurLifeImg}
+							alt="Our life"
+						/>
+					</Styled.OurLifeCarouselCard>
+				</div>
+			</Styled.Wrapper>
+			<Styled.Wrapper>
+				<div>
+					<Styled.OurLifeCarouselCard
+						backgroundtype="backgroundOne"
+						ledtype="ledOne"
+						cutedcorner="right"
+					>
+						<img
+							width={"300px"}
+							sx={{ pb: "143%" }}
+							src={OurLifeImg2}
+							alt="Our life"
+						/>
+					</Styled.OurLifeCarouselCard>
+				</div>
+			</Styled.Wrapper>
+			<Styled.Wrapper>
+				<div>
+					<Styled.OurLifeCarouselCard
+						backgroundtype="backgroundOne"
+						ledtype="ledOne"
+						cutedcorner="right"
+					>
+						<img
+							width={"300px"}
+							sx={{ pb: "143%" }}
+							src={OurLifeImg}
+							alt="Our life"
+						/>
+					</Styled.OurLifeCarouselCard>
+				</div>
+			</Styled.Wrapper>
+			<Styled.Wrapper>
+				<div>
+					<Styled.OurLifeCarouselCard
+						backgroundtype="backgroundOne"
+						ledtype="ledOne"
+						cutedcorner="right"
+					>
+						<img
+							width={"300px"}
+							sx={{ pb: "143%" }}
+							src={OurLifeImg2}
+							alt="Our life"
+						/>
+					</Styled.OurLifeCarouselCard>
+				</div>
+			</Styled.Wrapper>
+		</Styled.StyledSlider>
+	);
+};
+
+export default OurLifeCarousel;

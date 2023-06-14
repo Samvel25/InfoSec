@@ -18,6 +18,8 @@ export const CertificatesHead = styled(Box)(({ theme }) => ({
 	"&:after": {
 		position: "absolute",
 		backgroundImage: `url(${Net})`,
+		maxWidth: "100%",
+
 		right: "80px",
 		content: '""',
 		zIndex: "1",

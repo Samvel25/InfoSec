@@ -14,7 +14,7 @@ const Certificates = () => {
 					OUR certificates
 				</Styled.CertificatesHeadText>
 			</Styled.CertificatesHead>
-			<Box>
+			<Box sx={{ mb: { xs: "150px", md: "300px" } }}>
 				<CardList />
 			</Box>
 		</PageTransition>

@@ -1,50 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
 import * as Styled from "./style";
 import { ReactComponent as Arrow } from "../../../media/sliderArrow.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Certificate from "../../../media/certificate.png";
-import { Stack, Typography } from "@mui/material";
-import GradientButton from "../../Buttons";
+import { styled } from "@mui/material/styles";
+import CardItem from "../../CertificateCardsSorting/Card";
+import allCards from "../../CertificateCardsSorting/Card/sliderData";
 
-const allCards = [
-	{
-		id: 1,
-		certificateimg: Certificate,
-		title: "Certificate CIPP 1",
-		content:
-			"Developing and implementing a plan to quickly respond to and mitigate cybersecurity incidents, minimizing the impact on your business.",
-	},
-	{
-		id: 2,
-		certificateimg: Certificate,
-		title: "Certificate CIPP 2",
-		content:
-			"Developing and implementing a plan to quickly respond to and mitigate cybersecurity incidents, minimizing the impact on your business.",
-	},
-	{
-		id: 3,
-		certificateimg: Certificate,
-		title: "Certificate CIPP 3",
-		content:
-			"Developing and implementing a plan to quickly respond to and mitigate cybersecurity incidents, minimizing the impact on your business.",
-	},
-	{
-		id: 3,
-		certificateimg: Certificate,
-		title: "Certificate CIPP 3",
-		content:
-			"Developing and implementing a plan to quickly respond to and mitigate cybersecurity incidents, minimizing the impact on your business.",
-	},
-	{
-		id: 3,
-		certificateimg: Certificate,
-		title: "Certificate CIPP 3",
-		content:
-			"Developing and implementing a plan to quickly respond to and mitigate cybersecurity incidents, minimizing the impact on your business.",
-	},
-	// Add more cards here
-];
+// import allCards from "./sliderData";
 
 const GalleryPrevArrow = ({ currentSlide, slideCount, ...props }) => {
 	const { className, onClick } = props;
@@ -55,6 +18,7 @@ const GalleryPrevArrow = ({ currentSlide, slideCount, ...props }) => {
 		</div>
 	);
 };
+
 const GalleryNextArrow = ({ currentSlide, slideCount, ...props }) => {
 	const { className, onClick } = props;
 
@@ -65,46 +29,47 @@ const GalleryNextArrow = ({ currentSlide, slideCount, ...props }) => {
 	);
 };
 
-export default class CertificatesCarousel extends Component {
-	render() {
-		var settings = {
-			className: "center",
-			centerMode: true,
-			focusOnSelect: true,
-			infinite: true,
-			centerPadding: "100px",
-			variableWidth: true,
-			slidesToShow: 3,
-			speed: 800,
-			// autoplay: true,
-			pauseOnHover: true,
-			nextArrow: <GalleryNextArrow />,
-			prevArrow: <GalleryPrevArrow />,
-			responsive: [
-				{
-					breakpoint: 600,
-					settings: {
-						centerMode: true,
-						slidesToShow: 3,
-					},
+const CertificatesCarousel = ({ cards = allCards }) => {
+	const settings = {
+		className: "center",
+		centerMode: true,
+		focusOnSelect: true,
+		infinite: true,
+		centerPadding: "100px",
+		variableWidth: true,
+		slidesToShow: 3,
+		speed: 800,
+		// autoplay: true,
+		pauseOnHover: true,
+		nextArrow: <GalleryNextArrow />,
+		prevArrow: <GalleryPrevArrow />,
+		responsive: [
+			{
+				breakpoint: 600,
+				settings: {
+					centerMode: true,
+					slidesToShow: 3,
 				},
-			],
-		};
+			},
+		],
+	};
 
-		return (
-			<Styled.StyledSlider {...settings}>
-				{allCards.map((card) => (
-					<Styled.CustomCardItem
-						key={card.title}
+	return (
+		<Styled.StyledSlider {...settings}>
+			{cards.map((card, index) => (
+				<div key={index}>
+					<Styled.StyledCardItem
 						title={card.title}
 						content={card.content}
 						certificateimg={card.certificateimg}
 					/>
-				))}
-			</Styled.StyledSlider>
-		);
-	}
-}
+				</div>
+			))}
+		</Styled.StyledSlider>
+	);
+};
+
+export default CertificatesCarousel;
 
 // import React, { Component } from "react";
 // import * as Styled from "./style";

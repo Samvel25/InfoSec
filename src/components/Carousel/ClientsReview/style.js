@@ -30,7 +30,7 @@ export const ExpertsSlider = styled(Slider)`
     }
 `;
 
-export const Wraper = styled(Box)({
+export const Wrapper = styled(Box)({
 	width: "max-content",
 	textAlign: "start",
 	margin: "0 10px",

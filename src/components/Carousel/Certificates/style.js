@@ -1,16 +1,13 @@
 import Slider from "react-slick";
 import CarouselCard from "../../Card/CarouselCard";
 import { styled } from "@mui/material/styles";
-import { Typography } from "@mui/material";
 import CardItem from "../../CertificateCardsSorting/Card";
+import { Typography } from "@mui/material";
 
 export const StyledSlider = styled(Slider)`
 	position: relative;
 	height: 100%;
 	display: flex;
-	// justify-content: center;
-	// align-items: center;
-	// padding: 0 5px;
 
 	.custom-prevArrow,
 	.custom-nextArrow {
@@ -170,47 +167,35 @@ export const StyledSlider = styled(Slider)`
 	}
 `;
 
-export const CertificatesCarouselCard = styled(CardItem)(({ theme }) => ({
-	SortingCard: {
-		width: "auto",
-		padding: "57px 20px 37px",
-		transform: "scale(0.6)",
-		[theme.breakpoints.down("sm")]: {
-			maxWidth: "330px",
-			padding: " 50px  10px 20px",
+export const StyledCardItem = styled(CardItem)(({ theme }) => ({
+	width: "auto",
+	padding: "57px 20px 37px",
+	transform: "scale(0.6)",
+
+	"&:after": {
+		background: "#0a0a0a",
+		clipPath:
+			"polygon(0 0,calc(100% - 16.00px) 0,100% 16.00px,100% 100%,16.00px 100%,0 calc(100% - 16.00px),0 0,1px  1px ,1px calc(100% - 16.00px - 0.41px),calc(16.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(16.00px + 0.41px),calc(100% - 16.00px - 0.41px) 1px,1px 1px)",
+	},
+
+	"& Button": {
+		"& pre": {
+			display: "none",
 		},
 	},
-}));
-export const CustomCardItem = styled(CardItem)(({ theme }) => ({
-	SortingCard: {
-		// Update the styles of Styled.SortingCard here
-		// For example:
-		transform: "scale(0.6)",
-		width: "auto",
-		padding: "45px 15px 30px",
-		// ...
-	},
-}));
 
-export const CertificateImg = styled("img")(({ theme }) => ({
-	width: "190px",
-	height: "145px",
-	margin: "0 70px 50px",
+	"& img": {
+		width: "190px",
+		height: "145px",
+		[theme.breakpoints.down("sm")]: {
+			width: "167px",
+			height: "127px",
+		},
+	},
+
 	[theme.breakpoints.down("sm")]: {
-		width: "167px",
-		height: "127px",
-	},
-}));
-
-export const ButtonText = styled(Typography)(({ theme }) => ({
-	textTransform: "uppercase",
-	a: {
-		background:
-			"linear-gradient(93.74deg, #D42530 2.68%, #F10413 52.05%, #490005 104.6%)",
-		backgroundClip: "text",
-		WebkitBackgroundClip: "text",
-		color: "transparent",
-		textTransform: "uppercase",
+		maxWidth: "330px",
+		padding: " 50px  10px 20px",
 	},
 }));
 

@@ -1,8 +1,8 @@
+import { Box, Typography } from "@mui/material";
 import Slider from "react-slick";
 import { styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
 
-export const ExpertsSlider = styled(Slider)`
+export const StyledSlider = styled(Slider)`
 	.slick-list {
 		position: relative;
 		display: block !important;
@@ -13,7 +13,6 @@ export const ExpertsSlider = styled(Slider)`
 			padding: 0 0 60px !important;
 		}
 	}
-
 	.slick-track {
 		position: relative;
 		align-items: center;
@@ -23,8 +22,8 @@ export const ExpertsSlider = styled(Slider)`
 	}
 `;
 
-export const Wrapper = styled(Box)({
+export const Wraper = styled(Box)({
+	margin: "auto 10px",
 	width: "max-content",
 	textAlign: "start",
-	margin: "0 20px",
 });

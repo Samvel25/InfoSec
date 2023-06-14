@@ -6,6 +6,7 @@ import { Box, Typography } from "@mui/material";
 export const SortingCard = styled(CarouselCard)(({ theme, scale }) => ({
 	width: "auto",
 	padding: "45px 15px 30px",
+	textAlign: "center",
 	"&:after": {
 		background: "#0a0a0a",
 		clipPath:
@@ -21,10 +22,6 @@ export const CertificateImg = styled("img")(({ theme }) => ({
 	width: "150px",
 	height: "115px",
 	margin: "0 70px 50px",
-	[theme.breakpoints.down("sm")]: {
-		width: "167px",
-		height: "127px",
-	},
 }));
 export const ButtonText = styled(Typography)(({ theme }) => ({
 	textTransform: "uppercase",
