@@ -1,10 +1,146 @@
 import React, { useState } from "react";
-import { Typography, Menu, MenuItem, Hidden, styled } from "@mui/material";
+import {
+	Typography,
+	Menu,
+	MenuItem,
+	Hidden,
+	styled,
+	keyframes,
+} from "@mui/material";
 import { ReactComponent as Language } from "../../media/language.svg";
 import { ReactComponent as ArrowDown } from "../../media/arrowDown.svg";
 import { Stack } from "@mui/system";
 
 import GradientButton from ".";
+
+const Animation = keyframes`
+0% {
+  background-image: radial-gradient(farthest-corner, black 70%, #490005, #F10413, #D42530);
+}
+
+5% {
+  background-image: radial-gradient(farthest-corner, black 67%, #490005, #F10413, #D42530);
+}
+
+10% {
+  background-image: radial-gradient(farthest-corner, black 65%, #490005, #F10413, #D42530);
+}
+
+15% {
+  background-image: radial-gradient(farthest-corner, black 62%, #490005, #F10413, #D42530);
+}
+
+20% {
+  background-image: radial-gradient(farthest-corner, black 60%, #490005, #F10413, #D42530);
+}
+
+25% {
+  background-image: radial-gradient(farthest-corner, black 57%, #490005, #F10413, #D42530);
+}
+
+30% {
+  background-image: radial-gradient(farthest-corner, black 55%, #490005, #F10413, #D42530);
+}
+
+35% {
+  background-image: radial-gradient(farthest-corner, black 52%, #490005, #F10413, #D42530);
+}
+
+40% {
+  background-image: radial-gradient(farthest-corner, black 50%, #490005, #F10413, #D42530);
+}
+
+45% {
+  background-image: radial-gradient(farthest-corner, black 47%, #490005, #F10413, #D42530);
+}
+
+50% {
+  background-image: radial-gradient(farthest-corner, black 46%, #490005, #F10413, #D42530);
+}
+
+55% {
+  background-image: radial-gradient(farthest-corner, black 45%, #490005, #F10413, #D42530);
+}
+
+60% {
+  background-image: radial-gradient(farthest-corner, black 47%, #490005, #F10413, #D42530);
+}
+
+65% {
+  background-image: radial-gradient(farthest-corner, black 50%, #490005, #F10413, #D42530);
+}
+
+72% {
+  background-image: radial-gradient(farthest-corner, black 55%, #490005, #F10413, #D42530);
+}
+
+77% {
+  background-image: radial-gradient(farthest-corner, black 58%, #490005, #F10413, #D42530);
+}
+
+84% {
+  background-image: radial-gradient(farthest-corner, black 63%, #490005, #F10413, #D42530);
+}
+
+90% {
+  background-image: radial-gradient(farthest-corner, black 68%, #490005, #F10413, #D42530);
+}
+
+97% {
+  background-image: radial-gradient(farthest-corner, black 72%, #490005, #F10413, #D42530);
+}
+
+100% {
+  background-image: radial-gradient(farthest-corner, black 70%, #490005, #F10413, #D42530);
+
+}
+// 0% {
+//   background-image: conic-gradient(black 20%, #490005, #F10413, #D42530);
+// }
+
+// 10% {
+//   background-image: conic-gradient(black 32%, #490005, #F10413, #D42530);
+// }
+
+// 20% {
+//   background-image: conic-gradient(black 40%, #490005, #F10413, #D42530);
+// }
+
+// 30% {
+//   background-image: conic-gradient(black 44%, #490005, #F10413, #D42530);
+// }
+
+// 40% {
+//   background-image: conic-gradient(black 45%, #490005, #F10413, #D42530);
+// }
+
+// 50% {
+//   background-image: conic-gradient(black 40%, #490005, #F10413, #D42530);
+// }
+
+
+// 60% {
+//   background-image: conic-gradient(black 35%, #490005, #F10413, #D42530);
+// }
+
+// 70% {
+//   background-image: conic-gradient(black 32%, #490005, #F10413, #D42530);
+// }
+
+
+// 80% {
+//   background-image: conic-gradient(black 29%, #490005, #F10413, #D42530);
+// }
+
+// 90% {
+//   background-image: conic-gradient(black 26%, #490005, #F10413, #D42530);
+// }
+
+// 100% {
+// 	background-image: conic-gradient(black 23%, #490005, #F10413, #D42530);
+
+// }
+`;
 
 const StyledMenu = styled(Menu)(({ theme }) => ({
 	"& .MuiPaper-root": {
@@ -21,7 +157,10 @@ const StyledMenu = styled(Menu)(({ theme }) => ({
 			left: 0,
 			width: "100%",
 			height: "100%",
-			backgroundImage: "conic-gradient(black 28%, #490005, #F10413, #D42530)",
+			// backgroundImage: "conic-gradient(black 28%, #490005, #F10413, #D42530)",
+			animation: `${Animation} 1.5s infinite`,
+			backgroundImage:
+				"radial-gradient(farthest-corner, black 50%, #490005, #F10413, #D42530)", // increased black part of radial gradient
 			zIndex: 1,
 			filter: "blur(15px)",
 		},
