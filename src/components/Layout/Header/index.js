@@ -3,7 +3,7 @@ import { ReactComponent as LogoSvg } from "../../../media/logo/Logo.svg";
 import { Stack, Typography, IconButton, Hidden } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import GradientButton from "../../Buttons";
-import DropdownButton from "../../Buttons/dropdownButton";
+import DropdownButton from "../../Buttons/LanguageSwitch";
 import * as Styled from "./style";
 import { useState } from "react";
 import DrawerNavigation from "./DrawerNavigation ";

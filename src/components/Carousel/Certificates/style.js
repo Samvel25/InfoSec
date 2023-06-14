@@ -179,6 +179,7 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 	},
 
 	"& Button": {
+		background: "black",
 		"& pre": {
 			display: "none",
 		},
