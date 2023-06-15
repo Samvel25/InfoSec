@@ -66,12 +66,12 @@ export const GoalCard = styled(Card)(({ theme }) => ({
 }));
 
 export const Review = styled(Box)(({ theme }) => ({
-	position: 'relative',
+	position: "relative",
 	"&:before": {
 		position: "absolute",
 		backgroundImage: `url(${Net})`,
 		transform: "translate(-25%, -60%)",
-		maxWidth: "90%",
+		// maxWidth: "90%",
 		left: "0",
 		content: '""',
 		zIndex: "-1",
@@ -81,9 +81,10 @@ export const Review = styled(Box)(({ theme }) => ({
 		opacity: "0.4",
 		[theme.breakpoints.down("md")]: {
 			top: "100px",
-			left: '-180px',
+			left: "-180px",
 		},
 		[theme.breakpoints.down("sm")]: {
+			transform: "translate(-40%, -60%)",
 			height: "500px",
 		},
 	},
@@ -92,7 +93,6 @@ export const Review = styled(Box)(({ theme }) => ({
 		position: "absolute",
 		backgroundImage: `url(${Net})`,
 		transform: "translateY(50%)",
-		maxWidth: "90%",
 		right: "-50px",
 		content: '""',
 		zIndex: "-1",
@@ -102,14 +102,14 @@ export const Review = styled(Box)(({ theme }) => ({
 		opacity: "0.4",
 		[theme.breakpoints.down("md")]: {
 			height: "500px",
-
 		},
 		[theme.breakpoints.down("sm")]: {
-			right: '-15px',
+			transform: "translate(50%, 50%)",
 
+			right: "40px",
 		},
 	},
-	
+
 	// [theme.breakpoints.up("md")]: {
 	// 	minWidth: "400px",
 	// },

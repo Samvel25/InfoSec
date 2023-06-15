@@ -33,8 +33,10 @@ export const NavigationItem = styled(NavLink)(({ theme }) => ({
 
 export const BurgerMenu = styled(Drawer)(({ theme }) => ({
 	"& .MuiDrawer-paper": {
-		width: "250px",
-		background: "linear-gradient(45deg,#575757,#616161,#292929)", // Customize the background color
+		marginTop: "73px",
+		paddingTop: "70px",
+		width: "max-content",
+		background: "black", // Customize the background color
 	},
 }));
 

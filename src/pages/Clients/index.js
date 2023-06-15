@@ -15,7 +15,9 @@ const Clients = () => {
 		<PageTransition>
 			{/* ///1 section/////// */}
 			<Grid
-				sx={{ p: { md: "40px 0 150px", xs: "60px 0 100px" } }}
+				sx={{
+					p: { md: "40px 0 150px", sm: "70px 0 120px", xs: "40px 0 100px" },
+				}}
 				container
 				justifyContent={"space-around"}
 				direction={"row"}
@@ -113,11 +115,14 @@ const Clients = () => {
 					</Hidden>
 				</Grid>
 
-				<Grid item md={6.5} xs={12} sx={{ pt: { xs: "50px", md: "0" } }}>
+				<Grid item lg={6} md={6.5} xs={12} sx={{ pt: { xs: "50px", md: "0" } }}>
 					<GoalCards textAlign={{ xs: "center", sm: "start" }} />
 				</Grid>
 			</Styled.OurGoalsSection>
-			<Styled.Review sx={{pb: {xs: '150px', md: "250px"}}}>
+
+			{/* ///3 section/////// */}
+
+			<Styled.Review sx={{ pb: { xs: "150px", md: "250px" } }}>
 				<Typography
 					textAlign={"center"}
 					variant="GradientLight"

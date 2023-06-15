@@ -7,7 +7,7 @@ export const StyledSlider = styled(Slider)`
 		position: relative;
 		display: block !important;
 		overflow: hidden;
-		padding: 100px !important;
+		padding: 0 100px 60px !important;
 		width: 100%;
 		@media (min-width: 1350px) {
 			padding: 0 0 60px !important;

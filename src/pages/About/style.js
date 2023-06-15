@@ -13,3 +13,11 @@ export const FightAgainstCybercrime = styled(Grid)(({ theme }) => ({
 	padding: "50px 0 110px",
 	// display: "block",
 }));
+
+export const ScaleAndShiftWrapper = styled("div")(({ theme, open }) => ({
+	transform: open ? "scale(0.4) translateX(40vw)" : "none",
+	transition: theme.transitions.create("transform", {
+		easing: theme.transitions.easing.sharp,
+		duration: theme.transitions.duration.enteringScreen,
+	}),
+}));

@@ -110,7 +110,7 @@ export const StyledSlider = styled(Slider)`
 		width: 28px;
 		left: -9px;
 		bottom: -2px;
-
+		display: block;
 		margin: 0;
 	}
 
@@ -169,6 +169,7 @@ export const StyledSlider = styled(Slider)`
 
 export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 	width: "auto",
+	minWidth: "360px",
 	padding: "57px 20px 37px",
 	transform: "scale(0.6)",
 
@@ -195,8 +196,13 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 	},
 
 	[theme.breakpoints.down("sm")]: {
-		maxWidth: "330px",
+		minWidth: "auto",
+
+		width: "330px",
 		padding: " 50px  10px 20px",
+	},
+	[theme.breakpoints.down(470)]: {
+		width: "310px",
 	},
 }));
 

@@ -1,7 +1,6 @@
-import { Box, Hidden, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
-import GradientButton from "../../components/Buttons";
 import * as Styled from "./style";
 import * as GlobalStyled from "../style";
 import AchivmentsCarousel from "../../components/Carousel/Achivments/index";
@@ -10,12 +9,61 @@ import GlobeImg from "../../media/globe.png";
 import OurLifeCarousel from "../../components/Carousel/OurLife";
 import PageTransition from "../../components/PageTransition";
 
+// import { useMenuOpenState } from "../../components/context/MenuOpenContext";
+
+// const About = () => {
+// 	const isMenuOpen = useMenuOpenState();
+// 	return (
+// 		<PageTransition>
+// 			{/* ///1 section/////// */}
+
+// 			<Styled.ScaleAndShiftWrapper open={isMenuOpen}>
+// 				<Grid
+// 					sx={{ p: "70px 0 40px" }}
+// 					container
+// 					justifyContent={"space-around"}
+// 					direction={"row"}
+// 					alignItems="center"
+// 				>
+// 					<Grid
+// 						item
+// 						md={5}
+// 						xs={12}
+// 						sm={10}
+// 						textAlign={{ sm: "center", md: "start" }}
+// 					>
+// 						<Typography variant="h1">
+// 							Reliable business protection against cyber threats
+// 						</Typography>
+// 						<ProgreeBar />
+// 						<Grid item lg={11} md={12}>
+// 							<Typography>
+// 								We provide comprehensive cyber security services to protect your
+// 								business from cyber threats. Our team of experts has years of
+// 								experience in the field and can help you identify and mitigate
+// 								potential risks before they cause harm.
+// 							</Typography>
+// 						</Grid>
+// 					</Grid>
+// 					<Grid item md={6.5} xs={12} sm={8}>
+// 						<Styled.Globe>
+// 							<img
+// 								width={"100%"}
+// 								sx={{ paddingBottom: "86%" }}
+// 								src={GlobeImg}
+// 								alt="GlobeImg"
+// 							/>
+// 						</Styled.Globe>
+// 					</Grid>
+// 				</Grid>
+// 			</Styled.ScaleAndShiftWrapper>
+
 const About = () => {
 	return (
 		<PageTransition>
 			{/* ///1 section/////// */}
 			<Grid
-				sx={{ p: "70px 0 40px" }}
+				sx={{ m: { md: "70px 0 30px", xs: "40px 0 50px" } }}
 				container
 				justifyContent={"space-around"}
 				direction={"row"}
@@ -85,8 +133,8 @@ const About = () => {
 
 			<GlobalStyled.Achievements
 				sx={{
-					p: { lg: "120px 0 250px", xs: "100px 0 200px" },
-					"&: before": { bottom: { lg: "20%", xs: "16%" } },
+					borderTop: "none",
+					p: { md: "60px 0 130px", sm: "60px 0 85px", xs: "60px 0 0px" },
 				}}
 			>
 				<GlobalStyled.Description>
@@ -105,13 +153,13 @@ const About = () => {
 						</Typography>
 					</GlobalStyled.DescriptionText>
 				</GlobalStyled.Description>
-				<Box alignItems={"center"} sx={{ mt: "135px" }}>
+				<Box alignItems={"center"} sx={{ mt: { sm: "150px", xs: "110px" } }}>
 					<AchivmentsCarousel />
 				</Box>
 			</GlobalStyled.Achievements>
 
 			{/* ///4 section/////// */}
-			<Box sx={{ pb: "100px" }}>
+			<Box sx={{ p: "100px 0" }}>
 				<GlobalStyled.Description sx={{ "&: before": { content: "none" } }}>
 					<GlobalStyled.DescriptionText>
 						<Typography
@@ -128,7 +176,7 @@ const About = () => {
 						</Typography>
 					</GlobalStyled.DescriptionText>
 				</GlobalStyled.Description>
-				<Box alignItems={"center"} sx={{ mt: "70px" }}>
+				<Box alignItems={"center"} sx={{ my: "70px" }}>
 					<OurLifeCarousel />
 				</Box>
 			</Box>

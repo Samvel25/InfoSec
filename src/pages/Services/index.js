@@ -16,7 +16,9 @@ const Services = () => {
 		<PageTransition>
 			{/* ///1 section/////// */}
 			<Grid
-				sx={{ p: { md: "130px 0 230px", xs: "70px 0 140px" } }}
+				sx={{
+					p: { md: "130px 0 230px", sm: "70px 0 130px", xs: "40px 0 100px" },
+				}}
 				container
 				justifyContent={"space-around"}
 				direction={"row"}
@@ -63,12 +65,12 @@ const Services = () => {
 			<GlobalStyled.Achievements
 				sx={{
 					borderTop: "none",
-					p: { md: "0px 0 250px", xs: "0px 0 200px" },
-					"&: before": { bottom: { md: "170px", xs: "100px" } },
+					p: { md: "0px 0 250px", sm: "0px 0 200px", xs: "0px 0 150px" },
+					"&: before": { bottom: { md: "170px", xs: "75px" } },
 				}}
 			>
 				<GlobalStyled.Description
-					sx={{ "&: before": { bottom: { md: "-20px", xs: "-30px" } } }}
+					sx={{ "&: before": { bottom: { md: "-30px", xs: "-30px" } } }}
 				>
 					<Typography
 						variant="GradientLight"
@@ -79,7 +81,7 @@ const Services = () => {
 						response experts as soon as possible.
 					</Typography>
 				</GlobalStyled.Description>
-				<Box sx={{ mt: "200px" }} alignItems={"center"}>
+				<Box sx={{ mt: { sm: "200px", xs: "110px" } }} alignItems={"center"}>
 					<Experts sx={{ pb: "70px" }} />
 					<GradientButton sx={{ m: "0 auto" }}>
 						Report an Incident

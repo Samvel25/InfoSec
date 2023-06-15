@@ -95,7 +95,7 @@ const router = createBrowserRouter([
 
 function App() {
 	return (
-		<Stack id="app" height={"100vh"}>
+		<Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
 			<CssBaseline />
 			<RouterProvider router={router}>
 				<AnimateSharedLayout>

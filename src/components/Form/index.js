@@ -123,7 +123,7 @@ const Form = () => {
 				}}
 				onSubmit={handleSubmit}
 			>
-				<Grid container direction={"row"} spacing={2}>
+				<Grid container direction={"row"} spacing={{ sm: 2, xs: 1 }}>
 					<Grid textAlign={"center"} item xs={12}>
 						<Typography
 							variant="CardHead"

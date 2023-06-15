@@ -28,14 +28,14 @@ const CardList = ({ activeSort, setActiveSort }) => {
 	const cards = handleSortClick(activeSort);
 
 	return (
-		<div>
+		<Box>
 			<SortingButton onClick={setActiveSort} activeSort={activeSort} />
 			<Hidden smUp>
 				<CertificatesCarousel cards={cards} />
 			</Hidden>
 			<Hidden smDown>
 				<Grid
-					sx={{ mt: "100px" }}
+					sx={{ mt: { md: "100px", sm: "80px", xs: "50px" } }}
 					container
 					justifyContent={"center"}
 					spacing={2}
@@ -51,7 +51,7 @@ const CardList = ({ activeSort, setActiveSort }) => {
 					))}
 				</Grid>
 			</Hidden>
-		</div>
+		</Box>
 	);
 };
 

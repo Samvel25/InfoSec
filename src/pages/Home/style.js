@@ -1,6 +1,5 @@
 import { Box, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { ReactComponent as DiamondAnimation } from "../../media/diamondAnimation.svg";
 import Net1 from "../../media/backgroundNet.svg";
 import Net from "../../media/net.svg";
 import RadLine from "../../media/radLine.svg";
@@ -41,30 +40,22 @@ export const DiamondWraper = styled(Grid)(({ theme }) => ({
 	"&:after": {
 		position: "absolute",
 		backgroundImage: `url(${Net1})`,
-		left: "6%",
+		maxWidth: "100%",
 		content: '""',
-		zIndex: "-1",
-		top: "10%",
+		zIndex: "1",
 		width: "580px",
 		height: "455px",
 		opacity: "0.04",
 		borderRadius: "188px",
+		transform: "translate(-50%, -50%)",
+		top: "50%",
+		left: "50%",
 		[theme.breakpoints.down("md")]: {
 			transform: "translate(-50%, -50%)",
 			top: "50%",
 			left: "50%",
 			overflow: "visible",
 		},
-	},
-}));
-
-export const Diamond = styled(DiamondAnimation)(({ theme }) => ({
-	width: "35vw",
-	maxWidth: "510px",
-	minWidth: "280px",
-	height: "max-content",
-	[theme.breakpoints.up("md")]: {
-		minWidth: "400px",
 	},
 }));
 
@@ -86,7 +77,6 @@ export const BigCardImgWrapper = styled(Box)(({ theme }) => ({
 
 export const ExportCyberSecurity = styled(Grid)(({ theme }) => ({
 	position: "relative",
-	padding: "100px 0",
 
 	"&: after": {
 		...radLines,
@@ -96,6 +86,7 @@ export const ExportCyberSecurity = styled(Grid)(({ theme }) => ({
 		[theme.breakpoints.down("md")]: {
 			width: "265px",
 			height: "45px",
+			bottom: "30px",
 		},
 	},
 }));
@@ -106,6 +97,7 @@ export const ExportCyberSecurityDescription = styled(Grid)(({ theme }) => ({
 		position: "absolute",
 		backgroundImage: `url(${Net})`,
 		transform: "translate(-50%, -50%)",
+		// maxWidth: "100%",
 		left: "1%",
 		content: '""',
 		zIndex: "-1",
@@ -116,24 +108,24 @@ export const ExportCyberSecurityDescription = styled(Grid)(({ theme }) => ({
 		[theme.breakpoints.down("sm")]: {
 			top: "-15%",
 			height: "500px",
+			// display: "none",
 		},
 	},
 }));
 
 export const CyberSecurityServices = styled(Grid)(({ theme }) => ({
 	position: "relative",
-	padding: "100px 0 180px",
 	"&: after": {
 		...grayLines,
 		right: "0px",
-		bottom: "175px",
+		bottom: "140px",
 		transform: "translateY(100%)",
 		[theme.breakpoints.down("md")]: {
 			width: "265px",
 			height: "45px",
 		},
 		[theme.breakpoints.down("md")]: {
-			bottom: "140px",
+			bottom: "40px",
 		},
 	},
 }));
@@ -148,18 +140,20 @@ export const CyberSecurityServicesDescription = styled(Grid)(({ theme }) => ({
 		zIndex: "-1",
 		left: "17%",
 		top: "-17%",
-		maxWidth: "90%",
+		// maxWidth: "90%",
+
+		// maxWidth: "100%",
 		width: "620px",
 		height: "610px",
 		opacity: "0.4",
 		[theme.breakpoints.down("md")]: {
 			left: "35%",
 			height: "500px",
-			maxWidth: "80%",
+			// maxWidth: "80%",
 		},
-		[theme.breakpoints.down("sm")]: {
-			display: "none",
-		},
+		// [theme.breakpoints.down("sm")]: {
+		// 	display: "none",
+		// },
 	},
 }));
 

@@ -2,7 +2,7 @@ import Layout from "../components/Layout/Layout";
 import { Outlet } from "react-router-dom";
 
 const Root = () => {
-	return <Outlet />;
+	return <Outlet sx={{ overflow: "hidden" }} />;
 };
 
 export default Root;

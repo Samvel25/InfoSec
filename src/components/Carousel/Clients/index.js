@@ -13,28 +13,28 @@ const Clients = () => {
 		infinite: false,
 		focusOnSelect: true,
 		swipeToSlide: true,
+		centerMode: true,
 		autoplay: true,
 		slidesToShow: 8,
 		slidesToScroll: 1,
 		initialSlide: 0,
 		speed: 2000,
 		autoplaySpeed: 2000,
-		afterChange: function (index) {
-			console.log(
-				`Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-			);
-		},
+
 		responsive: [
 			{
 				breakpoint: 1200,
 				settings: {
 					slidesToShow: 5,
+					centerPadding: "60px",
+
 					infinite: true,
 				},
 			},
 			{
 				breakpoint: 900,
 				settings: {
+					centerPadding: "90px",
 					slidesToShow: 3,
 					slidesToScroll: 2,
 					infinite: true,
@@ -43,16 +43,27 @@ const Clients = () => {
 			{
 				breakpoint: 650,
 				settings: {
+					centerPadding: "80px",
 					slidesToShow: 2,
 					slidesToScroll: 2,
 					infinite: true,
 				},
 			},
 			{
-				breakpoint: 450,
+				breakpoint: 500,
 				settings: {
+					centerPadding: "120px",
 					slidesToShow: 1,
 					slidesToScroll: 2,
+					infinite: true,
+					centerMode: true,
+				},
+			},
+			{
+				breakpoint: 430,
+				settings: {
+					centerPadding: "90px",
+					slidesToShow: 1,
 					infinite: true,
 					centerMode: true,
 				},

@@ -5,6 +5,20 @@ import GrayLine from "../media/grayLine.svg";
 import Net from "../media/net.svg";
 import CarouselCard from "../components/Card/CarouselCard";
 
+export const ScaledSectionStyles = {
+	transform: "scale(0.9) translate(40%, 25%)",
+	transition: "transform 0.3s ease-in-out",
+	borderRadius: "20px",
+	boxShadow:
+		"0 0 6px 4px rgba(212, 37, 48, 0.4), " +
+		"0 0 12px 8px rgba(212, 37, 48, 0.3), " +
+		"0 0 18px 12px rgba(212, 37, 48, 0.2), " +
+		"0 0 24px 16px rgba(241, 4, 19, 0.4), " +
+		"0 0 30px 20px rgba(241, 4, 19, 0.3), " +
+		"0 0 36px 24px rgba(73, 0, 5, 0.4), " +
+		"0 0 42px 28px rgba(73, 0, 5, 0.6)",
+};
+
 export const grayLines = {
 	backgroundImage: `url(${GrayLine})`,
 	width: "320px",
@@ -44,11 +58,14 @@ export const Achievements = styled(Box)(({ theme }) => ({
 
 	"&: before": {
 		...grayLines,
-		bottom: "2%",
+		bottom: "10px",
 		right: 0,
 		[theme.breakpoints.down("md")]: {
 			width: "265px",
 			height: "45px",
+		},
+		[theme.breakpoints.down("sm")]: {
+			bottom: "-20px",
 		},
 	},
 }));
@@ -68,6 +85,7 @@ export const Description = styled(Box)(({ theme }) => ({
 		[theme.breakpoints.down("md")]: {
 			width: "265px",
 			height: "45px",
+			bottom: "-30px",
 		},
 	},
 }));
@@ -90,14 +108,14 @@ export const Services = styled(Grid)(({ theme }) => ({
 		zIndex: "-1",
 		left: "0",
 		top: "-70px",
-		maxWidth: "100%",
+		// maxWidth: "100%",
 		width: "620px",
 		height: "610px",
 		opacity: "0.5",
 
 		[theme.breakpoints.down("sm")]: {
 			height: "500px",
-			left: "28%",
+			left: "0",
 			top: "-16%",
 		},
 	},
@@ -110,7 +128,6 @@ export const Services = styled(Grid)(({ theme }) => ({
 		zIndex: "-1",
 		left: "100px",
 		bottom: "40px",
-		maxWidth: "80%",
 		width: "786px",
 		height: "610px",
 		opacity: "0.7",
@@ -118,12 +135,15 @@ export const Services = styled(Grid)(({ theme }) => ({
 			height: "500px",
 			bottom: 0,
 		},
-		[theme.breakpoints.down("850")]: {
-			bottom: "-40px",
+		[theme.breakpoints.down(850)]: {
+			bottom: "-10px",
 		},
 		[theme.breakpoints.down("sm")]: {
-			display: "none",
+			bottom: "30px",
 		},
+		// [theme.breakpoints.down("sm")]: {
+		// 	display: "none",
+		// },
 	},
 	[theme.breakpoints.down("1300")]: {
 		justifyContent: "space-around",

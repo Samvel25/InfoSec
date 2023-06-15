@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import * as Styled from "./style";
 import pdfFile from "../../../media/sample.pdf";
 import GradientButton from "../../Buttons";
@@ -7,7 +7,9 @@ import GradientButton from "../../Buttons";
 const CardItem = ({ title, content, certificateimg, className }) => {
 	return (
 		<Styled.SortingCard className={className}>
-			<Styled.CertificateImg src={certificateimg} alt="Certificate" />
+			<Box sx={{ width: "100%", textAlign: "center" }}>
+				<Styled.CertificateImg src={certificateimg} alt="Certificate" />
+			</Box>
 			<Stack
 				flexDirection={"row"}
 				sx={{ mb: "40px", width: "100%" }}
