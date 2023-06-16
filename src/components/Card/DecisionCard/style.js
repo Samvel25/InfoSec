@@ -1,4 +1,4 @@
-import CarouselCard from "../../components/Card/CarouselCard";
+import CarouselCard from "../CarouselCard";
 import { styled, keyframes } from "@mui/system";
 import { Typography } from "@mui/material";
 

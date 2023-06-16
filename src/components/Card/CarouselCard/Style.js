@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { styled, keyframes } from "@mui/material/styles";
-import Led, { boxShadow1, boxShadow2 } from "../Other/Led";
+import Led, { boxShadow1, boxShadow2 } from "../../Other/Led";
 
 const commonStyles = {
 	content: '""',
@@ -10,7 +10,7 @@ const commonStyles = {
 	overflow: "visible",
 };
 
-const AchievementsCard = styled(Box)(
+export const AchievementsCard = styled(Box)(
 	({ theme, backgroundtype, ledtype, boxpadding, cutedcorner }) => {
 		const animation = keyframes`
   ${ledtype === "ledOne" ? boxShadow1 : boxShadow2}
@@ -38,6 +38,12 @@ const AchievementsCard = styled(Box)(
 						? "linear-gradient(45deg,#575757,#616161,#292929)"
 						: "linear-gradient(45deg,#D42530,#F10413,#490005)",
 			},
+			[theme.breakpoints.down("sm")]: {
+				"& span:first-child": {
+					animation:
+						boxpadding === "boxpadding" ? "none" : `${animation} 1.5s infinite`,
+				},
+			},
 			"&:hover > span:first-child": {
 				animation:
 					boxpadding === "boxpadding" ? "none" : `${animation} 1.5s infinite`,
@@ -45,19 +51,3 @@ const AchievementsCard = styled(Box)(
 		};
 	}
 );
-
-function CarouselCard(props) {
-	const { backgroundtype, ledtype, boxpadding, cutedcorner } = props;
-
-	return (
-		<AchievementsCard
-			cutedcorner={cutedcorner}
-			backgroundtype={backgroundtype}
-			ledtype={ledtype}
-			boxpadding={boxpadding}
-			{...props}
-		></AchievementsCard>
-	);
-}
-
-export default CarouselCard;

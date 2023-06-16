@@ -34,11 +34,8 @@ export const radLines = {
 export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
 	...(isMenuOpen && {
 		...ScaledSectionStyles,
-		padding: "10px",
-		transform: "scale(0.4) translate(40%, 25%)",
-
 		[theme.breakpoints.down("md")]: {
-			transform: "scale(1.2) translate(55%, 50%)",
+			transform: "scale(0.6) translate(55%, -20%)",
 			// overflow: "visible",
 		},
 		[theme.breakpoints.down("sm")]: {
@@ -46,7 +43,7 @@ export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
 			// overflow: "visible",
 		},
 		[theme.breakpoints.up("xs")]: {
-			padding: "10px 10px 10px 10px !important",
+			padding: "20px 20px 20px 20px !important",
 
 			// overflow: "visible",
 		},
@@ -56,10 +53,6 @@ export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
 export const DiamondWraper = styled(Grid)(({ theme }) => ({
 	position: "relative",
 	textAlign: "end",
-	overflow: "hidden",
-	[theme.breakpoints.down("md")]: {
-		margin: "0 20px",
-	},
 	"&:after": {
 		position: "absolute",
 		backgroundImage: `url(${Net1})`,

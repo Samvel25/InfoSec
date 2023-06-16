@@ -6,16 +6,22 @@ import Net from "../media/net.svg";
 import CarouselCard from "../components/Card/CarouselCard";
 
 export const ScaledSectionStyles = {
+	transition: "transform 0.3s ease-in-out",
+	borderRadius: "40px",
+	// padding: "10px",
+	transform: "scale(0.6) translate(40%, 25%)",
 	"& sh": {
 		position: "absolute",
 		inset: "-140px",
 		border: "140px solid #0000",
-		borderRadius: "160px",
+		borderRadius: "180px",
 		WebkitMask:
 			"linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
 		WebkitMaskComposite: "xor",
 		maskComposite: "exclude",
-		transform: "translateX(-50px)",
+		// transform: "translateX(-50px)",
+		transform: "translateZ(-1px)",
+
 		pointerEvents: "none",
 		"&:before": {
 			content: '""',
@@ -41,16 +47,6 @@ export const ScaledSectionStyles = {
 			transform: "translate(0px,0px)",
 		},
 	},
-	transition: "transform 0.3s ease-in-out",
-	borderRadius: "20px",
-	// boxShadow:
-	// 	"0 0 6px 4px rgba(212, 37, 48, 0.4), " +
-	// 	"0 0 12px 8px rgba(212, 37, 48, 0.3), " +
-	// 	"0 0 18px 12px rgba(212, 37, 48, 0.2), " +
-	// 	"0 0 24px 16px rgba(241, 4, 19, 0.4), " +
-	// 	"0 0 30px 20px rgba(241, 4, 19, 0.3), " +
-	// 	"0 0 36px 24px rgba(73, 0, 5, 0.4), " +
-	// 	"0 0 42px 28px rgba(73, 0, 5, 0.6)",
 };
 
 export const grayLines = {

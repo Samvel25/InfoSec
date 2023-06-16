@@ -4,6 +4,7 @@ import RadLine from "../../media/radLine.svg";
 import GrayLine from "../../media/grayLine.svg";
 import Card from "../../components/Card/CarouselCard";
 import Net from "../../media/net.svg";
+import { ScaledSectionStyles } from "../style";
 
 export const grayLines = {
 	backgroundImage: `url(${GrayLine})`,
@@ -26,6 +27,25 @@ export const radLines = {
 	backgroundRepeat: " no-repeat",
 	backgroundSize: "contain",
 };
+
+export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
+	...(isMenuOpen && {
+		...ScaledSectionStyles,
+		[theme.breakpoints.down("md")]: {
+			transform: "scale(0.6) translate(55%, -20%)",
+			// overflow: "visible",
+		},
+		[theme.breakpoints.down("sm")]: {
+			transform: "scale(0.6) translate(55%, -15%)",
+			// overflow: "visible",
+		},
+		[theme.breakpoints.up("xs")]: {
+			padding: "20px 20px 20px 20px !important",
+
+			// overflow: "visible",
+		},
+	}),
+}));
 
 export const OurGoalsSection = styled(Grid)(({ theme }) => ({
 	position: "relative",

@@ -7,14 +7,18 @@ import ClientsImg from "../../media/clientsImg.png";
 import ClientsSlide from "../../components/Carousel/Clients";
 import GradientButton from "../../components/Buttons";
 import PageTransition from "../../components/PageTransition";
-import GoalCards from "../../components/CardExamples";
+import GoalCards from "../../components/Card/DecisionCard";
 import ClientsReview from "../../components/Carousel/ClientsReview";
+import { useMenuOpen } from "../../components/context/MenuOpenContext";
 
 const Clients = () => {
+	const { isMenuOpen } = useMenuOpen();
+
 	return (
 		<PageTransition>
 			{/* ///1 section/////// */}
-			<Grid
+			<Styled.FirstSection
+				isMenuOpen={isMenuOpen}
 				sx={{
 					p: { md: "40px 0 150px", sm: "70px 0 120px", xs: "40px 0 100px" },
 				}}
@@ -23,6 +27,7 @@ const Clients = () => {
 				direction={"row"}
 				alignItems="center"
 			>
+				<sh />
 				<Grid
 					item
 					md={5}
@@ -63,76 +68,84 @@ const Clients = () => {
 						/>
 					</Box>
 				</Grid>
-			</Grid>
+			</Styled.FirstSection>
 
-			{/* ///2 section/////// */}
-			<Box>
-				<Typography
-					textAlign={"center"}
-					variant="GradientLight"
-					component="h1"
-					sx={{ mb: "70px" }}
-				>
-					Trusted by thousands of companies
-				</Typography>
-				<ClientsSlide />
-			</Box>
-
-			{/* ///3 section/////// */}
-
-			<Styled.OurGoalsSection
-				sx={{ p: { md: "330px 0 300px", xs: "120px 0" } }}
-				container
-				justifyContent={"space-around"}
-				direction={"row"}
-				// alignItems="center"
-			>
-				<Grid
-					item
-					md={5}
-					xs={12}
-					sm={10}
-					textAlign={{ xs: "center", md: "start" }}
-				>
-					<Typography variant="h1">
-						Proactive Cyber Security Solutions for Your Business
+			<Box sx={{ display: isMenuOpen ? "none" : "block" }}>
+				{/* ///2 section/////// */}
+				<Box>
+					<Typography
+						textAlign={"center"}
+						variant="GradientLight"
+						component="h1"
+						sx={{ mb: "70px" }}
+					>
+						Trusted by thousands of companies
 					</Typography>
-					<ProgreeBar />
-					<Grid item lg={11} md={12}>
-						<Typography>
-							We provide comprehensive cyber security services to protect your
-							business from cyber threats. Our team of experts has years of
-							experience in the field and can help you identify and mitigate
-							potential risks before they cause harm.
-						</Typography>
-					</Grid>
-					<Hidden mdDown>
-						<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
-							<GradientButton backgroundtype="backgroundOne">
-								<Typography>To get a consultation</Typography>
-							</GradientButton>
-						</Stack>
-					</Hidden>
-				</Grid>
+					<ClientsSlide />
+				</Box>
 
-				<Grid item lg={6} md={6.5} xs={12} sx={{ pt: { xs: "50px", md: "0" } }}>
-					<GoalCards textAlign={{ xs: "center", sm: "start" }} />
-				</Grid>
-			</Styled.OurGoalsSection>
+				{/* ///3 section/////// */}
 
-			{/* ///3 section/////// */}
-
-			<Styled.Review sx={{ pb: { xs: "150px", md: "250px" } }}>
-				<Typography
-					textAlign={"center"}
-					variant="GradientLight"
-					component="h1"
-					sx={{ mb: "40px" }}
+				<Styled.OurGoalsSection
+					sx={{ p: { md: "330px 0 300px", xs: "120px 0" } }}
+					container
+					justifyContent={"space-around"}
+					direction={"row"}
+					// alignItems="center"
 				>
-					review from our client
-				</Typography>
-				<ClientsReview />
-			</Styled.Review>
+					<Grid
+						item
+						md={5}
+						xs={12}
+						sm={10}
+						textAlign={{ xs: "center", md: "start" }}
+					>
+						<Typography variant="h1">
+							Proactive Cyber Security Solutions for Your Business
+						</Typography>
+						<ProgreeBar />
+						<Grid item lg={11} md={12}>
+							<Typography>
+								We provide comprehensive cyber security services to protect your
+								business from cyber threats. Our team of experts has years of
+								experience in the field and can help you identify and mitigate
+								potential risks before they cause harm.
+							</Typography>
+						</Grid>
+						<Hidden mdDown>
+							<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
+								<GradientButton backgroundtype="backgroundOne">
+									<Typography>To get a consultation</Typography>
+								</GradientButton>
+							</Stack>
+						</Hidden>
+					</Grid>
+
+					<Grid
+						item
+						lg={6}
+						md={6.5}
+						xs={12}
+						sx={{ pt: { xs: "50px", md: "0" } }}
+					>
+						<GoalCards textAlign={{ xs: "center", sm: "start" }} />
+					</Grid>
+				</Styled.OurGoalsSection>
+
+				{/* ///3 section/////// */}
+
+				<Styled.Review sx={{ pb: { xs: "150px", md: "250px" } }}>
+					<Typography
+						textAlign={"center"}
+						variant="GradientLight"
+						component="h1"
+						sx={{ mb: "40px" }}
+					>
+						review from our client
+					</Typography>
+					<ClientsReview />
+				</Styled.Review>
+			</Box>
 		</PageTransition>
 	);
 };

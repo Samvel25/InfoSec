@@ -16,12 +16,6 @@ const Certificates = () => {
 					"&:after": {
 						display: isMenuOpen ? "none" : "block",
 					},
-					// "& p": {
-					// 	transform: "translateY(-50%)",
-					// 	top: "50%",
-					// },
-					// transform: isMenuOpen ? "scale(0.6) translate(30%, 40%)" : "none",
-					// border: isMenuOpen ? "3px solid gray" : "none",
 				}}
 			>
 				<sh />

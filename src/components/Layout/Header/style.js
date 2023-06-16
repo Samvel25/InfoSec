@@ -1,11 +1,21 @@
-import { AppBar } from "@mui/material";
+import { AppBar, Box, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ReactComponent as UserSvg } from "../../../media/user.svg";
 import { NavLink } from "react-router-dom";
 import { Drawer } from "@mui/material";
+import { ReactComponent as LogoSvg } from "../../../media/logo/Logo.svg";
 
-export const Logo = styled("a")(({ theme }) => ({
+export const LogoWrapper = styled("a")(({ theme }) => ({
 	display: "flex",
+}));
+
+export const Logo = styled(LogoSvg)(({ theme }) => ({
+	width: "182px",
+	height: "39px",
+	[theme.breakpoints.down("sm")]: {
+		width: "132px",
+		height: "30px",
+	},
 }));
 
 export const Navigation = styled("nav")(({ theme }) => ({
@@ -36,9 +46,19 @@ export const BurgerMenu = styled(Drawer)(({ theme }) => ({
 		marginTop: "73px",
 		paddingTop: "70px",
 		width: "max-content",
-		background: "transparent", // Customize the background color
+		background: "transparent",
+		position: "relative",
+		overflow: "visible", // Customize the background color
 	},
 }));
+
+export const ContactNavigation = styled(Box)({
+	position: "absolute",
+	transform: "translateX(50%)",
+	left: "-105%",
+	width: "280%",
+	bottom: "85px",
+});
 
 export const UserLogo = styled(UserSvg)({
 	cursor: "pointer",

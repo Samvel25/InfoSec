@@ -16,20 +16,13 @@ const defaultCenter = {
 	lng: 44.516667,
 };
 
-// const Item = styled(Paper)(({ theme }) => ({
-// 	backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-// 	...theme.typography.body2,
-// 	padding: theme.spacing(1),
-// 	textAlign: "center",
-// 	color: theme.palette.text.secondary,
-// }));
-
 const Footer = () => {
 	const { isMenuOpen } = useMenuOpen();
 	const { isLoaded } = useJsApiLoader({
 		id: "google-map-script",
 		googleMapsApiKey: APY_KEY,
 	});
+
 	return (
 		<Box sx={{ display: isMenuOpen ? "none" : "block" }}>
 			<footer>
@@ -50,90 +43,144 @@ const Footer = () => {
 						<Typography variant="FooterHead" component={"p"}>
 							Solutions
 						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Responding
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Phishing and scam protection
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							For the financial sector
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							For telecommunications
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							For industry
-						</Typography>
+						<ul>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Responding
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Phishing and scam protection
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									For the financial sector
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									For telecommunications
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									For industry
+								</Typography>
+							</li>
+						</ul>
 					</Grid>
 					<Grid item lg={2} md={3} sm={6} xs={12} sx={{ mb: "40px" }}>
 						<Typography variant="FooterHead" component={"p"}>
 							Product
 						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Threat Intelligence
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Fraud Protection
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Managed XDR
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Attack Surface Management
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Digital Risk Protection
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Business Email Protection
-						</Typography>
+						<ul>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Threat Intelligence
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Fraud Protection
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Managed XDR
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Attack Surface Management
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Digital Risk Protection
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Business Email Protection
+								</Typography>
+							</li>
+						</ul>
 					</Grid>
 					<Grid item lg={2} md={3} sm={6} sx={{ mb: "40px" }}>
 						<Typography variant="FooterHead" component={"p"}>
 							Resources
 						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Cyber Threat Research
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Certificates and licenses
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Customer Reviews
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Webinars
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Blog
-						</Typography>
+						<ul>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Cyber Threat Research
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Certificates and licenses
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Customer Reviews
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Webinars
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Blog
+								</Typography>
+							</li>
+						</ul>
 					</Grid>
 					<Grid item lg={2} md={3} sm={6} sx={{ mb: "40px" }}>
 						<Typography variant="FooterHead" component={"p"}>
 							Company
 						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							About Infosec LLC
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Command
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Find a partner
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Become a partner
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Career
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Internships
-						</Typography>
-						<Typography href="#" variant="FooterLink" component={"a"}>
-							Company
-						</Typography>
+						<ul>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									About Infosec LLC
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Command
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Find a partner
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Become a partner
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Career
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Internships
+								</Typography>
+							</li>
+							<li>
+								<Typography href="#" variant="FooterLink" component={"a"}>
+									Company
+								</Typography>
+							</li>
+						</ul>
 					</Grid>
 					<Styled.LineWrapper item xs={12}>
 						<Styled.FooterLine />
@@ -264,8 +311,4 @@ const Footer = () => {
 	);
 };
 
-<Styled.LineText>
-	© Infosec LLC is one of the world's leading cybercrime and fraud prevention
-	and investigation companies using high technology.
-</Styled.LineText>;
 export default Footer;

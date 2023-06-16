@@ -12,6 +12,10 @@ export const Logo = styled(LogoSvg)(({ theme }) => ({
 export const FooterLinkes = styled(Grid)(({ theme }) => ({
 	position: "relative",
 	marginBottom: "50px",
+	"& ul": {
+		listStyleType: "none",
+		paddingLeft: 0,
+	},
 }));
 export const LineWrapper = styled(Grid)(({ theme }) => ({
 	position: "relative",
@@ -47,20 +51,3 @@ export const LineText = styled(Typography)(({ theme }) => ({
 		width: "90%",
 	},
 }));
-
-// export const MapWrapper = styled("Box")(({ theme }) => ({
-// 	position: "relative",
-// 	zIndex: 1,
-// 	background: "rgba(0, 0, 0, 0.5)",
-// }));
-
-// export const GoogleMaps = styled("div")(({ theme }) => ({
-// 	position: "absolute",
-// 	top: "20px",
-// 	bottom: "20px",
-// 	left: "20px",
-// 	right: "20px",
-// 	background: "rgba(0, 0, 0, 0.0)",
-// }));
-// FooterLinkes
-// translateY(100%)

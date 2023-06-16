@@ -32,7 +32,7 @@ function Home() {
 					},
 				}}
 				container
-				justifyContent={"space-around"}
+				justifyContent={{ dm: "space-around", xs: "center" }}
 				direction={"row"}
 				alignItems="center"
 			>
@@ -47,8 +47,8 @@ function Home() {
 					<Typography variant="h1">
 						Proactive Cyber Security Solutions for Your Business
 					</Typography>
-					<ProgreeBar />
 					<Hidden mdDown>
+						<ProgreeBar />
 						<Grid item lg={11} md={12}>
 							<Typography>
 								We provide comprehensive cyber security services to protect your
@@ -77,6 +77,12 @@ function Home() {
 					xs={12}
 					textAlign={{ md: "end", xs: "center" }}
 				>
+					<Hidden mdUp>
+						<Box sx={{ m: "15px 0 30px" }}>
+							<ProgreeBar />
+						</Box>
+					</Hidden>
+
 					<img
 						src={DiamondAnimation}
 						alt="Cybersecurity"
@@ -85,7 +91,7 @@ function Home() {
 					/>
 				</Styled.DiamondWraper>
 				<Hidden mdUp>
-					<Grid item xs={11} sm={9} textAlign={"center"}>
+					<Grid item xs={12} sm={9} textAlign={{ sm: "center", xs: "start" }}>
 						<Typography>
 							We provide comprehensive cyber security services to protect your
 							business from cyber threats. Our team of experts has years of
@@ -95,7 +101,7 @@ function Home() {
 					</Grid>
 				</Hidden>
 				<Hidden mdUp>
-					<Grid item sm={7} xs={12} sx={{ mt: "20px" }}>
+					<Grid item sm={7} xs={12}>
 						<Box textItems={"center"} direction={"row"} sx={{ mt: "20px" }}>
 							<GradientButton sx={{ mb: "20px", width: "100%" }}>
 								<Typography>Pick a product</Typography>

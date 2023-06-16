@@ -1,5 +1,5 @@
 import { Box, styled, keyframes } from "@mui/material";
-import Led, { boxShadow1, boxShadow2 } from "../Other/Led";
+import Led, { boxShadow1, boxShadow2 } from "../../Other/Led";
 
 const commonStyles = {
 	content: '""',
@@ -11,7 +11,7 @@ const commonStyles = {
 		"polygon(0 0,calc(100% - 16.00px) 0,100% 16.00px,100% 100%,16.00px 100%,0 calc(100% - 16.00px),0 0,1px  1px ,1px calc(100% - 16.00px - 0.41px),calc(16.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(16.00px + 0.41px),calc(100% - 16.00px - 0.41px) 1px,1px 1px)",
 };
 
-const BigCard = styled(Box)(({ theme, backgroundtype, ledtype }) => {
+export const BigCard = styled(Box)(({ theme, backgroundtype, ledtype }) => {
 	const animation = keyframes`
   ${ledtype === "ledOne" ? boxShadow1 : boxShadow2}
 `;
@@ -28,20 +28,10 @@ const BigCard = styled(Box)(({ theme, backgroundtype, ledtype }) => {
 		"&:hover > span:first-child": {
 			animation: `${animation} 1.5s infinite`,
 		},
+		[theme.breakpoints.down("sm")]: {
+			"& span:first-child": {
+				animation: `${animation} 1.5s infinite`,
+			},
+		},
 	};
 });
-
-function BigCardWrapper(props) {
-	const { backgroundtype } = props;
-	console.log(props);
-
-	return (
-		<BigCard backgroundtype={backgroundtype} {...props}>
-			<Led />
-			{/* {props.svg} */}
-			{props.img}
-		</BigCard>
-	);
-}
-
-export default BigCardWrapper;

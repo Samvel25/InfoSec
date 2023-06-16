@@ -2,6 +2,7 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CertificateBackground from "../../media/certificatesBackground.png";
 import Net from "../../media/net2.svg";
+import { useMenuOpen } from "../../components/context/MenuOpenContext";
 import { ScaledSectionStyles } from "../style";
 
 export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
@@ -17,18 +18,20 @@ export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
 	...(isMenuOpen && {
 		...ScaledSectionStyles,
 		width: "150%",
-		transform: "scale(0.9) translate(40%, 25%)",
+		backgroundSize: "cover",
+		paddingBottom: "120%",
+
 		"& h1": {
 			transform: "translate(-50%, -50%)",
 			top: "50%",
 		},
+
 		[theme.breakpoints.down("md")]: {
-			transform: "scale(1.2) translate(55%, 50%)",
+			transform: "scale(0.6) translate(26%, -21%)",
 		},
+		[theme.breakpoints.down("sm")]: {},
 	}),
-	// [theme.breakpoints.down("md")]: {
-	// 	transform: "rotate(90deg)",
-	// },
+
 	"&:after": {
 		position: "absolute",
 		backgroundImage: `url(${Net})`,
@@ -47,23 +50,18 @@ export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
 			transform: "translate(-41%, -30%) rotate(180deg)",
 			top: "50%",
 			left: "50%",
-			// overflow: "visible",
 		},
 		[theme.breakpoints.down("md")]: {
 			height: "260px",
-			// overflow: "visible",
 		},
 		[theme.breakpoints.down("sm")]: {
 			display: "none",
-			// overflow: "visible",
 		},
 	},
 	[theme.breakpoints.down("sm")]: {
 		backgroundSize: "cover",
-		paddingBottom: isMenuOpen ? "100%" : "70%",
-		transform: isMenuOpen ? "scale(0.6) translate(27%, 3%)" : "none",
-
-		// overflow: "visible",
+		paddingBottom: isMenuOpen ? "120%" : "70%",
+		transform: isMenuOpen ? "scale(0.6) translate(27%, -5%)" : "none",
 	},
 }));
 

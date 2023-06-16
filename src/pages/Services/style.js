@@ -1,6 +1,26 @@
 import FormBackground from "../../media/incidentBackground.png";
 import { styled } from "@mui/material";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
+import { ScaledSectionStyles } from "../style";
+
+export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
+	...(isMenuOpen && {
+		...ScaledSectionStyles,
+		[theme.breakpoints.down("md")]: {
+			transform: "scale(0.6) translate(55%, -20%)",
+			// overflow: "visible",
+		},
+		[theme.breakpoints.down("sm")]: {
+			transform: "scale(0.6) translate(55%, -15%)",
+			// overflow: "visible",
+		},
+		[theme.breakpoints.up("xs")]: {
+			padding: "20px 20px 20px 20px !important",
+
+			// overflow: "visible",
+		},
+	}),
+}));
 
 export const FormBackgroundBox = styled(Box)(({ theme }) => ({
 	position: "relative",
