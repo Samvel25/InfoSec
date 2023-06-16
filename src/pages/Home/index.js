@@ -20,14 +20,15 @@ function Home() {
 	return (
 		<PageTransition>
 			{/* ///1 section/////// */}
-			<Grid
+			<Styled.FirstSection
+				isMenuOpen={isMenuOpen}
 				sx={{
 					p: {
 						md: "100px 0",
 						xs: "40px 0 100px",
 						sm: "70px 0 100px",
-						transform: isMenuOpen ? "scale(0.6) translate(50%, -20%)" : "none", // Add transform here
-						transition: "transform 0.3s ease-in-out",
+						// transform: isMenuOpen ? "scale(0.6) translate(50%, -20%)" : "none", // Add transform here
+						// transition: "transform 0.3s ease-in-out",
 					},
 				}}
 				container
@@ -35,6 +36,7 @@ function Home() {
 				direction={"row"}
 				alignItems="center"
 			>
+				<sh />
 				<Grid
 					item
 					md={5}
@@ -107,7 +109,7 @@ function Home() {
 						</Box>
 					</Grid>
 				</Hidden>
-			</Grid>
+			</Styled.FirstSection>
 
 			<Box sx={{ display: isMenuOpen ? "none" : "block" }}>
 				{/* ///2 section/////// */}

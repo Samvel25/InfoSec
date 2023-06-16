@@ -126,6 +126,7 @@ function Header() {
 					</Hidden>
 				</Stack>
 				<Styled.BurgerMenu
+					BackdropProps={{ invisible: true }}
 					anchor="left"
 					open={isMenuOpen}
 					onClose={handleMenuToggle}

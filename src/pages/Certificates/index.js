@@ -24,6 +24,7 @@ const Certificates = () => {
 					// border: isMenuOpen ? "3px solid gray" : "none",
 				}}
 			>
+				<sh />
 				<Styled.CertificatesHeadText variant="h1">
 					OUR certificates
 				</Styled.CertificatesHeadText>

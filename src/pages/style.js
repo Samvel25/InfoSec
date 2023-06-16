@@ -6,17 +6,51 @@ import Net from "../media/net.svg";
 import CarouselCard from "../components/Card/CarouselCard";
 
 export const ScaledSectionStyles = {
-	transform: "scale(0.9) translate(40%, 25%)",
+	"& sh": {
+		position: "absolute",
+		inset: "-140px",
+		border: "140px solid #0000",
+		borderRadius: "160px",
+		WebkitMask:
+			"linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0)",
+		WebkitMaskComposite: "xor",
+		maskComposite: "exclude",
+		transform: "translateX(-50px)",
+		pointerEvents: "none",
+		"&:before": {
+			content: '""',
+			position: "absolute",
+			inset: "40px",
+			borderRadius: "10px",
+			boxShadow:
+				"0 0 4px 2px rgba(212, 37, 48, 1.0), " +
+				"0 0 8px 4px rgba(73, 0, 5, 1.0), " +
+				"0 0 12px 6px rgba(212, 37, 48, 0.4), " +
+				"0 0 16px 8px rgba(241, 4, 19, 0.8), " +
+				"0 0 20px 10px rgba(241, 4, 19, 0.6), " +
+				"0 0 24px 12px rgba(73, 0, 5, 0.8), " +
+				"0 0 28px 14px rgba(73, 0, 5, 0.6), " +
+				"0 0 32px 16px rgba(212, 37, 48, 1.0), " +
+				"0 0 36px 18px rgba(73, 0, 5, 1.0), " +
+				"0 0 40px 20px rgba(212, 37, 48, 0.4), " +
+				"0 0 44px 22px rgba(241, 4, 19, 0.8), " +
+				"0 0 48px 24px rgba(241, 4, 19, 0.6), " +
+				"0 0 52px 26px rgba(73, 0, 5, 0.8), " +
+				"0 0 56px 28px rgba(73, 0, 5, 0.6)",
+			filter: "blur(60px)",
+			transform: "translate(0px,0px)",
+		},
+	},
 	transition: "transform 0.3s ease-in-out",
 	borderRadius: "20px",
-	boxShadow:
-		"0 0 6px 4px rgba(212, 37, 48, 0.4), " +
-		"0 0 12px 8px rgba(212, 37, 48, 0.3), " +
-		"0 0 18px 12px rgba(212, 37, 48, 0.2), " +
-		"0 0 24px 16px rgba(241, 4, 19, 0.4), " +
-		"0 0 30px 20px rgba(241, 4, 19, 0.3), " +
-		"0 0 36px 24px rgba(73, 0, 5, 0.4), " +
-		"0 0 42px 28px rgba(73, 0, 5, 0.6)",
+	// boxShadow:
+	// 	"0 0 6px 4px rgba(212, 37, 48, 0.4), " +
+	// 	"0 0 12px 8px rgba(212, 37, 48, 0.3), " +
+	// 	"0 0 18px 12px rgba(212, 37, 48, 0.2), " +
+	// 	"0 0 24px 16px rgba(241, 4, 19, 0.4), " +
+	// 	"0 0 30px 20px rgba(241, 4, 19, 0.3), " +
+	// 	"0 0 36px 24px rgba(73, 0, 5, 0.4), " +
+	// 	"0 0 42px 28px rgba(73, 0, 5, 0.6)",
 };
 
 export const grayLines = {

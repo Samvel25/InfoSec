@@ -2,7 +2,6 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CertificateBackground from "../../media/certificatesBackground.png";
 import Net from "../../media/net2.svg";
-import { useMenuOpen } from "../../components/context/MenuOpenContext";
 import { ScaledSectionStyles } from "../style";
 
 export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
@@ -17,18 +16,14 @@ export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
 	zIndex: "1",
 	...(isMenuOpen && {
 		...ScaledSectionStyles,
+		width: "150%",
+		transform: "scale(0.9) translate(40%, 25%)",
 		"& h1": {
 			transform: "translate(-50%, -50%)",
-
 			top: "50%",
 		},
 		[theme.breakpoints.down("md")]: {
 			transform: "scale(1.2) translate(55%, 50%)",
-			// overflow: "visible",
-		},
-		[theme.breakpoints.down("sm")]: {
-			transform: "scale(1.4) translate(55%, 50%)",
-			// overflow: "visible",
 		},
 	}),
 	// [theme.breakpoints.down("md")]: {
@@ -65,7 +60,9 @@ export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
 	},
 	[theme.breakpoints.down("sm")]: {
 		backgroundSize: "cover",
-		paddingBottom: "70%",
+		paddingBottom: isMenuOpen ? "100%" : "70%",
+		transform: isMenuOpen ? "scale(0.6) translate(27%, 3%)" : "none",
+
 		// overflow: "visible",
 	},
 }));

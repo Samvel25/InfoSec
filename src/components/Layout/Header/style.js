@@ -36,7 +36,7 @@ export const BurgerMenu = styled(Drawer)(({ theme }) => ({
 		marginTop: "73px",
 		paddingTop: "70px",
 		width: "max-content",
-		background: "black", // Customize the background color
+		background: "transparent", // Customize the background color
 	},
 }));
 

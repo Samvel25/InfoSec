@@ -5,6 +5,7 @@ import Net from "../../media/net.svg";
 import RadLine from "../../media/radLine.svg";
 import GrayLine from "../../media/grayLine.svg";
 import { ReactComponent as CardSquare } from "../../media/cardSquare.svg";
+import { ScaledSectionStyles } from "../style";
 
 //1 section*/*/*/*/*/*/
 
@@ -29,6 +30,28 @@ export const radLines = {
 	backgroundRepeat: " no-repeat",
 	backgroundSize: "contain",
 };
+
+export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
+	...(isMenuOpen && {
+		...ScaledSectionStyles,
+		padding: "10px",
+		transform: "scale(0.4) translate(40%, 25%)",
+
+		[theme.breakpoints.down("md")]: {
+			transform: "scale(1.2) translate(55%, 50%)",
+			// overflow: "visible",
+		},
+		[theme.breakpoints.down("sm")]: {
+			transform: "scale(0.6) translate(55%, -15%)",
+			// overflow: "visible",
+		},
+		[theme.breakpoints.up("xs")]: {
+			padding: "10px 10px 10px 10px !important",
+
+			// overflow: "visible",
+		},
+	}),
+}));
 
 export const DiamondWraper = styled(Grid)(({ theme }) => ({
 	position: "relative",
