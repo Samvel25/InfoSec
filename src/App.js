@@ -65,47 +65,47 @@ import Certificates from "./pages/Certificates";
 import Home from "./pages/Home";
 
 const router = createBrowserRouter([
-	{
-		path: "/",
-		element: <Layout />,
-		children: [
-			{
-				path: "",
-				element: <Home />,
-			},
-			{
-				path: "about",
-				element: <About />,
-			},
-			{
-				path: "services",
-				element: <Services />,
-			},
-			{
-				path: "clients",
-				element: <Clients />,
-			},
-			{
-				path: "certificates",
-				element: <Certificates />,
-			},
-		],
-	},
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "services",
+        element: <Services />,
+      },
+      {
+        path: "clients",
+        element: <Clients />,
+      },
+      {
+        path: "certificates",
+        element: <Certificates />,
+      },
+    ],
+  },
 ]);
 
 function App() {
-	return (
-		<Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
-			<CssBaseline />
-			<RouterProvider router={router}>
-				<AnimateSharedLayout>
-					<AnimatePresence exitBeforeEnter>
-						<Outlet />
-					</AnimatePresence>
-				</AnimateSharedLayout>
-			</RouterProvider>
-		</Stack>
-	);
+  return (
+    <Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
+      <CssBaseline />
+      <RouterProvider router={router}>
+        <AnimateSharedLayout>
+          <AnimatePresence mode="wait">
+            <Outlet />
+          </AnimatePresence>
+        </AnimateSharedLayout>
+      </RouterProvider>
+    </Stack>
+  );
 }
 
 export default App;
