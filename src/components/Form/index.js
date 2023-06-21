@@ -152,7 +152,7 @@ const Form = () => {
 							Phone: +374 066 666 666
 						</Typography>
 					</Grid>
-					<Grid item xs={12} sm={6}>
+					<Grid item xs={6}>
 						<Styled.Input
 							required
 							label="Name"
@@ -163,7 +163,7 @@ const Form = () => {
 							helperText={formErrors.name ? "Name is required" : ""}
 						/>
 					</Grid>
-					<Grid item xs={12} sm={6}>
+					<Grid item xs={6}>
 						<Styled.Input
 							required
 							label="Surname"

@@ -6,7 +6,7 @@ import * as Styled from "./style";
 import * as GlobalStyled from "../style";
 import IncidebtsImg from "../../media/incidebts.png";
 import Experts from "../../components/Carousel/Experts";
-import GradientButton from "../../components/Buttons";
+import GradientButton from "../../components/Buttons/MainButton";
 import { ReactComponent as CardImmage } from "../../media/cardLogo.svg";
 import Form from "../../components/Form";
 import PageTransition from "../../components/PageTransition";
@@ -21,7 +21,7 @@ const Services = () => {
 			<Styled.FirstSection
 				isMenuOpen={isMenuOpen}
 				sx={{
-					p: { md: "130px 0 230px", sm: "70px 0 130px", xs: "40px 0 100px" },
+					p: { md: "130px 0 230px", sm: "70px 0 130px", xs: "100px 0 100px" },
 				}}
 				container
 				justifyContent={"space-around"}

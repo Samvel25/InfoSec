@@ -19,7 +19,7 @@ export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
 		...ScaledSectionStyles,
 		width: "150%",
 		backgroundSize: "cover",
-		paddingBottom: "120%",
+		paddingBottom: "100%",
 
 		"& h1": {
 			transform: "translate(-50%, -50%)",
@@ -27,7 +27,7 @@ export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
 		},
 
 		[theme.breakpoints.down("md")]: {
-			transform: "scale(0.6) translate(26%, -21%)",
+			transform: "scale(0.6) translate(26%, -10%)",
 		},
 		[theme.breakpoints.down("sm")]: {},
 	}),

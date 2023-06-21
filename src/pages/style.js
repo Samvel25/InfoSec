@@ -8,7 +8,6 @@ import CarouselCard from "../components/Card/CarouselCard";
 export const ScaledSectionStyles = {
 	transition: "transform 0.3s ease-in-out",
 	borderRadius: "40px",
-	// padding: "10px",
 	transform: "scale(0.6) translate(40%, 25%)",
 	"& sh": {
 		position: "absolute",

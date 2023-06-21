@@ -64,6 +64,12 @@ export const UserLogo = styled(UserSvg)({
 	cursor: "pointer",
 });
 
-export const Header = styled(AppBar)({
+export const Header = styled(AppBar)(({ theme }) => ({
+	position: "fixed",
 	borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-});
+	zIndex: 5000,
+	padding: "0 50px",
+	[theme.breakpoints.down("sm")]: {
+		padding: "0 15px",
+	},
+}));

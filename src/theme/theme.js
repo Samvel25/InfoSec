@@ -138,6 +138,14 @@ export const theme = createTheme({
 		},
 	},
 	components: {
+		MuiDialog: {
+			styleOverrides: {
+				paper: {
+					backgroundColor: "none !important",
+				},
+			},
+		},
+
 		MuiCheckbox: {
 			styleOverrides: {
 				checked: {

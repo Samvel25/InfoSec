@@ -1,8 +1,9 @@
 // import { styled } from "@mui/material/styles";
-import { Box, Hidden, Stack, Typography } from "@mui/material";
+import { Box, Button, Hidden, Stack, Typography } from "@mui/material";
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
-import GradientButton from "../../components/Buttons";
+import GradientButton from "../../components/Buttons/MainButton";
 import * as Styled from "./style";
 import * as GlobalStyled from "../style";
 import Clients from "../../components/Carousel/Clients";
@@ -14,6 +15,9 @@ import cybersecurity2 from "../../media/cybersecurity2.png";
 import SlidCertificatesCarouselers from "../../components/Carousel/Certificates/index";
 import PageTransition from "../../components/PageTransition";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
+import FormModal from "../../components/Modal";
+import { ReactComponent as ModalSvg } from "../../media/modalButtonSvg.svg";
+import Modal from "../../components/Buttons/ModalButton";
 
 function Home() {
 	const { isMenuOpen } = useMenuOpen();
@@ -26,9 +30,7 @@ function Home() {
 					p: {
 						md: "100px 0",
 						xs: "40px 0 100px",
-						sm: "70px 0 100px",
-						// transform: isMenuOpen ? "scale(0.6) translate(50%, -20%)" : "none", // Add transform here
-						// transition: "transform 0.3s ease-in-out",
+						sm: "100px 0 100px",
 					},
 				}}
 				container
@@ -77,12 +79,18 @@ function Home() {
 					xs={12}
 					textAlign={{ md: "end", xs: "center" }}
 				>
+					<Styled.Modal>
+						{/* <Styled.ModalButton variant="outlined" onClick={handleClickOpen}>
+							<ModalSvg />
+						</Styled.ModalButton>
+						<FormModal open={modalOpen} handleClose={handleClose} /> */}
+						<Modal />
+					</Styled.Modal>
 					<Hidden mdUp>
 						<Box sx={{ m: "15px 0 30px" }}>
 							<ProgreeBar />
 						</Box>
 					</Hidden>
-
 					<img
 						src={DiamondAnimation}
 						alt="Cybersecurity"

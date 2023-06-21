@@ -195,7 +195,7 @@ const Footer = () => {
 						xs: "start",
 					}}
 				>
-					<Grid item xs={12} md={5.5} sm={8} sx={{ mt: "20px", mb: "30px" }}>
+					<Grid item xs={12} md={5.5} sm={10} sx={{ mt: "20px", mb: "30px" }}>
 						<Typography
 							sx={{ mb: "20px" }}
 							variant="FooterHead"
@@ -255,7 +255,7 @@ const Footer = () => {
 						item
 						xs={12}
 						md={5.5}
-						sm={8}
+						sm={10}
 						sx={{ mt: { md: "20px", xs: "30px" } }}
 					>
 						<Typography

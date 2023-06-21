@@ -16,7 +16,7 @@ const About = () => {
 			{/* ///1 section/////// */}
 			<Styled.FirstSection
 				isMenuOpen={isMenuOpen}
-				sx={{ p: { md: "70px 0 30px", xs: "40px 0 50px" } }}
+				sx={{ p: { md: "70px 0 30px", xs: "100px 0 50px" } }}
 				container
 				justifyContent={"space-around"}
 				direction={"row"}

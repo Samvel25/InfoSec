@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import { Box, Hidden, Stack, Typography } from "@mui/material";
 import ClientsImg from "../../media/clientsImg.png";
 import ClientsSlide from "../../components/Carousel/Clients";
-import GradientButton from "../../components/Buttons";
+import GradientButton from "../../components/Buttons/MainButton";
 import PageTransition from "../../components/PageTransition";
 import GoalCards from "../../components/Card/DecisionCard";
 import ClientsReview from "../../components/Carousel/ClientsReview";
@@ -20,7 +20,7 @@ const Clients = () => {
 			<Styled.FirstSection
 				isMenuOpen={isMenuOpen}
 				sx={{
-					p: { md: "40px 0 150px", sm: "70px 0 120px", xs: "40px 0 100px" },
+					p: { md: "40px 0 150px", sm: "70px 0 120px", xs: "100px 0 100px" },
 				}}
 				container
 				justifyContent={"space-around"}

@@ -1,6 +1,6 @@
 import CarouselCard from "../../Card/CarouselCard";
 import { styled } from "@mui/material/styles";
-import GradientButton from "../../Buttons";
+import GradientButton from "../../Buttons/MainButton";
 import { Box, Typography } from "@mui/material";
 
 export const SortingCard = styled(CarouselCard)(({ theme, scale }) => ({

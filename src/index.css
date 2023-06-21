@@ -1,6 +1,12 @@
 body {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;
 	font-family: "Quantico", sans-serif;
 	color: white !important;
+}
+
+body::-webkit-scrollbar {
+	display: none; /* Chrome, Safari and Edge */
 }
 
 code {

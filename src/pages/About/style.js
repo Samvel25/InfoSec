@@ -7,7 +7,7 @@ export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
 		...ScaledSectionStyles,
 
 		[theme.breakpoints.down("md")]: {
-			transform: "scale(0.6) translate(55%, -20%)",
+			transform: "scale(0.6) translate(55%, -10%)",
 			// overflow: "visible",
 		},
 		[theme.breakpoints.down("sm")]: {

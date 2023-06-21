@@ -1,4 +1,4 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Button, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Net1 from "../../media/backgroundNet.svg";
 import Net from "../../media/net.svg";
@@ -35,17 +35,13 @@ export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
 	...(isMenuOpen && {
 		...ScaledSectionStyles,
 		[theme.breakpoints.down("md")]: {
-			transform: "scale(0.6) translate(55%, -20%)",
-			// overflow: "visible",
+			transform: "scale(0.6) translate(55%, -15%)",
 		},
 		[theme.breakpoints.down("sm")]: {
 			transform: "scale(0.6) translate(55%, -15%)",
-			// overflow: "visible",
 		},
 		[theme.breakpoints.up("xs")]: {
 			padding: "20px 20px 20px 20px !important",
-
-			// overflow: "visible",
 		},
 	}),
 }));
@@ -72,6 +68,17 @@ export const DiamondWraper = styled(Grid)(({ theme }) => ({
 			left: "50%",
 			overflow: "visible",
 		},
+	},
+}));
+
+export const Modal = styled(Box)(({ theme }) => ({
+	position: "absolute",
+	right: "-30px",
+	top: "50%",
+	zIndex: "50",
+	transform: "translateY(-50%)",
+	[theme.breakpoints.down("sm")]: {
+		right: "-10px",
 	},
 }));
 
@@ -113,7 +120,6 @@ export const ExportCyberSecurityDescription = styled(Grid)(({ theme }) => ({
 		position: "absolute",
 		backgroundImage: `url(${Net})`,
 		transform: "translate(-50%, -50%)",
-		// maxWidth: "100%",
 		left: "1%",
 		content: '""',
 		zIndex: "-1",
@@ -124,7 +130,6 @@ export const ExportCyberSecurityDescription = styled(Grid)(({ theme }) => ({
 		[theme.breakpoints.down("sm")]: {
 			top: "-15%",
 			height: "500px",
-			// display: "none",
 		},
 	},
 }));
@@ -156,20 +161,13 @@ export const CyberSecurityServicesDescription = styled(Grid)(({ theme }) => ({
 		zIndex: "-1",
 		left: "17%",
 		top: "-17%",
-		// maxWidth: "90%",
-
-		// maxWidth: "100%",
 		width: "620px",
 		height: "610px",
 		opacity: "0.4",
 		[theme.breakpoints.down("md")]: {
 			left: "35%",
 			height: "500px",
-			// maxWidth: "80%",
 		},
-		// [theme.breakpoints.down("sm")]: {
-		// 	display: "none",
-		// },
 	},
 }));
 
@@ -224,4 +222,3 @@ export const CertificatesDescription = styled(Box)(({ theme }) => ({
 export const Maps = styled(Map)(({ theme }) => ({
 	background: "black",
 }));
-// transform: "rotateY(180deg)",
