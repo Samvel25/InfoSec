@@ -1,10 +1,10 @@
 import { Box, Button, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import Net1 from "../../media/backgroundNet.svg";
-import Net from "../../media/net.svg";
-import RadLine from "../../media/radLine.svg";
-import GrayLine from "../../media/grayLine.svg";
-import { ReactComponent as CardSquare } from "../../media/cardSquare.svg";
+import Net1 from "../../media/svg/backgroundNet.svg";
+import Net from "../../media/svg/net.svg";
+import RadLine from "../../media/svg/radLine.svg";
+import GrayLine from "../../media/svg/grayLine.svg";
+import { ReactComponent as CardSquare } from "../../media/svg/cardSquare.svg";
 import { ScaledSectionStyles } from "../style";
 
 //1 section*/*/*/*/*/*/

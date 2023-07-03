@@ -4,7 +4,9 @@ import ProgreeBar from "../../components/ProgressBar";
 import * as Styled from "./style";
 import * as GlobalStyled from "../style";
 import AchivmentsCarousel from "../../components/Carousel/Achivments/index";
-import GlobeImg from "../../media/globe.png";
+// import GlobeImg from "../../media/png/globe.png";
+import { ReactComponent as GlobeImg } from "../../media/svg/globe.svg";
+
 import OurLifeCarousel from "../../components/Carousel/OurLife";
 import PageTransition from "../../components/PageTransition";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
@@ -45,12 +47,13 @@ const About = () => {
 				</Grid>
 				<Grid item md={6.5} xs={12} sm={8}>
 					<Styled.Globe>
-						<img
+						{/* <img
 							width={"100%"}
 							sx={{ paddingBottom: "86%" }}
 							src={GlobeImg}
 							alt="GlobeImg"
-						/>
+						/> */}
+						<GlobeImg width={"100%"} height={"100%"} />
 					</Styled.Globe>
 				</Grid>
 			</Styled.FirstSection>

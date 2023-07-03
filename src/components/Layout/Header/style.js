@@ -1,6 +1,6 @@
 import { AppBar, Box, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import { ReactComponent as UserSvg } from "../../../media/user.svg";
+import { ReactComponent as UserSvg } from "../../../media/svg/user.svg";
 import { NavLink } from "react-router-dom";
 import { Drawer } from "@mui/material";
 import { ReactComponent as LogoSvg } from "../../../media/logo/Logo.svg";
@@ -65,11 +65,20 @@ export const UserLogo = styled(UserSvg)({
 });
 
 export const Header = styled(AppBar)(({ theme }) => ({
-	position: "fixed",
 	borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-	zIndex: 5000,
 	padding: "0 50px",
-	[theme.breakpoints.down("sm")]: {
+
+	[theme.breakpoints.down("md")]: {
 		padding: "0 15px",
 	},
+	[theme.breakpoints.down("sm")]: {
+		marginTop: "35px",
+	},
+}));
+
+export const Boxx = styled(AppBar)(({ theme }) => ({
+	position: "fixed",
+	transform: "translateX(-50%)",
+	left: "50%",
+	maxWidth: "1440px",
 }));

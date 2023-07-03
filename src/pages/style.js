@@ -1,8 +1,8 @@
 import { Box, Grid, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import RadLine from "../media/radLine.svg";
-import GrayLine from "../media/grayLine.svg";
-import Net from "../media/net.svg";
+import RadLine from "../media/svg/radLine.svg";
+import GrayLine from "../media/svg/grayLine.svg";
+import Net from "../media/svg/net.svg";
 import CarouselCard from "../components/Card/CarouselCard";
 
 export const ScaledSectionStyles = {

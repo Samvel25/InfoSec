@@ -1,4 +1,4 @@
-import { ReactComponent as SendIcon } from "../../media/sendArrow.svg";
+import { ReactComponent as SendIcon } from "../../media/svg/sendArrow.svg";
 import { TextField, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 

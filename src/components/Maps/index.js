@@ -1,7 +1,7 @@
 import { GoogleMap, Marker } from "@react-google-maps/api";
 import React, { useEffect, useState } from "react";
 import { DefaultTheme } from "./MapTheme";
-import MarkerIcon from "../../media/mapMarkerIcon.svg";
+import MarkerIcon from "../../media/svg/mapMarkerIcon.svg";
 
 // import { GoogleMap } from "@react-google-maps/api";
 

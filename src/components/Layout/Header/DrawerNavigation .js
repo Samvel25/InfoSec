@@ -13,11 +13,17 @@ export const DrawerNavigationItem = styled(NavigationItem)(({ theme }) => ({
 	textDecoration: "none",
 	padding: "0 20px",
 
-	"&.active > p": {
+	// "&:active": {
+	// 	background: "transparent",
+	// },
+
+	"&:active > p": {
 		color: "#D42530", // Active color
 	},
 
 	"& p": {
+		userSelect: "none",
+		// display: "block",
 		"&:hover": {
 			color: "#D42530",
 		},

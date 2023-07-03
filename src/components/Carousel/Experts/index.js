@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LedLine from "../../Other/Led";
 import * as Styled from "./style";
-import { ReactComponent as CardLogo } from "../../../media/cardLogo.svg";
+import { ReactComponent as CardLogo } from "../../../media/svg/cardLogo.svg";
 
 const Experts = () => {
 	var settings = {

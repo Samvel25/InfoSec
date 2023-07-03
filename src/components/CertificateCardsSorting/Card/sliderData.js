@@ -1,4 +1,4 @@
-import Certificate from "../../../media/certificate.png";
+import Certificate from "../../../media/png/certificate.png";
 
 const allCards = [
 	{

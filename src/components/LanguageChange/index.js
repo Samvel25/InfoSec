@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Typography, Hidden } from "@mui/material";
-import { ReactComponent as Language } from "../../media/language.svg";
+import { ReactComponent as Language } from "../../media/svg/language.svg";
 import { Stack } from "@mui/system";
 import GradientButton from "../Buttons/MainButton";
 import * as Styled from "./style";

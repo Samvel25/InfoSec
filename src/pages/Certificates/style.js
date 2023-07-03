@@ -1,7 +1,7 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import CertificateBackground from "../../media/certificatesBackground.png";
-import Net from "../../media/net2.svg";
+import CertificateBackground from "../../media/png/certificatesBackground.png";
+import Net from "../../media/svg/net2.svg";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
 import { ScaledSectionStyles } from "../style";
 

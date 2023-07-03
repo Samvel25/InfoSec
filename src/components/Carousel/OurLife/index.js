@@ -1,10 +1,10 @@
 import React from "react";
 import * as Styled from "./style";
-import { ReactComponent as Arrow } from "../../../media/sliderArrow.svg";
+import { ReactComponent as Arrow } from "../../../media/svg/sliderArrow.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import OurLifeImg from "../../../media/ourLIfe.png";
-import OurLifeImg2 from "../../../media/ourLife2.png";
+import OurLifeImg from "../../../media/png/ourLIfe.png";
+import OurLifeImg2 from "../../../media/png/ourLife2.png";
 
 const GalleryPrevArrow = ({ currentSlide, slideCount, ...props }) => {
 	const { className, onClick } = props;

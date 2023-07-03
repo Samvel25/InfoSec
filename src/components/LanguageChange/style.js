@@ -1,5 +1,5 @@
 import { Menu, MenuItem, styled, keyframes } from "@mui/material";
-import { ReactComponent as ArrowDown } from "../../media/arrowDown.svg";
+import { ReactComponent as ArrowDown } from "../../media/svg/arrowDown.svg";
 
 const rotateGradient = keyframes`
 0% {

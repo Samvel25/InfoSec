@@ -5,27 +5,24 @@
 // 	initial: {
 // 		opacity: 0,
 // 		x: "-100vw",
-// 		scale: 0.8,
-// 		rotate: -90,
+// 		scale: 0.9,
 // 	},
 // 	in: {
 // 		opacity: 1,
 // 		x: 0,
 // 		scale: 1,
-// 		rotate: 0,
 // 	},
 // 	out: {
 // 		opacity: 0,
 // 		x: "100vw",
-// 		scale: 1.2,
-// 		rotate: 90,
+// 		scale: 0.9,
 // 	},
 // };
 
 // const pageTransition = {
-// 	type: "spring",
-// 	stiffness: 200,
-// 	damping: 15,
+// 	type: "tween",
+// 	ease: "anticipate",
+// 	duration: 0.5,
 // };
 
 // const PageTransition = ({ children }) => {
@@ -51,30 +48,41 @@ const pageVariants = {
 	initial: {
 		opacity: 0,
 		x: "-100vw",
+		scale: 0.9,
 	},
 	in: {
 		opacity: 1,
 		x: 0,
+		scale: 1,
 	},
 	out: {
 		opacity: 0,
 		x: "100vw",
+		scale: 0.9,
 	},
 };
 
+const noAnimationVariants = {
+	initial: { opacity: 1 },
+	in: { opacity: 1 },
+	out: { opacity: 1 },
+};
+
 const pageTransition = {
-	type: "tween", // Changing from spring to tween, it generally performs better
+	type: "tween",
 	ease: "anticipate",
-	duration: 0.5, // Adjust this as per your need
+	duration: 0.5,
 };
 
 const PageTransition = ({ children }) => {
+	const isMobile = window.innerWidth <= 1000; // you can define the threshold as you want.
+
 	return (
 		<motion.div
 			initial="initial"
 			animate="in"
 			exit="out"
-			variants={pageVariants}
+			variants={isMobile ? noAnimationVariants : pageVariants} // if it's mobile, don't animate
 			transition={pageTransition}
 		>
 			{children}

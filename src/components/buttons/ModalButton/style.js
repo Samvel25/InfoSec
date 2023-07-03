@@ -18,16 +18,6 @@ const pulse = keyframes`
 `;
 
 // Define color transition animation
-const changeColor = keyframes`
-  0% {
-    background-color: #3f51b5;
-    color: white;
-  }
-  100% {
-    background-color: #f50057;
-    color: white;
-  }
-`;
 
 export const ModalButton = styled(Button)(({ theme }) => ({
 	position: "relative",
@@ -38,7 +28,6 @@ export const ModalButton = styled(Button)(({ theme }) => ({
 	borderRadius: "50%",
 	"&:hover": {
 		animation: `${pulse} 0.7s ease-in-out infinite`,
-		//  `${changeColor} 0.7s ease-in-out infinite`,
 		background: "#D42530",
 	},
 	[theme.breakpoints.down("md")]: {

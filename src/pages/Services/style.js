@@ -1,4 +1,4 @@
-import FormBackground from "../../media/incidentBackground.png";
+import FormBackground from "../../media/png/incidentBackground.png";
 import { styled } from "@mui/material";
 import { Box, Grid } from "@mui/material";
 import { ScaledSectionStyles } from "../style";

@@ -9,18 +9,29 @@ import * as GlobalStyled from "../style";
 import Clients from "../../components/Carousel/Clients";
 import Achivments from "../../components/Carousel/Achivments/index";
 import BigCardWrapper from "../../components/Card/BigCard";
-import DiamondAnimation from "../../media/diamond.png";
-import cybersecurity from "../../media/cybersecurity.png";
-import cybersecurity2 from "../../media/cybersecurity2.png";
+import DiamondAnimation from "../../media/gif/diamond.gif";
+import cybersecurity from "../../media/png/cybersecurity.png";
+import cybersecurity2 from "../../media/png/cybersecurity2.png";
 import SlidCertificatesCarouselers from "../../components/Carousel/Certificates/index";
 import PageTransition from "../../components/PageTransition";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
-import FormModal from "../../components/Modal";
-import { ReactComponent as ModalSvg } from "../../media/modalButtonSvg.svg";
-import Modal from "../../components/Buttons/ModalButton";
+import ModalButton from "../../components/Buttons/ModalButton";
+import Modal from "../../components/Modal";
+import Form from "../../components/Form";
 
 function Home() {
 	const { isMenuOpen } = useMenuOpen();
+	const [modalOpen, setmodalOpen] = useState(false);
+	const [bottomModalOpen, setbottomModalOpen] = useState(false);
+
+	const handleModalButtonClick = () => {
+		setmodalOpen((prev) => !prev);
+	};
+
+	const handleBottomModalButtonClick = () => {
+		setbottomModalOpen((prev) => !prev);
+	};
+
 	return (
 		<PageTransition>
 			{/* ///1 section/////// */}
@@ -29,8 +40,7 @@ function Home() {
 				sx={{
 					p: {
 						md: "100px 0",
-						xs: "40px 0 100px",
-						sm: "100px 0 100px",
+						xs: "100px 0 100px",
 					},
 				}}
 				container
@@ -84,7 +94,13 @@ function Home() {
 							<ModalSvg />
 						</Styled.ModalButton>
 						<FormModal open={modalOpen} handleClose={handleClose} /> */}
-						<Modal />
+						<Modal handleClose={setmodalOpen} isOpen={modalOpen}>
+							<Form />
+						</Modal>
+						<Modal handleClose={setbottomModalOpen} isOpen={bottomModalOpen}>
+							<h1>dnfsklafnslka</h1>
+						</Modal>
+						<ModalButton onClick={handleModalButtonClick} />
 					</Styled.Modal>
 					<Hidden mdUp>
 						<Box sx={{ m: "15px 0 30px" }}>
@@ -203,7 +219,10 @@ function Home() {
 						</Grid>
 						<Hidden mdDown>
 							<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
-								<GradientButton backgroundtype="backgroundOne">
+								<GradientButton
+									backgroundtype="backgroundOne"
+									onClick={handleBottomModalButtonClick}
+								>
 									<Typography>Read more</Typography>
 								</GradientButton>
 							</Stack>

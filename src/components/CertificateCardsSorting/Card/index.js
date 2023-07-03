@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import * as Styled from "./style";
-import pdfFile from "../../../media/sample.pdf";
+import pdfFile from "../../../media/pdf/sample.pdf";
 
 const CardItem = ({ title, content, certificateimg, className }) => {
 	return (
