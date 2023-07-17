@@ -5,7 +5,7 @@ import Net from "../../media/svg/net2.svg";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
 import { ScaledSectionStyles } from "../style";
 
-export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
+export const CertificatesHead = styled(Box)(({ theme, ismenuopen }) => ({
 	position: "relative",
 	backgroundImage: `url(${CertificateBackground})`,
 	width: "100%",
@@ -15,7 +15,7 @@ export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
 	justifyContent: "center",
 	display: "flex",
 	zIndex: "1",
-	...(isMenuOpen && {
+	...(ismenuopen && {
 		...ScaledSectionStyles,
 		width: "150%",
 		backgroundSize: "cover",
@@ -60,8 +60,8 @@ export const CertificatesHead = styled(Box)(({ theme, isMenuOpen }) => ({
 	},
 	[theme.breakpoints.down("sm")]: {
 		backgroundSize: "cover",
-		paddingBottom: isMenuOpen ? "120%" : "70%",
-		transform: isMenuOpen ? "scale(0.6) translate(27%, -5%)" : "none",
+		paddingBottom: ismenuopen ? "120%" : "70%",
+		transform: ismenuopen ? "scale(0.6) translate(27%, -5%)" : "none",
 	},
 }));
 

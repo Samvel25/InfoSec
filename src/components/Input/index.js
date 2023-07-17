@@ -24,7 +24,6 @@ const CorporateEmail = () => {
 			setCheckboxError(true);
 		} else {
 			setCheckboxError(false);
-			console.log("Accepted!");
 			setEmail("");
 		}
 

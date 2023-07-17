@@ -4,7 +4,6 @@ import * as Styled from "./style";
 
 function BigCardWrapper(props) {
 	const { backgroundtype } = props;
-	console.log(props);
 
 	return (
 		<Styled.BigCard backgroundtype={backgroundtype} {...props}>

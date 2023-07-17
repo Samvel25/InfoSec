@@ -17,14 +17,14 @@ const defaultCenter = {
 };
 
 const Footer = () => {
-	const { isMenuOpen } = useMenuOpen();
+	const { ismenuopen } = useMenuOpen();
 	const { isLoaded } = useJsApiLoader({
 		id: "google-map-script",
 		googleMapsApiKey: APY_KEY,
 	});
 
 	return (
-		<Box sx={{ display: isMenuOpen ? "none" : "block" }}>
+		<Box sx={{ display: ismenuopen ? "none" : "block" }}>
 			<footer>
 				<Styled.FooterLinkes
 					container

@@ -2,8 +2,8 @@ import { Box, Grid, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ScaledSectionStyles } from "../style";
 
-export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
-	...(isMenuOpen && {
+export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
+	...(ismenuopen && {
 		...ScaledSectionStyles,
 
 		[theme.breakpoints.down("md")]: {

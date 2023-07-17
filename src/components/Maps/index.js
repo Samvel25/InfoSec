@@ -26,7 +26,6 @@ const defaultOptions = {
 };
 
 const Map = ({ center }) => {
-	console.log("center", center);
 	const mapRef = React.useRef(null);
 
 	const [fakeCenter, setFakeCenter] = useState(null);
@@ -44,8 +43,6 @@ const Map = ({ center }) => {
 			);
 		}
 	};
-
-	console.log("marker", Marker);
 
 	const onLoad = React.useCallback(function callback(map) {
 		mapRef.current = map;

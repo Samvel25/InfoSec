@@ -17,7 +17,7 @@ import * as Styled from "./style";
 import MobileGreating from "./MobileHeaderGreetings";
 
 function Header() {
-	const { isMenuOpen, handleMenuToggle } = useMenuOpen();
+	const { ismenuopen, handleMenuToggle } = useMenuOpen();
 
 	return (
 		<Styled.Boxx>
@@ -41,7 +41,7 @@ function Header() {
 							>
 								<MenuIcon
 									sx={{
-										transform: isMenuOpen ? "rotate(90deg)" : "rotate(0deg)",
+										transform: ismenuopen ? "rotate(90deg)" : "rotate(0deg)",
 										transition: "transform 0.3s ease-in-out",
 									}}
 								/>
@@ -68,7 +68,7 @@ function Header() {
 					<Styled.BurgerMenu
 						BackdropProps={{ invisible: true }}
 						anchor="left"
-						open={isMenuOpen}
+						open={ismenuopen}
 						onClose={handleMenuToggle}
 						variant="temporary"
 						ModalProps={{
@@ -76,7 +76,7 @@ function Header() {
 						}}
 					>
 						<DrawerNavigation
-							isMenuOpen={isMenuOpen}
+							ismenuopen={ismenuopen}
 							handleMenuClose={handleMenuToggle}
 						/>
 						<Styled.ContactNavigation>

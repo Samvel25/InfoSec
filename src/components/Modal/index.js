@@ -8,10 +8,10 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 	return <Slide direction="up" ref={ref} {...props} />;
 });
 
-function Modal({ isOpen, handleClose, childComponent }) {
+function Modal({ isopen, handleClose, childComponent }) {
 	return (
 		<Styled.Modal
-			open={isOpen}
+			open={isopen}
 			onClose={() => handleClose(false)}
 			TransitionComponent={Transition}
 		>

@@ -92,7 +92,6 @@ const Form = () => {
 		}
 
 		// Handle form submission logic here
-		console.log(formData);
 
 		// Reset form data and errors
 		setFormData({

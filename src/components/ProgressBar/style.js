@@ -70,11 +70,11 @@ export const MyBox = styled(Box)(({ theme }) => ({
 	height: "18px",
 	width: "100%",
 	position: "relative",
-	"&:hover > div:first-child": {
+	"&:hover > div:first-of-type": {
 		animation: `${pulse} 1.5s infinite`,
 	},
 	[theme.breakpoints.down("sm")]: {
-		"& div:first-child": {
+		"& div:first-of-type": {
 			animation: `${pulse} 1.5s infinite`,
 		},
 	},

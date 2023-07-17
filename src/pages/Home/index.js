@@ -21,7 +21,7 @@ import Form from "../../components/Form";
 import ModalReadMore from "../../components/ModalReadMore";
 
 function Home() {
-	const { isMenuOpen } = useMenuOpen();
+	const { ismenuopen } = useMenuOpen();
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [childComponent, setChildComponent] = useState(<></>);
 
@@ -34,7 +34,7 @@ function Home() {
 		<PageTransition>
 			{/* ///1 section/////// */}
 			<Styled.FirstSection
-				isMenuOpen={isMenuOpen}
+				ismenuopen={ismenuopen}
 				sx={{
 					p: {
 						md: "100px 0",
@@ -90,7 +90,7 @@ function Home() {
 					<Styled.Modal>
 						<Modal
 							handleClose={setIsModalOpen}
-							isOpen={isModalOpen}
+							isopen={isModalOpen}
 							childComponent={childComponent}
 						/>
 
@@ -135,7 +135,7 @@ function Home() {
 				</Hidden>
 			</Styled.FirstSection>
 
-			<Box sx={{ display: isMenuOpen ? "none" : "block" }}>
+			<Box sx={{ display: ismenuopen ? "none" : "block" }}>
 				{/* ///2 section/////// */}
 
 				<GlobalStyled.Achievements

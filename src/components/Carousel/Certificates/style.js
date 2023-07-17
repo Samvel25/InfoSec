@@ -83,7 +83,7 @@ export const StyledSlider = styled(Slider)`
 		display: flex;
 	}
 
-	.slick-slide div:first-child {
+	.slick-slide div:first-of-type {
 		display: flex !important;
 		flex-direction: column;
 		justify-content: center;
@@ -114,7 +114,7 @@ export const StyledSlider = styled(Slider)`
 		margin: 0;
 	}
 
-	.slick-slide.slick-active:not(.slick-current) pre:first-child {
+	.slick-slide.slick-active:not(.slick-current) pre:first-of-type {
 		right: -9px;
 		top: -2px;
 		left: auto;
@@ -132,7 +132,7 @@ export const StyledSlider = styled(Slider)`
 		padding: 0;
 	}
 
-	.slick-slide.slick-active:not(.slick-current) ul:first-child {
+	.slick-slide.slick-active:not(.slick-current) ul:first-of-type {
 		right: -9px;
 		top: -19px;
 		left: auto;
@@ -293,7 +293,7 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 // 		display: flex;
 // 	}
 
-// 	.slick-slide div:first-child {
+// 	.slick-slide div:first-of-type {
 // 		display: flex !important;
 // 		flex-direction: column;
 // 		justify-content: center;
@@ -324,7 +324,7 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 // 		margin: 0;
 // 	}
 
-// 	.slick-slide.slick-active:not(.slick-current) pre:first-child {
+// 	.slick-slide.slick-active:not(.slick-current) pre:first-of-type {
 // 		right: -9px;
 // 		top: -2px;
 // 		left: auto;
@@ -342,7 +342,7 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 // 		padding: 0;
 // 	}
 
-// 	.slick-slide.slick-active:not(.slick-current) ul:first-child {
+// 	.slick-slide.slick-active:not(.slick-current) ul:first-of-type {
 // 		right: -9px;
 // 		top: -19px;
 // 		left: auto;

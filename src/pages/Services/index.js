@@ -13,13 +13,13 @@ import PageTransition from "../../components/PageTransition";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
 
 const Services = () => {
-	const { isMenuOpen } = useMenuOpen();
+	const { ismenuopen } = useMenuOpen();
 
 	return (
 		<PageTransition>
 			{/* ///1 section/////// */}
 			<Styled.FirstSection
-				isMenuOpen={isMenuOpen}
+				ismenuopen={ismenuopen}
 				sx={{
 					p: { md: "130px 0 230px", sm: "70px 0 130px", xs: "100px 0 100px" },
 				}}
@@ -65,7 +65,7 @@ const Services = () => {
 				</Grid>
 			</Styled.FirstSection>
 
-			<Box sx={{ display: isMenuOpen ? "none" : "block" }}>
+			<Box sx={{ display: ismenuopen ? "none" : "block" }}>
 				{/* ///2 section/////// */}
 
 				<GlobalStyled.Achievements

@@ -9,16 +9,16 @@ function DropdownButton() {
 	const [anchorEl, setAnchorEl] = useState(null);
 	const [selectedLanguage, setSelectedLanguage] = useState("eng");
 	const [activeLanguage, setActiveLanguage] = useState("eng");
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [ismenuopen, setismenuopen] = useState(false);
 
 	const handleOpenMenu = (event) => {
 		setAnchorEl(event.currentTarget);
-		setIsMenuOpen(true);
+		setismenuopen(true);
 	};
 
 	const handleCloseMenu = () => {
 		setAnchorEl(null);
-		setIsMenuOpen(false);
+		setismenuopen(false);
 	};
 
 	const handleLanguageChange = (language) => {
@@ -39,7 +39,7 @@ function DropdownButton() {
 					>
 						<Language />
 						<Typography>{selectedLanguage}</Typography>
-						<Styled.StyledArrowDown isOpen={isMenuOpen} />
+						<Styled.StyledArrowDown isopen={ismenuopen} />
 					</Stack>
 				</GradientButton>
 			</Hidden>
@@ -53,7 +53,7 @@ function DropdownButton() {
 					justifyContent={"center"}
 				>
 					<Typography>{selectedLanguage.toUpperCase()}</Typography>
-					<Styled.StyledArrowDown isOpen={isMenuOpen} />
+					<Styled.StyledArrowDown isopen={ismenuopen} />
 				</Stack>
 			</Hidden>
 			<Styled.StyledMenu

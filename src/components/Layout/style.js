@@ -11,8 +11,8 @@ export const slideAndRotateAnimation = keyframes`
   }
 `;
 
-export const LayoutContainer = styled(Container)(({ theme, isMenuOpen }) => ({
+export const LayoutContainer = styled(Container)(({ theme, ismenuopen }) => ({
 	animation: `${slideAndRotateAnimation} 0.5s ease-in-out`,
 	transformOrigin: "top right",
-	transform: isMenuOpen ? "scale(0.4) rotate(90deg)" : "none",
+	transform: ismenuopen ? "scale(0.4) rotate(90deg)" : "none",
 }));

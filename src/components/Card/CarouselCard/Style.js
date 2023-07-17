@@ -39,12 +39,12 @@ export const AchievementsCard = styled(Box)(
 						: "linear-gradient(45deg,#D42530,#F10413,#490005)",
 			},
 			[theme.breakpoints.down("sm")]: {
-				"& span:first-child": {
+				"& span:first-of-type": {
 					animation:
 						boxpadding === "boxpadding" ? "none" : `${animation} 1.5s infinite`,
 				},
 			},
-			"&:hover > span:first-child": {
+			"&:hover > span:first-of-type": {
 				animation:
 					boxpadding === "boxpadding" ? "none" : `${animation} 1.5s infinite`,
 			},

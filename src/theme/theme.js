@@ -148,21 +148,14 @@ export const theme = createTheme({
 
 		MuiCheckbox: {
 			styleOverrides: {
-				checked: {
-					color: "red", // Change the color to your desired color
+				root: {
+					checked: {
+						color: "red", // Change the color to your desired color
+					},
 				},
 			},
 		},
-		// MuiAppBar: {
-		// 	styleOverrides: {
-		// 		colorPrimary: {
-		// 			backgroundColor: "#000000",
-		// 		},
-		// 		root: {
-		// 			borderBottom: "px solid rgba(255, 255, 255, 0.1)",
-		// 		},
-		// 	},
-		// },
+
 		MuiButton: {
 			styleOverrides: {
 				root: {
@@ -170,12 +163,5 @@ export const theme = createTheme({
 				},
 			},
 		},
-		// MuiToolbar: {
-		// 	styleOverrides: {
-		// 		root: {
-		// 			padding: "0px",
-		// 		},
-		// 	},
-		// },
 	},
 });

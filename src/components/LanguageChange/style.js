@@ -72,8 +72,8 @@ export const StyledMenuItem = styled(MenuItem)(({ theme, isActive }) => ({
 	},
 }));
 
-export const StyledArrowDown = styled(ArrowDown)(({ isOpen }) => ({
-	transform: isOpen ? "rotateX(180deg)" : "rotateX(0)",
+export const StyledArrowDown = styled(ArrowDown)(({ isopen }) => ({
+	transform: isopen ? "rotateX(180deg)" : "rotateX(0)",
 	transition: "transform 0.3s ease",
 	animation: `${rotate} 1s linear`,
 }));

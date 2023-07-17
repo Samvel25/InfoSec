@@ -3,8 +3,8 @@ import { styled } from "@mui/material";
 import { Box, Grid } from "@mui/material";
 import { ScaledSectionStyles } from "../style";
 
-export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
-	...(isMenuOpen && {
+export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
+	...(ismenuopen && {
 		...ScaledSectionStyles,
 		[theme.breakpoints.down("md")]: {
 			transform: "scale(0.6) translate(55%, -10%)",

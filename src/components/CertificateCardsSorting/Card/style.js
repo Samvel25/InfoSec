@@ -49,7 +49,7 @@ export const Button = styled(GradientButton)(({ theme }) => ({
 
 		margin: 0,
 	},
-	"& pre:first-child": {
+	"& pre:first-of-type": {
 		right: "-9px",
 		top: "-2px",
 		left: "auto",

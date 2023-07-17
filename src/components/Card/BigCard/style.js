@@ -25,11 +25,11 @@ export const BigCard = styled(Box)(({ theme, backgroundtype, ledtype }) => {
 			...commonStyles,
 			background: "linear-gradient(45deg,#D42530,#F10413,#490005)",
 		},
-		"&:hover > span:first-child": {
+		"&:hover > span:first-of-type": {
 			animation: `${animation} 1.5s infinite`,
 		},
 		[theme.breakpoints.down("sm")]: {
-			"& span:first-child": {
+			"& span:first-of-type": {
 				animation: `${animation} 1.5s infinite`,
 			},
 		},

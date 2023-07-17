@@ -29,7 +29,7 @@ const CardItem = ({ title, content, certificateimg, className }) => {
 					</Typography>
 				</GradientButton> */}
 			</Stack>
-			<Typography variant="CardDescription" sx={{ mb: "50px" }}>
+			<Typography variant="CardDescription" component={"p"} sx={{ mb: "50px" }}>
 				{content}
 			</Typography>
 			<Styled.Button

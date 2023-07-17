@@ -12,13 +12,13 @@ import ClientsReview from "../../components/Carousel/ClientsReview";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
 
 const Clients = () => {
-	const { isMenuOpen } = useMenuOpen();
+	const { ismenuopen } = useMenuOpen();
 
 	return (
 		<PageTransition>
 			{/* ///1 section/////// */}
 			<Styled.FirstSection
-				isMenuOpen={isMenuOpen}
+				ismenuopen={ismenuopen}
 				sx={{
 					p: { md: "40px 0 150px", sm: "70px 0 120px", xs: "100px 0 100px" },
 				}}
@@ -70,7 +70,7 @@ const Clients = () => {
 				</Grid>
 			</Styled.FirstSection>
 
-			<Box sx={{ display: isMenuOpen ? "none" : "block" }}>
+			<Box sx={{ display: ismenuopen ? "none" : "block" }}>
 				{/* ///2 section/////// */}
 				<Box>
 					<Typography

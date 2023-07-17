@@ -12,12 +12,12 @@ import PageTransition from "../../components/PageTransition";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
 
 const About = () => {
-	const { isMenuOpen } = useMenuOpen();
+	const { ismenuopen } = useMenuOpen();
 	return (
 		<PageTransition>
 			{/* ///1 section/////// */}
 			<Styled.FirstSection
-				isMenuOpen={isMenuOpen}
+				ismenuopen={ismenuopen}
 				sx={{ p: { md: "70px 0 30px", xs: "100px 0 50px" } }}
 				container
 				justifyContent={"space-around"}
@@ -58,7 +58,7 @@ const About = () => {
 				</Grid>
 			</Styled.FirstSection>
 
-			<Box sx={{ display: isMenuOpen ? "none" : "block" }}>
+			<Box sx={{ display: ismenuopen ? "none" : "block" }}>
 				{/* ///2 section/////// */}
 
 				<Styled.FightAgainstCybercrime

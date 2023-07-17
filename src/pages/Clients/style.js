@@ -28,8 +28,8 @@ export const radLines = {
 	backgroundSize: "contain",
 };
 
-export const FirstSection = styled(Grid)(({ theme, isMenuOpen }) => ({
-	...(isMenuOpen && {
+export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
+	...(ismenuopen && {
 		...ScaledSectionStyles,
 		[theme.breakpoints.down("md")]: {
 			transform: "scale(0.6) translate(55%, -10%)",

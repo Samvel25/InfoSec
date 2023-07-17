@@ -5,16 +5,16 @@ import CardList from "../../components/CertificateCardsSorting";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
 
 const Certificates = () => {
-	const { isMenuOpen } = useMenuOpen();
+	const { ismenuopen } = useMenuOpen();
 	return (
 		<PageTransition>
 			<Styled.CertificatesHead
-				isMenuOpen={isMenuOpen}
+				ismenuopen={ismenuopen}
 				textAlign={"center"}
 				sx={{
 					m: { md: "10px 0 260px", xs: "10px 0 150px" },
 					"&:after": {
-						display: isMenuOpen ? "none" : "block",
+						display: ismenuopen ? "none" : "block",
 					},
 				}}
 			>
@@ -23,7 +23,7 @@ const Certificates = () => {
 					OUR certificates
 				</Styled.CertificatesHeadText>
 			</Styled.CertificatesHead>
-			<Box sx={{ display: isMenuOpen ? "none" : "block" }}>
+			<Box sx={{ display: ismenuopen ? "none" : "block" }}>
 				<Box sx={{ mb: { xs: "150px", md: "300px" } }}>
 					<CardList />
 				</Box>

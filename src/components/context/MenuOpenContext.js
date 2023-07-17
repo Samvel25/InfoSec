@@ -3,14 +3,14 @@ import { createContext, useState, useContext } from "react";
 export const MenuOpenContext = createContext();
 
 export const MenuOpenProvider = ({ children }) => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [ismenuopen, setismenuopen] = useState(false);
 
 	const handleMenuToggle = () => {
-		setIsMenuOpen((prevState) => !prevState);
+		setismenuopen((prevState) => !prevState);
 	};
 
 	return (
-		<MenuOpenContext.Provider value={{ isMenuOpen, handleMenuToggle }}>
+		<MenuOpenContext.Provider value={{ ismenuopen, handleMenuToggle }}>
 			{children}
 		</MenuOpenContext.Provider>
 	);

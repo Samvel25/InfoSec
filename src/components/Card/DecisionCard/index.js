@@ -12,7 +12,7 @@ function GoalCards() {
 		>
 			<Grid item xs={10} sm={6}>
 				<Styled.RedCard>
-					<sh></sh>
+					<sh> </sh>
 					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
 					<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
 						<Styled.Text variant="CardRate" component={"h6"}>
@@ -28,7 +28,7 @@ function GoalCards() {
 			<Hidden smDown>
 				<Grid item xs={10} sm={6}>
 					<Styled.Card backgroundtype="backgroundOne">
-						<sh></sh>
+						<sh> </sh>
 
 						<Styled.Text sx={{ mb: "11px" }}>DELIVERING </Styled.Text>
 						<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
@@ -45,7 +45,7 @@ function GoalCards() {
 			</Hidden>
 			<Grid item xs={10} sm={6}>
 				<Styled.Card backgroundtype="backgroundOne">
-					<sh></sh>
+					<sh> </sh>
 
 					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
 					<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
@@ -61,7 +61,7 @@ function GoalCards() {
 			</Grid>
 			<Grid item xs={10} sm={6}>
 				<Styled.RedCard>
-					<sh></sh>
+					<sh> </sh>
 
 					<Styled.Text sx={{ mb: "11px" }}>DELIVERING BY</Styled.Text>
 					<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
@@ -78,7 +78,7 @@ function GoalCards() {
 			<Hidden smUp>
 				<Grid item xs={10} sm={6}>
 					<Styled.Card backgroundtype="backgroundOne">
-						<sh></sh>
+						<sh> </sh>
 
 						<Styled.Text sx={{ mb: "11px" }}>DELIVERING </Styled.Text>
 						<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>

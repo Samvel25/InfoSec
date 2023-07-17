@@ -2,9 +2,9 @@ import * as Styled from "./style";
 import { Typography } from "@mui/material";
 import { useLocation } from "react-router-dom";
 
-function Navigation({ isMenuOpen }) {
+function Navigation({ ismenuopen }) {
 	return (
-		<Styled.Navigation className={isMenuOpen ? "open" : ""}>
+		<Styled.Navigation className={ismenuopen ? "open" : ""}>
 			<Styled.NavigationItem to="/" exact>
 				<Typography>home</Typography>
 			</Styled.NavigationItem>
