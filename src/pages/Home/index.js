@@ -18,18 +18,16 @@ import { useMenuOpen } from "../../components/context/MenuOpenContext";
 import ModalButton from "../../components/Buttons/ModalButton";
 import Modal from "../../components/Modal";
 import Form from "../../components/Form";
+import ModalReadMore from "../../components/ModalReadMore";
 
 function Home() {
 	const { isMenuOpen } = useMenuOpen();
-	const [modalOpen, setmodalOpen] = useState(false);
-	const [bottomModalOpen, setbottomModalOpen] = useState(false);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [childComponent, setChildComponent] = useState(<></>);
 
-	const handleModalButtonClick = () => {
-		setmodalOpen((prev) => !prev);
-	};
-
-	const handleBottomModalButtonClick = () => {
-		setbottomModalOpen((prev) => !prev);
+	const handleModalButtonClick = (childComponent) => {
+		setChildComponent(childComponent);
+		setIsModalOpen((prev) => !prev);
 	};
 
 	return (
@@ -90,17 +88,13 @@ function Home() {
 					textAlign={{ md: "end", xs: "center" }}
 				>
 					<Styled.Modal>
-						{/* <Styled.ModalButton variant="outlined" onClick={handleClickOpen}>
-							<ModalSvg />
-						</Styled.ModalButton>
-						<FormModal open={modalOpen} handleClose={handleClose} /> */}
-						<Modal handleClose={setmodalOpen} isOpen={modalOpen}>
-							<Form />
-						</Modal>
-						<Modal handleClose={setbottomModalOpen} isOpen={bottomModalOpen}>
-							<h1>dnfsklafnslka</h1>
-						</Modal>
-						<ModalButton onClick={handleModalButtonClick} />
+						<Modal
+							handleClose={setIsModalOpen}
+							isOpen={isModalOpen}
+							childComponent={childComponent}
+						/>
+
+						<ModalButton onClick={() => handleModalButtonClick(<Form />)} />
 					</Styled.Modal>
 					<Hidden mdUp>
 						<Box sx={{ m: "15px 0 30px" }}>
@@ -221,7 +215,22 @@ function Home() {
 							<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
 								<GradientButton
 									backgroundtype="backgroundOne"
-									onClick={handleBottomModalButtonClick}
+									onClick={() =>
+										handleModalButtonClick(
+											<ModalReadMore>
+												<Typography>
+													INFOSEC LLC, we understand how important it is to keep
+													your business safe from cyber threats. That's why we
+													offer a range of expert cybersecurity solutions
+													designed to give you peace of mind. Whether you're
+													looking for network security, endpoint protection, or
+													incident response services, our team of experts has
+													the knowledge and experience to help you stay one step
+													ahead of the hackers. Contact us today to learn more.
+												</Typography>
+											</ModalReadMore>
+										)
+									}
 								>
 									<Typography>Read more</Typography>
 								</GradientButton>
@@ -282,7 +291,25 @@ function Home() {
 						</Grid>
 						<Hidden mdDown>
 							<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
-								<GradientButton backgroundtype="backgroundOne">
+								<GradientButton
+									backgroundtype="backgroundOne"
+									onClick={() =>
+										handleModalButtonClick(
+											<ModalReadMore>
+												<Typography>
+													INFOSEC LLC, we understand how important it is to keep
+													your business safe from cyber threats. That's why we
+													offer a range of expert cybersecurity solutions
+													designed to give you peace of mind. Whether you're
+													looking for network security, endpoint protection, or
+													incident response services, our team of experts has
+													the knowledge and experience to help you stay one step
+													ahead of the hackers. Contact us today to learn more.
+												</Typography>
+											</ModalReadMore>
+										)
+									}
+								>
 									<Typography>Read more</Typography>
 								</GradientButton>
 							</Stack>

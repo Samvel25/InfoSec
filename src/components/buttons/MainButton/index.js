@@ -5,6 +5,7 @@ function GradientButton(props) {
 
 	return (
 		<Styled.ButtonGradient
+			disableRipple
 			backgroundtype={backgroundtype}
 			cliptype={cliptype}
 			variant="contained"
