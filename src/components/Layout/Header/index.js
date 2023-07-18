@@ -1,12 +1,5 @@
-import React from "react";
-import {
-	IconButton,
-	Hidden,
-	Stack,
-	Typography,
-	Box,
-	Container,
-} from "@mui/material";
+import React, { useState } from "react";
+import { IconButton, Hidden, Stack, Typography, Box } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { useMenuOpen } from "../../context/MenuOpenContext";
 import Navigation from "./Navigation";
@@ -15,9 +8,19 @@ import DropdownButton from "../../LanguageChange";
 import DrawerNavigation from "./DrawerNavigation ";
 import * as Styled from "./style";
 import MobileGreating from "./MobileHeaderGreetings";
+import Modal from "../../Modal";
+import LoginForm from "./LogIn";
+import Form from "../../Form";
 
 function Header() {
 	const { ismenuopen, handleMenuToggle } = useMenuOpen();
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const [childComponent, setChildComponent] = useState(<></>);
+
+	const handleModalButtonClick = (childComponent) => {
+		setChildComponent(childComponent);
+		setIsModalOpen((prev) => !prev);
+	};
 
 	return (
 		<Styled.Boxx>
@@ -57,12 +60,28 @@ function Header() {
 					<Stack direction="row" spacing={3}>
 						<DropdownButton />
 						<Hidden mdDown>
-							<GradientButton>
+							<Modal
+								handleClose={setIsModalOpen}
+								isopen={isModalOpen}
+								childComponent={childComponent}
+							/>
+							<GradientButton
+								onClick={() => handleModalButtonClick(<LoginForm />)}
+							>
 								<Typography>clients area</Typography>
 							</GradientButton>
 						</Hidden>
 						<Hidden mdUp>
-							<Styled.UserLogo width={"20px"} height={"20px"}></Styled.UserLogo>
+							<Modal
+								handleClose={setIsModalOpen}
+								isopen={isModalOpen}
+								childComponent={childComponent}
+							/>
+							<Styled.UserLogo
+								onClick={() => handleModalButtonClick(<LoginForm />)}
+								width={"20px"}
+								height={"20px"}
+							></Styled.UserLogo>
 						</Hidden>
 					</Stack>
 					<Styled.BurgerMenu
