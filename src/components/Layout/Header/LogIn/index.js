@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import {
-	Box,
-	TextField,
 	Divider,
 	IconButton,
 	InputAdornment,
-	Stack,
 	Checkbox,
 	FormControlLabel,
 	Typography,
 	FormHelperText,
-	FormControl,
+	Alert,
 } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
@@ -18,7 +15,7 @@ import * as Styled from "./style";
 import GradientButton from "../../../Buttons/MainButton";
 import { ReactComponent as Logo } from "../../../../media/logo/Logo.svg";
 
-const LoginForm = () => {
+const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 	const [showPassword, setShowPassword] = useState(false);
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
@@ -32,7 +29,8 @@ const LoginForm = () => {
 	};
 
 	const handleLogin = (event) => {
-		console.log(867684684);
+		console.log("event.target", event.target[0].value);
+
 		event.preventDefault();
 		setUsernameError(false);
 		setPasswordError(false);
@@ -55,6 +53,8 @@ const LoginForm = () => {
 				setUsername("");
 				setPassword("");
 				setShowPassword(false);
+				onLoginSuccess();
+				setIsModalOpen((prev) => !prev);
 			}
 		}
 	};
