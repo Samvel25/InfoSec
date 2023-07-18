@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Clients from "./pages/Clients";
 import Certificates from "./pages/Certificates";
 import Home from "./pages/Home";
+import ScrollToTop from "./components/ScrollToTop"; // Import here
 
 const router = createBrowserRouter([
 	{
@@ -45,6 +46,7 @@ function App() {
 		<Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
 			<CssBaseline />
 			<RouterProvider router={router}>
+				<ScrollToTop /> {/* Include it here */}
 				<AnimateSharedLayout>
 					<AnimatePresence mode="wait">
 						<Outlet />
