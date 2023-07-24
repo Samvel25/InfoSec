@@ -46,19 +46,6 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 		}
 
 		if (username && password) {
-			// Here you can include your actual authentication logic
-
-			//   if (username !== "admin" || password !== "admin") {
-			//     setLoginError(true);
-			//   } else {
-			//     console.log("Login button clicked");
-			//     setUsername("");
-			//     setPassword("");
-			//     setShowPassword(false);
-			//     onLoginSuccess();
-			//     setIsModalOpen((prev) => !prev);
-			//   }
-
 			instance
 				.post("auth/login", {
 					userName: username,
@@ -134,29 +121,6 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 									sx={{ color: "#FFF" }}
 									onClick={handlePasswordVisibility}
 								>
-									{showPassword ? <VisibilityOff /> : <Visibility />}
-								</IconButton>
-							</InputAdornment>
-						),
-					}}
-					error={passwordError || loginError}
-					helperText={passwordError ? "Password cannot be empty" : ""}
-				/>
-				{loginError && (
-					<FormHelperText error>
-						Username or password is incorrect
-					</FormHelperText>
-				)}
-				<Styled.Input
-					label="Password"
-					type={showPassword ? "text" : "password"}
-					variant="outlined"
-					value={password}
-					onChange={handlePasswordChange}
-					InputProps={{
-						endAdornment: (
-							<InputAdornment position="end">
-								<IconButton onClick={handlePasswordVisibility}>
 									{showPassword ? <VisibilityOff /> : <Visibility />}
 								</IconButton>
 							</InputAdornment>

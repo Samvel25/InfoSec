@@ -48,6 +48,9 @@ function DrawerNavigation() {
 			<DrawerNavigationItem to="/certificates">
 				<Typography>certificates</Typography>
 			</DrawerNavigationItem>
+			<DrawerNavigationItem to="/admin">
+				<Typography>admin</Typography>
+			</DrawerNavigationItem>
 		</DrawerNavigationWrapper>
 	);
 }

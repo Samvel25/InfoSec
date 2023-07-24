@@ -11,6 +11,7 @@ import Clients from "./pages/Clients";
 import Certificates from "./pages/Certificates";
 import Home from "./pages/Home";
 import ScrollToTop from "./components/ScrollToTop"; // Import here
+import Admin from "./pages/Admin";
 
 const router = createBrowserRouter([
 	{
@@ -33,9 +34,14 @@ const router = createBrowserRouter([
 				path: "clients",
 				element: <Clients />,
 			},
+
 			{
 				path: "certificates",
 				element: <Certificates />,
+			},
+			{
+				path: "admin",
+				element: <Admin />,
 			},
 		],
 	},
