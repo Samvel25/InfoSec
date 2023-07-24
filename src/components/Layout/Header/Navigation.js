@@ -20,6 +20,9 @@ function Navigation({ ismenuopen }) {
 			<Styled.NavigationItem to="/certificates">
 				<Typography>certificates</Typography>
 			</Styled.NavigationItem>
+			<Styled.NavigationItem to="/admin">
+				<Typography>admin</Typography>
+			</Styled.NavigationItem>
 		</Styled.Navigation>
 	);
 }
