@@ -76,7 +76,7 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 	};
 
 	return (
-		<Styled.Form sx={{ p: { md: "35px", sm: "25px 15px", xs: "20px 10px" } }}>
+		<Styled.Form sx={{ p: { md: "60px 40px", xs: "35px 25px" } }}>
 			<Styled.LogoContainer>
 				{/* replace 'logo.png' with your actual logo path */}
 				<Logo width={"184px"} height={"40px"} />
@@ -111,7 +111,10 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 					InputProps={{
 						endAdornment: (
 							<InputAdornment position="end">
-								<IconButton onClick={handlePasswordVisibility}>
+								<IconButton
+									sx={{ color: "#FFF" }}
+									onClick={handlePasswordVisibility}
+								>
 									{showPassword ? <VisibilityOff /> : <Visibility />}
 								</IconButton>
 							</InputAdornment>
