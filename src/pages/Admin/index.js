@@ -64,15 +64,21 @@ const Admin = () => {
                       {card.description}
                     </Typography>
                   </Box>
-                  <Stack
-                    justifyContent={"end"}
+                  {/* <Box
+                    // justifyContent={"end"}
                     direction={"row"}
                     sx={{ pt: "25px" }}
                   >
                     <Typography sx={{ color: "#D42530" }} component={"span"}>
                       {card.date}
                     </Typography>
-                  </Stack>
+                  </Box> */}
+                  <Box sx={{ mb: "20px" }}>
+                    <Typography variant="CardHead" component={"h5"}>
+                      Date. &nbsp;
+                    </Typography>
+                    <Typography component={"span"}>{card.timestamp}</Typography>
+                  </Box>
                 </Box>
               </GlobalStyled.ServicesCard>
             ))
