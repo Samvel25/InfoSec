@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as Styled from "./style";
 import { ReactComponent as Arrow } from "../../../media/svg/sliderArrow.svg";
 import "slick-carousel/slick/slick.css";
@@ -30,12 +30,24 @@ const GalleryNextArrow = ({ currentSlide, slideCount, ...props }) => {
 };
 
 const CertificatesCarousel = ({ cards = allCards }) => {
+	// useEffect(() => {
+	// 	const slider = document.querySelector(".center");
+	// 	const slides = slider.querySelectorAll(".slick-slide");
+
+	// 	slides.forEach((slide) => {
+	// 		const dataIndex = slide.getAttribute("data-index");
+
+	// 		if (dataIndex === "2" || dataIndex === "-2") {
+	// 			slide.classList.add("scaled-slide");
+	// 		}
+	// 	});
+	// }, []);
 	const settings = {
 		className: "center",
 		centerMode: true,
 		focusOnSelect: true,
 		infinite: true,
-		centerPadding: "100px",
+		centerPadding: "800px",
 		variableWidth: true,
 		slidesToShow: 3,
 		speed: 800,
@@ -45,8 +57,45 @@ const CertificatesCarousel = ({ cards = allCards }) => {
 		prevArrow: <GalleryPrevArrow />,
 		responsive: [
 			{
+				breakpoint: 2450,
+				settings: {
+					centerPadding: "700px",
+
+					centerMode: true,
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 2300,
+				settings: {
+					centerPadding: "500px",
+
+					centerMode: true,
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 1920,
+				settings: {
+					centerPadding: "300px",
+
+					centerMode: true,
+					slidesToShow: 3,
+				},
+			},
+			{
+				breakpoint: 1440,
+				settings: {
+					centerPadding: "200px",
+
+					centerMode: true,
+					slidesToShow: 3,
+				},
+			},
+			{
 				breakpoint: 600,
 				settings: {
+					centerPadding: "100px",
 					centerMode: true,
 					slidesToShow: 3,
 				},

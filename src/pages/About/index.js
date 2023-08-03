@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
 import * as Styled from "./style";
@@ -45,14 +45,8 @@ const About = () => {
 						</Typography>
 					</Grid>
 				</Grid>
-				<Grid item md={6.5} xs={12} sm={8}>
+				<Grid item xxl={5.5} xl={6} md={6.5} xs={12} sm={8}>
 					<Styled.Globe>
-						{/* <img
-							width={"100%"}
-							sx={{ paddingBottom: "86%" }}
-							src={GlobeImg}
-							alt="GlobeImg"
-						/> */}
 						<GlobeImg width={"100%"} height={"100%"} />
 					</Styled.Globe>
 				</Grid>

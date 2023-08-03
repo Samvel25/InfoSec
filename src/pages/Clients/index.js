@@ -10,6 +10,7 @@ import PageTransition from "../../components/PageTransition";
 import GoalCards from "../../components/Card/DecisionCard";
 import ClientsReview from "../../components/Carousel/ClientsReview";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
+import CustomHidden from "../../components/Hidden";
 
 const Clients = () => {
 	const { ismenuopen } = useMenuOpen();
@@ -112,13 +113,13 @@ const Clients = () => {
 								potential risks before they cause harm.
 							</Typography>
 						</Grid>
-						<Hidden mdDown>
+						<CustomHidden breakpoint="md" down>
 							<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
 								<GradientButton backgroundtype="backgroundOne">
 									<Typography>To get a consultation</Typography>
 								</GradientButton>
 							</Stack>
-						</Hidden>
+						</CustomHidden>
 					</Grid>
 
 					<Grid

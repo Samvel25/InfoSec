@@ -26,7 +26,7 @@ export const FormBackgroundBox = styled(Box)(({ theme }) => ({
 	position: "relative",
 	backgroundImage: `url(${FormBackground})`,
 	width: "100%",
-	backgroundSize: "contain",
+	backgroundSize: "cover",
 	backgroundRepeat: "no-repeat",
 	height: "960px",
 	alignItems: "center",

@@ -4,6 +4,11 @@ import { ReactComponent as Language } from "../../media/svg/language.svg";
 import { Stack } from "@mui/system";
 import GradientButton from "../Buttons/MainButton";
 import * as Styled from "./style";
+import CustomHidden from "../Hidden";
+import CheckDoneIcon from "@mui/icons-material/Done";
+import { ReactComponent as ArmenianFlag } from "../../media/svg/LanguageFlag/armenianFlag.svg";
+import { ReactComponent as RussianFlag } from "../../media/svg/LanguageFlag/russianFlag.svg";
+import { ReactComponent as UKFlag } from "../../media/svg/LanguageFlag/ukFlag.svg";
 
 function DropdownButton() {
 	const [anchorEl, setAnchorEl] = useState(null);
@@ -29,7 +34,7 @@ function DropdownButton() {
 
 	return (
 		<>
-			<Hidden mdDown>
+			<CustomHidden breakpoint="md" down>
 				<GradientButton onClick={handleOpenMenu} backgroundtype="backgroundOne">
 					<Stack
 						direction={"row"}
@@ -42,8 +47,8 @@ function DropdownButton() {
 						<Styled.StyledArrowDown isopen={ismenuopen} />
 					</Stack>
 				</GradientButton>
-			</Hidden>
-			<Hidden mdUp>
+			</CustomHidden>
+			<CustomHidden breakpoint="md" up>
 				<Stack
 					sx={{ cursor: "pointer" }}
 					onClick={handleOpenMenu}
@@ -55,8 +60,9 @@ function DropdownButton() {
 					<Typography>{selectedLanguage.toUpperCase()}</Typography>
 					<Styled.StyledArrowDown isopen={ismenuopen} />
 				</Stack>
-			</Hidden>
+			</CustomHidden>
 			<Styled.StyledMenu
+				spacing={2}
 				anchorEl={anchorEl}
 				open={Boolean(anchorEl)}
 				onClose={handleCloseMenu}
@@ -67,19 +73,37 @@ function DropdownButton() {
 					isActive={activeLanguage === "eng"}
 					onClick={() => handleLanguageChange("eng")}
 				>
-					<Typography>English</Typography>
+					<Stack alignItems={"center"} direction={"row"}>
+						<UKFlag width={"32px"} height={"32px"} />
+
+						<Typography>English</Typography>
+					</Stack>
+					{activeLanguage === "eng" && <CheckDoneIcon />}
 				</Styled.StyledMenuItem>
+
 				<Styled.StyledMenuItem
-					isActive={activeLanguage === "հայ"}
-					onClick={() => handleLanguageChange("հայ")}
+					isActive={activeLanguage === "rus"}
+					onClick={() => handleLanguageChange("rus")}
 				>
-					<Typography>Հայերեն</Typography>
+					<Stack alignItems={"center"} direction={"row"}>
+						<RussianFlag width={"32px"} height={"32px"} />
+						<Typography>Russian</Typography>
+					</Stack>
+
+					{activeLanguage === "rus" && <CheckDoneIcon />}
 				</Styled.StyledMenuItem>
+
 				<Styled.StyledMenuItem
-					isActive={activeLanguage === "рус"}
-					onClick={() => handleLanguageChange("рус")}
+					isActive={activeLanguage === "arm"}
+					onClick={() => handleLanguageChange("arm")}
 				>
-					<Typography>Русский</Typography>
+					<Stack alignItems={"center"} direction={"row"}>
+						<ArmenianFlag width={"32px"} height={"32px"} />
+
+						<Typography>Armenian</Typography>
+					</Stack>
+
+					{activeLanguage === "arm" && <CheckDoneIcon />}
 				</Styled.StyledMenuItem>
 			</Styled.StyledMenu>
 		</>

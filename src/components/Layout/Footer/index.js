@@ -8,6 +8,7 @@ import { ReactComponent as FacebookLogo } from "../../../media/logo/facebookLogo
 import { ReactComponent as InstagramLogo } from "../../../media/logo/instagramLogo.svg";
 import { ReactComponent as TwitterLogo } from "../../../media/logo/twitterLogo.svg";
 import { useMenuOpen } from "../../context/MenuOpenContext";
+import CustomHidden from "../../Hidden";
 
 const APY_KEY = process.env.REACT_APP_API_KEY;
 
@@ -29,7 +30,7 @@ const Footer = () => {
 				<Styled.FooterLinkes
 					container
 					direction={"row"}
-					justifyContent={{ sm: "start", md: "space-between" }}
+					justifyContent={{ sm: "start", md: "space-around" }}
 					spacing={{ xs: 5, sm: 8, md: 0 }}
 					sx={{
 						pt: { md: "90px", xs: "20px" },
@@ -190,12 +191,20 @@ const Footer = () => {
 					container
 					direction={"row"}
 					justifyContent={{
+						xl: "space-around",
 						md: "space-between",
 						sm: "center",
 						xs: "start",
 					}}
 				>
-					<Grid item xs={12} md={5.5} sm={10} sx={{ mt: "20px", mb: "30px" }}>
+					<Grid
+						item
+						xs={12}
+						md={5.5}
+						xl={5}
+						sm={10}
+						sx={{ mt: "20px", mb: "30px" }}
+					>
 						<Typography
 							sx={{ mb: "20px" }}
 							variant="FooterHead"
@@ -237,25 +246,26 @@ const Footer = () => {
 							</Box>
 						</Stack>
 					</Grid>
-					<Hidden mdDown>
+					<CustomHidden breakpoint="md" down>
 						<Divider
 							orientation={"vertical"}
 							variant="middle"
 							flexItem
 							sx={{ background: "rgba(255, 255, 255, 0.1)" }}
 						/>
-					</Hidden>
-					<Hidden mdUp>
+					</CustomHidden>
+					<CustomHidden breakpoint="md" up>
 						<Grid item xs={12}>
 							<Divider sx={{ background: "rgba(255, 255, 255, 0.1)" }} />
 						</Grid>
-					</Hidden>
+					</CustomHidden>
 
 					<Grid
 						item
 						xs={12}
 						md={5.5}
 						sm={10}
+						xl={5}
 						sx={{ mt: { md: "20px", xs: "30px" } }}
 					>
 						<Typography

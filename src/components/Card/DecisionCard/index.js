@@ -1,5 +1,6 @@
 import { Box, Grid, Hidden } from "@mui/material";
 import * as Styled from "./style";
+import CustomHidden from "../../Hidden";
 
 function GoalCards() {
 	return (
@@ -25,7 +26,7 @@ function GoalCards() {
 					</Box>
 				</Styled.RedCard>
 			</Grid>
-			<Hidden smDown>
+			<CustomHidden breakpoint="sm" down>
 				<Grid item xs={10} sm={6}>
 					<Styled.Card backgroundtype="backgroundOne">
 						<sh> </sh>
@@ -42,7 +43,7 @@ function GoalCards() {
 						</Box>
 					</Styled.Card>
 				</Grid>
-			</Hidden>
+			</CustomHidden>
 			<Grid item xs={10} sm={6}>
 				<Styled.Card backgroundtype="backgroundOne">
 					<sh> </sh>
@@ -75,7 +76,7 @@ function GoalCards() {
 					</Box>
 				</Styled.RedCard>
 			</Grid>
-			<Hidden smUp>
+			<CustomHidden breakpoint="sm" up>
 				<Grid item xs={10} sm={6}>
 					<Styled.Card backgroundtype="backgroundOne">
 						<sh> </sh>
@@ -92,7 +93,7 @@ function GoalCards() {
 						</Box>
 					</Styled.Card>
 				</Grid>
-			</Hidden>
+			</CustomHidden>
 		</Grid>
 	);
 }

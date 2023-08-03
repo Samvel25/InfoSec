@@ -30,5 +30,8 @@ export const ButtonGradient = styled(Button)(
 					? "linear-gradient(45deg,#575757,#616161,#292929)"
 					: "linear-gradient(45deg,#D42530,#F10413,#490005)",
 		},
+		[theme.breakpoints.up("xxl")]: {
+			padding: "18px 40px",
+		},
 	})
 );

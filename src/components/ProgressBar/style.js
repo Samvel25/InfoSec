@@ -61,6 +61,9 @@ export const Lazer = styled("div")(({ theme }) => ({
 	"&:hover": {
 		animation: `${pulse} 1.5s infinite`,
 	},
+	[theme.breakpoints.up("2500")]: {
+		height: "3px",
+	},
 }));
 
 export const MyBox = styled(Box)(({ theme }) => ({
@@ -68,6 +71,7 @@ export const MyBox = styled(Box)(({ theme }) => ({
 	backgroundRepeat: "repeat-x",
 	marginBottom: "20px",
 	height: "18px",
+	backgroundSize: "contain",
 	width: "100%",
 	position: "relative",
 	"&:hover > div:first-of-type": {
@@ -77,5 +81,8 @@ export const MyBox = styled(Box)(({ theme }) => ({
 		"& div:first-of-type": {
 			animation: `${pulse} 1.5s infinite`,
 		},
+	},
+	[theme.breakpoints.up("2500")]: {
+		height: "25px",
 	},
 }));

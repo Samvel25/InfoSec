@@ -33,6 +33,14 @@ export const ModalButton = styled(Button)(({ theme }) => ({
 	[theme.breakpoints.down("md")]: {
 		paddingTop: "40px",
 	},
+	[theme.breakpoints.up(1921)]: {
+		height: "71px",
+		width: "71px",
+	},
+	[theme.breakpoints.up(2500)]: {
+		height: "90px",
+		width: "90px",
+	},
 	"& svg": {
 		position: "absolute",
 		transform: "translate(-50%, -50%)",
@@ -40,5 +48,13 @@ export const ModalButton = styled(Button)(({ theme }) => ({
 		left: "50%",
 		height: "20px",
 		width: "20px",
+		[theme.breakpoints.up(1921)]: {
+			height: "27px",
+			width: "27px",
+		},
+		[theme.breakpoints.up(2500)]: {
+			height: "34px",
+			width: "34px",
+		},
 	},
 }));

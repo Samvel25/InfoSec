@@ -16,10 +16,13 @@ import DropdownButton from "../../LanguageChange";
 import DrawerNavigation from "./DrawerNavigation ";
 import * as Styled from "./style";
 import MobileGreating from "./MobileHeaderGreetings";
+import { useScrollPosition } from "./MobileHeaderGreetings/scrollPosition";
 import Modal from "../../Modal";
 import LoginForm from "./LogIn";
+import CustomHidden from "../../Hidden";
 
 function Header() {
+	const scrollPosition = useScrollPosition();
 	const { ismenuopen, handleMenuToggle } = useMenuOpen();
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -38,22 +41,25 @@ function Header() {
 
 	return (
 		<>
-			<Styled.Boxx>
-				<MobileGreating />
+			<Styled.HeaderWrapper>
 				<Styled.Header>
+					{scrollPosition === 0 && <MobileGreating />}
 					<Stack
 						direction="row"
 						justifyContent="space-between"
 						alignItems="center"
 						spacing={2}
-						sx={{ p: { sm: "16px 0", xs: "5px 0 1px" } }}
+						sx={{
+							p: { sm: "16px 15px", xs: "5px 15px 1px", md: '"5px 50px 1px"' },
+						}}
 					>
 						<Stack
 							direction="row"
 							spacing={{ lg: 6, md: 3 }}
 							alignItems="center"
 						>
-							<Hidden mdUp>
+							<CustomHidden breakpoint="md" up>
+								>
 								<IconButton
 									sx={{ mr: "15px" }}
 									edge="start"
@@ -68,13 +74,13 @@ function Header() {
 										}}
 									/>
 								</IconButton>
-							</Hidden>
+							</CustomHidden>
 							<Styled.LogoWrapper sx={{ display: "flex" }} href="/">
 								<Styled.Logo />
 							</Styled.LogoWrapper>
-							<Hidden mdDown>
+							<CustomHidden breakpoint="md" down>
 								<Navigation />
-							</Hidden>
+							</CustomHidden>
 						</Stack>
 						<Stack direction="row" spacing={3}>
 							<Modal
@@ -83,7 +89,7 @@ function Header() {
 								childComponent={childComponent}
 							/>
 							<DropdownButton />
-							<Hidden mdDown>
+							<CustomHidden breakpoint="md" down>
 								<GradientButton
 									onClick={() =>
 										handleModalButtonClick(
@@ -96,8 +102,9 @@ function Header() {
 								>
 									<Typography>clients area</Typography>
 								</GradientButton>
-							</Hidden>
-							<Hidden mdUp>
+							</CustomHidden>
+							<CustomHidden breakpoint="md" up>
+								>
 								<Styled.UserLogo
 									onClick={() =>
 										handleModalButtonClick(
@@ -110,7 +117,7 @@ function Header() {
 									width={"20px"}
 									height={"20px"}
 								></Styled.UserLogo>
-							</Hidden>
+							</CustomHidden>
 						</Stack>
 						<Styled.BurgerMenu
 							BackdropProps={{ invisible: true }}
@@ -166,7 +173,7 @@ function Header() {
 						</Styled.BurgerMenu>
 					</Stack>
 				</Styled.Header>
-			</Styled.Boxx>
+			</Styled.HeaderWrapper>
 			<Snackbar
 				open={alertOpen}
 				autoHideDuration={6000}

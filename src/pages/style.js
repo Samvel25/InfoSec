@@ -105,12 +105,12 @@ export const Description = styled(Box)(({ theme }) => ({
 	justifyContent: "center",
 	textAlign: "center",
 	position: "relative",
-
 	"&: before": {
 		...radLines,
 		left: 0,
 		bottom: "-10px",
 		transform: "translateY(100%)",
+
 		[theme.breakpoints.down("md")]: {
 			width: "265px",
 			height: "45px",
@@ -126,7 +126,7 @@ export const DescriptionText = styled(Stack)(({ theme }) => ({
 	},
 }));
 
-export const Services = styled(Grid)(({ theme }) => ({
+export const Services = styled(Box)(({ theme }) => ({
 	borderTop: "1px solid rgba(255, 255, 255, 0.1)",
 	position: "relative",
 	"&:before": {
@@ -174,21 +174,21 @@ export const Services = styled(Grid)(({ theme }) => ({
 		// 	display: "none",
 		// },
 	},
-	[theme.breakpoints.down("1300")]: {
-		justifyContent: "space-around",
-	},
-	[theme.breakpoints.down("sm")]: {
-		padding: "20px 0 0px",
-	},
+	// [theme.breakpoints.down("1300")]: {
+	// 	justifyContent: "space-around",
+	// },
+	// [theme.breakpoints.down("sm")]: {
+	// 	padding: "20px 0 0px",
+	// },
 }));
 
-export const ServicesCard = styled(CarouselCard)(({ theme }) => ({
-	width: "auto",
-	margin: "28px 10px",
-	[theme.breakpoints.down("md")]: {
-		margin: "20px 10px",
-	},
-	[theme.breakpoints.down("sm")]: {
-		width: "100%",
-	},
-}));
+// export const ServicesCard = styled(CarouselCard)(({ theme }) => ({
+// 	width: "auto",
+// 	margin: "28px 10px",
+// 	[theme.breakpoints.down("md")]: {
+// 		margin: "20px 10px",
+// 	},
+// 	[theme.breakpoints.down("sm")]: {
+// 		width: "100%",
+// 	},
+// }));

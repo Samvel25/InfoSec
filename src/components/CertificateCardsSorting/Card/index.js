@@ -14,7 +14,11 @@ const CardItem = ({ title, content, certificateimg, className }) => {
 				sx={{ mb: "40px", width: "100%" }}
 				justifyContent={"space-between"}
 			>
-				<Typography variant="CardHead" component={"h5"} sx={{ mb: "0" }}>
+				<Typography
+					variant="CardHead"
+					component={"h5"}
+					sx={{ mb: "0", textTransform: "uppercase" }}
+				>
 					{title}
 				</Typography>
 
@@ -29,7 +33,11 @@ const CardItem = ({ title, content, certificateimg, className }) => {
 					</Typography>
 				</GradientButton> */}
 			</Stack>
-			<Typography variant="CardDescription" component={"p"} sx={{ mb: "50px" }}>
+			<Typography
+				variant="CardDescription"
+				component={"p"}
+				sx={{ mb: "50px", textTransform: "none" }}
+			>
 				{content}
 			</Typography>
 			<Styled.Button

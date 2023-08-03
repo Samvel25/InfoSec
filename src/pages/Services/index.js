@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
 import * as Styled from "./style";
-
+import ServicesCard from "../../components/Card/Services";
 import * as GlobalStyled from "../style";
 import IncidebtsImg from "../../media/png/incidebts.png";
 import Experts from "../../components/Carousel/Experts";
@@ -81,7 +81,7 @@ const Services = () => {
 						<Typography
 							variant="GradientLight"
 							component="h1"
-							sx={{ mb: "20px" }}
+							sx={{ mb: "20px", width: { xs: "100%", xl: "80%" } }}
 						>
 							If your company is under attack, it is important to contact
 							incident response experts as soon as possible.
@@ -107,10 +107,6 @@ const Services = () => {
 						Results of work on the results of the response
 					</Typography>
 					<GlobalStyled.Services
-						container
-						justifyContent={{ sm: "center", md: "space-between" }}
-						direction={"row"}
-						alignItems="center"
 						sx={{
 							pt: { md: "80px", xs: "35px" },
 							m: { md: "80px 0 300px", xs: "60px 0 150px" },
@@ -119,102 +115,7 @@ const Services = () => {
 						<GlobalStyled.HeadText>
 							<Typography variant="Head">OUR SERVICES</Typography>
 						</GlobalStyled.HeadText>
-						<GlobalStyled.ServicesCard
-							boxpadding="boxpadding"
-							backgroundtype="backgroundOne"
-						>
-							<Box sx={{ maxWidth: "330px" }}>
-								<Typography variant="CardHead" component={"h5"}>
-									Network Security
-								</Typography>
-								<Typography variant="CardDescription">
-									Protecting your company's network and data from unauthorized
-									access and attacks, including firewalls, intrusion detection
-									and prevention, and VPNs.
-								</Typography>
-							</Box>
-							<CardImmage display={"block"} width={"60px"} height={"53px"} />
-						</GlobalStyled.ServicesCard>
-						<GlobalStyled.ServicesCard
-							boxpadding="boxpadding"
-							backgroundtype="backgroundOne"
-						>
-							<Box sx={{ maxWidth: "330px" }}>
-								<Typography variant="CardHead" component={"h5"}>
-									Network Security
-								</Typography>
-								<Typography variant="CardDescription">
-									Protecting your company's network and data from unauthorized
-									access and attacks, including firewalls, intrusion detection
-									and prevention, and VPNs.
-								</Typography>
-							</Box>
-							<CardImmage display={"block"} width={"60px"} height={"53px"} />
-						</GlobalStyled.ServicesCard>
-						<GlobalStyled.ServicesCard
-							boxpadding="boxpadding"
-							backgroundtype="backgroundOne"
-						>
-							<Box sx={{ maxWidth: "330px" }}>
-								<Typography variant="CardHead" component={"h5"}>
-									Network Security
-								</Typography>
-								<Typography variant="CardDescription">
-									Protecting your company's network and data from unauthorized
-									access and attacks, including firewalls, intrusion detection
-									and prevention, and VPNs.
-								</Typography>
-							</Box>
-							<CardImmage display={"block"} width={"60px"} height={"53px"} />
-						</GlobalStyled.ServicesCard>
-						<GlobalStyled.ServicesCard
-							boxpadding="boxpadding"
-							backgroundtype="backgroundOne"
-						>
-							<Box sx={{ maxWidth: "330px" }}>
-								<Typography variant="CardHead" component={"h5"}>
-									Network Security
-								</Typography>
-								<Typography variant="CardDescription">
-									Protecting your company's network and data from unauthorized
-									access and attacks, including firewalls, intrusion detection
-									and prevention, and VPNs.
-								</Typography>
-							</Box>
-							<CardImmage display={"block"} width={"60px"} height={"53px"} />
-						</GlobalStyled.ServicesCard>
-						<GlobalStyled.ServicesCard
-							boxpadding="boxpadding"
-							backgroundtype="backgroundOne"
-						>
-							<Box sx={{ maxWidth: "330px" }}>
-								<Typography variant="CardHead" component={"h5"}>
-									Network Security
-								</Typography>
-								<Typography variant="CardDescription">
-									Protecting your company's network and data from unauthorized
-									access and attacks, including firewalls, intrusion detection
-									and prevention, and VPNs.
-								</Typography>
-							</Box>
-							<CardImmage display={"block"} width={"60px"} height={"53px"} />
-						</GlobalStyled.ServicesCard>
-						<GlobalStyled.ServicesCard
-							boxpadding="boxpadding"
-							backgroundtype="backgroundOne"
-						>
-							<Box sx={{ maxWidth: "330px" }}>
-								<Typography variant="CardHead" component={"h5"}>
-									Network Security
-								</Typography>
-								<Typography variant="CardDescription">
-									Protecting your company's network and data from unauthorized
-									access and attacks, including firewalls, intrusion detection
-									and prevention, and VPNs.
-								</Typography>
-							</Box>
-							<CardImmage display={"block"} width={"60px"} height={"53px"} />
-						</GlobalStyled.ServicesCard>
+						<ServicesCard />
 					</GlobalStyled.Services>
 					{/* <Container maxWidth="xxl"> */}
 				</Box>

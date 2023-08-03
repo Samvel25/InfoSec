@@ -20,6 +20,9 @@ export const ExpertsSlider = styled(Slider)`
 		top: 0;
 		left: 0;
 		display: flex;
+		@media (min-width: 1350px) {
+			justify-content: space-between;
+		}
 	}
 `;
 

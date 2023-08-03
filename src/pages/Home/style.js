@@ -32,6 +32,7 @@ export const radLines = {
 };
 
 export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
+	position: "relative",
 	...(ismenuopen && {
 		...ScaledSectionStyles,
 		[theme.breakpoints.down("md")]: {
@@ -44,6 +45,25 @@ export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
 			padding: "20px 20px 20px 20px !important",
 		},
 	}),
+	"&:after": {
+		position: "absolute",
+		content: '""',
+		zIndex: "1",
+		borderRadius: "50%",
+		left: "50%",
+		top: "0",
+		transform: "translate(-50%, -50%)",
+		width: "70%",
+		height: "100%",
+		opacity: "0.4",
+		background:
+			"radial-gradient(47.45% 47.45% at 50.00% 54.40%, rgba(212, 37, 48, 0.60) 0%, rgba(212, 37, 48, 0.00) 100%)",
+		filter: "blur(100px)",
+		// [theme.breakpoints.down("md")]: {
+		// 	left: "35%",
+		// 	height: "500px",
+		// },
+	},
 }));
 
 export const DiamondWraper = styled(Grid)(({ theme }) => ({

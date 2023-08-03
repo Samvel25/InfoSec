@@ -19,6 +19,7 @@ export const FooterLinkes = styled(Grid)(({ theme }) => ({
 }));
 export const LineWrapper = styled(Grid)(({ theme }) => ({
 	position: "relative",
+	width: "100%",
 }));
 
 export const FooterLine = styled(Line)(({ theme }) => ({

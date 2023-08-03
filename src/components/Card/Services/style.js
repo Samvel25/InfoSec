@@ -1,8 +1,9 @@
 import { Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
-import CarouselCard from "../../components/Card/CarouselCard";
+import { ReactComponent as CardSquare } from "../../../media/svg/cardSquare.svg";
+import CarouselCard from "../CarouselCard";
 
-export const SubmitedForm = styled(Grid)(({ theme }) => ({
+export const Services = styled(Grid)(({ theme }) => ({
 	position: "relative",
 	[theme.breakpoints.down("1300")]: {
 		justifyContent: "space-around",
@@ -10,6 +11,12 @@ export const SubmitedForm = styled(Grid)(({ theme }) => ({
 	[theme.breakpoints.down("sm")]: {
 		padding: "20px 0 0px",
 	},
+}));
+
+export const CardSquareImg = styled(CardSquare)(({ theme }) => ({
+	width: "62px",
+	display: "block",
+	height: "62px",
 }));
 
 export const Card = styled(CarouselCard)(({ theme }) => ({

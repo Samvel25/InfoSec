@@ -1,7 +1,29 @@
 import Slider from "react-slick";
 import CarouselCard from "../../Card/CarouselCard";
 import { styled } from "@mui/material/styles";
-import { Typography } from "@mui/material";
+
+export const OurLifeCarouselCard = styled(CarouselCard)(({ theme }) => ({
+	width: "300px",
+	padding: "0px",
+	[theme.breakpoints.down("sm")]: {
+		// maxWidth: "330px",
+		padding: "0px",
+	},
+	[theme.breakpoints.up("xxl")]: {
+		width: "350px",
+	},
+	[theme.breakpoints.up(3250)]: {
+		width: "400px",
+	},
+}));
+
+export const LifeImmage = styled("img")(({ theme }) => ({
+	width: "100%",
+}));
+
+export const Wrapper = styled("div")(({ theme }) => ({
+	margin: "0 10px",
+}));
 
 export const StyledSlider = styled(Slider)`
 	.custom-prevArrow,
@@ -90,15 +112,3 @@ export const StyledSlider = styled(Slider)`
 	// 	display: flex;
 	// }
 `;
-export const OurLifeCarouselCard = styled(CarouselCard)(({ theme }) => ({
-	width: "94%",
-	padding: "0px",
-	[theme.breakpoints.down("sm")]: {
-		// maxWidth: "330px",
-		padding: "0px",
-	},
-}));
-
-export const Wrapper = styled("div")(({ theme }) => ({
-	margin: "0 10px",
-}));

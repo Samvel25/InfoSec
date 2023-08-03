@@ -17,6 +17,9 @@ const commonStyles = {
 	"@media (max-width:600px)": {
 		fontSize: "24px",
 	},
+	"@media (min-width:2000px)": {
+		fontSize: "42px",
+	},
 };
 
 export const theme = createTheme({
@@ -26,7 +29,8 @@ export const theme = createTheme({
 			sm: 600,
 			md: 1000,
 			lg: 1250,
-			xl: 1440,
+			xl: 1920,
+			xxl: 2800,
 		},
 	},
 	palette: {
@@ -50,6 +54,9 @@ export const theme = createTheme({
 			margin: 0,
 			marginBottom: "0",
 			color: "#C0C1C2",
+			"@media (min-width:2000px)": {
+				fontSize: "16px",
+			},
 		},
 		h1: {
 			background:
@@ -72,6 +79,9 @@ export const theme = createTheme({
 			color: "#C0C1C2",
 			marginBottom: "45px",
 			display: "inline",
+			"@media (min-width:2000px)": {
+				fontSize: "20px",
+			},
 		},
 		GradientHead: {
 			background:
@@ -83,6 +93,9 @@ export const theme = createTheme({
 			color: "#C0C1C2",
 			marginBottom: "45px",
 			...gradientText,
+			"@media (min-width:2000px)": {
+				fontSize: "20px",
+			},
 		},
 		CardRate: {
 			fontWeight: 400,
@@ -91,6 +104,9 @@ export const theme = createTheme({
 
 			"@media (max-width:600px)": {
 				fontSize: "28px",
+			},
+			"@media (min-width:2000px)": {
+				fontSize: "35px",
 			},
 		},
 		CardDescription: {
@@ -101,6 +117,9 @@ export const theme = createTheme({
 			marginBottom: "17px",
 			display: "block",
 			...gradientText,
+			"@media (min-width:2000px)": {
+				fontSize: "15px",
+			},
 		},
 		CardHead: {
 			color: "#FFFFFF",
@@ -109,6 +128,9 @@ export const theme = createTheme({
 			lineHeight: "31px",
 			fontWeight: 700,
 			display: "inline",
+			"@media (min-width:2000px)": {
+				fontSize: "24px",
+			},
 		},
 		FooterHead: {
 			color: "#FFFFFF",
@@ -117,6 +139,9 @@ export const theme = createTheme({
 			marginBottom: "20px",
 			textDecoration: "none",
 			display: "block",
+			"@media (min-width:2000px)": {
+				fontSize: "20px",
+			},
 		},
 		FooterLink: {
 			marginBottom: "10px",
@@ -125,6 +150,9 @@ export const theme = createTheme({
 			lineHeight: "24px",
 			textDecoration: "none",
 			display: "block",
+			"@media (min-width:2000px)": {
+				fontSize: "20px",
+			},
 		},
 
 		ButtonNew: {
@@ -135,6 +163,9 @@ export const theme = createTheme({
 			textDecoration: "none",
 			textTransform: "uppercase",
 			display: "inline-block",
+			"@media (min-width:2000px)": {
+				fontSize: "15px",
+			},
 		},
 	},
 	components: {

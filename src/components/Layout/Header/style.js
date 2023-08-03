@@ -66,19 +66,21 @@ export const UserLogo = styled(UserSvg)({
 
 export const Header = styled(AppBar)(({ theme }) => ({
 	borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-	padding: "0 50px",
-
-	[theme.breakpoints.down("md")]: {
-		padding: "0 15px",
-	},
-	[theme.breakpoints.down("sm")]: {
-		marginTop: "35px",
-	},
+	position: "fixed",
+	background: "rgba(0, 0, 0, 0.95)",
+	backdropFilter: "blur(50px)",
+	// padding: "0 50px",
+	width: "100%",
+	// [theme.breakpoints.down("md")]: {
+	// 	padding: "0 15px",
+	// },
+	// [theme.breakpoints.down("sm")]: {
+	// 	marginTop: "35px",
+	// },
 }));
 
-export const Boxx = styled(AppBar)(({ theme }) => ({
+export const HeaderWrapper = styled(Header)(({ theme }) => ({
 	position: "fixed",
-	transform: "translateX(-50%)",
-	left: "50%",
-	maxWidth: "1440px",
+	padding: "0",
+	height: "max-content",
 }));

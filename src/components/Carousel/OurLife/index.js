@@ -34,7 +34,7 @@ const OurLifeCarousel = () => {
 		variableWidth: true,
 		slidesToShow: 4,
 		speed: 800,
-		autoplay: true,
+		// autoplay: true,
 		pauseOnHover: true,
 		nextArrow: <GalleryNextArrow />,
 		prevArrow: <GalleryPrevArrow />,
@@ -60,13 +60,6 @@ const OurLifeCarousel = () => {
 					centerPadding: "100px",
 				},
 			},
-			// {
-			// breakpoint: 450,
-			// settings: {
-			// slidesToShow: 1,
-			// centerPadding: "10px",
-			// },
-			// },
 		],
 	};
 
@@ -79,9 +72,9 @@ const OurLifeCarousel = () => {
 						ledtype="ledOne"
 						cutedcorner="right"
 					>
-						<img
+						<Styled.LifeImmage
 							width={"300px"}
-							sx={{ pb: "143%" }}
+							// sx={{ pb: "143%" }}
 							src={OurLifeImg2}
 							alt="Our life"
 						/>
@@ -95,9 +88,9 @@ const OurLifeCarousel = () => {
 						ledtype="ledOne"
 						cutedcorner="right"
 					>
-						<img
+						<Styled.LifeImmage
 							width={"300px"}
-							sx={{ pb: "143%" }}
+							// sx={{ pb: "143%" }}
 							src={OurLifeImg}
 							alt="Our life"
 						/>
@@ -111,9 +104,9 @@ const OurLifeCarousel = () => {
 						ledtype="ledOne"
 						cutedcorner="right"
 					>
-						<img
+						<Styled.LifeImmage
 							width={"300px"}
-							sx={{ pb: "143%" }}
+							// sx={{ pb: "143%" }}
 							src={OurLifeImg2}
 							alt="Our life"
 						/>
@@ -127,9 +120,9 @@ const OurLifeCarousel = () => {
 						ledtype="ledOne"
 						cutedcorner="right"
 					>
-						<img
+						<Styled.LifeImmage
 							width={"300px"}
-							sx={{ pb: "143%" }}
+							// sx={{ pb: "143%" }}
 							src={OurLifeImg}
 							alt="Our life"
 						/>
@@ -143,9 +136,9 @@ const OurLifeCarousel = () => {
 						ledtype="ledOne"
 						cutedcorner="right"
 					>
-						<img
+						<Styled.LifeImmage
 							width={"300px"}
-							sx={{ pb: "143%" }}
+							// sx={{ pb: "143%" }}
 							src={OurLifeImg2}
 							alt="Our life"
 						/>

@@ -1,5 +1,12 @@
 // import { styled } from "@mui/material/styles";
-import { Box, Button, Hidden, Stack, Typography } from "@mui/material";
+import {
+	Box,
+	Button,
+	Container,
+	Hidden,
+	Stack,
+	Typography,
+} from "@mui/material";
 import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
@@ -19,6 +26,8 @@ import ModalButton from "../../components/Buttons/ModalButton";
 import Modal from "../../components/Modal";
 import Form from "../../components/Form";
 import ModalReadMore from "../../components/ModalReadMore";
+import CustomHidden from "../../components/Hidden";
+import ServicesCard from "../../components/Card/Services";
 
 function Home() {
 	const { ismenuopen } = useMenuOpen();
@@ -32,7 +41,9 @@ function Home() {
 
 	return (
 		<PageTransition>
+			<Styled.CardSquareImg />
 			{/* ///1 section/////// */}
+
 			<Styled.FirstSection
 				ismenuopen={ismenuopen}
 				sx={{
@@ -42,7 +53,7 @@ function Home() {
 					},
 				}}
 				container
-				justifyContent={{ dm: "space-around", xs: "center" }}
+				justifyContent={{ sm: "space-around", xs: "center" }}
 				direction={"row"}
 				alignItems="center"
 			>
@@ -52,12 +63,13 @@ function Home() {
 					md={5}
 					xs={12}
 					sm={9}
+					xl={4.5}
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography variant="h1">
 						Proactive Cyber Security Solutions for Your Business
 					</Typography>
-					<Hidden mdDown>
+					<CustomHidden breakpoint="md" down>
 						<ProgreeBar />
 						<Grid item lg={11} md={12}>
 							<Typography>
@@ -67,8 +79,8 @@ function Home() {
 								potential risks before they cause harm.
 							</Typography>
 						</Grid>
-					</Hidden>
-					<Hidden mdDown>
+					</CustomHidden>
+					<CustomHidden breakpoint="md" down>
 						<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
 							<GradientButton>
 								<Typography>Pick a product</Typography>
@@ -77,7 +89,7 @@ function Home() {
 								<Typography>To get a consultation</Typography>
 							</GradientButton>
 						</Stack>
-					</Hidden>
+					</CustomHidden>
 				</Grid>
 
 				<Styled.DiamondWraper
@@ -96,11 +108,11 @@ function Home() {
 
 						<ModalButton onClick={() => handleModalButtonClick(<Form />)} />
 					</Styled.Modal>
-					<Hidden mdUp>
+					<CustomHidden breakpoint="md" up>
 						<Box sx={{ m: "15px 0 30px" }}>
 							<ProgreeBar />
 						</Box>
-					</Hidden>
+					</CustomHidden>
 					<img
 						src={DiamondAnimation}
 						alt="Cybersecurity"
@@ -108,7 +120,7 @@ function Home() {
 						sx={{ paddingBottom: "100%" }}
 					/>
 				</Styled.DiamondWraper>
-				<Hidden mdUp>
+				<CustomHidden breakpoint="md" up>
 					<Grid item xs={12} sm={9} textAlign={{ sm: "center", xs: "start" }}>
 						<Typography>
 							We provide comprehensive cyber security services to protect your
@@ -117,8 +129,8 @@ function Home() {
 							potential risks before they cause harm.
 						</Typography>
 					</Grid>
-				</Hidden>
-				<Hidden mdUp>
+				</CustomHidden>
+				<CustomHidden breakpoint="md" up>
 					<Grid item sm={7} xs={12}>
 						<Box textItems={"center"} direction={"row"} sx={{ mt: "20px" }}>
 							<GradientButton sx={{ mb: "20px", width: "100%" }}>
@@ -132,7 +144,7 @@ function Home() {
 							</GradientButton>
 						</Box>
 					</Grid>
-				</Hidden>
+				</CustomHidden>
 			</Styled.FirstSection>
 
 			<Box sx={{ display: ismenuopen ? "none" : "block" }}>
@@ -211,7 +223,7 @@ function Home() {
 								of the hackers. Contact us today to learn more.
 							</Typography>
 						</Grid>
-						<Hidden mdDown>
+						<CustomHidden breakpoint="md" up>
 							<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
 								<GradientButton
 									backgroundtype="backgroundOne"
@@ -235,10 +247,17 @@ function Home() {
 									<Typography>Read more</Typography>
 								</GradientButton>
 							</Stack>
-						</Hidden>
+						</CustomHidden>
 					</Styled.ExportCyberSecurityDescription>
-					<Grid item md={5} sm={8} sx={{ mt: { md: "0px", xs: "40px" } }}>
+					<Grid
+						item
+						md={5}
+						sm={8}
+						xl={4.5}
+						sx={{ mt: { md: "0px", xs: "40px" } }}
+					>
 						<BigCardWrapper
+							maxWidth={"900px"}
 							img={
 								<img
 									src={cybersecurity}
@@ -289,7 +308,7 @@ function Home() {
 								of the hackers. Contact us today to learn more.
 							</Typography>
 						</Grid>
-						<Hidden mdDown>
+						<CustomHidden mdDown>
 							<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
 								<GradientButton
 									backgroundtype="backgroundOne"
@@ -313,11 +332,19 @@ function Home() {
 									<Typography>Read more</Typography>
 								</GradientButton>
 							</Stack>
-						</Hidden>
+						</CustomHidden>
 					</Styled.CyberSecurityServicesDescription>
 
-					<Grid item md={5} sm={8} sx={{ mt: { md: "0px", xs: "40px" } }}>
+					<Grid
+						item
+						justifyContent={"end"}
+						md={5}
+						sm={8}
+						xl={4.5}
+						sx={{ mt: { md: "0px", xs: "40px" }, display: "flex" }}
+					>
 						<BigCardWrapper
+							maxWidth={"900px"}
 							img={
 								<img
 									src={cybersecurity2}
@@ -332,113 +359,13 @@ function Home() {
 
 				{/*5 /// section/////// */}
 
-				<GlobalStyled.Services
-					container
-					justifyContent={{ sm: "center", md: "space-between" }}
-					direction={"row"}
-					alignItems="center"
-					sx={{ m: "80px 0 130px" }}
-				>
+				<GlobalStyled.Services sx={{ m: "80px 0 130px" }}>
 					<GlobalStyled.HeadText>
 						<Typography variant="Head">OUR SERVICES</Typography>
 					</GlobalStyled.HeadText>
-					<GlobalStyled.ServicesCard
-						boxpadding="boxpadding"
-						backgroundtype="backgroundOne"
-					>
-						<Box sx={{ maxWidth: "330px" }}>
-							<Typography variant="CardHead" component={"h5"}>
-								Network Security
-							</Typography>
-							<Typography variant="CardDescription">
-								Protecting your company's network and data from unauthorized
-								access and attacks, including firewalls, intrusion detection and
-								prevention, and VPNs.
-							</Typography>
-						</Box>
-						<Styled.CardSquareImg />
-					</GlobalStyled.ServicesCard>
-					<GlobalStyled.ServicesCard
-						boxpadding="boxpadding"
-						backgroundtype="backgroundOne"
-					>
-						<Box sx={{ maxWidth: "330px" }}>
-							<Typography variant="CardHead" component={"h5"}>
-								Network Security
-							</Typography>
-							<Typography variant="CardDescription">
-								Protecting your company's network and data from unauthorized
-								access and attacks, including firewalls, intrusion detection and
-								prevention, and VPNs.
-							</Typography>
-						</Box>
-						<Styled.CardSquareImg />
-					</GlobalStyled.ServicesCard>
-					<GlobalStyled.ServicesCard
-						boxpadding="boxpadding"
-						backgroundtype="backgroundOne"
-					>
-						<Box sx={{ maxWidth: "330px" }}>
-							<Typography variant="CardHead" component={"h5"}>
-								Network Security
-							</Typography>
-							<Typography variant="CardDescription">
-								Protecting your company's network and data from unauthorized
-								access and attacks, including firewalls, intrusion detection and
-								prevention, and VPNs.
-							</Typography>
-						</Box>
-						<Styled.CardSquareImg />
-					</GlobalStyled.ServicesCard>
-					<GlobalStyled.ServicesCard
-						boxpadding="boxpadding"
-						backgroundtype="backgroundOne"
-					>
-						<Box sx={{ maxWidth: "330px" }}>
-							<Typography variant="CardHead" component={"h5"}>
-								Network Security
-							</Typography>
-							<Typography variant="CardDescription">
-								Protecting your company's network and data from unauthorized
-								access and attacks, including firewalls, intrusion detection and
-								prevention, and VPNs.
-							</Typography>
-						</Box>
-						<Styled.CardSquareImg />
-					</GlobalStyled.ServicesCard>
-					<GlobalStyled.ServicesCard
-						boxpadding="boxpadding"
-						backgroundtype="backgroundOne"
-					>
-						<Box sx={{ maxWidth: "330px" }}>
-							<Typography variant="CardHead" component={"h5"}>
-								Network Security
-							</Typography>
-							<Typography variant="CardDescription">
-								Protecting your company's network and data from unauthorized
-								access and attacks, including firewalls, intrusion detection and
-								prevention, and VPNs.
-							</Typography>
-						</Box>
-						<Styled.CardSquareImg />
-					</GlobalStyled.ServicesCard>
-					<GlobalStyled.ServicesCard
-						boxpadding="boxpadding"
-						backgroundtype="backgroundOne"
-					>
-						<Box sx={{ maxWidth: "330px" }}>
-							<Typography variant="CardHead" component={"h5"}>
-								Network Security
-							</Typography>
-							<Typography variant="CardDescription">
-								Protecting your company's network and data from unauthorized
-								access and attacks, including firewalls, intrusion detection and
-								prevention, and VPNs.
-							</Typography>
-						</Box>
-						<Styled.CardSquareImg />
-					</GlobalStyled.ServicesCard>
+					<ServicesCard />
 				</GlobalStyled.Services>
+
 				{/*6 /// section/////// */}
 
 				<Box
@@ -462,9 +389,9 @@ function Home() {
 							</Typography>
 						</GlobalStyled.DescriptionText>
 					</Styled.CertificatesDescription>
-					<Box>
-						<SlidCertificatesCarouselers></SlidCertificatesCarouselers>
-					</Box>
+					<Container maxWidth={"xl"} sx={{ mt: "80px" }}>
+						<SlidCertificatesCarouselers />
+					</Container>
 				</Box>
 			</Box>
 		</PageTransition>

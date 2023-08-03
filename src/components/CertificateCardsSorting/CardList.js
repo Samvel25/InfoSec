@@ -4,6 +4,7 @@ import CardItem from "./Card/index";
 import { Box, Grid, Hidden } from "@mui/material";
 import CertificatesCarousel from "../Carousel/Certificates";
 import allCards from "./Card/sliderData";
+import CustomHidden from "../Hidden";
 
 const SortTypes = {
 	ALL: "all",
@@ -30,10 +31,10 @@ const CardList = ({ activeSort, setActiveSort }) => {
 	return (
 		<Box>
 			<SortingButton onClick={setActiveSort} activeSort={activeSort} />
-			<Hidden smUp>
+			<CustomHidden breakpoint="sm" up>
 				<CertificatesCarousel cards={cards} />
-			</Hidden>
-			<Hidden smDown>
+			</CustomHidden>
+			<CustomHidden breakpoint="sm" down>
 				<Grid
 					sx={{ mt: { md: "100px", sm: "80px", xs: "50px" } }}
 					container
@@ -50,7 +51,7 @@ const CardList = ({ activeSort, setActiveSort }) => {
 						</Grid>
 					))}
 				</Grid>
-			</Hidden>
+			</CustomHidden>
 		</Box>
 	);
 };
