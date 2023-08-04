@@ -15,7 +15,14 @@ function GoalCards() {
 				<Styled.RedCard>
 					<sh> </sh>
 					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
-					<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
+					<Box
+						alignItems={"center"}
+						sx={{
+							display: "flex",
+							width: { xs: "280px", xl: "auto" },
+							maxWidth: { xs: "auto", xl: "96%", xxl: "100%" },
+						}}
+					>
 						<Styled.Text variant="CardRate" component={"h6"}>
 							7/10
 						</Styled.Text>
@@ -32,7 +39,14 @@ function GoalCards() {
 						<sh> </sh>
 
 						<Styled.Text sx={{ mb: "11px" }}>DELIVERING </Styled.Text>
-						<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
+						<Box
+							alignItems={"center"}
+							sx={{
+								display: "flex",
+								width: { xs: "280px", xl: "auto" },
+								maxWidth: { xs: "auto", xl: "96%", xxl: "100%" },
+							}}
+						>
 							<Styled.Text variant="CardRate" component={"h6"}>
 								100K
 							</Styled.Text>
@@ -49,7 +63,14 @@ function GoalCards() {
 					<sh> </sh>
 
 					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
-					<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
+					<Box
+						alignItems={"center"}
+						sx={{
+							display: "flex",
+							width: { xs: "280px", xl: "auto" },
+							maxWidth: { xs: "auto", xl: "96%", xxl: "100%" },
+						}}
+					>
 						<Styled.Text variant="CardRate" component={"h6"}>
 							2/3
 						</Styled.Text>
@@ -65,7 +86,14 @@ function GoalCards() {
 					<sh> </sh>
 
 					<Styled.Text sx={{ mb: "11px" }}>DELIVERING BY</Styled.Text>
-					<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
+					<Box
+						alignItems={"center"}
+						sx={{
+							display: "flex",
+							width: { xs: "280px", xl: "auto" },
+							maxWidth: { xs: "auto", xl: "96%", xxl: "100%" },
+						}}
+					>
 						<Styled.Text variant="CardRate" component={"h6"}>
 							300+
 						</Styled.Text>
@@ -82,7 +110,14 @@ function GoalCards() {
 						<sh> </sh>
 
 						<Styled.Text sx={{ mb: "11px" }}>DELIVERING </Styled.Text>
-						<Box alignItems={"center"} sx={{ display: "flex", width: "225px" }}>
+						<Box
+							alignItems={"center"}
+							sx={{
+								display: "flex",
+								width: { xs: "280px", xl: "auto" },
+								maxWidth: { xs: "auto", xl: "96%", xxl: "100%" },
+							}}
+						>
 							<Styled.Text variant="CardRate" component={"h6"}>
 								100K
 							</Styled.Text>

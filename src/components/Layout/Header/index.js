@@ -59,7 +59,6 @@ function Header() {
 							alignItems="center"
 						>
 							<CustomHidden breakpoint="md" up>
-								>
 								<IconButton
 									sx={{ mr: "15px" }}
 									edge="start"
@@ -104,7 +103,6 @@ function Header() {
 								</GradientButton>
 							</CustomHidden>
 							<CustomHidden breakpoint="md" up>
-								>
 								<Styled.UserLogo
 									onClick={() =>
 										handleModalButtonClick(

@@ -30,19 +30,37 @@ const CardList = ({ activeSort, setActiveSort }) => {
 
 	return (
 		<Box>
-			<SortingButton onClick={setActiveSort} activeSort={activeSort} />
+			<SortingButton
+				sx={{ mb: { xs: "100px", sm: "0" } }}
+				onClick={setActiveSort}
+				activeSort={activeSort}
+			/>
 			<CustomHidden breakpoint="sm" up>
 				<CertificatesCarousel cards={cards} />
 			</CustomHidden>
 			<CustomHidden breakpoint="sm" down>
 				<Grid
-					sx={{ mt: { md: "100px", sm: "80px", xs: "50px" } }}
+					sx={{
+						mt: { md: "100px", sm: "80px", xs: "50px" },
+						p: { sm: "0 15px", xs: "0" },
+					}}
 					container
-					justifyContent={"center"}
-					spacing={2}
+					justifyContent={{ xs: "center", sm: "space-around" }}
+					spacing={5}
 				>
 					{cards.map((card, index) => (
-						<Grid item xs={6} md={4} lg={3} key={index}>
+						<Grid
+							item
+							xs={6}
+							md={4}
+							lg={4}
+							xl={3}
+							xxl={2}
+							// direction={"row"}
+							display={"flex"}
+							justifyContent={"center"}
+							key={index}
+						>
 							<CardItem
 								title={card.title}
 								content={card.content}

@@ -20,31 +20,47 @@ const About = () => {
 				ismenuopen={ismenuopen}
 				sx={{ p: { md: "70px 0 30px", xs: "100px 0 50px" } }}
 				container
-				justifyContent={"space-around"}
+				justifyContent={"end"}
 				direction={"row"}
 				alignItems="center"
 			>
-				<sh />
 				<Grid
 					item
-					md={5}
+					display={"flex"}
+					alignItems={"center"}
+					justifyContent={"center"}
 					xs={12}
-					sm={10}
-					textAlign={{ sm: "center", md: "start" }}
+					sm={12}
+					md={5.5}
+					xl={6}
+					xxl={6.5}
+					textAlign={"center"}
 				>
-					<Typography variant="h1">
-						Reliable business protection against cyber threats
-					</Typography>
-					<ProgreeBar />
-					<Grid item lg={11} md={12}>
-						<Typography>
-							We provide comprehensive cyber security services to protect your
-							business from cyber threats. Our team of experts has years of
-							experience in the field and can help you identify and mitigate
-							potential risks before they cause harm.
+					<Grid
+						item
+						xs={12}
+						sm={10}
+						md={11}
+						xl={9}
+						xxl={8}
+						textAlign={{ sm: "center", md: "start" }}
+					>
+						<Typography variant="h1">
+							Reliable business protection against cyber threats
 						</Typography>
+						<ProgreeBar />
+						<Grid item lg={11} md={12}>
+							<Typography>
+								We provide comprehensive cyber security services to protect your
+								business from cyber threats. Our team of experts has years of
+								experience in the field and can help you identify and mitigate
+								potential risks before they cause harm.
+							</Typography>
+						</Grid>
 					</Grid>
 				</Grid>
+				<sh />
+
 				<Grid item xxl={5.5} xl={6} md={6.5} xs={12} sm={8}>
 					<Styled.Globe>
 						<GlobeImg width={"100%"} height={"100%"} />

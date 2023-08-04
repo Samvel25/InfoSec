@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { ReactComponent as LogoSvg } from "../../../media/logo/Logo.svg";
+import { ReactComponent as LogoSvg } from "../../../media/logo/secondaryLogo.svg";
 import { ReactComponent as Line } from "../../../media/svg/footerLine.svg";
 import { Grid, Box, Typography } from "@mui/material";
 

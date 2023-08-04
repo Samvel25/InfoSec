@@ -44,17 +44,25 @@ const ClientsReview = () => {
 			<Styled.Wrapper>
 				<CarouselCard
 					sx={{
-						p: { sm: "45px 30px", xs: "30px 20px" },
+						p: {
+							sm: "45px 30px",
+							xs: "30px 20px",
+							xl: "40px 38px 40px 25px",
+							xxl: "42px 45px 42px 30px",
+						},
 						width: "max-content",
 					}}
 					backgroundtype="backgroundOne"
 				>
 					<Box sx={{ maxWidth: "330px" }}>
-						<NameAmLogo width={"116px"} height={"22px"} />
+						<Styled.NameAmLogoImg />
 						<Stack
 							direction={"row"}
 							justifyContent={"space-between"}
-							sx={{ width: "115px", mt: "70px" }}
+							sx={{
+								width: { xs: "115px", xl: "138", xxl: "165px" },
+								mt: "70px",
+							}}
 						>
 							<Styled.RateStars />
 							<Styled.RateStars />
@@ -71,17 +79,25 @@ const ClientsReview = () => {
 			<Styled.Wrapper>
 				<CarouselCard
 					sx={{
-						p: { sm: "45px 30px", xs: "30px 20px" },
+						p: {
+							sm: "45px 30px",
+							xs: "30px 20px",
+							xl: "40px 38px 40px 25px",
+							xxl: "42px 45px 42px 30px",
+						},
 						width: "max-content",
 					}}
 					backgroundtype="backgroundOne"
 				>
 					<Box sx={{ maxWidth: "330px" }}>
-						<DomainDeskAmLogo width={"116px"} height={"22px"} />
+						<DomainDeskAmLogo />
 						<Stack
 							direction={"row"}
 							justifyContent={"space-between"}
-							sx={{ width: "115px", mt: "70px" }}
+							sx={{
+								width: { xs: "115px", xl: "138", xxl: "165px" },
+								mt: "70px",
+							}}
 						>
 							<Styled.RateStars />
 							<Styled.RateStars />
@@ -98,17 +114,25 @@ const ClientsReview = () => {
 			<Styled.Wrapper>
 				<CarouselCard
 					sx={{
-						p: { sm: "45px 30px", xs: "30px 20px" },
+						p: {
+							sm: "45px 30px",
+							xs: "30px 20px",
+							xl: "40px 38px 40px 25px",
+							xxl: "42px 45px 42px 30px",
+						},
 						width: "max-content",
 					}}
 					backgroundtype="backgroundOne"
 				>
 					<Box sx={{ maxWidth: "330px" }}>
-						<NameAmLogo width={"116px"} height={"22px"} />
+						<Styled.NameAmLogoImg width={"116px"} height={"22px"} />
 						<Stack
 							direction={"row"}
 							justifyContent={"space-between"}
-							sx={{ width: "115px", mt: "70px" }}
+							sx={{
+								width: { xs: "115px", xl: "138", xxl: "165px" },
+								mt: "70px",
+							}}
 						>
 							<Styled.RateStars />
 							<Styled.RateStars />

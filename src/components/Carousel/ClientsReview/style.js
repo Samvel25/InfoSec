@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
 import { ReactComponent as RateStar } from "../../../media/svg/rateStar.svg";
+import { ReactComponent as NameAmLogo } from "../../../media/logo/nameAmLogo.svg";
 
 export const ExpertsSlider = styled(Slider)`
 	.slick-list {
@@ -38,8 +39,32 @@ export const Wrapper = styled(Box)({
 	margin: "0 10px",
 });
 
-export const RateStars = styled(RateStar)(({ grayscale }) => ({
+export const RateStars = styled(RateStar)(({ theme, grayscale }) => ({
 	width: "15px",
 	height: "15px",
 	filter: grayscale ? "grayscale(100%)" : "none",
+	[theme.breakpoints.up("xl")]: {
+		width: "18px",
+		height: "18px",
+	},
+
+	[theme.breakpoints.up("xxl")]: {
+		width: "21px",
+		height: "22px",
+	},
+}));
+
+export const NameAmLogoImg = styled(NameAmLogo)(({ theme, grayscale }) => ({
+	width: "116px",
+	height: "22px",
+
+	[theme.breakpoints.up("xl")]: {
+		width: "139px",
+		height: "26px",
+	},
+
+	[theme.breakpoints.up("xxl")]: {
+		width: "166px",
+		height: "31px",
+	},
 }));

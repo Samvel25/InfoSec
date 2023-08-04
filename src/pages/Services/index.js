@@ -28,12 +28,13 @@ const Services = () => {
 				direction={"row"}
 				alignItems="center"
 			>
-				<sh />
 				<Grid
 					item
 					md={5}
 					xs={12}
 					sm={10}
+					xl={4.5}
+					xxl={4}
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography sx={{ mb: "12px", textTransform: "uppercase" }}>
@@ -53,7 +54,9 @@ const Services = () => {
 						</Typography>
 					</Grid>
 				</Grid>
-				<Grid item md={4.5} xs={12} sm={8}>
+				<sh />
+
+				<Grid item xxl={4} md={4.5} xs={12} sm={8}>
 					<Box>
 						<img
 							width={"100%"}
@@ -90,7 +93,7 @@ const Services = () => {
 					<Box sx={{ mt: { sm: "200px", xs: "110px" } }} alignItems={"center"}>
 						<Experts sx={{ pb: "70px" }} />
 						<GradientButton sx={{ m: "0 auto" }}>
-							Report an Incident
+							<Typography>Report an Incident</Typography>
 						</GradientButton>
 					</Box>
 				</GlobalStyled.Achievements>

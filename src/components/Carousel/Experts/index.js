@@ -43,7 +43,12 @@ const Experts = () => {
 			<Styled.Wrapper>
 				<AchievementsCard
 					sx={{
-						p: { sm: "45px 30px", xs: "30px 20px" },
+						p: {
+							sm: "45px 30px",
+							xs: "30px 20px",
+							xl: "55px 60px 45px",
+							xxl: "55px 135px 40px 75px",
+						},
 						width: "max-content",
 					}}
 					backgroundtype="backgroundOne"
@@ -71,7 +76,12 @@ const Experts = () => {
 			<Styled.Wrapper>
 				<AchievementsCard
 					sx={{
-						p: { sm: "45px 30px", xs: "30px 20px" },
+						p: {
+							sm: "45px 30px",
+							xs: "30px 20px",
+							xl: "55px 60px",
+							xxl: "55px 135px 40px 75px",
+						},
 						width: "max-content",
 					}}
 					backgroundtype="backgroundOne"
@@ -99,7 +109,12 @@ const Experts = () => {
 			<Styled.Wrapper>
 				<AchievementsCard
 					sx={{
-						p: { sm: "45px 30px", xs: "30px 20px" },
+						p: {
+							sm: "45px 30px",
+							xs: "30px 20px",
+							xl: "55px 60px",
+							xxl: "55px 135px 40px 75px",
+						},
 						width: "max-content",
 					}}
 					backgroundtype="backgroundOne"

@@ -1,8 +1,9 @@
 import { ReactComponent as SendIcon } from "../../media/svg/sendArrow.svg";
-import { TextField, Typography } from "@mui/material";
+import { Box, TextField, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const Container = styled("div")`
+export const Container = styled(Box)`
+	// margin-left: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -16,7 +17,10 @@ export const EmailInput = styled(TextField)(({ theme }) => ({
 	position: "relative",
 	marginBottom: "20px",
 	[theme.breakpoints.up("xl")]: {
-		width: "700px",
+		maxWidth: "80%",
+	},
+	[theme.breakpoints.up("xxl")]: {
+		maxWidth: "60%",
 	},
 	"& .MuiInputBase-input": {
 		color: "#FFF",

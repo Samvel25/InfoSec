@@ -142,10 +142,6 @@ export const StyledSlider = styled(Slider)`
 	}
 
 	@media screen and (max-width: 500px) {
-		.custom-prevArrow,
-		.custom-nextArrow {
-			bottom: 60px;
-		}
 		.custom-nextArrow {
 			right: 44%;
 		}

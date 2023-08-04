@@ -17,8 +17,13 @@ const commonStyles = {
 	"@media (max-width:600px)": {
 		fontSize: "24px",
 	},
-	"@media (min-width:2000px)": {
+	"@media (min-width:1930px)": {
 		fontSize: "42px",
+		lineHeight: "45px",
+	},
+	"@media (min-width:2800px)": {
+		fontSize: "50px",
+		lineHeight: "55px",
 	},
 };
 
@@ -29,7 +34,7 @@ export const theme = createTheme({
 			sm: 600,
 			md: 1000,
 			lg: 1250,
-			xl: 1920,
+			xl: 1930,
 			xxl: 2800,
 		},
 	},
@@ -54,8 +59,13 @@ export const theme = createTheme({
 			margin: 0,
 			marginBottom: "0",
 			color: "#C0C1C2",
-			"@media (min-width:2000px)": {
+			"@media (min-width:1930px)": {
 				fontSize: "16px",
+				lineHeight: "28px",
+			},
+			"@media (min-width:2800px)": {
+				fontSize: "19px",
+				lineHeight: "32px",
 			},
 		},
 		h1: {
@@ -79,8 +89,13 @@ export const theme = createTheme({
 			color: "#C0C1C2",
 			marginBottom: "45px",
 			display: "inline",
-			"@media (min-width:2000px)": {
+			"@media (min-width:1930px)": {
 				fontSize: "20px",
+				lineHeight: "25px",
+			},
+			"@media (min-width:2800px)": {
+				fontSize: "24px",
+				lineHeight: "30px",
 			},
 		},
 		GradientHead: {
@@ -93,8 +108,13 @@ export const theme = createTheme({
 			color: "#C0C1C2",
 			marginBottom: "45px",
 			...gradientText,
-			"@media (min-width:2000px)": {
+			"@media (min-width:1930px)": {
 				fontSize: "20px",
+				lineHeight: "25px",
+			},
+			"@media (min-width:2800px)": {
+				fontSize: "24px",
+				lineHeight: "30px",
 			},
 		},
 		CardRate: {
@@ -105,8 +125,13 @@ export const theme = createTheme({
 			"@media (max-width:600px)": {
 				fontSize: "28px",
 			},
-			"@media (min-width:2000px)": {
+			"@media (min-width:1930px)": {
 				fontSize: "35px",
+				lineHeight: "33px",
+			},
+			"@media (min-width:2800px)": {
+				fontSize: "38px",
+				lineHeight: "39px",
 			},
 		},
 		CardDescription: {
@@ -117,8 +142,13 @@ export const theme = createTheme({
 			marginBottom: "17px",
 			display: "block",
 			...gradientText,
-			"@media (min-width:2000px)": {
+			"@media (min-width:1930px)": {
 				fontSize: "15px",
+				lineHeight: "24px",
+			},
+			"@media (min-width:2800px)": {
+				fontSize: "18px",
+				lineHeight: "29px",
 			},
 		},
 		CardHead: {
@@ -128,8 +158,13 @@ export const theme = createTheme({
 			lineHeight: "31px",
 			fontWeight: 700,
 			display: "inline",
-			"@media (min-width:2000px)": {
+			"@media (min-width:1930px)": {
 				fontSize: "24px",
+				lineHeight: "37px",
+			},
+			"@media (min-width:2800px)": {
+				fontSize: "29px",
+				lineHeight: "44px",
 			},
 		},
 		FooterHead: {
@@ -139,8 +174,13 @@ export const theme = createTheme({
 			marginBottom: "20px",
 			textDecoration: "none",
 			display: "block",
-			"@media (min-width:2000px)": {
+			"@media (min-width:1930px)": {
 				fontSize: "20px",
+				lineHeight: "26px",
+			},
+			"@media (min-width:2800px)": {
+				fontSize: "24px",
+				lineHeight: "31px",
 			},
 		},
 		FooterLink: {
@@ -150,8 +190,13 @@ export const theme = createTheme({
 			lineHeight: "24px",
 			textDecoration: "none",
 			display: "block",
-			"@media (min-width:2000px)": {
+			"@media (min-width:1930px)": {
+				fontSize: "18px",
+				lineHeight: "30px",
+			},
+			"@media (min-width:2800px)": {
 				fontSize: "20px",
+				lineHeight: "36px",
 			},
 		},
 
@@ -163,8 +208,13 @@ export const theme = createTheme({
 			textDecoration: "none",
 			textTransform: "uppercase",
 			display: "inline-block",
-			"@media (min-width:2000px)": {
+			"@media (min-width:1930px)": {
 				fontSize: "15px",
+				lineHeight: "31px",
+			},
+			"@media (min-width:2800px)": {
+				fontSize: "18px",
+				lineHeight: "37px",
 			},
 		},
 	},

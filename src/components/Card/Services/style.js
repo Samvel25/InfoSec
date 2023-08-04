@@ -28,4 +28,7 @@ export const Card = styled(CarouselCard)(({ theme }) => ({
 	[theme.breakpoints.down("sm")]: {
 		width: "100%",
 	},
+	[theme.breakpoints.up("xl")]: {
+		padding: "40px 80px 40px 50px",
+	},
 }));

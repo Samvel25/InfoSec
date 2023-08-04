@@ -57,13 +57,13 @@ function Home() {
 				direction={"row"}
 				alignItems="center"
 			>
-				<sh />
 				<Grid
 					item
 					md={5}
 					xs={12}
 					sm={9}
 					xl={4.5}
+					xxl={4}
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography variant="h1">
@@ -91,7 +91,7 @@ function Home() {
 						</Stack>
 					</CustomHidden>
 				</Grid>
-
+				<sh />
 				<Styled.DiamondWraper
 					item
 					md={5}

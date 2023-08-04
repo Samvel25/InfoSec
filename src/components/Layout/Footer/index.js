@@ -25,7 +25,12 @@ const Footer = () => {
 	});
 
 	return (
-		<Box sx={{ display: ismenuopen ? "none" : "block" }}>
+		<Box
+			sx={{
+				display: ismenuopen ? "none" : "block",
+				p: { sm: "0 25px", xs: "0" },
+			}}
+		>
 			<footer>
 				<Styled.FooterLinkes
 					container

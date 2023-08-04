@@ -28,12 +28,13 @@ const Clients = () => {
 				direction={"row"}
 				alignItems="center"
 			>
-				<sh />
 				<Grid
 					item
-					md={5}
 					xs={12}
 					sm={10}
+					md={5}
+					xl={4.5}
+					xxl={4}
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography sx={{ mb: "12px", textTransform: "uppercase" }}>
@@ -53,11 +54,15 @@ const Clients = () => {
 						</Typography>
 					</Grid>
 				</Grid>
+				<sh />
+
 				<Grid
 					item
-					md={5}
 					xs={12}
 					sm={8}
+					md={5}
+					xl={4.5}
+					xxl={4}
 					sx={{ pt: { md: "0", sm: "60px", xs: "50px" } }}
 				>
 					<Box>
@@ -96,9 +101,11 @@ const Clients = () => {
 				>
 					<Grid
 						item
-						md={5}
 						xs={12}
 						sm={10}
+						md={5}
+						xl={4.5}
+						xxl={4}
 						textAlign={{ xs: "center", md: "start" }}
 					>
 						<Typography variant="h1">
@@ -124,9 +131,11 @@ const Clients = () => {
 
 					<Grid
 						item
+						xs={12}
 						lg={6}
 						md={6.5}
-						xs={12}
+						xl={4.5}
+						xxl={4}
 						sx={{ pt: { xs: "50px", md: "0" } }}
 					>
 						<GoalCards textAlign={{ xs: "center", sm: "start" }} />

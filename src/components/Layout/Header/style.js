@@ -16,6 +16,14 @@ export const Logo = styled(LogoSvg)(({ theme }) => ({
 		width: "132px",
 		height: "30px",
 	},
+	[theme.breakpoints.up("xl")]: {
+		width: "218px",
+		height: "47px",
+	},
+	[theme.breakpoints.up("xxl")]: {
+		width: "255px",
+		height: "55px",
+	},
 }));
 
 export const Navigation = styled("nav")(({ theme }) => ({

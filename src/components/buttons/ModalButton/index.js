@@ -1,8 +1,6 @@
 import { ReactComponent as ModalSvg } from "../../../media/svg/modalButtonSvg.svg";
-import React, { useState } from "react";
-import FormModal from "../../Modal";
+import React from "react";
 import * as Styled from "./style";
-import Form from "../../Form";
 
 function ModalButton({ onClick }) {
 	return (
