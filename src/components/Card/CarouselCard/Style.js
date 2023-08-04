@@ -37,6 +37,17 @@ export const AchievementsCard = styled(Box)(
 					backgroundtype === "backgroundOne"
 						? "linear-gradient(45deg,#575757,#616161,#292929)"
 						: "linear-gradient(45deg,#D42530,#F10413,#490005)",
+				[theme.breakpoints.up("xl")]: {
+					padding: "18px 40px",
+					...commonStyles,
+					clipPath:
+						"polygon(0 0,calc(100% - 26.00px) 0,100% 26.00px,100% 100%,26.00px 100%,0 calc(100% - 26.00px),0 0,1px  1px ,1px calc(100% - 26.00px - 0.41px),calc(26.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(26.00px + 0.41px),calc(100% - 26.00px - 0.41px) 1px,1px 1px)",
+				},
+				[theme.breakpoints.up("xxl")]: {
+					...commonStyles,
+					clipPath:
+						"polygon(0 0,calc(100% - 30.00px) 0,100% 30.00px,100% 100%,30.00px 100%,0 calc(100% - 30.00px),0 0,1px  1px ,1px calc(100% - 30.00px - 0.41px),calc(30.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(30.00px + 0.41px),calc(100% - 30.00px - 0.41px) 1px,1px 1px)",
+				},
 			},
 			[theme.breakpoints.down("sm")]: {
 				"& span:first-of-type": {

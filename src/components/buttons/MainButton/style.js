@@ -32,17 +32,23 @@ export const ButtonGradient = styled(Button)(
 		},
 		[theme.breakpoints.up("xl")]: {
 			padding: "18px 40px",
+			"&:before": {
+				...commonStyles,
+				clipPath:
+					cliptype === "smallOne"
+						? "polygon(0 0,calc(100% - 13.00px) 0,100% 13.00px,100% 100%,13.00px 100%,0 calc(100% - 13.00px),0 0,1px  1px ,1px calc(100% - 13.00px - 0.41px),calc(13.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(13.00px + 0.41px),calc(100% - 13.00px - 0.41px) 1px,1px 1px)"
+						: "polygon(0 0,calc(100% - 25.00px) 0,100% 25.00px,100% 100%,25.00px 100%,0 calc(100% - 25.00px),0 0,1px  1px ,1px calc(100% - 25.00px - 0.41px),calc(25.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(25.00px + 0.41px),calc(100% - 25.00px - 0.41px) 1px,1px 1px)",
+			},
 		},
 		[theme.breakpoints.up("xxl")]: {
 			padding: "25px 56px",
+			"&:before": {
+				...commonStyles,
+				clipPath:
+					cliptype === "smallOne"
+						? "polygon(0 0,calc(100% - 15.00px) 0,100% 15.00px,100% 100%,15.00px 100%,0 calc(100% - 15.00px),0 0,1px  1px ,1px calc(100% - 15.00px - 0.41px),calc(15.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(15.00px + 0.41px),calc(100% - 15.00px - 0.41px) 1px,1px 1px)"
+						: "polygon(0 0,calc(100% - 30.00px) 0,100% 30.00px,100% 100%,30.00px 100%,0 calc(100% - 30.00px),0 0,1px  1px ,1px calc(100% - 30.00px - 0.41px),calc(30.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(30.00px + 0.41px),calc(100% - 30.00px - 0.41px) 1px,1px 1px)",
+			},
 		},
-		// "& p": {
-		// 	[theme.breakpoints.up(1940)]: {
-		// 		fontSize: "21px",
-		// 	},
-		// 	[theme.breakpoints.up("xxl")]: {
-		// 		fontSize: "25px",
-		// 	},
-		// },
 	})
 );

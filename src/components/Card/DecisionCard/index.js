@@ -11,7 +11,7 @@ function GoalCards() {
 			columnSpacing={3}
 			justifyContent={"center"}
 		>
-			<Grid item xs={10} sm={6}>
+			<Grid item xs={10} sm={5.5} md={6}>
 				<Styled.RedCard>
 					<sh> </sh>
 					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
@@ -34,7 +34,7 @@ function GoalCards() {
 				</Styled.RedCard>
 			</Grid>
 			<CustomHidden breakpoint="sm" down>
-				<Grid item xs={10} sm={6}>
+				<Grid item xs={10} sm={5.5} md={6}>
 					<Styled.Card backgroundtype="backgroundOne">
 						<sh> </sh>
 
@@ -58,7 +58,7 @@ function GoalCards() {
 					</Styled.Card>
 				</Grid>
 			</CustomHidden>
-			<Grid item xs={10} sm={6}>
+			<Grid item xs={10} sm={5.5} md={6}>
 				<Styled.Card backgroundtype="backgroundOne">
 					<sh> </sh>
 
@@ -81,7 +81,7 @@ function GoalCards() {
 					</Box>
 				</Styled.Card>
 			</Grid>
-			<Grid item xs={10} sm={6}>
+			<Grid item xs={10} sm={5.5} md={6}>
 				<Styled.RedCard>
 					<sh> </sh>
 
@@ -105,7 +105,7 @@ function GoalCards() {
 				</Styled.RedCard>
 			</Grid>
 			<CustomHidden breakpoint="sm" up>
-				<Grid item xs={10} sm={6}>
+				<Grid item xs={10} sm={5.5} md={6}>
 					<Styled.Card backgroundtype="backgroundOne">
 						<sh> </sh>
 

@@ -57,7 +57,7 @@ const Achivments = () => {
 						<Typography
 							sx={{
 								ml: "10px",
-								maxWidth: { xs: "140px", xl: "160px" },
+								maxWidth: { xs: "140px", xl: "160px", xxl: "190px" },
 								lineHeight: "14px",
 							}}
 						>
@@ -77,7 +77,7 @@ const Achivments = () => {
 						<Typography
 							sx={{
 								ml: "10px",
-								maxWidth: { xs: "140px", xl: "160px" },
+								maxWidth: { xs: "140px", xl: "160px", xxl: "190px" },
 								lineHeight: "14px",
 							}}
 						>
@@ -97,7 +97,7 @@ const Achivments = () => {
 						<Typography
 							sx={{
 								ml: "10px",
-								maxWidth: { xs: "140px", xl: "160px" },
+								maxWidth: { xs: "140px", xl: "160px", xxl: "190px" },
 								lineHeight: "14px",
 							}}
 						>
@@ -117,7 +117,7 @@ const Achivments = () => {
 						<Typography
 							sx={{
 								ml: "10px",
-								maxWidth: { xs: "140px", xl: "160px" },
+								maxWidth: { xs: "140px", xl: "160px", xxl: "190px" },
 								lineHeight: "14px",
 							}}
 						>

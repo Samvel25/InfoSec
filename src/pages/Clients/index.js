@@ -97,7 +97,6 @@ const Clients = () => {
 					container
 					justifyContent={"space-around"}
 					direction={"row"}
-					// alignItems="center"
 				>
 					<Grid
 						item
@@ -142,7 +141,7 @@ const Clients = () => {
 					</Grid>
 				</Styled.OurGoalsSection>
 
-				{/* ///3 section/////// */}
+				{/* ///4 section/////// */}
 
 				<Styled.Review sx={{ pb: { xs: "150px", md: "250px" } }}>
 					<Typography

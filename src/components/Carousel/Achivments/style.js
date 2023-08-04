@@ -28,7 +28,7 @@ export const StyledSlider = styled(Slider)`
 
 export const Card = styled(AchievementsCard)(({ theme }) => ({
 	[theme.breakpoints.up("1921")]: {
-		padding: "70px 80px 76px 50px",
+		padding: "70px 85px 76px 50px",
 		width: "350px",
 	},
 	[theme.breakpoints.up("xxl")]: {
