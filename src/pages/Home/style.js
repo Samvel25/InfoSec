@@ -1,4 +1,4 @@
-import { Box, Button, Grid } from "@mui/material";
+import { Box, Button, Container, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Net1 from "../../media/svg/backgroundNet.svg";
 import Net from "../../media/svg/net.svg";
@@ -241,4 +241,10 @@ export const CertificatesDescription = styled(Box)(({ theme }) => ({
 
 export const Maps = styled(Map)(({ theme }) => ({
 	background: "black",
+}));
+
+export const CustomContainer = styled(Container)(({ theme }) => ({
+	[theme.breakpoints.up("xxl")]: {
+		maxWidth: "2300px",
+	},
 }));

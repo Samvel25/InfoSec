@@ -25,6 +25,15 @@ export const StyledMenu = styled(Menu)(({ theme }) => ({
 			position: "relative",
 			zIndex: 2,
 		},
+		[theme.breakpoints.up("xl")]: {
+			padding: " 24px 12px",
+			width: "384px",
+		},
+
+		[theme.breakpoints.up("xxl")]: {
+			padding: " 29px 14.5px",
+			width: "460px",
+		},
 	},
 }));
 
@@ -51,6 +60,13 @@ export const StyledMenuItem = styled(MenuItem)(({ theme, isActive }) => ({
 	"& p": {
 		paddingLeft: "10px",
 		color: isActive ? "#FFFFFF" : "#C0C1C2",
+	},
+	[theme.breakpoints.up("xl")]: {
+		padding: "12px",
+	},
+
+	[theme.breakpoints.up("xxl")]: {
+		padding: "14.5",
 	},
 }));
 

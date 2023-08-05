@@ -25,13 +25,20 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 		"& a": {
 			fontSize: "8px",
 			lineHeight: "15px",
+			[theme.breakpoints.up("xl")]: {
+				fontSize: "10px",
+				lineHeight: "18px",
+			},
 			[theme.breakpoints.up("xxl")]: {
-				fontSize: "10.5px",
-				lineHeight: "19.5px",
+				fontSize: "13px",
+				lineHeight: "23px",
 			},
 		},
+		[theme.breakpoints.up("xl")]: {
+			padding: "10px 22px",
+		},
 		[theme.breakpoints.up("xxl")]: {
-			padding: "10.5px 23.5px",
+			padding: "13px 28px",
 		},
 	},
 
@@ -43,17 +50,25 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 			width: "100px",
 			height: "76px",
 		},
+		[theme.breakpoints.up("	xl")]: {
+			width: "138px",
+			height: "104px",
+		},
 		[theme.breakpoints.up("xxl")]: {
-			width: "150px",
-			height: "113px",
+			width: "175px",
+			height: "135px",
 		},
 	},
 	"& h5": {
 		fontSize: "12px",
 		lineHeight: "18px",
+		[theme.breakpoints.up("xl")]: {
+			fontSize: "14px",
+			lineHeight: "21px",
+		},
 		[theme.breakpoints.up("xxl")]: {
-			fontSize: "15.5px",
-			lineHeight: "23.5px",
+			fontSize: "16.5px",
+			lineHeight: "28px",
 		},
 	},
 
@@ -61,9 +76,13 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 		marginBottom: "30px",
 		fontSize: "8px",
 		lineHeight: "12px",
+		[theme.breakpoints.up("xl")]: {
+			fontSize: "10px",
+			lineHeight: "14px",
+		},
 		[theme.breakpoints.up("xxl")]: {
-			fontSize: "10.5px",
-			lineHeight: "18.5px",
+			fontSize: "13px",
+			lineHeight: "18px",
 		},
 	},
 
@@ -72,11 +91,17 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 		maxWidth: "300px",
 		padding: " 30px 10px 12px",
 	},
+	[theme.breakpoints.up("xl")]: {
+		minWidth: "264px",
+		padding: "40px 14.5px 26px",
+		margin: "0 12px",
+		maxWidth: "288px",
+	},
 	[theme.breakpoints.up("xxl")]: {
-		minWidth: "290px",
-		padding: "44px 16px 29px",
-		margin: "0 13px",
-		maxWidth: "312px",
+		minWidth: "343px",
+		padding: "52px 21px 34px",
+		margin: "0 17px",
+		maxWidth: "405px",
 	},
 }));
 
@@ -107,10 +132,17 @@ export const StyledSlider = styled(Slider)`
 		transform: translateX(50%);
 	}
 
+	@media screen and (min-width: 1930px) {
+		.custom-prevArrow,
+		.custom-nextArrow {
+			bottom: -30px;
+		}
+	}
+
 	@media screen and (min-width: 2800px) {
 		.custom-prevArrow,
 		.custom-nextArrow {
-			bottom: -20px;
+			bottom: -50px;
 		}
 	}
 

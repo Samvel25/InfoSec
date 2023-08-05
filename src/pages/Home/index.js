@@ -369,7 +369,15 @@ function Home() {
 				{/*6 /// section/////// */}
 
 				<Box
-					sx={{ p: { md: "130px 0 80px", sm: "80px 0 120px", xs: "0 0 80px" } }}
+					sx={{
+						p: {
+							xxl: "190px 0 120px",
+							xl: "160px 0 100px",
+							md: "130px 0 80px",
+							sm: "80px 0 120px",
+							xs: "0 0 80px",
+						},
+					}}
 				>
 					<Styled.CertificatesDescription>
 						<GlobalStyled.DescriptionText sx={{ pt: 0 }}>
@@ -389,9 +397,9 @@ function Home() {
 							</Typography>
 						</GlobalStyled.DescriptionText>
 					</Styled.CertificatesDescription>
-					<Container maxWidth={"xl"} sx={{ mt: "80px" }}>
+					<Styled.CustomContainer maxWidth={"xl"} sx={{ mt: "80px" }}>
 						<SlidCertificatesCarouselers />
-					</Container>
+					</Styled.CustomContainer>
 				</Box>
 			</Box>
 		</PageTransition>
