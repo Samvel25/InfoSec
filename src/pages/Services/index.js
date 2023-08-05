@@ -11,8 +11,10 @@ import { ReactComponent as CardImmage } from "../../media/svg/cardLogo.svg";
 import Form from "../../components/Form";
 import PageTransition from "../../components/PageTransition";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+	const { t } = useTranslation();
 	const { ismenuopen } = useMenuOpen();
 
 	return (
@@ -38,7 +40,7 @@ const Services = () => {
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography sx={{ mb: "12px", textTransform: "uppercase" }}>
-						About the services
+						{t("about_services")}
 					</Typography>
 					<Typography variant="h1">
 						We eliminate incidebts of any scale and level of complecity
