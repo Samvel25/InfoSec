@@ -27,6 +27,7 @@ function LanguageDropdown() {
 
 	const handleLanguageChange = (language) => {
 		i18n.changeLanguage(language);
+		localStorage.setItem("i18nLanguage", language);
 		handleCloseMenu();
 	};
 

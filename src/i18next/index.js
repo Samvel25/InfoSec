@@ -4,6 +4,8 @@ import translationEN from "../Locales/En/translation.json";
 import translationRU from "../Locales/Ru/translation.json";
 import translationARM from "../Locales/Arm/translation.json";
 
+const savedLanguage = localStorage.getItem("i18nLanguage") || "en";
+
 const resources = {
 	en: {
 		translation: translationEN,
@@ -18,7 +20,7 @@ const resources = {
 
 i18n.use(initReactI18next).init({
 	resources,
-	lng: "en",
+	lng: savedLanguage,
 	keySeparator: false,
 	interpolation: {
 		escapeValue: false,
