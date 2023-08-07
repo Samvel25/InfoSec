@@ -42,7 +42,17 @@ export const EmailInput = styled(TextField)(({ theme }) => ({
 }));
 
 export const SendArrow = styled(SendIcon)(({ theme }) => ({
+	width: "16px",
+	height: "16px",
 	cursor: "pointer",
+	[theme.breakpoints.up("xl")]: {
+		width: "20px",
+		height: "20px",
+	},
+	[theme.breakpoints.up("xxl")]: {
+		width: "23px",
+		height: "23px",
+	},
 }));
 
 export const ErrorText = styled(Typography)(({ theme }) => ({

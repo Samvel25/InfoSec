@@ -301,11 +301,19 @@ const Footer = () => {
 						>
 							Solutions
 						</Typography>
-						<Stack direction={"row"} spacing={3}>
-							<FacebookLogo />
-							<InstagramLogo />
-							<TwitterLogo />
-						</Stack>
+						<Styled.SocialMedia direction={"row"} spacing={3}>
+							<a href="/">
+								<FacebookLogo />
+							</a>
+
+							<a href="/">
+								<InstagramLogo />
+							</a>
+
+							<a href="/">
+								<TwitterLogo />
+							</a>
+						</Styled.SocialMedia>
 					</Grid>
 					<Styled.LineWrapper
 						sx={{

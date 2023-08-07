@@ -23,14 +23,14 @@ export const CertificateButton = styled(Button)(({ theme }) => ({
 		transform: "rotate(45deg)",
 		height: "14px",
 		width: "28px",
-		left: "-9px",
-		bottom: "-2px",
+		left: "-12px",
+		bottom: "-3px",
 
 		margin: 0,
 	},
 	"& pre:first-of-type": {
-		right: "-9px",
-		top: "-2px",
+		right: "-12px",
+		top: "-3px",
 		left: "auto",
 		bottom: "auto",
 	},
@@ -40,7 +40,7 @@ export const CertificateButton = styled(Button)(({ theme }) => ({
 	"&:before": {
 		...commonStyles,
 		clipPath:
-			"polygon(0 0,calc(100% - 20.00px) 0,100% 20.00px,100% 100%,20.00px 100%,0 calc(100% - 20.00px),0 0,1px  1px ,1px calc(100% - 20.00px - 0.41px),calc(20.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(20.00px + 0.41px),calc(100% - 20.00px - 0.41px) 1px,1px 1px)",
+			"polygon(0 0,calc(100% - 16.00px) 0,100% 16.00px,100% 100%,16.00px 100%,0 calc(100% - 16.00px),0 0,1px  1px ,1px calc(100% - 16.00px - 0.41px),calc(16.00px + 0.41px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(16.00px + 0.41px),calc(100% - 16.00px - 0.41px) 1px,1px 1px)",
 		background: "linear-gradient(45deg,#575757,#616161,#292929)",
 	},
 }));

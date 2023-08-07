@@ -36,25 +36,3 @@ export const ButtonText = styled(Typography)(({ theme }) => ({
 		textTransform: "uppercase",
 	},
 }));
-
-export const Button = styled(GradientButton)(({ theme }) => ({
-	width: "100%",
-	background: "transparent",
-	"& pre": {
-		position: "absolute",
-		background: "#0a0a0a",
-		transform: "rotate(45deg)",
-		height: "14px",
-		width: "28px",
-		left: "-9px",
-		bottom: "-2px",
-
-		margin: 0,
-	},
-	"& pre:first-of-type": {
-		right: "-9px",
-		top: "-2px",
-		left: "auto",
-		bottom: "auto",
-	},
-}));

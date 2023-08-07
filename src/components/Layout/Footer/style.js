@@ -1,12 +1,35 @@
 import { styled } from "@mui/material/styles";
 import { ReactComponent as LogoSvg } from "../../../media/logo/secondaryLogo.svg";
 import { ReactComponent as Line } from "../../../media/svg/footerLine.svg";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography, Stack } from "@mui/material";
+import { ReactComponent as FacebookLogo } from "../../../media/logo/facebookLogo.svg";
+import { ReactComponent as InstagramLogo } from "../../../media/logo/instagramLogo.svg";
+import { ReactComponent as TwitterLogo } from "../../../media/logo/twitterLogo.svg";
 
 export const Logo = styled(LogoSvg)(({ theme }) => ({
 	width: "125px",
 	height: "26px",
 	filter: "grayscale(100%)",
+}));
+
+export const SocialMedia = styled(Stack)(({ theme }) => ({
+	"& svg": {
+		width: "30px",
+		height: "30px",
+		filter: "grayscale(100%)",
+		cursor: "pointer",
+		"&:hover": {
+			filter: "none",
+		},
+		[theme.breakpoints.up("xl")]: {
+			width: "35px",
+			height: "35px",
+		},
+		[theme.breakpoints.up("xxl")]: {
+			width: "45px",
+			height: "45px",
+		},
+	},
 }));
 
 export const FooterLinkes = styled(Grid)(({ theme }) => ({

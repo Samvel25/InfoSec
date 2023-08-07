@@ -1,40 +1,190 @@
+// import React, { useState } from "react";
+// import {
+// 	InputAdornment,
+// 	Typography,
+// 	Checkbox,
+// 	FormControlLabel,
+// } from "@mui/material";
+// import * as Styled from "./style";
+
+// const CorporateEmail = () => {
+// 	const [email, setEmail] = useState("");
+// 	const [emailError, setEmailError] = useState(false);
+// 	const [checkboxError, setCheckboxError] = useState(false);
+// 	const [checked, setChecked] = useState(false);
+
+// 	const handleAccept = (e) => {
+// 		if (email === "") {
+// 			setEmailError(true);
+// 		} else {
+// 			setEmailError(false);
+// 		}
+
+// 		if (!checked) {
+// 			setCheckboxError(true);
+// 		} else {
+// 			setCheckboxError(false);
+// 			setEmail("");
+// 		}
+
+// 		if (e.key === "Enter") {
+// 			e.preventDefault();
+// 		}
+// 	};
+
+// 	const handleChange = (event) => {
+// 		setEmail(event.target.value);
+// 		setEmailError(false);
+// 	};
+
+// 	const handleCheckboxChange = (event) => {
+// 		setChecked(event.target.checked);
+// 		setCheckboxError(false);
+// 	};
+
+// 	return (
+// 		<Styled.Container>
+// 			<Styled.EmailInput
+// 				label="Corporate email"
+// 				onKeyDown={handleAccept}
+// 				id="outlined-basic"
+// 				variant="outlined"
+// 				value={email}
+// 				onChange={handleChange}
+// 				error={emailError}
+// 				helperText={emailError ? "Email is required" : ""}
+// 				InputProps={{
+// 					endAdornment: (
+// 						<InputAdornment position="end">
+// 							<Styled.SendArrow onClick={handleAccept} />
+// 						</InputAdornment>
+// 					),
+// 				}}
+// 			/>
+// 			<FormControlLabel
+// 				control={
+// 					<Checkbox
+// 						sx={{
+// 							color: checked ? "#FFF" : "#D42530", // Change the color values here
+// 							"&.Mui-checked, &.MuiCheckbox-indeterminate": {
+// 								color: checked ? "#FFF" : "#D42530", // Change the color values here
+// 							},
+// 						}}
+// 						checked={checked}
+// 						onChange={handleCheckboxChange}
+// 						color="primary"
+// 					/>
+// 				}
+// 				label={
+// 					<Typography
+// 						sx={{ color: "#C0C1C2", cursor: "default", textTransform: "none" }}
+// 						variant="ButtonNew"
+// 						component={"p"}
+// 					>
+// 						I consent to the processing of my personal data and confirm that I
+// 						have read and agree to the terms of the{" "}
+// 						<Typography
+// 							sx={{
+// 								color: "#D42530",
+// 								cursor: "pointer",
+// 								textTransform: "none",
+// 							}}
+// 							variant="ButtonNew"
+// 							component={"a"}
+// 							href="#"
+// 						>
+// 							Privacy Policy
+// 						</Typography>{" "}
+// 						and{" "}
+// 						<Typography
+// 							sx={{
+// 								color: "#D42530",
+// 								cursor: "pointer",
+// 								textTransform: "none",
+// 							}}
+// 							variant="ButtonNew"
+// 							component={"a"}
+// 							href="#"
+// 						>
+// 							User Agreement
+// 						</Typography>
+// 					</Typography>
+// 				}
+// 			/>
+// 			{checkboxError && (
+// 				<Styled.ErrorText>
+// 					Please accept the terms and conditions
+// 				</Styled.ErrorText>
+// 			)}
+// 		</Styled.Container>
+// 	);
+// };
+
+// export default CorporateEmail;
+
 import React, { useState } from "react";
 import {
 	InputAdornment,
 	Typography,
 	Checkbox,
 	FormControlLabel,
+	Snackbar,
+	Alert,
 } from "@mui/material";
 import * as Styled from "./style";
+import ReCaptchaComponent from "../ReCaptcha"; // Assuming it's in the same directory
+
+const EMAIL_ERROR_MESSAGE = "Please enter a valid email address";
+const ACCEPT_TERMS_ERROR_MESSAGE = "Please accept the terms and conditions";
+const CAPTCHA_ERROR_MESSAGE = "Please verify that you are not a robot";
+
+const isValidEmail = (email) => {
+	const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+	return re.test(String(email).toLowerCase());
+};
 
 const CorporateEmail = () => {
 	const [email, setEmail] = useState("");
-	const [emailError, setEmailError] = useState(false);
-	const [checkboxError, setCheckboxError] = useState(false);
+	const [emailError, setEmailError] = useState("");
 	const [checked, setChecked] = useState(false);
+	const [checkboxError, setCheckboxError] = useState(false);
+	const [snackbarOpen, setSnackbarOpen] = useState(false);
+	const [captchaValue, setCaptchaValue] = useState(null);
+	const [captchaError, setCaptchaError] = useState(false);
 
 	const handleAccept = (e) => {
-		if (email === "") {
-			setEmailError(true);
+		if (e && e.key === "Enter") {
+			e.preventDefault();
+		}
+
+		if (!isValidEmail(email)) {
+			setEmailError(EMAIL_ERROR_MESSAGE);
+			return;
 		} else {
-			setEmailError(false);
+			setEmailError("");
 		}
 
 		if (!checked) {
 			setCheckboxError(true);
+			return;
 		} else {
 			setCheckboxError(false);
-			setEmail("");
 		}
 
-		if (e.key === "Enter") {
-			e.preventDefault();
+		if (!captchaValue) {
+			setCaptchaError(true);
+			return;
+		} else {
+			setCaptchaError(false);
+			setEmail("");
+			setChecked(false);
+			setSnackbarOpen(true);
 		}
 	};
 
 	const handleChange = (event) => {
 		setEmail(event.target.value);
-		setEmailError(false);
+		setEmailError("");
 	};
 
 	const handleCheckboxChange = (event) => {
@@ -46,13 +196,15 @@ const CorporateEmail = () => {
 		<Styled.Container>
 			<Styled.EmailInput
 				label="Corporate email"
-				onKeyDown={handleAccept}
 				id="outlined-basic"
 				variant="outlined"
 				value={email}
 				onChange={handleChange}
-				error={emailError}
-				helperText={emailError ? "Email is required" : ""}
+				error={!!emailError}
+				helperText={emailError}
+				onKeyPress={(e) => {
+					if (e.key === "Enter") handleAccept(e);
+				}}
 				InputProps={{
 					endAdornment: (
 						<InputAdornment position="end">
@@ -65,9 +217,13 @@ const CorporateEmail = () => {
 				control={
 					<Checkbox
 						sx={{
-							color: checked ? "#FFF" : "#D42530", // Change the color values here
+							"& svg": {
+								width: { xl: "40px", xxl: "45px" },
+								height: { xl: "40px", xxl: "45px" },
+							},
+							color: checked ? "#FFF" : "#D42530",
 							"&.Mui-checked, &.MuiCheckbox-indeterminate": {
-								color: checked ? "#FFF" : "#D42530", // Change the color values here
+								color: checked ? "#FFF" : "#D42530",
 							},
 						}}
 						checked={checked}
@@ -79,43 +235,63 @@ const CorporateEmail = () => {
 					<Typography
 						sx={{ color: "#C0C1C2", cursor: "default", textTransform: "none" }}
 						variant="ButtonNew"
-						component={"p"}
+						component={"span"}
 					>
 						I consent to the processing of my personal data and confirm that I
 						have read and agree to the terms of the{" "}
-						<Typography
-							sx={{
+						<a
+							style={{
 								color: "#D42530",
 								cursor: "pointer",
 								textTransform: "none",
 							}}
-							variant="ButtonNew"
-							component={"a"}
-							href="#"
+							href="/path-to-privacy-policy"
 						>
 							Privacy Policy
-						</Typography>{" "}
+						</a>{" "}
 						and{" "}
-						<Typography
-							sx={{
+						<a
+							style={{
 								color: "#D42530",
 								cursor: "pointer",
 								textTransform: "none",
 							}}
-							variant="ButtonNew"
-							component={"a"}
-							href="#"
+							href="/path-to-user-agreement"
 						>
 							User Agreement
-						</Typography>
+						</a>
 					</Typography>
 				}
 			/>
 			{checkboxError && (
-				<Styled.ErrorText>
-					Please accept the terms and conditions
-				</Styled.ErrorText>
+				<Styled.ErrorText>{ACCEPT_TERMS_ERROR_MESSAGE}</Styled.ErrorText>
 			)}
+
+			<ReCaptchaComponent
+				onChange={(value) => {
+					setCaptchaValue(value);
+					setCaptchaError(false);
+				}}
+			/>
+			{captchaError && (
+				<Styled.ErrorText>{CAPTCHA_ERROR_MESSAGE}</Styled.ErrorText>
+			)}
+
+			<Snackbar
+				open={snackbarOpen}
+				autoHideDuration={6000}
+				onClose={() => setSnackbarOpen(false)}
+				anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+			>
+				<Alert
+					onClose={() => setSnackbarOpen(false)}
+					severity="success"
+					variant="filled"
+					sx={{ bgcolor: "white", color: "black" }}
+				>
+					Email successfully submitted!
+				</Alert>
+			</Snackbar>
 		</Styled.Container>
 	);
 };
