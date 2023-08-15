@@ -5,7 +5,6 @@ import { Typography } from "@mui/material";
 function Navigation({ ismenuopen }) {
 	const user = useAuth((state) => state.user);
 
-	console.log("user", user);
 
 	return (
 		<Styled.Navigation className={ismenuopen ? "open" : ""}>

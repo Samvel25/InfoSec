@@ -1,11 +1,11 @@
 import { Navigate, Route, useLocation } from "react-router-dom";
+import useAuth from '../../hooks/useAuth';
 
 const PrivateRoute = ({ children, path }) => {
   const location = useLocation();
-  const userRole = localStorage.getItem("userRole");
+  const user = useAuth((state) => state.user);
 
-  return userRole === "admin" ? (
-    // <Route path={path}>{children}</Route>
+  return user?.role === 'admin' ? (
     <Navigate to={path} state={{ from: location }} replace />
   ) : (
     <Navigate to="/" state={{ from: location }} replace />
