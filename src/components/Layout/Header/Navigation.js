@@ -1,8 +1,12 @@
+import useAuth from "../../../hooks/useAuth";
 import * as Styled from "./style";
 import { Typography } from "@mui/material";
-import { useLocation } from "react-router-dom";
 
 function Navigation({ ismenuopen }) {
+	const user = useAuth((state) => state.user);
+
+	console.log("user", user);
+
 	return (
 		<Styled.Navigation className={ismenuopen ? "open" : ""}>
 			<Styled.NavigationItem to="/" exact>
@@ -20,9 +24,11 @@ function Navigation({ ismenuopen }) {
 			<Styled.NavigationItem to="/certificates">
 				<Typography>certificates</Typography>
 			</Styled.NavigationItem>
-			<Styled.NavigationItem to="/admin">
-				<Typography>admin</Typography>
-			</Styled.NavigationItem>
+			{user?.role === "admin" && (
+				<Styled.NavigationItem to="/admin">
+					<Typography>admin</Typography>
+				</Styled.NavigationItem>
+			)}
 		</Styled.Navigation>
 	);
 }
