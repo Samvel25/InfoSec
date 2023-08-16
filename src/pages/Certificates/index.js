@@ -12,7 +12,7 @@ const Certificates = () => {
 				ismenuopen={ismenuopen}
 				textAlign={"center"}
 				sx={{
-					m: { md: "10px 0 260px", xs: "10px 0 150px" },
+					m: { md: "0px 0 260px", xs: "0px 0 150px" },
 					"&:after": {
 						display: ismenuopen ? "none" : "block",
 					},

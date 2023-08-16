@@ -1,19 +1,12 @@
 import React, { useState } from "react";
-import {
-	IconButton,
-	Hidden,
-	Stack,
-	Typography,
-	Box,
-	Snackbar,
-} from "@mui/material";
+import { IconButton, Stack, Typography, Box, Snackbar } from "@mui/material";
 import { Alert } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { useMenuOpen } from "../../context/MenuOpenContext";
 import Navigation from "./Navigation";
 import GradientButton from "../../Buttons/MainButton";
 import DropdownButton from "../../LanguageChange";
-import DrawerNavigation from "./DrawerNavigation ";
+import DrawerNavigation from "./Navigation/DrowerNavigation";
 import * as Styled from "./style";
 import MobileGreating from "./MobileHeaderGreetings";
 import { useScrollPosition } from "./MobileHeaderGreetings/scrollPosition";
@@ -50,7 +43,7 @@ function Header() {
 						alignItems="center"
 						spacing={2}
 						sx={{
-							p: { sm: "16px 15px", xs: "5px 15px 1px", md: '"5px 50px 1px"' },
+							p: { sm: "16px 15px", xs: "5px 15px 1px", md: "0px 40px" },
 						}}
 					>
 						<Stack

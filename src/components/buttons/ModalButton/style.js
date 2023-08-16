@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 const pulse = keyframes`
   0% {
@@ -17,8 +17,6 @@ const pulse = keyframes`
   }
 `;
 
-// Define color transition animation
-
 export const ModalButton = styled(Button)(({ theme }) => ({
 	position: "relative",
 	height: "53px",
@@ -26,9 +24,10 @@ export const ModalButton = styled(Button)(({ theme }) => ({
 	background: "#D42530",
 	minWidth: "1px",
 	borderRadius: "50%",
+	animation: `${pulse} 0.7s ease-in-out infinite`,
+
 	"&:hover": {
-		animation: `${pulse} 0.7s ease-in-out infinite`,
-		background: "#D42530",
+		background: "#B60712",
 	},
 	[theme.breakpoints.down("md")]: {
 		paddingTop: "40px",

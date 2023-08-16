@@ -1,7 +1,6 @@
 import { AppBar, Box, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ReactComponent as UserSvg } from "../../../media/svg/user.svg";
-import { NavLink } from "react-router-dom";
 import { Drawer } from "@mui/material";
 import { ReactComponent as LogoSvg } from "../../../media/logo/Logo.svg";
 
@@ -23,29 +22,6 @@ export const Logo = styled(LogoSvg)(({ theme }) => ({
 	[theme.breakpoints.up("xxl")]: {
 		width: "255px",
 		height: "55px",
-	},
-}));
-
-export const Navigation = styled("nav")(({ theme }) => ({
-	display: "flex",
-	alignItems: "center",
-}));
-
-export const NavigationItem = styled(NavLink)(({ theme }) => ({
-	textTransform: "uppercase",
-	textDecoration: "none",
-	padding: "0 20px",
-	"&.active > p": {
-		color: "#D42530", // Active color
-	},
-
-	"& p": {
-		"&:hover": {
-			color: "#D42530",
-		},
-	},
-	[theme.breakpoints.down(1150)]: {
-		padding: "0 9px",
 	},
 }));
 
@@ -73,18 +49,28 @@ export const UserLogo = styled(UserSvg)({
 });
 
 export const Header = styled(AppBar)(({ theme }) => ({
-	borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
 	position: "fixed",
-	background: "rgba(0, 0, 0, 0.95)",
-	backdropFilter: "blur(50px)",
-	// padding: "0 50px",
+	background: "transparent",
+	backdropFilter: "blur(19.0734px)",
 	width: "100%",
-	// [theme.breakpoints.down("md")]: {
-	// 	padding: "0 15px",
-	// },
-	// [theme.breakpoints.down("sm")]: {
-	// 	marginTop: "35px",
-	// },
+	boxShadow: "none",
+	"&: hover": {
+		background: "rgba(0, 0, 0, 0.95)",
+		borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+		boxShadow:
+			"0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)",
+		[theme.breakpoints.down("sm")]: {
+			background: "none",
+			borderBottom: "none",
+			boxShadow: "none",
+		},
+	},
+	[theme.breakpoints.down("sm")]: {
+		background: "rgba(0, 0, 0, 0.95)",
+		borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
+		boxShadow:
+			"0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)",
+	},
 }));
 
 export const HeaderWrapper = styled(Header)(({ theme }) => ({

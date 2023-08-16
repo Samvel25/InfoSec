@@ -31,6 +31,10 @@ export const radLines = {
 	backgroundSize: "contain",
 };
 
+export const Home = styled("div")(({ theme }) => ({
+	position: "relative",
+}));
+
 export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
 	position: "relative",
 	...(ismenuopen && {
@@ -92,8 +96,8 @@ export const DiamondWraper = styled(Grid)(({ theme }) => ({
 }));
 
 export const Modal = styled(Box)(({ theme }) => ({
-	position: "absolute",
-	right: "-30px",
+	position: "fixed",
+	right: "2%",
 	top: "50%",
 	zIndex: "50",
 	transform: "translateY(-50%)",

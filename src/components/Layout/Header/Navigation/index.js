@@ -1,10 +1,9 @@
-import useAuth from "../../../hooks/useAuth";
+import useAuth from "../../../../hooks/useAuth";
 import * as Styled from "./style";
 import { Typography } from "@mui/material";
 
 function Navigation({ ismenuopen }) {
 	const user = useAuth((state) => state.user);
-
 
 	return (
 		<Styled.Navigation className={ismenuopen ? "open" : ""}>
