@@ -22,6 +22,7 @@ function ServicesCard() {
 					</Typography>
 					<Typography
 						sx={{ mt: { xs: "8px", xl: "12px", xxl: "15px" } }}
+						component={"p"}
 						variant="CardDescription"
 					>
 						Protecting your company's network and data from unauthorized access
@@ -38,6 +39,7 @@ function ServicesCard() {
 					</Typography>
 					<Typography
 						sx={{ mt: { xs: "8px", xl: "12px", xxl: "15px" } }}
+						component={"p"}
 						variant="CardDescription"
 					>
 						Protecting your company's network and data from unauthorized access
@@ -54,6 +56,7 @@ function ServicesCard() {
 					</Typography>
 					<Typography
 						sx={{ mt: { xs: "8px", xl: "12px", xxl: "15px" } }}
+						component={"p"}
 						variant="CardDescription"
 					>
 						Protecting your company's network and data from unauthorized access
@@ -70,6 +73,7 @@ function ServicesCard() {
 					</Typography>
 					<Typography
 						sx={{ mt: { xs: "8px", xl: "12px", xxl: "15px" } }}
+						component={"p"}
 						variant="CardDescription"
 					>
 						Protecting your company's network and data from unauthorized access
@@ -86,6 +90,7 @@ function ServicesCard() {
 					</Typography>
 					<Typography
 						sx={{ mt: { xs: "8px", xl: "12px", xxl: "15px" } }}
+						component={"p"}
 						variant="CardDescription"
 					>
 						Protecting your company's network and data from unauthorized access
@@ -102,6 +107,7 @@ function ServicesCard() {
 					</Typography>
 					<Typography
 						sx={{ mt: { xs: "8px", xl: "12px", xxl: "15px" } }}
+						component={"p"}
 						variant="CardDescription"
 					>
 						Protecting your company's network and data from unauthorized access

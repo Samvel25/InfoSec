@@ -12,6 +12,7 @@ export const DrawerNavigationItem = styled(NavigationItem)(({ theme }) => ({
 	textTransform: "uppercase",
 	textDecoration: "none",
 	padding: "0 20px",
+	marginBottom: "20px",
 	[theme.breakpoints.up("xs")]: {
 		height: "auto",
 	},

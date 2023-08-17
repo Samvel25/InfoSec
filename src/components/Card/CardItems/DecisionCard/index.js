@@ -1,6 +1,6 @@
 import { Box, Grid, Hidden } from "@mui/material";
 import * as Styled from "./style";
-import CustomHidden from "../../Hidden";
+import CustomHidden from "../../../Hidden";
 
 function GoalCards() {
 	return (

@@ -142,9 +142,11 @@ export const theme = createTheme({
 			marginBottom: "17px",
 			display: "block",
 			...gradientText,
+			textTransform: "none",
+
 			"@media (min-width:1930px)": {
-				fontSize: "15px",
-				lineHeight: "24px",
+				fontSize: "13px",
+				lineHeight: "23px",
 			},
 			"@media (min-width:2800px)": {
 				fontSize: "18px",

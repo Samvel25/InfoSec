@@ -7,7 +7,7 @@ import ClientsImg from "../../media/png/clientsImg.png";
 import ClientsSlide from "../../components/Carousel/Clients";
 import GradientButton from "../../components/Buttons/MainButton";
 import PageTransition from "../../components/PageTransition";
-import GoalCards from "../../components/Card/DecisionCard";
+import GoalCards from "../../components/Card/CardItems/DecisionCard";
 import ClientsReview from "../../components/Carousel/ClientsReview";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
 import CustomHidden from "../../components/Hidden";

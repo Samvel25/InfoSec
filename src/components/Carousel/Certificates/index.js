@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import * as Styled from "./style";
 import { ReactComponent as Arrow } from "../../../media/svg/sliderArrow.svg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { styled } from "@mui/material/styles";
-import CardItem from "../../CertificateCardsSorting/Card";
 import allCards from "../../CertificateCardsSorting/Card/Data";
-
-// import allCards from "./sliderData";
 
 const GalleryPrevArrow = ({ currentSlide, slideCount, ...props }) => {
 	const { className, onClick } = props;

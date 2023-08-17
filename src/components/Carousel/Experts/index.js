@@ -63,6 +63,7 @@ const Experts = () => {
 							Swiftly identify and localize
 						</Typography>
 						<Typography
+							component={"p"}
 							variant="CardDescription"
 							sx={{ mt: "25px", mb: "17px" }}
 						>
@@ -96,6 +97,7 @@ const Experts = () => {
 							Swiftly identify and localize
 						</Typography>
 						<Typography
+							component={"p"}
 							variant="CardDescription"
 							sx={{ mt: "25px", mb: "17px" }}
 						>
@@ -129,6 +131,7 @@ const Experts = () => {
 							Swiftly identify and localize
 						</Typography>
 						<Typography
+							component={"p"}
 							variant="CardDescription"
 							sx={{ mt: "25px", mb: "17px" }}
 						>

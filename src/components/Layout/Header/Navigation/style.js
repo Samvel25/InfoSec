@@ -8,15 +8,42 @@ export const Navigation = styled("nav")(({ theme }) => ({
 
 export const NavigationItem = styled(NavLink)(({ theme }) => ({
 	textTransform: "uppercase",
+	position: "relative",
 	textDecoration: "none",
-	padding: "0 20px",
+	padding: "0 14px",
+	margin: "0 3px",
 	display: "flex",
 	flexDirection: "column",
 	justifyContent: "center",
+	"&:after": {
+		content: '""',
+		position: "absolute",
+		bottom: "0",
+		transform: "translate(-50%)",
+		left: "50%",
+		width: "90%",
+		height: "2px",
+		background: "#B7040F",
+		borderRadius: "4px",
+		display: "none",
+	},
 
-	"&.active": {},
-	"&.active > p": {
-		color: "#D42530",
+	"&:hover": {
+		"&:after": {
+			display: "block",
+		},
+		"& p": {
+			color: "#D42530",
+		},
+	},
+
+	"&.active": {
+		"&:after": {
+			display: "block",
+		},
+		"& p": {
+			color: "#D42530",
+		},
 	},
 
 	"& p": {
