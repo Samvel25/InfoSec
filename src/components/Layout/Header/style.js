@@ -51,7 +51,7 @@ export const UserLogo = styled(UserSvg)({
 export const Header = styled(AppBar)(({ theme }) => ({
 	position: "fixed",
 	background: "transparent",
-	backdropFilter: "blur(19.0734px)",
+
 	width: "100%",
 	boxShadow: "none",
 	"&: hover": {
@@ -68,8 +68,6 @@ export const Header = styled(AppBar)(({ theme }) => ({
 	[theme.breakpoints.down("sm")]: {
 		background: "rgba(0, 0, 0, 0.95)",
 		borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
-		boxShadow:
-			"0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12)",
 	},
 }));
 
@@ -77,4 +75,10 @@ export const HeaderWrapper = styled(Header)(({ theme }) => ({
 	position: "fixed",
 	padding: "0",
 	height: "max-content",
+}));
+
+export const HeaderContent = styled(Stack)(({ theme }) => ({
+	background:
+		"linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.008) )",
+	backdropFilter: " blur(5px) saturate(100%)",
 }));

@@ -37,7 +37,7 @@ function Header() {
 			<Styled.HeaderWrapper>
 				<Styled.Header>
 					{scrollPosition === 0 && <MobileGreating />}
-					<Stack
+					<Styled.HeaderContent
 						direction="row"
 						justifyContent="space-between"
 						alignItems="center"
@@ -162,7 +162,7 @@ function Header() {
 								</Stack>
 							</Styled.ContactNavigation>
 						</Styled.BurgerMenu>
-					</Stack>
+					</Styled.HeaderContent>
 				</Styled.Header>
 			</Styled.HeaderWrapper>
 			<Snackbar

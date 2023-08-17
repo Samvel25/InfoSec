@@ -3,7 +3,7 @@ import SortingButton from "./SortingButton";
 import CardItem from "./Card/index";
 import { Box, Grid, Hidden } from "@mui/material";
 import CertificatesCarousel from "../Carousel/Certificates";
-import allCards from "./Card/sliderData";
+import allCards from "./Card/Data";
 import CustomHidden from "../Hidden";
 
 const SortTypes = {
