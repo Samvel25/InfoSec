@@ -14,8 +14,10 @@ import * as Styled from "./style";
 import GradientButton from "../../../Buttons/MainButton";
 import { ReactComponent as Logo } from "../../../../media/logo/Logo.svg";
 import instance from "../../../../api/instance";
+import useAuth from "../../../../hooks/useAuth";
 
 const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
+	const setUser = useAuth((state) => state.setUser);
 	const [showPassword, setShowPassword] = useState(false);
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
@@ -29,8 +31,6 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 	};
 
 	const handleLogin = (event) => {
-		console.log("event.target", event.target[0].value);
-
 		event.preventDefault();
 		setUsernameError(false);
 		setPasswordError(false);
@@ -51,8 +51,7 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 					password,
 				})
 				.then((res) => {
-					console.log({ res });
-					localStorage.setItem("userRole", res.data.role); // assuming the response contains user's role
+					setUser(res.data);
 					setUsername("");
 					setPassword("");
 					setShowPassword(false);
@@ -98,6 +97,7 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 				variant="middle"
 			/>
 			<form onSubmit={handleLogin}>
+				{/* <FormControl sx={{ width: "100%" }} mt={2}> */}
 				<Styled.Input
 					label="Username"
 					variant="outlined"
@@ -161,9 +161,11 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 					variant="contained"
 					color="primary"
 					type="submit"
+					// onClick={handleLogin}
 				>
 					<Typography variant="ButtonNew">Log in</Typography>
 				</GradientButton>
+				{/* </FormControl> */}
 			</form>
 		</Styled.Form>
 	);
