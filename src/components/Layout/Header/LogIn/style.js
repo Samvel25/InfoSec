@@ -10,6 +10,13 @@ export const Form = styled(Box)(({ theme }) => ({
 	gap: theme.spacing(2),
 	marginBottom: "0",
 	maxWidth: "500px",
+	[theme.breakpoints.up("xl")]: {
+		maxWidth: "500px",
+	},
+	[theme.breakpoints.up("xxl")]: {
+		width: "255px",
+		height: "55px",
+	},
 }));
 
 export const LogoContainer = styled(Box)(({ theme }) => ({
