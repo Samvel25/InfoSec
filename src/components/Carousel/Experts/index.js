@@ -1,11 +1,10 @@
 import React from "react";
-import AchievementsCard from "../../Card/CarouselCard";
+import AchievementsCard from "../../Card/AnimatedCarouselCard";
 import { Box, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LedLine from "../../Other/Led";
 import * as Styled from "./style";
-import { ReactComponent as CardLogo } from "../../../media/svg/cardLogo.svg";
 
 const Experts = () => {
 	var settings = {
@@ -71,7 +70,7 @@ const Experts = () => {
 							and data.
 						</Typography>
 					</Box>
-					<CardLogo width={"60px"} height={"53px"} />
+					<Styled.CardLogoSvg />
 				</AchievementsCard>
 			</Styled.Wrapper>
 			<Styled.Wrapper>
@@ -105,7 +104,7 @@ const Experts = () => {
 							and data.
 						</Typography>
 					</Box>
-					<CardLogo width={"60px"} height={"53px"} />
+					<Styled.CardLogoSvg />
 				</AchievementsCard>
 			</Styled.Wrapper>
 			<Styled.Wrapper>
@@ -139,7 +138,7 @@ const Experts = () => {
 							and data.
 						</Typography>
 					</Box>
-					<CardLogo width={"60px"} height={"53px"} />
+					<Styled.CardLogoSvg />
 				</AchievementsCard>
 			</Styled.Wrapper>
 		</Styled.ExpertsSlider>

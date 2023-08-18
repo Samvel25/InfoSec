@@ -137,7 +137,8 @@ export const theme = createTheme({
 		CardDescription: {
 			background:
 				"linear-gradient(92.98deg, #575757 2.17%, #616161 42.05%, #292929 84.51%)",
-			fontSize: "12px",
+			"--dynamic-font-size": "12px",
+			fontSize: "var(--dynamic-font-size)",
 			lineHeight: "21px",
 			marginBottom: "17px",
 			display: "block",
@@ -145,30 +146,51 @@ export const theme = createTheme({
 			textTransform: "none",
 
 			"@media (min-width:1930px)": {
-				fontSize: "13px",
+				"--dynamic-font-size": "13px",
+				fontSize: "var(--dynamic-font-size)",
 				lineHeight: "23px",
 			},
 			"@media (min-width:2800px)": {
-				fontSize: "18px",
+				"--dynamic-font-size": "18px",
+				fontSize: "var(--dynamic-font-size)",
 				lineHeight: "29px",
 			},
 		},
 		CardHead: {
 			color: "#FFFFFF",
 			marginBottom: "25px",
-			fontSize: "20px",
+			"--dynamic-font-size": "20px",
+			fontSize: "var(--dynamic-font-size)",
 			lineHeight: "31px",
 			fontWeight: 700,
-			display: "inline",
+			display: "block",
 			"@media (min-width:1930px)": {
-				fontSize: "24px",
+				"--dynamic-font-size": "24px",
+				fontSize: "var(--dynamic-font-size)",
 				lineHeight: "37px",
 			},
 			"@media (min-width:2800px)": {
-				fontSize: "29px",
+				"--dynamic-font-size": "29px",
+				fontSize: "var(--dynamic-font-size)",
 				lineHeight: "44px",
 			},
 		},
+		// CardHead: {
+		// 	color: "#FFFFFF",
+		// 	marginBottom: "25px",
+		// 	fontSize: "20px",
+		// 	lineHeight: "31px",
+		// 	fontWeight: 700,
+		// 	display: "block",
+		// 	"@media (min-width:1930px)": {
+		// 		fontSize: "24px",
+		// 		lineHeight: "37px",
+		// 	},
+		// 	"@media (min-width:2800px)": {
+		// 		fontSize: "29px",
+		// 		lineHeight: "44px",
+		// 	},
+		// },
 		FooterHead: {
 			color: "#FFFFFF",
 			fontSize: "16px",

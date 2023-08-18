@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import { styled } from "@mui/material/styles";
 import { Box } from "@mui/material";
+import { ReactComponent as CardLogo } from "../../../media/svg/cardLogo.svg";
 
 export const ExpertsSlider = styled(Slider)`
 	.slick-list {
@@ -31,3 +32,16 @@ export const Wrapper = styled(Box)({
 	textAlign: "start",
 	margin: "0 20px",
 });
+
+export const CardLogoSvg = styled(CardLogo)(({ theme }) => ({
+	width: "66px",
+	height: "58px",
+	[theme.breakpoints.down("xxl")]: {
+		width: "72px",
+		height: "63px",
+	},
+	[theme.breakpoints.up("xl")]: {
+		width: "86px",
+		height: "75px",
+	},
+}));

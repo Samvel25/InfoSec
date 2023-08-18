@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { ReactComponent as CardSquare } from "../../../media/svg/cardSquare.svg";
-import CarouselCard from "../CarouselCard";
+import CarouselCard from "../AnimatedCarouselCard";
 
 export const Services = styled(Grid)(({ theme }) => ({
 	position: "relative",
