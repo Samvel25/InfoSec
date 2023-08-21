@@ -24,7 +24,7 @@ export const RedCard = styled(CarouselCard)(({ theme }) => ({
 			"polygon(0 0,calc(100% - 16.00px) 0,100% 16.00px,100% 100%,16.00px 100%,0 calc(100% - 16.00px))",
 		background: "linear-gradient(83.59deg, #D42530 6.05%, #490005 201.78%)",
 	},
-	"& sh": {
+	"& abbr": {
 		position: "absolute",
 		inset: "-40px",
 		border: "40px solid #0000",
@@ -37,7 +37,7 @@ export const RedCard = styled(CarouselCard)(({ theme }) => ({
 		transform: "translateZ(-1px)",
 		pointerEvents: "none",
 	},
-	"& sh:before": {
+	"& abbr:before": {
 		content: '""',
 		position: "absolute",
 		inset: "23px",
@@ -53,7 +53,7 @@ export const RedCard = styled(CarouselCard)(({ theme }) => ({
 		filter: "blur(14px)",
 		transform: "translate(0px, 12px)",
 	},
-	"&:hover sh:before": {
+	"&:hover abbr:before": {
 		animation: `${expandAnimation} 1.5s infinite`,
 	},
 	[theme.breakpoints.down(1250)]: {

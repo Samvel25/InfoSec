@@ -59,7 +59,7 @@ const About = () => {
 						</Grid>
 					</Grid>
 				</Grid>
-				<sh />
+				<abbr />
 
 				<Grid item xxl={5.5} xl={6} md={6.5} xs={12} sm={8}>
 					<Styled.Globe>

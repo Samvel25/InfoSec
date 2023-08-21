@@ -43,7 +43,12 @@ function Header() {
 						alignItems="center"
 						spacing={2}
 						sx={{
-							p: { sm: "16px 15px", xs: "5px 15px 1px", md: "0px 40px" },
+							p: {
+								sm: "16px 15px",
+								xs: "5px 15px 1px",
+								md: "0px 40px",
+								xxl: "0 60px",
+							},
 						}}
 					>
 						<Stack

@@ -1,15 +1,35 @@
 import { styled } from "@mui/material/styles";
 import { ReactComponent as LogoSvg } from "../../../media/logo/secondaryLogo.svg";
 import { ReactComponent as Line } from "../../../media/svg/footerLine.svg";
-import { Grid, Box, Typography, Stack } from "@mui/material";
+import { Grid, Box, Typography, Stack, Container } from "@mui/material";
 import { ReactComponent as FacebookLogo } from "../../../media/logo/facebookLogo.svg";
 import { ReactComponent as InstagramLogo } from "../../../media/logo/instagramLogo.svg";
 import { ReactComponent as TwitterLogo } from "../../../media/logo/twitterLogo.svg";
 
+export const FooterContainer = styled(Container)(({ theme }) => ({
+	[theme.breakpoints.up(1940)]: {
+		maxWidth: "1800px", // default behavior for 'xl' in MUI
+	},
+	[theme.breakpoints.down(1940)]: {
+		maxWidth: "none", // default behavior for 'xl' in MUI
+	},
+	[theme.breakpoints.up("xxl")]: {
+		maxWidth: "2300px", // replace with your desired maxWidth for 'xxl'
+	},
+}));
+
 export const Logo = styled(LogoSvg)(({ theme }) => ({
-	width: "125px",
-	height: "26px",
+	width: "170px",
+	height: "35px",
 	filter: "grayscale(100%)",
+	[theme.breakpoints.up("xl")]: {
+		width: "220px",
+		height: "46px",
+	},
+	[theme.breakpoints.up("xxl")]: {
+		width: "250px",
+		height: "52px",
+	},
 }));
 
 export const SocialMedia = styled(Stack)(({ theme }) => ({

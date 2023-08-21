@@ -59,7 +59,7 @@ export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
 		transform: "translate(-50%, -50%)",
 		width: "70%",
 		height: "100%",
-		opacity: "0.4",
+		opacity: "0.7",
 		background:
 			"radial-gradient(47.45% 47.45% at 50.00% 54.40%, rgba(212, 37, 48, 0.60) 0%, rgba(212, 37, 48, 0.00) 100%)",
 		filter: "blur(100px)",
@@ -101,9 +101,6 @@ export const Modal = styled(Box)(({ theme }) => ({
 	top: "50%",
 	zIndex: "50",
 	transform: "translateY(-50%)",
-	[theme.breakpoints.down("sm")]: {
-		right: "-10px",
-	},
 }));
 
 export const MyLine = styled("span")({
@@ -115,6 +112,20 @@ export const MyLine = styled("span")({
 });
 
 // 2 section*/*/*/*/*/*/
+
+export const OurClienats = styled(Container)(({ theme }) => ({
+	position: "relative",
+	borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+	[theme.breakpoints.down("xl")]: {
+		maxWidth: "none", // default behavior for 'xl' in MUI
+	},
+	[theme.breakpoints.up("xl")]: {
+		maxWidth: "1800px", // default behavior for 'xl' in MUI
+	},
+	[theme.breakpoints.up("xxl")]: {
+		maxWidth: "2300px", // replace with your desired maxWidth for 'xxl'
+	},
+}));
 
 export const BigCardImgWrapper = styled(Box)(({ theme }) => ({
 	[theme.breakpoints.down("md")]: {
@@ -150,7 +161,7 @@ export const ExportCyberSecurityDescription = styled(Grid)(({ theme }) => ({
 		top: "3%",
 		width: "620px",
 		height: "610px",
-		opacity: "0.4",
+		opacity: "0.7",
 		[theme.breakpoints.down("sm")]: {
 			top: "-15%",
 			height: "500px",
@@ -187,7 +198,7 @@ export const CyberSecurityServicesDescription = styled(Grid)(({ theme }) => ({
 		top: "-17%",
 		width: "620px",
 		height: "610px",
-		opacity: "0.4",
+		opacity: "0.7",
 		[theme.breakpoints.down("md")]: {
 			left: "35%",
 			height: "500px",

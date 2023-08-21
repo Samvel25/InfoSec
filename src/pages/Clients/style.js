@@ -98,7 +98,7 @@ export const Review = styled(Box)(({ theme }) => ({
 		top: "0",
 		width: "620px",
 		height: "610px",
-		opacity: "0.4",
+		opacity: "0.7",
 		[theme.breakpoints.down("md")]: {
 			top: "100px",
 			left: "-180px",
@@ -119,7 +119,7 @@ export const Review = styled(Box)(({ theme }) => ({
 		bottom: "50px",
 		width: "620px",
 		height: "610px",
-		opacity: "0.4",
+		opacity: "0.7",
 		[theme.breakpoints.down("md")]: {
 			height: "500px",
 		},

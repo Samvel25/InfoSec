@@ -11,10 +11,10 @@ export const DrawerNavigationWrapper = styled(Navigation)(({ theme }) => ({
 export const DrawerNavigationItem = styled(NavigationItem)(({ theme }) => ({
 	textTransform: "uppercase",
 	textDecoration: "none",
-	padding: "0 20px",
-	marginBottom: "20px",
+
 	[theme.breakpoints.up("xs")]: {
 		height: "auto",
+		padding: "10px 20px ",
 	},
 
 	// "&:active": {
@@ -28,7 +28,19 @@ export const DrawerNavigationItem = styled(NavigationItem)(({ theme }) => ({
 	"& p": {
 		userSelect: "none",
 		// display: "block",
-		"&:hover": {
+	},
+
+	"&:hover": {
+		"&:after": {
+			display: "none",
+		},
+	},
+
+	"&.active": {
+		"&:after": {
+			display: "none",
+		},
+		"& p": {
 			color: "#D42530",
 		},
 	},

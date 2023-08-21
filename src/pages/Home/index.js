@@ -1,5 +1,5 @@
 // import { styled } from "@mui/material/styles";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
@@ -50,22 +50,24 @@ function Home() {
 					ismenuopen={ismenuopen}
 					sx={{
 						p: {
-							md: "100px 0",
-							xs: "100px 0 100px",
+							lg: "100px 0",
+							md: "150px 0 100px",
+							xs: "100px 0",
 						},
 					}}
 					container
-					justifyContent={{ sm: "space-around", xs: "center" }}
+					justifyContent={{ xl: "center", md: "space-evenly", xs: "center" }}
 					direction={"row"}
 					alignItems="center"
 				>
 					<Grid
 						item
-						md={5}
 						xs={12}
 						sm={9}
-						xl={4.5}
-						xxl={4}
+						md={5}
+						lg={4.5}
+						xl={3.5}
+						xxl={3}
 						textAlign={{ sm: "center", md: "start" }}
 					>
 						<Typography variant="h1">
@@ -93,13 +95,16 @@ function Home() {
 							</Stack>
 						</CustomHidden>
 					</Grid>
-					<sh />
+					<abbr />
 					<Styled.DiamondWraper
 						item
+						xxl={4}
+						xl={4.5}
 						md={5}
 						sm={9}
 						xs={12}
 						textAlign={{ md: "end", xs: "center" }}
+						sx={{ ml: { xs: "0", xl: "5vw" } }}
 					>
 						<CustomHidden breakpoint="md" up>
 							<Box sx={{ m: "15px 0 30px" }}>
@@ -142,17 +147,18 @@ function Home() {
 
 				<Box sx={{ display: ismenuopen ? "none" : "block" }}>
 					{/* ///2 section/////// */}
-
-					<GlobalStyled.Achievements
-						sx={{
-							p: { md: "60px 0 130px", sm: "60px 0 85px", xs: "60px 0 0px" },
-						}}
-					>
+					<Styled.OurClienats sx={{ pt: "60px" }}>
 						<GlobalStyled.HeadText>
 							<Typography variant="Head"> OUR</Typography>
 							<Typography variant="GradientHead"> CLIENTS</Typography>
 						</GlobalStyled.HeadText>
 						<Clients />
+					</Styled.OurClienats>
+					<GlobalStyled.Achievements
+						sx={{
+							p: { md: "0 0 130px", sm: "0 0 85px", xs: "0" },
+						}}
+					>
 						<GlobalStyled.Description>
 							<GlobalStyled.DescriptionText
 								sx={{ pt: { md: "145px", xs: "100px" } }}
@@ -181,19 +187,20 @@ function Home() {
 							<Achivments />
 						</Box>
 					</GlobalStyled.Achievements>
-
 					{/*3 /// section/////// */}
-
 					<Styled.ExportCyberSecurity
 						sx={{ p: { xs: "110px 0", sm: "100px 0" } }}
 						container
-						justifyContent={"space-around"}
+						justifyContent={"center"}
 						direction={"row"}
 						alignItems="center"
 					>
 						<Styled.ExportCyberSecurityDescription
 							item
-							md={5}
+							xxl={3}
+							xl={3.5}
+							lg={4}
+							md={4.5}
 							xs={12}
 							sm={10}
 							textAlign={{ sm: "center", md: "start" }}
@@ -249,10 +256,14 @@ function Home() {
 						</Styled.ExportCyberSecurityDescription>
 						<Grid
 							item
-							md={5}
 							sm={8}
-							xl={4.5}
-							sx={{ mt: { md: "0px", xs: "40px" } }}
+							md={4.5}
+							xl={3.5}
+							xxl={3}
+							sx={{
+								mt: { md: "0px", xs: "40px" },
+								ml: { sx: "0px", md: "4vw" },
+							}}
 						>
 							<BigCardWrapper
 								maxWidth={"900px"}
@@ -267,19 +278,20 @@ function Home() {
 							/>
 						</Grid>
 					</Styled.ExportCyberSecurity>
-
 					{/*4 /// section/////// */}
-
 					<Styled.CyberSecurityServices
 						sx={{ p: { md: "100px 0 180px", xs: "80px 0 100px" } }}
 						container
-						justifyContent={"space-around"}
+						justifyContent={"center"}
 						direction={{ md: "row-reverse" }}
 						alignItems="center"
 					>
 						<Styled.CyberSecurityServicesDescription
 							item
-							md={5}
+							xxl={3}
+							xl={3.5}
+							lg={4}
+							md={4.5}
 							xs={12}
 							sm={10}
 							textAlign={{ sm: "center", md: "start" }}
@@ -337,10 +349,15 @@ function Home() {
 						<Grid
 							item
 							justifyContent={"end"}
-							md={5}
 							sm={8}
-							xl={4.5}
-							sx={{ mt: { md: "0px", xs: "40px" }, display: "flex" }}
+							md={4.5}
+							xl={3.5}
+							xxl={3}
+							sx={{
+								mt: { md: "0px", xs: "40px" },
+								display: "flex",
+								mr: { sx: "0px", md: "4vw" },
+							}}
 						>
 							<BigCardWrapper
 								maxWidth={"900px"}
@@ -355,18 +372,16 @@ function Home() {
 							/>
 						</Grid>
 					</Styled.CyberSecurityServices>
-
 					{/*5 /// section/////// */}
-
-					<GlobalStyled.Services sx={{ m: "80px 0 130px" }}>
-						<GlobalStyled.HeadText>
-							<Typography variant="Head">OUR SERVICES</Typography>
-						</GlobalStyled.HeadText>
-						<ServicesCard />
-					</GlobalStyled.Services>
-
+					<GlobalStyled.ServicesContainer>
+						<GlobalStyled.Services sx={{ m: "80px 0 130px", pt: "50px" }}>
+							<GlobalStyled.HeadText>
+								<Typography variant="Head">OUR SERVICES</Typography>
+							</GlobalStyled.HeadText>
+							<ServicesCard />
+						</GlobalStyled.Services>
+					</GlobalStyled.ServicesContainer>
 					{/*6 /// section/////// */}
-
 					<Box
 						sx={{
 							p: {

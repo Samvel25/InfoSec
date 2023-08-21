@@ -16,12 +16,6 @@ export const EmailInput = styled(TextField)(({ theme }) => ({
 	border: "1px solid rgba(255, 255, 255, 0.1)",
 	position: "relative",
 	marginBottom: "20px",
-	[theme.breakpoints.up("xl")]: {
-		maxWidth: "80%",
-	},
-	[theme.breakpoints.up("xxl")]: {
-		maxWidth: "60%",
-	},
 	"& .MuiInputBase-input": {
 		color: "#FFF",
 	},

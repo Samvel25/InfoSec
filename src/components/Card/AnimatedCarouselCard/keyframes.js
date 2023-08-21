@@ -1,7 +1,11 @@
 import { keyframes } from "@mui/material/styles";
 
 export const bounceFontSize = keyframes`
-    0% { 
+    0% {
+      font-size: calc(var(--dynamic-font-size) * 1.2);
+    	  transform: scale(1.1);
+    }
+    10% { 
         font-size: calc(var(--dynamic-font-size) * 1.4);
     	  transform: scale(1.2);
     }    
@@ -29,7 +33,11 @@ export const bounceFontSize = keyframes`
 `;
 
 export const mouseoutAnimation = keyframes`
-    0% { 
+      0% {
+        font-size: calc(var(--dynamic-font-size) * 1.2);
+        transform: scale(0.95);
+      }
+    10% { 
         font-size: calc(var(--dynamic-font-size) + 0px);
         transform: scale(0.9);
     }
@@ -53,7 +61,11 @@ export const mouseoutAnimation = keyframes`
 `;
 
 export const headBounceFontSize = keyframes`
-    0% { 
+      0% {
+        font-size: calc(var(--dynamic-font-size) * 0.8);
+      transform: scale(0.95);
+      }
+    10% { 
       font-size: calc(var(--dynamic-font-size) * 0.6);
       transform: scale(0.9);
     }
@@ -77,7 +89,11 @@ export const headBounceFontSize = keyframes`
 `;
 
 export const headMouseoutAnimation = keyframes`
-    0% { 
+      0% {
+        font-size calc(var(--dynamic-font-size) * 0.8);
+        transform: scale(1.12);
+      }
+    10% { 
     	font-size calc(var(--dynamic-font-size) + 0px);
     	transform: scale(1.25);
     }    
@@ -105,7 +121,11 @@ export const headMouseoutAnimation = keyframes`
 `;
 
 export const svgBounceFontSize = keyframes`
-    0% { 
+      0% {
+        transform: scale(0.8);
+
+      }
+    10% { 
       transform: scale(0.6);
     }
     50% {
@@ -124,7 +144,11 @@ export const svgBounceFontSize = keyframes`
 `;
 
 export const svgMouseoutAnimation = keyframes`
-    0% { 
+      0% {
+        transform: scale(0.9);
+
+      }
+    10% { 
     	transform: scale(1.25);
     }    
     

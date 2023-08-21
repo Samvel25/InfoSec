@@ -54,7 +54,7 @@ const Clients = () => {
 						</Typography>
 					</Grid>
 				</Grid>
-				<sh />
+				<abbr />
 
 				<Grid
 					item

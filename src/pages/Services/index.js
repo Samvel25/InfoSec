@@ -56,7 +56,7 @@ const Services = () => {
 						</Typography>
 					</Grid>
 				</Grid>
-				<sh />
+				<abbr />
 
 				<Grid item xxl={4} md={4.5} xs={12} sm={8}>
 					<Box>

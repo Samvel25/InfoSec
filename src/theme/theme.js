@@ -214,13 +214,18 @@ export const theme = createTheme({
 			lineHeight: "24px",
 			textDecoration: "none",
 			display: "block",
+			transformOrigin: "left center",
+			"&:hover": {
+				transform: "scale(1.15)",
+				color: "#FFFFFF",
+			},
 			"@media (min-width:1930px)": {
-				fontSize: "18px",
-				lineHeight: "30px",
+				fontSize: "15px",
+				lineHeight: "27px",
 			},
 			"@media (min-width:2800px)": {
-				fontSize: "20px",
-				lineHeight: "36px",
+				fontSize: "18px",
+				lineHeight: "30px",
 			},
 		},
 

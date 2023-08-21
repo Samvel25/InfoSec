@@ -13,7 +13,7 @@ function GoalCards() {
 		>
 			<Grid item xs={10} sm={5.5} md={6}>
 				<Styled.RedCard>
-					<sh> </sh>
+					<abbr> </abbr>
 					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
 					<Box
 						alignItems={"center"}
@@ -36,7 +36,7 @@ function GoalCards() {
 			<CustomHidden breakpoint="sm" down>
 				<Grid item xs={10} sm={5.5} md={6}>
 					<Styled.Card backgroundtype="backgroundOne">
-						<sh> </sh>
+						<abbr> </abbr>
 
 						<Styled.Text sx={{ mb: "11px" }}>DELIVERING </Styled.Text>
 						<Box
@@ -60,7 +60,7 @@ function GoalCards() {
 			</CustomHidden>
 			<Grid item xs={10} sm={5.5} md={6}>
 				<Styled.Card backgroundtype="backgroundOne">
-					<sh> </sh>
+					<abbr> </abbr>
 
 					<Styled.Text sx={{ mb: "11px" }}>TRUSTED BY</Styled.Text>
 					<Box
@@ -83,7 +83,7 @@ function GoalCards() {
 			</Grid>
 			<Grid item xs={10} sm={5.5} md={6}>
 				<Styled.RedCard>
-					<sh> </sh>
+					<abbr> </abbr>
 
 					<Styled.Text sx={{ mb: "11px" }}>DELIVERING BY</Styled.Text>
 					<Box
@@ -107,7 +107,7 @@ function GoalCards() {
 			<CustomHidden breakpoint="sm" up>
 				<Grid item xs={10} sm={5.5} md={6}>
 					<Styled.Card backgroundtype="backgroundOne">
-						<sh> </sh>
+						<abbr> </abbr>
 
 						<Styled.Text sx={{ mb: "11px" }}>DELIVERING </Styled.Text>
 						<Box

@@ -18,7 +18,7 @@ const Certificates = () => {
 					},
 				}}
 			>
-				<sh />
+				<abbr />
 				<Styled.CertificatesHeadText variant="h1">
 					OUR certificates
 				</Styled.CertificatesHeadText>

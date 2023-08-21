@@ -1,4 +1,4 @@
-import { Box, Grid, Stack } from "@mui/material";
+import { Box, Container, Grid, Stack } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import RadLine from "../media/svg/radLine.svg";
 import GrayLine from "../media/svg/grayLine.svg";
@@ -9,7 +9,7 @@ export const ScaledSectionStyles = {
 	transition: "transform 0.3s ease-in-out",
 	borderRadius: "40px",
 	transform: "scale(0.6) translate(40%, 25%)",
-	"& sh": {
+	"& abbr": {
 		position: "absolute",
 		inset: "-140px",
 		border: "140px solid #0000",
@@ -81,7 +81,6 @@ export const HeadText = styled("div")({
 });
 
 export const Achievements = styled(Box)(({ theme }) => ({
-	borderTop: "1px solid rgba(255, 255, 255, 0.1)",
 	position: "relative",
 	display: "block",
 
@@ -120,9 +119,25 @@ export const Description = styled(Box)(({ theme }) => ({
 }));
 
 export const DescriptionText = styled(Stack)(({ theme }) => ({
-	width: "55%",
+	width: "50%",
+
+	[theme.breakpoints.up("lg")]: {
+		width: "45%",
+	},
+	[theme.breakpoints.up("xl")]: {
+		width: "35%",
+	},
 	[theme.breakpoints.down("md")]: {
 		width: "100%",
+	},
+}));
+
+export const ServicesContainer = styled(Container)(({ theme }) => ({
+	[theme.breakpoints.down("xl")]: {
+		maxWidth: "1650px", // default behavior for 'xl' in MUI
+	},
+	[theme.breakpoints.up("xl")]: {
+		maxWidth: "1930px", // replace with your desired maxWidth for 'xxl'
 	},
 }));
 
