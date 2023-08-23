@@ -23,6 +23,10 @@ export const Card = styled(CarouselCard)(({ theme }) => {
 			transformOrigin: "left bottom",
 		},
 
+		"& abbr": {
+			transformOrigin: "left bottom",
+		},
+
 		"&:hover": {
 			"& p": {
 				color: "#FFFFFF",
@@ -38,6 +42,12 @@ export const Card = styled(CarouselCard)(({ theme }) => {
 				color: "#C0C1C2",
 				transformOrigin: "left center",
 				animation: `${svgBounceFontSize} 0.7s forwards`,
+			},
+			"& abbr": {
+				animation: `${svgBounceFontSize} 0.7s forwards`,
+				"& svg": {
+					animation: `none`,
+				},
 			},
 		},
 		"&:not(:hover)": {

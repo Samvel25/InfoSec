@@ -24,17 +24,18 @@ const Clients = () => {
 					p: { md: "40px 0 150px", sm: "70px 0 120px", xs: "100px 0 100px" },
 				}}
 				container
-				justifyContent={"space-around"}
+				justifyContent={{ xl: "center", md: "space-evenly", xs: "center" }}
 				direction={"row"}
 				alignItems="center"
 			>
 				<Grid
 					item
 					xs={12}
-					sm={10}
+					sm={9}
 					md={5}
-					xl={4.5}
-					xxl={4}
+					lg={4.5}
+					xl={3.5}
+					xxl={3}
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography sx={{ mb: "12px", textTransform: "uppercase" }}>
@@ -63,7 +64,10 @@ const Clients = () => {
 					md={5}
 					xl={4.5}
 					xxl={4}
-					sx={{ pt: { md: "0", sm: "60px", xs: "50px" } }}
+					sx={{
+						pt: { md: "0", sm: "60px", xs: "50px" },
+						ml: { xs: "0", xl: "5vw" },
+					}}
 				>
 					<Box>
 						<img
@@ -78,33 +82,36 @@ const Clients = () => {
 
 			<Box sx={{ display: ismenuopen ? "none" : "block" }}>
 				{/* ///2 section/////// */}
-				<Box>
-					<Typography
-						textAlign={"center"}
-						variant="GradientLight"
-						component="h1"
-						sx={{ mb: "70px" }}
-					>
-						Trusted by thousands of companies
-					</Typography>
-					<ClientsSlide />
-				</Box>
+				<GlobalStyled.OurClienats sx={{ border: "none" }}>
+					<Box>
+						<Typography
+							textAlign={"center"}
+							variant="GradientLight"
+							component="h1"
+							sx={{ mb: { xs: "70px", xl: "80px", xxl: "85px" } }}
+						>
+							Trusted by thousands of companies
+						</Typography>
+						<ClientsSlide />
+					</Box>
+				</GlobalStyled.OurClienats>
 
 				{/* ///3 section/////// */}
 
 				<Styled.OurGoalsSection
 					sx={{ p: { md: "330px 0 300px", xs: "120px 0" } }}
 					container
-					justifyContent={"space-around"}
+					justifyContent={{ xl: "center", md: "space-evenly", xs: "center" }}
 					direction={"row"}
 				>
 					<Grid
 						item
 						xs={12}
-						sm={10}
+						sm={9}
 						md={5}
-						xl={4.5}
-						xxl={4}
+						lg={4.5}
+						xl={3.5}
+						xxl={3}
 						textAlign={{ xs: "center", md: "start" }}
 					>
 						<Typography variant="h1">
@@ -135,7 +142,7 @@ const Clients = () => {
 						md={6.5}
 						xl={4.5}
 						xxl={4}
-						sx={{ pt: { xs: "50px", md: "0" } }}
+						sx={{ pt: { xs: "50px", md: "0" }, ml: { xs: "0", xl: "5vw" } }}
 					>
 						<GoalCards textAlign={{ xs: "center", sm: "start" }} />
 					</Grid>
@@ -148,7 +155,7 @@ const Clients = () => {
 						textAlign={"center"}
 						variant="GradientLight"
 						component="h1"
-						sx={{ mb: "40px" }}
+						sx={{ mb: { xs: "40px", xl: "55px", xxl: "65" } }}
 					>
 						review from our client
 					</Typography>

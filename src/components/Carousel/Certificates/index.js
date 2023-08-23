@@ -26,18 +26,6 @@ const GalleryNextArrow = ({ currentSlide, slideCount, ...props }) => {
 };
 
 const CertificatesCarousel = ({ cards = allCards }) => {
-	// useEffect(() => {
-	// 	const slider = document.querySelector(".center");
-	// 	const slides = slider.querySelectorAll(".slick-slide");
-
-	// 	slides.forEach((slide) => {
-	// 		const dataIndex = slide.getAttribute("data-index");
-
-	// 		if (dataIndex === "2" || dataIndex === "-2") {
-	// 			slide.classList.add("scaled-slide");
-	// 		}
-	// 	});
-	// }, []);
 	const settings = {
 		className: "center",
 		centerMode: true,
@@ -47,7 +35,6 @@ const CertificatesCarousel = ({ cards = allCards }) => {
 		variableWidth: true,
 		slidesToShow: 3,
 		speed: 800,
-		// autoplay: true,
 		pauseOnHover: true,
 		nextArrow: <GalleryNextArrow />,
 		prevArrow: <GalleryPrevArrow />,

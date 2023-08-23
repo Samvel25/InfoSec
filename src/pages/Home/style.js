@@ -113,20 +113,6 @@ export const MyLine = styled("span")({
 
 // 2 section*/*/*/*/*/*/
 
-export const OurClienats = styled(Container)(({ theme }) => ({
-	position: "relative",
-	borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-	[theme.breakpoints.down("xl")]: {
-		maxWidth: "none", // default behavior for 'xl' in MUI
-	},
-	[theme.breakpoints.up("xl")]: {
-		maxWidth: "1800px", // default behavior for 'xl' in MUI
-	},
-	[theme.breakpoints.up("xxl")]: {
-		maxWidth: "2300px", // replace with your desired maxWidth for 'xxl'
-	},
-}));
-
 export const BigCardImgWrapper = styled(Box)(({ theme }) => ({
 	[theme.breakpoints.down("md")]: {
 		paddingTop: "40px",

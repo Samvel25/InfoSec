@@ -26,17 +26,18 @@ const Services = () => {
 					p: { md: "130px 0 230px", sm: "70px 0 130px", xs: "100px 0 100px" },
 				}}
 				container
-				justifyContent={"space-around"}
+				justifyContent={{ xl: "center", md: "space-evenly", xs: "center" }}
 				direction={"row"}
 				alignItems="center"
 			>
 				<Grid
 					item
-					md={5}
 					xs={12}
-					sm={10}
-					xl={4.5}
-					xxl={4}
+					sm={9}
+					md={5}
+					lg={4.5}
+					xl={3.5}
+					xxl={3}
 					textAlign={{ sm: "center", md: "start" }}
 				>
 					<Typography sx={{ mb: "12px", textTransform: "uppercase" }}>
@@ -58,7 +59,14 @@ const Services = () => {
 				</Grid>
 				<abbr />
 
-				<Grid item xxl={4} md={4.5} xs={12} sm={8}>
+				<Grid
+					item
+					xxl={4}
+					md={4.5}
+					xs={12}
+					sm={8}
+					sx={{ ml: { xs: "0", xl: "5vw" } }}
+				>
 					<Box>
 						<img
 							width={"100%"}
@@ -85,8 +93,12 @@ const Services = () => {
 					>
 						<Typography
 							variant="GradientLight"
-							component="h1"
-							sx={{ mb: "20px", width: { xs: "100%", xl: "80%" } }}
+							component="h2"
+							sx={{
+								mb: "20px",
+								width: { xs: "100%", md: "80%", xl: "70%" },
+								m: "0 auto",
+							}}
 						>
 							If your company is under attack, it is important to contact
 							incident response experts as soon as possible.
@@ -101,29 +113,31 @@ const Services = () => {
 				</GlobalStyled.Achievements>
 
 				{/* ///3 section/////// */}
+				<GlobalStyled.ServicesContainer>
+					<Box>
+						<Typography
+							textAlign={"center"}
+							variant="GradientLight"
+							component="h1"
+							sx={{ mb: "0px" }}
+						>
+							Results of work on the results of the response
+						</Typography>
 
-				<Box>
-					<Typography
-						textAlign={"center"}
-						variant="GradientLight"
-						component="h1"
-						sx={{ mb: "0px" }}
-					>
-						Results of work on the results of the response
-					</Typography>
-					<GlobalStyled.Services
-						sx={{
-							pt: { md: "80px", xs: "35px" },
-							m: { md: "80px 0 300px", xs: "60px 0 150px" },
-						}}
-					>
-						<GlobalStyled.HeadText>
-							<Typography variant="Head">OUR SERVICES</Typography>
-						</GlobalStyled.HeadText>
-						<ServicesCard />
-					</GlobalStyled.Services>
-					{/* <Container maxWidth="xxl"> */}
-				</Box>
+						<GlobalStyled.Services
+							sx={{
+								pt: { md: "80px", xs: "35px" },
+								m: { md: "80px 0 300px", xs: "60px 0 150px" },
+							}}
+						>
+							<GlobalStyled.HeadText>
+								<Typography variant="Head">OUR SERVICES</Typography>
+							</GlobalStyled.HeadText>
+							<ServicesCard />
+						</GlobalStyled.Services>
+						{/* <Container maxWidth="xxl"> */}
+					</Box>
+				</GlobalStyled.ServicesContainer>
 				{/* ///4 section/////// */}
 
 				<Styled.FormBackgroundBox sx={{ mb: "100px" }}>

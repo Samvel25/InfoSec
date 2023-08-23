@@ -45,7 +45,7 @@ const Achivments = () => {
 	};
 
 	return (
-		<Container maxWidth={"xl"}>
+		<Styled.CarouselContainer>
 			<Styled.StyledSlider {...settings}>
 				<Styled.Wraper>
 					<Styled.Card backgroundtype="backgroundOne" ledtype="ledOne">
@@ -128,7 +128,7 @@ const Achivments = () => {
 					</Styled.Card>
 				</Styled.Wraper>
 			</Styled.StyledSlider>
-		</Container>
+		</Styled.CarouselContainer>
 	);
 };
 

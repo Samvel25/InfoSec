@@ -34,6 +34,9 @@ export const StyledCardItem = styled(CardItem)(({ theme }) => ({
 				lineHeight: "23px",
 			},
 		},
+		[theme.breakpoints.up("xs")]: {
+			padding: "10px 30px",
+		},
 		[theme.breakpoints.up("xl")]: {
 			padding: "10px 22px",
 		},
@@ -241,6 +244,9 @@ export const StyledSlider = styled(Slider)`
 		z-index: 999;
 		transform: scale(1.4);
 		transition: 0.5s;
+		@media screen and (max-width: 600px) {
+			transform: scale(1.2);
+		}
 	}
 
 	.slick-slide.slick-active:not(.slick-current) pre {
@@ -305,5 +311,8 @@ export const StyledSlider = styled(Slider)`
 		z-index: 1000;
 		transform: scale(1.7);
 		transition: 0.5s;
+		@media screen and (max-width: 600px) {
+			transform: scale(1.5);
+		}
 	}
 `;

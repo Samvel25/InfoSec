@@ -9,11 +9,11 @@ const commonStyles = {
 };
 
 export const CertificateButton = styled(Button)(({ theme }) => ({
-	display: "block",
+	display: "flex",
 	position: "relative",
 	zIndex: 0,
+
 	textDecoration: "none",
-	padding: "14px 30px",
 	minWidth: "140px",
 	width: "100%",
 	background: "transparent",

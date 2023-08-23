@@ -6,6 +6,7 @@ const ReCaptcha = ({ onChange }) => {
 	return (
 		<Styled.StyledRecaptchaWrapper>
 			<ReCAPTCHA
+				theme="dark"
 				sitekey="6LdxsoknAAAAANiiwy-cOoAVWpHVDNvS0v1h26O4"
 				onChange={onChange}
 			/>

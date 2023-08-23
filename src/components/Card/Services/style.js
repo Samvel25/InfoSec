@@ -14,9 +14,17 @@ export const Services = styled(Grid)(({ theme }) => ({
 }));
 
 export const CardSquareImg = styled(CardSquare)(({ theme }) => ({
-	width: "62px",
 	display: "block",
-	height: "62px",
+	width: "45px",
+	height: "45px",
+	[theme.breakpoints.up("md")]: {
+		width: "55px",
+		height: "55px",
+	},
+	[theme.breakpoints.up("xl")]: {
+		width: "62px",
+		height: "62px",
+	},
 }));
 
 export const Card = styled(CarouselCard)(({ theme }) => ({

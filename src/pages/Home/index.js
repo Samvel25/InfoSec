@@ -147,13 +147,13 @@ function Home() {
 
 				<Box sx={{ display: ismenuopen ? "none" : "block" }}>
 					{/* ///2 section/////// */}
-					<Styled.OurClienats sx={{ pt: "60px" }}>
+					<GlobalStyled.OurClienats sx={{ pt: "60px" }}>
 						<GlobalStyled.HeadText>
 							<Typography variant="Head"> OUR</Typography>
 							<Typography variant="GradientHead"> CLIENTS</Typography>
 						</GlobalStyled.HeadText>
 						<Clients />
-					</Styled.OurClienats>
+					</GlobalStyled.OurClienats>
 					<GlobalStyled.Achievements
 						sx={{
 							p: { md: "0 0 130px", sm: "0 0 85px", xs: "0" },
@@ -227,32 +227,29 @@ function Home() {
 									ahead of the hackers. Contact us today to learn more.
 								</Typography>
 							</Grid>
-							<CustomHidden breakpoint="md" up>
-								<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
-									<GradientButton
-										backgroundtype="backgroundOne"
-										onClick={() =>
-											handleModalButtonClick(
-												<ModalReadMore>
-													<Typography>
-														INFOSEC LLC, we understand how important it is to
-														keep your business safe from cyber threats. That's
-														why we offer a range of expert cybersecurity
-														solutions designed to give you peace of mind.
-														Whether you're looking for network security,
-														endpoint protection, or incident response services,
-														our team of experts has the knowledge and experience
-														to help you stay one step ahead of the hackers.
-														Contact us today to learn more.
-													</Typography>
-												</ModalReadMore>
-											)
-										}
-									>
-										<Typography>Read more</Typography>
-									</GradientButton>
-								</Stack>
-							</CustomHidden>
+							<Stack direction={"row"} sx={{ mt: "20px" }}>
+								<GradientButton
+									backgroundtype="backgroundOne"
+									onClick={() =>
+										handleModalButtonClick(
+											<ModalReadMore>
+												<Typography>
+													INFOSEC LLC, we understand how important it is to keep
+													your business safe from cyber threats. That's why we
+													offer a range of expert cybersecurity solutions
+													designed to give you peace of mind. Whether you're
+													looking for network security, endpoint protection, or
+													incident response services, our team of experts has
+													the knowledge and experience to help you stay one step
+													ahead of the hackers. Contact us today to learn more.
+												</Typography>
+											</ModalReadMore>
+										)
+									}
+								>
+									<Typography>Read more</Typography>
+								</GradientButton>
+							</Stack>
 						</Styled.ExportCyberSecurityDescription>
 						<Grid
 							item
@@ -318,32 +315,29 @@ function Home() {
 									ahead of the hackers. Contact us today to learn more.
 								</Typography>
 							</Grid>
-							<CustomHidden mdDown>
-								<Stack spacing={3} direction={"row"} sx={{ mt: "20px" }}>
-									<GradientButton
-										backgroundtype="backgroundOne"
-										onClick={() =>
-											handleModalButtonClick(
-												<ModalReadMore>
-													<Typography>
-														INFOSEC LLC, we understand how important it is to
-														keep your business safe from cyber threats. That's
-														why we offer a range of expert cybersecurity
-														solutions designed to give you peace of mind.
-														Whether you're looking for network security,
-														endpoint protection, or incident response services,
-														our team of experts has the knowledge and experience
-														to help you stay one step ahead of the hackers.
-														Contact us today to learn more.
-													</Typography>
-												</ModalReadMore>
-											)
-										}
-									>
-										<Typography>Read more</Typography>
-									</GradientButton>
-								</Stack>
-							</CustomHidden>
+							<Stack direction={"row"} sx={{ mt: "20px" }}>
+								<GradientButton
+									backgroundtype="backgroundOne"
+									onClick={() =>
+										handleModalButtonClick(
+											<ModalReadMore>
+												<Typography>
+													INFOSEC LLC, we understand how important it is to keep
+													your business safe from cyber threats. That's why we
+													offer a range of expert cybersecurity solutions
+													designed to give you peace of mind. Whether you're
+													looking for network security, endpoint protection, or
+													incident response services, our team of experts has
+													the knowledge and experience to help you stay one step
+													ahead of the hackers. Contact us today to learn more.
+												</Typography>
+											</ModalReadMore>
+										)
+									}
+								>
+									<Typography>Read more</Typography>
+								</GradientButton>
+							</Stack>
 						</Styled.CyberSecurityServicesDescription>
 
 						<Grid

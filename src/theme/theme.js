@@ -53,7 +53,8 @@ export const theme = createTheme({
 		fontWeight: "400",
 		fontFamily: "Quantico",
 		body1: {
-			fontSize: "14px",
+			"--dynamic-font-size": "14px",
+			fontSize: "var(--dynamic-font-size)",
 			fontStyle: "normal",
 			lineHeight: "24px",
 			margin: 0,

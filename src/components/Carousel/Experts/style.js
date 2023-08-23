@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { ReactComponent as CardLogo } from "../../../media/svg/cardLogo.svg";
 
 export const ExpertsSlider = styled(Slider)`
@@ -26,6 +26,18 @@ export const ExpertsSlider = styled(Slider)`
 		}
 	}
 `;
+
+export const CarouselContainer = styled(Container)(({ theme }) => ({
+	[theme.breakpoints.down("xl")]: {
+		maxWidth: "none", // default behavior for 'xl' in MUI
+	},
+	[theme.breakpoints.up("xl")]: {
+		maxWidth: "1930px", // replace with your desired maxWidth for 'xxl'
+	},
+	[theme.breakpoints.up("xxl")]: {
+		maxWidth: "2300px", // replace with your desired maxWidth for 'xxl'
+	},
+}));
 
 export const Wrapper = styled(Box)({
 	width: "max-content",

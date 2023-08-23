@@ -1,10 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { ReactComponent as LogoSvg } from "../../../media/logo/secondaryLogo.svg";
 import { ReactComponent as Line } from "../../../media/svg/footerLine.svg";
-import { Grid, Box, Typography, Stack, Container } from "@mui/material";
-import { ReactComponent as FacebookLogo } from "../../../media/logo/facebookLogo.svg";
-import { ReactComponent as InstagramLogo } from "../../../media/logo/instagramLogo.svg";
-import { ReactComponent as TwitterLogo } from "../../../media/logo/twitterLogo.svg";
+import { Grid, Typography, Stack, Container } from "@mui/material";
 
 export const FooterContainer = styled(Container)(({ theme }) => ({
 	[theme.breakpoints.up(1940)]: {
@@ -19,16 +16,16 @@ export const FooterContainer = styled(Container)(({ theme }) => ({
 }));
 
 export const Logo = styled(LogoSvg)(({ theme }) => ({
-	width: "170px",
-	height: "35px",
+	width: "130px",
+	height: "27px",
 	filter: "grayscale(100%)",
 	[theme.breakpoints.up("xl")]: {
-		width: "220px",
-		height: "46px",
+		width: "160px",
+		height: "33px",
 	},
 	[theme.breakpoints.up("xxl")]: {
-		width: "250px",
-		height: "52px",
+		width: "200px",
+		height: "41px",
 	},
 }));
 

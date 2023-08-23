@@ -154,6 +154,7 @@ const CorporateEmail = () => {
 			)}
 
 			<ReCaptchaComponent
+				data-theme="dark"
 				onChange={(value) => {
 					setCaptchaValue(value);
 					setCaptchaError(false);

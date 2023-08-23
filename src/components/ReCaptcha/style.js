@@ -7,14 +7,14 @@ export const StyledRecaptchaWrapper = styled("div")(({ theme }) => ({
 	borderRadius: "4px",
 
 	"& > div": {
+		transformOrigin: "left center",
 		transform: "scale(0.85)", // Adjust scale as needed
-		transformOrigin: "0 0",
 		[theme.breakpoints.up("xl")]: {
-			transform: "scale(1.2)",
+			transform: "scale(1.1)",
 			transformOrigin: "0 0",
 		},
 		[theme.breakpoints.up("xxl")]: {
-			transform: "scale(1.4)",
+			transform: "scale(1.2)",
 			transformOrigin: "0 0",
 		},
 	},

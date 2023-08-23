@@ -90,32 +90,32 @@ export const headBounceFontSize = keyframes`
 
 export const headMouseoutAnimation = keyframes`
       0% {
-        font-size calc(var(--dynamic-font-size) * 0.8);
+        font-size: calc(var(--dynamic-font-size) * 0.8);
         transform: scale(1.12);
       }
     10% { 
-    	font-size calc(var(--dynamic-font-size) + 0px);
+    	font-size: calc(var(--dynamic-font-size) + 0px);
     	transform: scale(1.25);
     }    
     
     50% { 
-    	font-size calc(var(--dynamic-font-size) + 0px);
+    	font-size: calc(var(--dynamic-font-size) + 0px);
     	transform: scale(1);
     }   
     63% { 
-    	font-size calc(var(--dynamic-font-size) + 0px);
+    	font-size: calc(var(--dynamic-font-size) + 0px);
     	transform: scale(1.1);
     }   
     75% { 
-    	font-size calc(var(--dynamic-font-size) + 0px);
+    	font-size: calc(var(--dynamic-font-size) + 0px);
     	transform: scale(1);
     }  
     90% { 
-    	font-size calc(var(--dynamic-font-size) + 0px);
+    	font-size: calc(var(--dynamic-font-size) + 0px);
     	transform: scale(1.05);
     }  
     100% { 
-    	font-size calc(var(--dynamic-font-size) + 0px);
+    	font-size: calc(var(--dynamic-font-size) + 0px);
     	transform: scale(1);
     }  
 `;

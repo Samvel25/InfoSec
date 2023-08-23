@@ -1,6 +1,6 @@
 import Slider from "react-slick";
 import { styled } from "@mui/material/styles";
-import { Box } from "@mui/material";
+import { Box, Container, Stack } from "@mui/material";
 import { ReactComponent as RateStar } from "../../../media/svg/rateStar.svg";
 import { ReactComponent as NameAmLogo } from "../../../media/logo/nameAmLogo.svg";
 
@@ -33,6 +33,18 @@ export const ExpertsSlider = styled(Slider)`
     }
 `;
 
+export const CarouselContainer = styled(Container)(({ theme }) => ({
+	[theme.breakpoints.down("xl")]: {
+		maxWidth: "none",
+	},
+	[theme.breakpoints.up("xl")]: {
+		maxWidth: "1930px",
+	},
+	[theme.breakpoints.up("xxl")]: {
+		maxWidth: "2300px",
+	},
+}));
+
 export const Wrapper = styled(Box)({
 	width: "max-content",
 	textAlign: "start",
@@ -54,7 +66,7 @@ export const RateStars = styled(RateStar)(({ theme, grayscale }) => ({
 	},
 }));
 
-export const NameAmLogoImg = styled(NameAmLogo)(({ theme, grayscale }) => ({
+export const LogoWrapper = styled(Box)(({ theme, grayscale }) => ({
 	width: "116px",
 	height: "22px",
 
@@ -66,5 +78,9 @@ export const NameAmLogoImg = styled(NameAmLogo)(({ theme, grayscale }) => ({
 	[theme.breakpoints.up("xxl")]: {
 		width: "166px",
 		height: "31px",
+	},
+	"& svg": {
+		width: "100%",
+		height: "100%",
 	},
 }));

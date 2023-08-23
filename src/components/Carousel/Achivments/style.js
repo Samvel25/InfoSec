@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import Slider from "react-slick";
 import { styled } from "@mui/material/styles";
 import AchievementsCard from "../../Card/CarouselCard";
@@ -44,3 +44,15 @@ export const Wraper = styled(Box)({
 	width: "max-content",
 	textAlign: "start",
 });
+
+export const CarouselContainer = styled(Container)(({ theme }) => ({
+	[theme.breakpoints.down("xl")]: {
+		maxWidth: "none", // default behavior for 'xl' in MUI
+	},
+	[theme.breakpoints.up("xl")]: {
+		maxWidth: "1930px", // replace with your desired maxWidth for 'xxl'
+	},
+	[theme.breakpoints.up("xxl")]: {
+		maxWidth: "2300px", // replace with your desired maxWidth for 'xxl'
+	},
+}));

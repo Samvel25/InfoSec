@@ -38,110 +38,112 @@ const Experts = () => {
 	};
 
 	return (
-		<Styled.ExpertsSlider {...settings}>
-			<Styled.Wrapper>
-				<AchievementsCard
-					sx={{
-						p: {
-							sm: "45px 30px",
-							xs: "30px 20px",
-							xl: "55px 60px 45px",
-							xxl: "55px 135px 40px 75px",
-						},
-						width: "max-content",
-					}}
-					backgroundtype="backgroundOne"
-				>
-					<LedLine />
-					<Box sx={{ maxWidth: "330px" }}>
-						<Typography
-							sx={{ textTransform: "uppercase" }}
-							variant="CardHead"
-							component={"h5"}
-						>
-							Swiftly identify and localize
-						</Typography>
-						<Typography
-							component={"p"}
-							variant="CardDescription"
-							sx={{ mt: "25px", mb: "17px" }}
-						>
-							Swift response limits damage, localizes threat, protects network
-							and data.
-						</Typography>
-					</Box>
-					<Styled.CardLogoSvg />
-				</AchievementsCard>
-			</Styled.Wrapper>
-			<Styled.Wrapper>
-				<AchievementsCard
-					sx={{
-						p: {
-							sm: "45px 30px",
-							xs: "30px 20px",
-							xl: "55px 60px",
-							xxl: "55px 135px 40px 75px",
-						},
-						width: "max-content",
-					}}
-					backgroundtype="backgroundOne"
-				>
-					<LedLine />
-					<Box sx={{ maxWidth: "330px" }}>
-						<Typography
-							sx={{ textTransform: "uppercase" }}
-							variant="CardHead"
-							component={"h5"}
-						>
-							Swiftly identify and localize
-						</Typography>
-						<Typography
-							component={"p"}
-							variant="CardDescription"
-							sx={{ mt: "25px", mb: "17px" }}
-						>
-							Swift response limits damage, localizes threat, protects network
-							and data.
-						</Typography>
-					</Box>
-					<Styled.CardLogoSvg />
-				</AchievementsCard>
-			</Styled.Wrapper>
-			<Styled.Wrapper>
-				<AchievementsCard
-					sx={{
-						p: {
-							sm: "45px 30px",
-							xs: "30px 20px",
-							xl: "55px 60px",
-							xxl: "55px 135px 40px 75px",
-						},
-						width: "max-content",
-					}}
-					backgroundtype="backgroundOne"
-				>
-					<LedLine />
-					<Box sx={{ maxWidth: "330px" }}>
-						<Typography
-							sx={{ textTransform: "uppercase" }}
-							variant="CardHead"
-							component={"h5"}
-						>
-							Swiftly identify and localize
-						</Typography>
-						<Typography
-							component={"p"}
-							variant="CardDescription"
-							sx={{ mt: "25px", mb: "17px" }}
-						>
-							Swift response limits damage, localizes threat, protects network
-							and data.
-						</Typography>
-					</Box>
-					<Styled.CardLogoSvg />
-				</AchievementsCard>
-			</Styled.Wrapper>
-		</Styled.ExpertsSlider>
+		<Styled.CarouselContainer>
+			<Styled.ExpertsSlider {...settings}>
+				<Styled.Wrapper>
+					<AchievementsCard
+						sx={{
+							p: {
+								sm: "45px 30px",
+								xs: "30px 20px",
+								xl: "55px 60px 45px",
+								xxl: "55px 135px 40px 75px",
+							},
+							width: "max-content",
+						}}
+						backgroundtype="backgroundOne"
+					>
+						<LedLine />
+						<Box sx={{ maxWidth: "330px" }}>
+							<Typography
+								sx={{ textTransform: "uppercase" }}
+								variant="CardHead"
+								component={"h5"}
+							>
+								Swiftly identify and localize
+							</Typography>
+							<Typography
+								component={"p"}
+								variant="CardDescription"
+								sx={{ mt: "25px", mb: "17px" }}
+							>
+								Swift response limits damage, localizes threat, protects network
+								and data.
+							</Typography>
+						</Box>
+						<Styled.CardLogoSvg />
+					</AchievementsCard>
+				</Styled.Wrapper>
+				<Styled.Wrapper>
+					<AchievementsCard
+						sx={{
+							p: {
+								sm: "45px 30px",
+								xs: "30px 20px",
+								xl: "55px 60px",
+								xxl: "55px 135px 40px 75px",
+							},
+							width: "max-content",
+						}}
+						backgroundtype="backgroundOne"
+					>
+						<LedLine />
+						<Box sx={{ maxWidth: "330px" }}>
+							<Typography
+								sx={{ textTransform: "uppercase" }}
+								variant="CardHead"
+								component={"h5"}
+							>
+								Swiftly identify and localize
+							</Typography>
+							<Typography
+								component={"p"}
+								variant="CardDescription"
+								sx={{ mt: "25px", mb: "17px" }}
+							>
+								Swift response limits damage, localizes threat, protects network
+								and data.
+							</Typography>
+						</Box>
+						<Styled.CardLogoSvg />
+					</AchievementsCard>
+				</Styled.Wrapper>
+				<Styled.Wrapper>
+					<AchievementsCard
+						sx={{
+							p: {
+								sm: "45px 30px",
+								xs: "30px 20px",
+								xl: "55px 60px",
+								xxl: "55px 135px 40px 75px",
+							},
+							width: "max-content",
+						}}
+						backgroundtype="backgroundOne"
+					>
+						<LedLine />
+						<Box sx={{ maxWidth: "330px" }}>
+							<Typography
+								sx={{ textTransform: "uppercase" }}
+								variant="CardHead"
+								component={"h5"}
+							>
+								Swiftly identify and localize
+							</Typography>
+							<Typography
+								component={"p"}
+								variant="CardDescription"
+								sx={{ mt: "25px", mb: "17px" }}
+							>
+								Swift response limits damage, localizes threat, protects network
+								and data.
+							</Typography>
+						</Box>
+						<Styled.CardLogoSvg />
+					</AchievementsCard>
+				</Styled.Wrapper>
+			</Styled.ExpertsSlider>
+		</Styled.CarouselContainer>
 	);
 };
 

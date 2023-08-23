@@ -230,7 +230,10 @@ const Footer = () => {
 									</Typography>
 									<Typography
 										href="mailto:infosec@gmail.com"
-										sx={{ fontSize: "12px", mb: "0" }}
+										sx={{
+											fontSize: { xs: "12px", xl: "16px", xxl: "20px" },
+											mb: "0",
+										}}
 										variant="FooterHead"
 										component={"a"}
 									>
@@ -243,7 +246,10 @@ const Footer = () => {
 									</Typography>
 									<Typography
 										href="tel:+374 066 666 666"
-										sx={{ fontSize: "12px", mb: "0" }}
+										sx={{
+											fontSize: { xs: "12px", xl: "16px", xxl: "20px" },
+											mb: "0",
+										}}
 										variant="FooterHead"
 										component={"a"}
 									>
