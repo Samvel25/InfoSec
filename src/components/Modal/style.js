@@ -9,8 +9,6 @@ export const Modal = styled(Dialog)(({ theme }) => ({
 		margin: "70px",
 		[theme.breakpoints.down("sm")]: {
 			margin: "25px",
-
-			// overflow: "visible",
 		},
 	},
 	"& .MuiContainer-root": {

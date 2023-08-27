@@ -22,17 +22,6 @@ const CardItem = ({ title, content, certificateimg, className }) => {
 				>
 					{title}
 				</Typography>
-
-				{/* <GradientButton
-					cliptype="smallOne"
-					sx={{ padding: "0 17px", minWidth: "0", mt: "0" }}
-				>
-					<ul></ul>
-					<ul></ul>
-					<Typography variant="ButtonNew" component={"a"}>
-						new
-					</Typography>
-				</GradientButton> */}
 			</Stack>
 			<Typography
 				variant="CardDescription"

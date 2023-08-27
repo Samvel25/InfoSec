@@ -14,7 +14,6 @@ const CustomHidden = ({ breakpoint, children, up, down }) => {
 
 	let hidden = false;
 
-	// For "up"
 	if (up) {
 		if (breakpoint === "xxl") {
 			hidden = isXxl;
@@ -23,7 +22,6 @@ const CustomHidden = ({ breakpoint, children, up, down }) => {
 		}
 	}
 
-	// For "down"
 	if (down) {
 		if (breakpoint === "xxl") {
 			hidden = isBelowXxl;

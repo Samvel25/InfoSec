@@ -1,5 +1,6 @@
 import { styled } from "@mui/material/styles";
 import { Box, TextField } from "@mui/material";
+import { Height } from "@mui/icons-material";
 
 export const Form = styled(Box)(({ theme }) => ({
 	display: "flex",
@@ -14,8 +15,7 @@ export const Form = styled(Box)(({ theme }) => ({
 		maxWidth: "500px",
 	},
 	[theme.breakpoints.up("xxl")]: {
-		width: "255px",
-		height: "55px",
+		maxWidth: "600px",
 	},
 }));
 
@@ -23,6 +23,17 @@ export const LogoContainer = styled(Box)(({ theme }) => ({
 	display: "flex",
 	justifyContent: "center",
 	alignItems: "center",
+	marginBottom: "100px",
+	width: "300px",
+	height: "65px",
+	[theme.breakpoints.up("xl")]: {
+		width: "350px",
+		height: "76px",
+	},
+	[theme.breakpoints.up("xxl")]: {
+		width: "400px",
+		height: "87px",
+	},
 }));
 
 export const Input = styled(TextField)(({ theme }) => ({

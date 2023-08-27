@@ -5,13 +5,13 @@ import { Grid, Typography, Stack, Container } from "@mui/material";
 
 export const FooterContainer = styled(Container)(({ theme }) => ({
 	[theme.breakpoints.up(1940)]: {
-		maxWidth: "1800px", // default behavior for 'xl' in MUI
+		maxWidth: "1800px",
 	},
 	[theme.breakpoints.down(1940)]: {
-		maxWidth: "none", // default behavior for 'xl' in MUI
+		maxWidth: "none",
 	},
 	[theme.breakpoints.up("xxl")]: {
-		maxWidth: "2300px", // replace with your desired maxWidth for 'xxl'
+		maxWidth: "2300px",
 	},
 }));
 

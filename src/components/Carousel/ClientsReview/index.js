@@ -3,7 +3,6 @@ import CarouselCard from "../../Card/AnimatedCarouselCard";
 import { Box, Stack, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import LedLine from "../../Other/Led";
 import * as Styled from "./style";
 import { ReactComponent as NameAmLogo } from "../../../media/logo/nameAmLogo.svg";
 import { ReactComponent as DomainDeskAmLogo } from "../../../media/logo/domainDeskLogo.svg";

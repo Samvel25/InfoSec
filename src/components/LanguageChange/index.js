@@ -5,9 +5,6 @@ import GradientButton from "../Buttons/MainButton";
 import * as Styled from "./style";
 import CustomHidden from "../Hidden";
 import CheckDoneIcon from "@mui/icons-material/Done";
-import { ReactComponent as ArmenianFlag } from "../../media/svg/LanguageFlag/armenianFlag.svg";
-import { ReactComponent as RussianFlag } from "../../media/svg/LanguageFlag/russianFlag.svg";
-import { ReactComponent as UKFlag } from "../../media/svg/LanguageFlag/ukFlag.svg";
 import { useTranslation } from "react-i18next";
 
 function LanguageDropdown() {
@@ -63,7 +60,7 @@ function LanguageDropdown() {
 				</Stack>
 			</CustomHidden>
 			<Styled.StyledMenu
-				spacing={2}
+				sx={{ pb: "0" }}
 				anchorEl={anchorEl}
 				open={Boolean(anchorEl)}
 				onClose={handleCloseMenu}
@@ -75,11 +72,11 @@ function LanguageDropdown() {
 					onClick={() => handleLanguageChange("en")}
 				>
 					<Stack alignItems={"center"} direction={"row"}>
-						<UKFlag width={"32px"} height={"32px"} />
-
-						<Typography>English</Typography>
+						<Typography sx={{ textTransform: "uppercase" }}>eng</Typography>
 					</Stack>
-					{currentLanguage === "en" && <CheckDoneIcon />}
+					{currentLanguage === "en" && (
+						<CheckDoneIcon sx={{ color: "#D42530", width: "15%" }} />
+					)}
 				</Styled.StyledMenuItem>
 
 				<Styled.StyledMenuItem
@@ -87,11 +84,11 @@ function LanguageDropdown() {
 					onClick={() => handleLanguageChange("ru")}
 				>
 					<Stack alignItems={"center"} direction={"row"}>
-						<RussianFlag width={"32px"} height={"32px"} />
-						<Typography>Russian</Typography>
+						<Typography sx={{ textTransform: "uppercase" }}>rus</Typography>
 					</Stack>
-
-					{currentLanguage === "ru" && <CheckDoneIcon />}
+					{currentLanguage === "ru" && (
+						<CheckDoneIcon sx={{ color: "#D42530", width: "15%" }} />
+					)}
 				</Styled.StyledMenuItem>
 
 				<Styled.StyledMenuItem
@@ -99,12 +96,12 @@ function LanguageDropdown() {
 					onClick={() => handleLanguageChange("arm")}
 				>
 					<Stack alignItems={"center"} direction={"row"}>
-						<ArmenianFlag width={"32px"} height={"32px"} />
-
-						<Typography>Armenian</Typography>
+						<Typography sx={{ textTransform: "uppercase" }}>arm</Typography>
 					</Stack>
 
-					{currentLanguage === "arm" && <CheckDoneIcon />}
+					{currentLanguage === "arm" && (
+						<CheckDoneIcon sx={{ color: "#D42530", width: "15%" }} />
+					)}
 				</Styled.StyledMenuItem>
 			</Styled.StyledMenu>
 		</>

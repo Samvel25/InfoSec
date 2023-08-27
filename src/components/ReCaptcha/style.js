@@ -8,7 +8,7 @@ export const StyledRecaptchaWrapper = styled("div")(({ theme }) => ({
 
 	"& > div": {
 		transformOrigin: "left center",
-		transform: "scale(0.85)", // Adjust scale as needed
+		transform: "scale(0.85)",
 		[theme.breakpoints.up("xl")]: {
 			transform: "scale(1.1)",
 			transformOrigin: "0 0",

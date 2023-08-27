@@ -83,21 +83,19 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 	return (
 		<Styled.Form sx={{ p: { md: "60px 40px", xs: "35px 25px" } }}>
 			<Styled.LogoContainer>
-				{/* replace 'logo.png' with your actual logo path */}
-				<Logo width={"184px"} height={"40px"} />
+				<Logo width={"100%"} height={"100%"} />
 			</Styled.LogoContainer>
-			<Typography m={0} variant="CardHead" component={"h5"}>
+			{/* <Typography m={0} variant="CardHead" component={"h5"}>
 				Welcome Back
 			</Typography>
 			<Typography component={"p"}>
 				Please enter your details to sign in.
-			</Typography>
-			<Divider
+			</Typography> */}
+			{/* <Divider
 				sx={{ width: "100%", background: "rgba(255, 255, 255, 0.1)" }}
 				variant="middle"
-			/>
+			/> */}
 			<form onSubmit={handleLogin}>
-				{/* <FormControl sx={{ width: "100%" }} mt={2}> */}
 				<Styled.Input
 					label="Username"
 					variant="outlined"
@@ -157,15 +155,14 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess }) => {
 						width: "100%",
 						marginTop: "20px",
 						background: "transparent",
+						p: { xs: "14px 30px", xl: "14px 30px", xxl: "16px 30px" },
 					}}
 					variant="contained"
 					color="primary"
 					type="submit"
-					// onClick={handleLogin}
 				>
 					<Typography variant="ButtonNew">Log in</Typography>
 				</GradientButton>
-				{/* </FormControl> */}
 			</form>
 		</Styled.Form>
 	);

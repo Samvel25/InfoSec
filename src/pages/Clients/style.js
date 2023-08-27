@@ -33,16 +33,12 @@ export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
 		...ScaledSectionStyles,
 		[theme.breakpoints.down("md")]: {
 			transform: "scale(0.6) translate(55%, -10%)",
-			// overflow: "visible",
 		},
 		[theme.breakpoints.down("sm")]: {
 			transform: "scale(0.6) translate(55%, -15%)",
-			// overflow: "visible",
 		},
 		[theme.breakpoints.up("xs")]: {
 			padding: "20px 20px 20px 20px !important",
-
-			// overflow: "visible",
 		},
 	}),
 }));
@@ -63,16 +59,12 @@ export const OurGoalsSection = styled(Grid)(({ theme }) => ({
 		...radLines,
 		left: 0,
 		bottom: "110px",
-		// transform: "translateY(100%)",
 		[theme.breakpoints.down("md")]: {
 			width: "265px",
 			height: "45px",
 			bottom: "30px",
 		},
 	},
-	// [theme.breakpoints.up("md")]: {
-	// 	minWidth: "400px",
-	// },
 }));
 
 export const GoalCard = styled(Card)(({ theme }) => ({
@@ -80,9 +72,6 @@ export const GoalCard = styled(Card)(({ theme }) => ({
 		clipPath:
 			"polygon(0 32.00px,32.00px 0,calc(100% - 32.00px) 0,100% 32.00px,100% calc(100% - 32.00px),calc(100% - 32.00px) 100%,32.00px 100%,0 calc(100% - 32.00px))",
 	},
-	// [theme.breakpoints.up("md")]: {
-	// 	minWidth: "400px",
-	// },
 }));
 
 export const Review = styled(Box)(({ theme }) => ({
@@ -91,7 +80,6 @@ export const Review = styled(Box)(({ theme }) => ({
 		position: "absolute",
 		backgroundImage: `url(${Net})`,
 		transform: "translate(-25%, -60%)",
-		// maxWidth: "90%",
 		left: "0",
 		content: '""',
 		zIndex: "-1",
@@ -129,8 +117,4 @@ export const Review = styled(Box)(({ theme }) => ({
 			right: "40px",
 		},
 	},
-
-	// [theme.breakpoints.up("md")]: {
-	// 	minWidth: "400px",
-	// },
 }));

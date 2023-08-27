@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Hidden, Stack, Typography } from "@mui/material";
+import { Stack, Typography } from "@mui/material";
 import CustomHidden from "../../../Hidden";
 
 const Greatings = () => {

@@ -21,7 +21,6 @@ export const AchievementsCard = styled(Box)(
 			position: "relative",
 			zIndex: 0,
 			width: "300px",
-			// padding: "55px 60px 60px 40px",
 			padding: boxpadding === "boxpadding" ? "30px" : "55px 60px 60px 40px",
 			[theme.breakpoints.down("sm")]: {
 				padding:

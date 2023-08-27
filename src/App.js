@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import { I18nextProvider } from "react-i18next"; // Import the provider and hook
+import { I18nextProvider } from "react-i18next";
 import Layout from "./components/Layout/Layout";
 import { Stack } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";

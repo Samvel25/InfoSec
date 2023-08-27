@@ -8,7 +8,6 @@ function BigCardWrapper(props) {
 	return (
 		<Styled.BigCard backgroundtype={backgroundtype} {...props}>
 			<Led />
-			{/* {props.svg} */}
 			{props.img}
 		</Styled.BigCard>
 	);

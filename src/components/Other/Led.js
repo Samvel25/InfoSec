@@ -1,8 +1,6 @@
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-// import { keyframes } from "@mui/system";
-
 export const boxShadow1 = {
 	"0%": {
 		boxShadow:
@@ -82,7 +80,6 @@ const Led = styled(Box)(({ theme, ledtype }) => {
 		borderRadius: "20px",
 		content: '""',
 		margin: "auto",
-		// padding: "20px 20px",
 
 		boxShadow:
 			ledtype === "ledOne"

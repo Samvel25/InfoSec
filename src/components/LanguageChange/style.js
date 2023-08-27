@@ -12,11 +12,14 @@ const rotate = keyframes`
 `;
 
 export const StyledMenu = styled(Menu)(({ theme }) => ({
+	"& .MuiList-root": {
+		padding: 0,
+	},
 	"& .MuiPaper-root": {
 		backgroundColor: "#000000",
-		width: "320px",
-		padding: " 20px 10px",
+		width: "max-content",
 		borderRadius: "10px",
+		borderTopLeftRadius: "0",
 		position: "relative",
 		overflow: "visible",
 		border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -25,31 +28,37 @@ export const StyledMenu = styled(Menu)(({ theme }) => ({
 			position: "relative",
 			zIndex: 2,
 		},
-		[theme.breakpoints.up("xl")]: {
-			padding: " 24px 12px",
-			width: "384px",
-		},
+		[theme.breakpoints.up("xl")]: {},
 
-		[theme.breakpoints.up("xxl")]: {
-			padding: " 29px 14.5px",
-			width: "460px",
-		},
+		[theme.breakpoints.up("xxl")]: {},
 	},
 }));
 
 export const StyledMenuItem = styled(MenuItem)(({ theme, isActive }) => ({
-	background: "#0A0A0A",
+	width: "7vw",
+	maxWidth: "230px",
+	minWidth: "110px",
+
+	background: isActive
+		? "linear-gradient(45deg,#000000, #2D2D2D)"
+		: "transparent",
+	padding: "14px 22px 14px 10px",
 	justifyContent: "space-between",
 	position: "relative",
 	zIndex: 2,
-	padding: "10px",
-	marginBottom: "10px",
-	"&:hover": {
-		background: "#070707",
+	"&:first-child": {
+		borderTopRightRadius: "10px",
 	},
 	"&:last-child": {
-		margin: "0",
+		borderBottomRightRadius: "10px",
+		borderBottomLeftRadius: "10px",
 	},
+	"&:hover": {
+		background: isActive
+			? "linear-gradient(45deg,#000000, #2D2D2D)"
+			: "#070707",
+	},
+
 	"& li": {
 		"&:hover": {
 			"& p": {
@@ -62,11 +71,11 @@ export const StyledMenuItem = styled(MenuItem)(({ theme, isActive }) => ({
 		color: isActive ? "#FFFFFF" : "#C0C1C2",
 	},
 	[theme.breakpoints.up("xl")]: {
-		padding: "12px",
+		padding: "17px 23px 17px 12px",
 	},
 
 	[theme.breakpoints.up("xxl")]: {
-		padding: "14.5",
+		padding: "20px 25px 20px 15px",
 	},
 }));
 

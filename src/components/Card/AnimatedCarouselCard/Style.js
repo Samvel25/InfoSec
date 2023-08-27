@@ -1,4 +1,4 @@
-import { styled, keyframes } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import {
 	bounceFontSize,
 	mouseoutAnimation,

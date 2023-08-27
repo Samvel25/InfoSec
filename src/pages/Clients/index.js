@@ -2,7 +2,7 @@ import * as Styled from "./style";
 import ProgreeBar from "../../components/ProgressBar";
 import * as GlobalStyled from "../style";
 import Grid from "@mui/material/Grid";
-import { Box, Hidden, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import ClientsImg from "../../media/png/clientsImg.png";
 import ClientsSlide from "../../components/Carousel/Clients";
 import GradientButton from "../../components/Buttons/MainButton";

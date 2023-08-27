@@ -16,5 +16,4 @@ export const MenuOpenProvider = ({ children }) => {
 	);
 };
 
-// Hook to use this context
 export const useMenuOpen = () => useContext(MenuOpenContext);

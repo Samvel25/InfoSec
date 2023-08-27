@@ -8,7 +8,6 @@ export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
 		...ScaledSectionStyles,
 		[theme.breakpoints.down("md")]: {
 			transform: "scale(0.6) translate(55%, -10%)",
-			// overflow: "visible",
 		},
 		[theme.breakpoints.down("sm")]: {
 			transform: "scale(0.6) translate(55%, -15%)",
@@ -16,8 +15,6 @@ export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
 		},
 		[theme.breakpoints.up("xs")]: {
 			padding: "20px 20px 20px 20px !important",
-
-			// overflow: "visible",
 		},
 	}),
 }));
@@ -31,7 +28,6 @@ export const FormBackgroundBox = styled(Box)(({ theme }) => ({
 	height: "960px",
 	alignItems: "center",
 	display: "flex",
-	// filter: "grayscale(100%)",
 	"& div": {
 		filter: "inherit",
 	},

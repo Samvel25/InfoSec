@@ -1,5 +1,5 @@
 import Grid from "@mui/material/Grid";
-import { Stack, Typography, Divider, Box, Hidden } from "@mui/material";
+import { Stack, Typography, Divider, Box } from "@mui/material";
 import * as Styled from "./style";
 import Map from "../../../components/Maps/index";
 import { useJsApiLoader } from "@react-google-maps/api";

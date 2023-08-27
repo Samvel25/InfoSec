@@ -1,12 +1,24 @@
 import Slider from "react-slick";
 import CarouselCard from "../../Card/CarouselCard";
 import { styled } from "@mui/material/styles";
+import { Container } from "@mui/material";
+
+export const CarouselContainer = styled(Container)(({ theme }) => ({
+	[theme.breakpoints.down("xl")]: {
+		maxWidth: "none",
+	},
+	[theme.breakpoints.up("xl")]: {
+		maxWidth: "1930px",
+	},
+	[theme.breakpoints.up("xxl")]: {
+		maxWidth: "2300px",
+	},
+}));
 
 export const OurLifeCarouselCard = styled(CarouselCard)(({ theme }) => ({
 	width: "300px",
 	padding: "0px",
 	[theme.breakpoints.down("sm")]: {
-		// maxWidth: "330px",
 		padding: "0px",
 	},
 	[theme.breakpoints.up("xxl")]: {

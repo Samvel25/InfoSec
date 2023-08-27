@@ -13,7 +13,6 @@ function ServicesCard() {
 			}}
 			direction={"row"}
 			alignItems="center"
-			// sx={{ m: "80px 0 130px" }}
 		>
 			<Styled.Card boxpadding="boxpadding" backgroundtype="backgroundOne">
 				<Box sx={{ maxWidth: { xs: "330px", xl: "350px", xxl: "380px" } }}>

@@ -2,15 +2,8 @@ import { GoogleMap, Marker } from "@react-google-maps/api";
 import React, { useEffect, useState } from "react";
 import { DefaultTheme } from "./MapTheme";
 import MarkerIcon from "../../media/svg/mapMarkerIcon.svg";
-import * as Styled from "./style";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-
-// import { GoogleMap } from "@react-google-maps/api";
-
-// const containerStyle = {
-// 	height: "400px",
-// };
 
 const defaultOptions = {
 	panControl: true,

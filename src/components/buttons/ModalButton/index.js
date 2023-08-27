@@ -8,9 +8,6 @@ function ModalButton({ onClick }) {
 			<Styled.ModalButton variant="outlined">
 				<ModalSvg />
 			</Styled.ModalButton>
-			{/* <FormModal open={modalOpen} handleClose={handleClose}>
-				<Form />
-			</FormModal> */}
 		</div>
 	);
 }

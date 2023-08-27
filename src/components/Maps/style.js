@@ -1,4 +1,4 @@
-import { GoogleMap, Marker } from "@react-google-maps/api";
+import { GoogleMap } from "@react-google-maps/api";
 import { styled } from "@mui/material/styles";
 
 export const Maps = styled(GoogleMap)(({ theme }) => ({

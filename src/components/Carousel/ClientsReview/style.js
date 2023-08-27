@@ -1,8 +1,7 @@
 import Slider from "react-slick";
 import { styled } from "@mui/material/styles";
-import { Box, Container, Stack } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import { ReactComponent as RateStar } from "../../../media/svg/rateStar.svg";
-import { ReactComponent as NameAmLogo } from "../../../media/logo/nameAmLogo.svg";
 
 export const ExpertsSlider = styled(Slider)`
 	.slick-list {

@@ -3,7 +3,6 @@ import { styled } from "@mui/material/styles";
 import RadLine from "../media/svg/radLine.svg";
 import GrayLine from "../media/svg/grayLine.svg";
 import Net from "../media/svg/net.svg";
-import CarouselCard from "../components/Card/CarouselCard";
 
 export const ScaledSectionStyles = {
 	transition: "transform 0.3s ease-in-out",
@@ -136,22 +135,22 @@ export const OurClienats = styled(Container)(({ theme }) => ({
 	position: "relative",
 	borderTop: "1px solid rgba(255, 255, 255, 0.1)",
 	[theme.breakpoints.down("xl")]: {
-		maxWidth: "none", // default behavior for 'xl' in MUI
+		maxWidth: "none",
 	},
 	[theme.breakpoints.up("xl")]: {
-		maxWidth: "1800px", // default behavior for 'xl' in MUI
+		maxWidth: "1800px",
 	},
 	[theme.breakpoints.up("xxl")]: {
-		maxWidth: "2300px", // replace with your desired maxWidth for 'xxl'
+		maxWidth: "2300px",
 	},
 }));
 
 export const ServicesContainer = styled(Container)(({ theme }) => ({
 	[theme.breakpoints.down("xl")]: {
-		maxWidth: "1650px", // default behavior for 'xl' in MUI
+		maxWidth: "1650px",
 	},
 	[theme.breakpoints.up("xl")]: {
-		maxWidth: "1930px", // replace with your desired maxWidth for 'xxl'
+		maxWidth: "1930px",
 	},
 }));
 
@@ -166,7 +165,6 @@ export const Services = styled(Box)(({ theme }) => ({
 		zIndex: "-1",
 		left: "0",
 		top: "-70px",
-		// maxWidth: "100%",
 		width: "620px",
 		height: "610px",
 		opacity: "0.5",
@@ -199,25 +197,5 @@ export const Services = styled(Box)(({ theme }) => ({
 		[theme.breakpoints.down("sm")]: {
 			bottom: "30px",
 		},
-		// [theme.breakpoints.down("sm")]: {
-		// 	display: "none",
-		// },
 	},
-	// [theme.breakpoints.down("1300")]: {
-	// 	justifyContent: "space-around",
-	// },
-	// [theme.breakpoints.down("sm")]: {
-	// 	padding: "20px 0 0px",
-	// },
 }));
-
-// export const ServicesCard = styled(CarouselCard)(({ theme }) => ({
-// 	width: "auto",
-// 	margin: "28px 10px",
-// 	[theme.breakpoints.down("md")]: {
-// 		margin: "20px 10px",
-// 	},
-// 	[theme.breakpoints.down("sm")]: {
-// 		width: "100%",
-// 	},
-// }));

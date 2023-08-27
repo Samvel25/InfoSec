@@ -1,4 +1,4 @@
-import { Box, Grid, Hidden } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import * as Styled from "./style";
 import CustomHidden from "../../../Hidden";
 

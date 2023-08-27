@@ -1,6 +1,6 @@
 import * as React from "react";
 import Footer from "./Footer";
-import { Box, Container, Hidden, Stack, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import Header from "./Header/index";
 import { Outlet } from "react-router-dom";
 import { MenuOpenProvider } from "../context/MenuOpenContext";

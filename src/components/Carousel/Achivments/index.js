@@ -1,6 +1,5 @@
 import React from "react";
-// import Styled.Card from "../../Card/CarouselCard";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import LedLine from "../../Other/Led";

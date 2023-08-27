@@ -1,14 +1,12 @@
 import CarouselCard from "../../Card/CarouselCard";
 import { styled } from "@mui/material/styles";
-import GradientButton from "../../Buttons/MainButton";
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 
 export const SortingCard = styled(CarouselCard)(({ theme, scale }) => ({
 	width: "auto",
 	padding: "45px 15px 30px",
 	maxWidth: "410px",
 
-	// textAlign: "center",
 	"&:after": {
 		background: "#0a0a0a",
 		clipPath:

@@ -7,7 +7,6 @@ import * as GlobalStyled from "../style";
 import IncidebtsImg from "../../media/png/incidebts.png";
 import Experts from "../../components/Carousel/Experts";
 import GradientButton from "../../components/Buttons/MainButton";
-import { ReactComponent as CardImmage } from "../../media/svg/cardLogo.svg";
 import Form from "../../components/Form";
 import PageTransition from "../../components/PageTransition";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";

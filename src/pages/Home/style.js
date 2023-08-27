@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid } from "@mui/material";
+import { Box, Container, Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import Net1 from "../../media/svg/backgroundNet.svg";
 import Net from "../../media/svg/net.svg";
@@ -63,10 +63,6 @@ export const FirstSection = styled(Grid)(({ theme, ismenuopen }) => ({
 		background:
 			"radial-gradient(47.45% 47.45% at 50.00% 54.40%, rgba(212, 37, 48, 0.60) 0%, rgba(212, 37, 48, 0.00) 100%)",
 		filter: "blur(100px)",
-		// [theme.breakpoints.down("md")]: {
-		// 	left: "35%",
-		// 	height: "500px",
-		// },
 	},
 }));
 

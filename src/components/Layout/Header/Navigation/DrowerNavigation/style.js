@@ -1,6 +1,4 @@
-import { Typography } from "@mui/material";
 import { Navigation, NavigationItem } from "../style";
-// import { NavigationItem } from "../style";
 import { styled } from "@mui/material/styles";
 
 export const DrawerNavigationWrapper = styled(Navigation)(({ theme }) => ({
@@ -17,17 +15,12 @@ export const DrawerNavigationItem = styled(NavigationItem)(({ theme }) => ({
 		padding: "10px 20px ",
 	},
 
-	// "&:active": {
-	// 	background: "transparent",
-	// },
-
 	"&:active > p": {
-		color: "#D42530", // Active color
+		color: "#D42530",
 	},
 
 	"& p": {
 		userSelect: "none",
-		// display: "block",
 	},
 
 	"&:hover": {

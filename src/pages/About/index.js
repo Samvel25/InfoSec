@@ -1,12 +1,10 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
 import * as Styled from "./style";
 import * as GlobalStyled from "../style";
 import AchivmentsCarousel from "../../components/Carousel/Achivments/index";
-// import GlobeImg from "../../media/png/globe.png";
 import { ReactComponent as GlobeImg } from "../../media/svg/globe.svg";
-
 import OurLifeCarousel from "../../components/Carousel/OurLife";
 import PageTransition from "../../components/PageTransition";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";

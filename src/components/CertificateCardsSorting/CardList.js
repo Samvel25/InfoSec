@@ -1,7 +1,7 @@
 import React from "react";
 import SortingButton from "./SortingButton";
 import CardItem from "./Card/index";
-import { Box, Grid, Hidden } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import CertificatesCarousel from "../Carousel/Certificates";
 import allCards from "./Card/Data";
 import CustomHidden from "../Hidden";
@@ -56,7 +56,6 @@ const CardList = ({ activeSort, setActiveSort }) => {
 							lg={4}
 							xl={3}
 							xxl={2}
-							// direction={"row"}
 							display={"flex"}
 							justifyContent={"center"}
 							key={index}

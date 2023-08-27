@@ -49,7 +49,6 @@ export const RedCard = styled(CarouselCard)(({ theme }) => ({
 			"0 0 20px 10px rgba(241, 4, 19, 0.6), " +
 			"0 0 24px 12px rgba(73, 0, 5, 0.8), " +
 			"0 0 28px 14px rgba(73, 0, 5, 0.6)",
-		// background: "conic-gradient(#D42530 100%, #490005 100%)",
 		filter: "blur(14px)",
 		transform: "translate(0px, 12px)",
 	},
@@ -82,7 +81,6 @@ export const RedCard = styled(CarouselCard)(({ theme }) => ({
 export const Card = styled(CarouselCard)(({ theme }) => ({
 	width: "100%",
 	padding: "52px 52px 80px 60px",
-
 	[theme.breakpoints.down(1250)]: {
 		padding: "52px 52px 80px 20px",
 	},
@@ -102,16 +100,9 @@ export const Card = styled(CarouselCard)(({ theme }) => ({
 	[theme.breakpoints.up("xxl")]: {
 		padding: "62px 1px 92px 72px",
 	},
-	// [theme.breakpoints.down("xs")]: {
-	// 	padding: "52px 52px 80px 25px",
-	// },
 }));
 
 export const Text = styled(Typography)(({ theme }) => ({
 	color: "#F2F2F2",
 	textTransform: "uppercase",
-
-	// [theme.breakpoints.up("md")]: {
-	// 	minWidth: "400px",
-	// },
 }));

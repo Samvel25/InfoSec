@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import PageTransition from "../../components/PageTransition";
 import * as Styled from "./style";
 import CardList from "../../components/CertificateCardsSorting";

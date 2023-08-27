@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-// import createBreakpoints from "@mui/material/styles/createBreakpoints";
 
 const gradientText = {
 	backgroundClip: "text",
@@ -176,22 +175,6 @@ export const theme = createTheme({
 				lineHeight: "44px",
 			},
 		},
-		// CardHead: {
-		// 	color: "#FFFFFF",
-		// 	marginBottom: "25px",
-		// 	fontSize: "20px",
-		// 	lineHeight: "31px",
-		// 	fontWeight: 700,
-		// 	display: "block",
-		// 	"@media (min-width:1930px)": {
-		// 		fontSize: "24px",
-		// 		lineHeight: "37px",
-		// 	},
-		// 	"@media (min-width:2800px)": {
-		// 		fontSize: "29px",
-		// 		lineHeight: "44px",
-		// 	},
-		// },
 		FooterHead: {
 			color: "#FFFFFF",
 			fontSize: "16px",
@@ -261,7 +244,7 @@ export const theme = createTheme({
 			styleOverrides: {
 				root: {
 					checked: {
-						color: "red", // Change the color to your desired color
+						color: "red",
 					},
 				},
 			},
