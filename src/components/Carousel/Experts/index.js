@@ -50,6 +50,12 @@ const Experts = () => {
 								xxl: "55px 135px 40px 75px",
 							},
 							width: "max-content",
+							height: {
+								sm: "275px",
+								xs: "245px",
+								xl: "346px",
+								xxl: "400px",
+							},
 						}}
 						backgroundtype="backgroundOne"
 					>
@@ -84,6 +90,12 @@ const Experts = () => {
 								xxl: "55px 135px 40px 75px",
 							},
 							width: "max-content",
+							height: {
+								sm: "275px",
+								xs: "245px",
+								xl: "346px",
+								xxl: "400px",
+							},
 						}}
 						backgroundtype="backgroundOne"
 					>
@@ -118,6 +130,12 @@ const Experts = () => {
 								xxl: "55px 135px 40px 75px",
 							},
 							width: "max-content",
+							height: {
+								sm: "275px",
+								xs: "245px",
+								xl: "346px",
+								xxl: "400px",
+							},
 						}}
 						backgroundtype="backgroundOne"
 					>

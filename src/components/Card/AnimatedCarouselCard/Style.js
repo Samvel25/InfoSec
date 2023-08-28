@@ -28,6 +28,9 @@ export const Card = styled(CarouselCard)(({ theme }) => {
 		},
 
 		"&:hover": {
+			display: "flex",
+			flexDirection: "column",
+			justifyContent: "space-around",
 			"& p": {
 				color: "#FFFFFF",
 				transformOrigin: "left center",
