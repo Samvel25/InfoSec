@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
 	Container,
 	FormControlLabel,
@@ -7,63 +7,46 @@ import {
 	Typography,
 	Divider,
 } from "@mui/material";
+import { useForm, Controller } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import * as Styled from "./style";
 import instance from "../../api/instance";
 
 const Form = () => {
-	const [formData, setFormData] = useState({
-		name: "",
-		surname: "",
-		email: "",
-		phoneNumber: "",
-		description: "",
-		acceptConditions: false,
+	const validationSchema = yup.object().shape({
+		name: yup.string().required("Name is required"),
+		surname: yup.string().required("Surname is required"),
+		email: yup
+			.string()
+			.required("Email is required")
+			.email("Invalid email format"),
+		phoneNumber: yup
+			.string()
+			.required("Phone number is required")
+			.matches(/^[0-9+]*$/, "Please enter only numbers"),
+		description: yup.string().required("Description is required"),
+		acceptConditions: yup
+			.bool()
+			.oneOf([true], "You must accept the conditions to proceed."),
 	});
 
-	const [formErrors, setFormErrors] = useState({
-		name: false,
-		surname: false,
-		email: false,
-		phoneNumber: false,
-		description: false,
-		acceptConditions: false,
+	const {
+		handleSubmit,
+		control,
+		setValue,
+		formState: { errors },
+	} = useForm({
+		resolver: yupResolver(validationSchema),
+		defaultValues: {
+			name: "",
+			surname: "",
+			email: "",
+			phoneNumber: "",
+			description: "",
+			acceptConditions: false,
+		},
 	});
-
-	const handleChange = (event) => {
-		const { name, value, checked } = event.target;
-
-		if (name === "phoneNumber") {
-			const numericValue = value.replace(/[^0-9+]/g, "");
-
-			if (value !== numericValue) {
-				setFormErrors((prevErrors) => ({
-					...prevErrors,
-					[name]: "Please enter only numbers",
-				}));
-			} else {
-				setFormErrors((prevErrors) => ({
-					...prevErrors,
-					[name]: numericValue === "" ? "Phone number is required" : false,
-				}));
-				setFormData((prevData) => ({
-					...prevData,
-					[name]: numericValue,
-				}));
-			}
-		} else {
-			setFormData((prevData) => ({
-				...prevData,
-				[name]: name === "acceptConditions" ? checked : value,
-			}));
-			setFormErrors((prevErrors) => ({
-				...prevErrors,
-				[name]:
-					value === ""
-						? `${name.charAt(0).toUpperCase() + name.slice(1)} is required`
-						: false,
-			}));
-		}
-	};
 
 	const handleClick = () => {
 		const lat = 37.7749;
@@ -73,59 +56,27 @@ const Form = () => {
 		);
 	};
 
-	const handleSubmit = (event) => {
-		event.preventDefault();
-
-		const newFormErrors = {
-			name: formData.name === "",
-			surname: formData.surname === "",
-			email: formData.email === "",
-			phoneNumber: formData.phoneNumber === "",
-			description: formData.description === "",
-			acceptConditions: !formData.acceptConditions,
-		};
-
-		if (Object.values(newFormErrors).some((error) => error === true)) {
-			setFormErrors(newFormErrors);
-			return;
-		}
-
+	const onSubmit = (data) => {
 		instance
-			.post("saveFormData", formData)
+			.post("saveFormData", data)
 			.then((res) => {
 				console.log({ res });
+				// Reset the form or any other logic after successful form submission.
 			})
 			.catch((err) => {
 				console.log(err);
 			});
-
-		setFormData({
-			name: "",
-			surname: "",
-			email: "",
-			phoneNumber: "",
-			description: "",
-			acceptConditions: false,
-		});
-		setFormErrors({
-			name: false,
-			surname: false,
-			email: false,
-			phoneNumber: false,
-			description: false,
-			acceptConditions: false,
-		});
 	};
 
 	return (
 		<Container>
 			<Styled.StyledForm
+				onSubmit={handleSubmit(onSubmit)}
 				sx={{
 					p: { md: "35px", sm: "25px 15px", xs: "20px 10px" },
 					background: "rgba(0, 0, 0, 0.64)",
 					backdropFilter: "blur(19.0734px)",
 				}}
-				onSubmit={handleSubmit}
 			>
 				<Grid container direction={"row"} spacing={{ sm: 2, xs: 1 }}>
 					<Grid textAlign={"center"} item xs={12}>
@@ -156,90 +107,58 @@ const Form = () => {
 							Phone: +374 066 666 666
 						</Typography>
 					</Grid>
-					<Grid item xs={6}>
-						<Styled.Input
-							required
-							label="Name"
-							name="name"
-							value={formData.name}
-							onChange={handleChange}
-							error={formErrors.name}
-							helperText={formErrors.name ? "Name is required" : ""}
-						/>
-					</Grid>
-					<Grid item xs={6}>
-						<Styled.Input
-							required
-							label="Surname"
-							name="surname"
-							value={formData.surname}
-							onChange={handleChange}
-							error={formErrors.surname}
-							helperText={formErrors.surname ? "Surname is required" : ""}
-							fullWidth
-						/>
-					</Grid>
-					<Grid item xs={12} sm={6}>
-						<Styled.Input
-							required
-							label="Email"
-							name="email"
-							type="email"
-							value={formData.email}
-							onChange={handleChange}
-							error={formErrors.email}
-							helperText={formErrors.email ? "Email is required" : ""}
-							fullWidth
-						/>
-					</Grid>
-					<Grid item xs={12} sm={6}>
-						<Styled.Input
-							required
-							label="Phone Number"
-							name="phoneNumber"
-							type="tel"
-							value={formData.phoneNumber}
-							onChange={handleChange}
-							error={!!formErrors.phoneNumber}
-							helperText={
-								formErrors.phoneNumber ||
-								(formErrors.phoneNumber === false
-									? ""
-									: "Phone number is required")
-							}
-							fullWidth
-						/>
-					</Grid>
-					<Grid item xs={12}>
-						<Styled.Input
-							required
-							label="Description of the incidents"
-							name="description"
-							multiline
-							rows={4}
-							value={formData.description}
-							onChange={handleChange}
-							error={formErrors.description}
-							helperText={
-								formErrors.description ? "Description is required" : ""
-							}
-							fullWidth
-						/>
-					</Grid>
+
+					{[
+						{ label: "Name", name: "name" },
+						{ label: "Surname", name: "surname" },
+						{ label: "Email", name: "email" },
+						{ label: "Phone Number", name: "phoneNumber" },
+						{
+							label: "Description of the incidents",
+							name: "description",
+							multiline: true,
+							rows: 4,
+						},
+					].map((inputProps) => (
+						<Grid
+							item
+							xs={12}
+							sm={inputProps.name === "description" ? 12 : 6}
+							key={inputProps.name}
+						>
+							<Controller
+								name={inputProps.name}
+								control={control}
+								render={({ field }) => (
+									<Styled.Input
+										{...field}
+										{...inputProps}
+										error={Boolean(errors[inputProps.name])}
+										helperText={errors[inputProps.name]?.message || ""}
+										variant="outlined"
+									/>
+								)}
+							/>
+						</Grid>
+					))}
+
 					<Grid item xs={12}>
 						<FormControlLabel
 							control={
-								<Checkbox
-									sx={{
-										color: "#D42530",
-										"&.Mui-checked, &.MuiCheckbox-indeterminate": {
-											color: "#FFF",
-										},
-									}}
-									checked={formData.acceptConditions}
-									onChange={handleChange}
+								<Controller
 									name="acceptConditions"
-									color="primary"
+									control={control}
+									render={({ field }) => (
+										<Checkbox
+											{...field}
+											sx={{
+												color: "#D42530",
+												"&.Mui-checked, &.MuiCheckbox-indeterminate": {
+													color: "#FFF",
+												},
+											}}
+										/>
+									)}
 								/>
 							}
 							label={
@@ -281,14 +200,14 @@ const Form = () => {
 									</Typography>
 								</Typography>
 							}
-							error={formErrors.acceptConditions}
 						/>
-						{formErrors.acceptConditions && (
+						{errors.acceptConditions && (
 							<div style={{ color: "red" }}>
-								You must accept the conditions to proceed.
+								{errors.acceptConditions.message}
 							</div>
 						)}
 					</Grid>
+
 					<Grid item xs={12} display={"flex"} justifyContent={"end"}>
 						<Styled.FormGradientButton
 							type="submit"

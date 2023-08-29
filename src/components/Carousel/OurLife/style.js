@@ -6,6 +6,7 @@ import { Container } from "@mui/material";
 export const CarouselContainer = styled(Container)(({ theme }) => ({
 	[theme.breakpoints.down("xl")]: {
 		maxWidth: "none",
+		padding: "0",
 	},
 	[theme.breakpoints.up("xl")]: {
 		maxWidth: "1930px",

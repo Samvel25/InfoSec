@@ -200,22 +200,22 @@ export const StyledSlider = styled(Slider)`
 		position: relative;
 		display: block !important;
 		overflow: hidden;
-		padding: 125px 800px 170px !important;
+		padding: 180px 800px 170px !important;
 		width: 100%;
 		@media screen and (max-width: 2450px) {
-			padding: 125px 700px 170px !important;
+			padding: 135px 700px 170px !important;
 		}
 		@media screen and (max-width: 2300px) {
-			padding: 125px 500px 170px !important;
+			padding: 135px 500px 170px !important;
 		}
 		@media screen and (max-width: 1920px) {
-			padding: 125px 300px 170px !important;
+			padding: 135px 300px 170px !important;
 		}
 		@media screen and (max-width: 1440px) {
-			padding: 125px 200px 170px !important;
+			padding: 135px 200px 170px !important;
 		}
 		@media screen and (max-width: 600px) {
-			padding: 125px 100px 170px !important;
+			padding: 135px 100px 170px !important;
 		}
 	}
 
