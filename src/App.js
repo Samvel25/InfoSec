@@ -14,59 +14,65 @@ import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import i18n from "./i18next";
 import ScrollToTop from "./routes/ScrollToTop";
+import PrivateRoute from "./routes/PrivateRoute";
 
 const routes = [
-	{
-		path: "/",
-		element: <Layout />,
-		children: [
-			{
-				path: "",
-				element: <Home />,
-			},
-			{
-				path: "about",
-				element: <About />,
-			},
-			{
-				path: "services",
-				element: <Services />,
-			},
-			{
-				path: "clients",
-				element: <Clients />,
-			},
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "services",
+        element: <Services />,
+      },
+      {
+        path: "clients",
+        element: <Clients />,
+      },
 
-			{
-				path: "certificates",
-				element: <Certificates />,
-			},
-			{
-				path: "admin",
-				element: <Admin />,
-			},
-		],
-	},
+      {
+        path: "certificates",
+        element: <Certificates />,
+      },
+      {
+        path: "admin",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Admin />{" "}
+          </PrivateRoute>
+        ),
+      },
+    ],
+  },
 ];
 
 const router = createBrowserRouter(routes);
 
 function App() {
-	return (
-		<I18nextProvider i18n={i18n}>
-			<Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
-				<CssBaseline />
-				<RouterProvider router={router}>
-					<ScrollToTop />
-					<AnimateSharedLayout>
-						<AnimatePresence mode="wait">
-							<Outlet />
-						</AnimatePresence>
-					</AnimateSharedLayout>
-				</RouterProvider>
-			</Stack>
-		</I18nextProvider>
-	);
+  return (
+    <I18nextProvider i18n={i18n}>
+      <Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
+        <CssBaseline />
+        <RouterProvider router={router}>
+          <ScrollToTop />
+          <AnimateSharedLayout>
+            <AnimatePresence mode="wait">
+              <Outlet />
+            </AnimatePresence>
+          </AnimateSharedLayout>
+        </RouterProvider>
+      </Stack>
+    </I18nextProvider>
+  );
 }
 
 export default App;
