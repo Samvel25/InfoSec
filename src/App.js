@@ -1,5 +1,11 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  Routes,
+  Route,
+} from "react-router-dom";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { I18nextProvider } from "react-i18next";
 import Layout from "./components/Layout/Layout";
@@ -15,6 +21,7 @@ import Admin from "./pages/Admin";
 import i18n from "./i18next";
 import ScrollToTop from "./routes/ScrollToTop";
 import PrivateRoute from "./routes/PrivateRoute";
+import LoginForm from "./components/Layout/Header/LogIn";
 
 const routes = [
   {
@@ -39,17 +46,18 @@ const routes = [
       },
 
       {
+        path: "signin",
+        element: <LoginForm />,
+      },
+
+      {
         path: "certificates",
         element: <Certificates />,
       },
       {
         path: "admin",
-        element: (
-          <PrivateRoute>
-            {" "}
-            <Admin />{" "}
-          </PrivateRoute>
-        ),
+        // element: <PrivateRoute element={<Admin />} />,
+        element: <Admin />,
       },
     ],
   },

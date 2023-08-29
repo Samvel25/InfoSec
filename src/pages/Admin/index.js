@@ -1,14 +1,25 @@
 import { Box, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { Navigate, useLocation } from "react-router-dom";
 import instance from "../../api/instance";
+import useAuth from "../../hooks/useAuth";
+import PrivateRoute from "../../routes/PrivateRoute";
 import * as Styled from "./style";
 
 const Admin = () => {
   const [formsData, setFormsData] = useState([]);
+  const user = useAuth((state) => state.user);
+  const location = useLocation();
+
+  console.log({ user });
 
   useEffect(() => {
     instance.get("getAllForms").then((res) => setFormsData(res.data));
   }, []);
+
+  if (user?.role !== "admin") {
+    return <Navigate to={"/"} state={{ from: location }} replace />;
+  }
 
   console.log({ formsData });
 
