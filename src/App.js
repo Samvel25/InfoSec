@@ -1,10 +1,10 @@
 import React from "react";
 import {
-  createBrowserRouter,
-  RouterProvider,
-  Outlet,
-  Routes,
-  Route,
+	createBrowserRouter,
+	RouterProvider,
+	Outlet,
+	Routes,
+	Route,
 } from "react-router-dom";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { I18nextProvider } from "react-i18next";
@@ -20,67 +20,65 @@ import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import i18n from "./i18next";
 import ScrollToTop from "./routes/ScrollToTop";
-import PrivateRoute from "./routes/PrivateRoute";
-import LoginForm from "./components/Layout/Header/LogIn";
+import SignIn from "./pages/SignIn";
 
 const routes = [
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      {
-        path: "",
-        element: <Home />,
-      },
-      {
-        path: "about",
-        element: <About />,
-      },
-      {
-        path: "services",
-        element: <Services />,
-      },
-      {
-        path: "clients",
-        element: <Clients />,
-      },
+	{
+		path: "/",
+		element: <Layout />,
+		children: [
+			{
+				path: "",
+				element: <Home />,
+			},
+			{
+				path: "about",
+				element: <About />,
+			},
+			{
+				path: "services",
+				element: <Services />,
+			},
+			{
+				path: "clients",
+				element: <Clients />,
+			},
 
-      {
-        path: "signin",
-        element: <LoginForm />,
-      },
-
-      {
-        path: "certificates",
-        element: <Certificates />,
-      },
-      {
-        path: "admin",
-        // element: <PrivateRoute element={<Admin />} />,
-        element: <Admin />,
-      },
-    ],
-  },
+			{
+				path: "certificates",
+				element: <Certificates />,
+			},
+			{
+				path: "signin",
+				element: <SignIn />,
+			},
+			{
+				path: "admin",
+				// element: <PrivateRoute element={<Admin />} />,
+				element: <Admin />,
+			},
+		],
+	},
 ];
 
 const router = createBrowserRouter(routes);
 
 function App() {
-  return (
-    <I18nextProvider i18n={i18n}>
-      <Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
-        <CssBaseline />
-        <RouterProvider router={router}>
-          <ScrollToTop />
-          <AnimateSharedLayout>
-            <AnimatePresence mode="wait">
-              <Outlet />
-            </AnimatePresence>
-          </AnimateSharedLayout>
-        </RouterProvider>
-      </Stack>
-    </I18nextProvider>
-  );
+	return (
+		<I18nextProvider i18n={i18n}>
+			<Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
+				<CssBaseline />
+				<RouterProvider router={router}>
+					<ScrollToTop />
+					<AnimateSharedLayout>
+						<AnimatePresence mode="wait">
+							<Outlet />
+						</AnimatePresence>
+					</AnimateSharedLayout>
+				</RouterProvider>
+			</Stack>
+		</I18nextProvider>
+	);
 }
 
 export default App;

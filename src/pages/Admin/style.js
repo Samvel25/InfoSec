@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Box, Grid, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CarouselCard from "../../components/Card/CarouselCard";
 
@@ -21,4 +21,17 @@ export const Card = styled(CarouselCard)(({ theme }) => ({
 	[theme.breakpoints.down("sm")]: {
 		width: "100%",
 	},
+}));
+
+export const CardItems = styled(Box)(({ theme }) => ({
+	display: "flex",
+	alignItems: "center",
+	marginBottom: "30px",
+}));
+
+export const UserData = styled(Typography)(({ theme }) => ({
+	marginLeft: "20px",
+	whiteSpace: "nowrap",
+	overflow: "hidden",
+	textOverflow: "ellipsis",
 }));
