@@ -29,7 +29,7 @@ export const CardSquareImg = styled(CardSquare)(({ theme }) => ({
 
 export const Card = styled(CarouselCard)(({ theme }) => ({
 	width: "auto",
-	height: "240px",
+	height: "260px",
 	margin: "28px 10px",
 	[theme.breakpoints.down("md")]: {
 		margin: "20px 10px",

@@ -1,4 +1,15 @@
-import { Box, Grid, Typography } from "@mui/material";
+import {
+	Box,
+	Grid,
+	TextareaAutosize,
+	Typography,
+	Dialog,
+	DialogActions,
+	DialogContent,
+	DialogContentText,
+	DialogTitle,
+	Button,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import instance from "../../api/instance";
@@ -15,6 +26,33 @@ const Admin = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [childComponent, setChildComponent] = useState(<></>);
 
+	const [text, setText] = useState("");
+	const [showConfirm, setShowConfirm] = useState(false);
+
+	const handleTextChange = (e) => {
+		setText(e.target.value);
+	};
+
+	const handleSendClick = () => {
+		setShowConfirm(true);
+	};
+
+	const handleConfirmSend = () => {
+		// Your send logic here
+		// ...
+
+		// Clear the textarea
+		setText("");
+
+		// Hide the confirmation dialog
+		setShowConfirm(false);
+	};
+
+	const handleCancelSend = () => {
+		// Hide the confirmation dialog without sending
+		setShowConfirm(false);
+	};
+
 	const handleModalButtonClick = (childComponent) => {
 		setChildComponent(childComponent);
 		setIsModalOpen((prev) => !prev);
@@ -27,10 +65,6 @@ const Admin = () => {
 	}, []);
 
 	console.log({ user });
-
-	// useEffect(() => {
-	// 	instance.get("getAllForms").then((res) => setFormsData(res.data));
-	// }, []);
 
 	if (user?.role !== "admin") {
 		return <Navigate to={"/"} state={{ from: location }} replace />;
@@ -52,6 +86,37 @@ const Admin = () => {
 				alignItems="center"
 				sx={{ m: "120px 0 130px" }}
 			>
+				<Grid item xs={12}>
+					<Grid container direction={"row"} justifyContent={"center"}>
+						<Grid sx={{ position: "relative" }} item xs={5}>
+							<Styled.StyledTextarea
+								value={text}
+								onChange={handleTextChange}
+								minRows={3}
+								placeholder="Add your comments here..."
+							/>
+							<Styled.SendButton onClick={handleSendClick}>
+								Send
+							</Styled.SendButton>
+						</Grid>
+						<Dialog open={showConfirm} onClose={handleCancelSend}>
+							<DialogTitle>Confirm</DialogTitle>
+							<DialogContent>
+								<DialogContentText>
+									Are you sure you want to send this message?
+								</DialogContentText>
+							</DialogContent>
+							<DialogActions>
+								<Button onClick={handleCancelSend} color="primary">
+									Cancel
+								</Button>
+								<Button onClick={handleConfirmSend} color="primary">
+									Yes, Send it!
+								</Button>
+							</DialogActions>
+						</Dialog>
+					</Grid>
+				</Grid>
 				{formsData.length
 					? formsData.map((card, index) => (
 							<Grid item xs={11} sm={6} md={4} lg={2.5} xl={2} xxl={1.7}>

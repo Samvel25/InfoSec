@@ -24,9 +24,10 @@ const defaultOptions = {
 const Map = ({ center }) => {
 	const theme = useTheme();
 	const isXXlUp = useMediaQuery(theme.breakpoints.up("xxl"));
+	const isSMDown = useMediaQuery(theme.breakpoints.down("sm"));
 
 	const containerStyle = {
-		height: isXXlUp ? "500px" : "400px",
+		height: isXXlUp ? "500px" : isSMDown ? "400px" : "260px",
 	};
 	const mapRef = React.useRef(null);
 

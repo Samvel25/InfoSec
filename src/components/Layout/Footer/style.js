@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { ReactComponent as LogoSvg } from "../../../media/logo/secondaryLogo.svg";
 import { ReactComponent as Line } from "../../../media/svg/footerLine.svg";
-import { Grid, Typography, Stack, Container } from "@mui/material";
+import { Grid, Typography, Stack, Container, Box } from "@mui/material";
 
 export const FooterContainer = styled(Container)(({ theme }) => ({
 	[theme.breakpoints.up(1940)]: {
@@ -57,14 +57,14 @@ export const FooterLinkes = styled(Grid)(({ theme }) => ({
 		paddingLeft: 0,
 	},
 }));
-export const LineWrapper = styled(Grid)(({ theme }) => ({
+export const LineWrapper = styled(Box)(({ theme }) => ({
 	position: "relative",
-	width: "100%",
+	width: "100vw",
 }));
 
 export const FooterLine = styled(Line)(({ theme }) => ({
 	width: "100%",
-	height: "64px",
+	height: "auto",
 	transform: " rotateY(180deg)",
 	[theme.breakpoints.down("sm")]: {
 		height: "26px",
@@ -81,14 +81,20 @@ export const LineText = styled(Typography)(({ theme }) => ({
 	color: "#FFF",
 	transform: "translateX(-50%) rotateX(180deg)",
 	bottom: "20px",
-	width: "63%",
+	width: "40%",
 	textAlign: "center",
 	left: "50%",
+	[theme.breakpoints.up(2500)]: {
+		bottom: "5px",
+	},
 	[theme.breakpoints.down(700)]: {
+		width: "80%",
 		transform: "translate(-50%, -80%) rotateX(180deg)",
 		bottom: "0",
+		fontSize: "12px",
 	},
-	[theme.breakpoints.down("sm")]: {
+	[theme.breakpoints.down(500)]: {
+		transform: "translate(-50%, -50%) rotateX(180deg)",
 		width: "90%",
 	},
 }));

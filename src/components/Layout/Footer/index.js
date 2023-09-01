@@ -28,7 +28,7 @@ const Footer = () => {
 		<Box
 			sx={{
 				display: ismenuopen ? "none" : "block",
-				p: { sm: "0 25px", xs: "0" },
+				p: { xs: "0" },
 			}}
 		>
 			<Styled.FooterContainer>
@@ -189,10 +189,14 @@ const Footer = () => {
 								</li>
 							</ul>
 						</Grid>
-						<Styled.LineWrapper item xs={12}>
-							<Styled.FooterLine />
-						</Styled.LineWrapper>
 					</Styled.FooterLinkes>
+				</footer>
+			</Styled.FooterContainer>
+			<Styled.LineWrapper>
+				<Styled.FooterLine />
+			</Styled.LineWrapper>
+			<Styled.FooterContainer>
+				<footer>
 					<Styled.ContactUs
 						container
 						direction={"row"}
@@ -322,22 +326,22 @@ const Footer = () => {
 								</a>
 							</Styled.SocialMedia>
 						</Grid>
-						<Styled.LineWrapper
-							sx={{
-								transform: " rotateX(180deg)",
-								mt: "30px",
-								mb: "5px",
-							}}
-						>
-							<Styled.FooterLine />
-							<Styled.LineText>
-								© Infosec LLC is one of the world's leading cybercrime and fraud
-								prevention and investigation companies using high technology.
-							</Styled.LineText>
-						</Styled.LineWrapper>
 					</Styled.ContactUs>
 				</footer>
 			</Styled.FooterContainer>
+			<Styled.LineWrapper
+				sx={{
+					transform: " rotateX(180deg)",
+					mt: "30px",
+					mb: "5px",
+				}}
+			>
+				<Styled.FooterLine />
+				<Styled.LineText>
+					© Infosec LLC is one of the world's leading cybercrime and fraud
+					prevention and investigation companies using high technology.
+				</Styled.LineText>
+			</Styled.LineWrapper>
 		</Box>
 	);
 };
