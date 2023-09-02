@@ -85,7 +85,7 @@ export const LineText = styled(Typography)(({ theme }) => ({
 	textAlign: "center",
 	left: "50%",
 	[theme.breakpoints.up(2500)]: {
-		bottom: "5px",
+		bottom: "40px",
 	},
 	[theme.breakpoints.down(700)]: {
 		width: "80%",

@@ -21,6 +21,7 @@ import Admin from "./pages/Admin";
 import i18n from "./i18next";
 import ScrollToTop from "./routes/ScrollToTop";
 import SignIn from "./pages/SignIn";
+import CookieBanner from "./components/CookieBanner";
 
 const routes = [
 	{
@@ -68,6 +69,8 @@ function App() {
 		<I18nextProvider i18n={i18n}>
 			<Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
 				<CssBaseline />
+				<CookieBanner />
+
 				<RouterProvider router={router}>
 					<ScrollToTop />
 					<AnimateSharedLayout>

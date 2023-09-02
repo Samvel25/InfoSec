@@ -37,7 +37,7 @@ const CardItem = ({ title, content, certificateimg, className }) => {
 			>
 				<pre></pre>
 				<pre></pre>
-				<Styled.ButtonText variant="ButtonNew" component={"a"}>
+				<Styled.ButtonText variant="ButtonNew">
 					dOWNLOAD <Typography component={"a"}>PDF</Typography>
 				</Styled.ButtonText>
 			</CertificateButton>
