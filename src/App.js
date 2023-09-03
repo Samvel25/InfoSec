@@ -1,11 +1,5 @@
 import React from "react";
-import {
-	createBrowserRouter,
-	RouterProvider,
-	Outlet,
-	Routes,
-	Route,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
 import { I18nextProvider } from "react-i18next";
 import Layout from "./components/Layout/Layout";
@@ -19,7 +13,6 @@ import Certificates from "./pages/Certificates";
 import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 import i18n from "./i18next";
-import ScrollToTop from "./routes/ScrollToTop";
 import SignIn from "./pages/SignIn";
 import CookieBanner from "./components/CookieBanner";
 
@@ -67,12 +60,10 @@ const router = createBrowserRouter(routes);
 function App() {
 	return (
 		<I18nextProvider i18n={i18n}>
-			<Stack id="app" height={"100vh"} sx={{ overflowX: "hidden" }}>
+			<Stack id="app" sx={{ overflowX: "hidden" }}>
 				<CssBaseline />
 				<CookieBanner />
-
 				<RouterProvider router={router}>
-					<ScrollToTop />
 					<AnimateSharedLayout>
 						<AnimatePresence mode="wait">
 							<Outlet />

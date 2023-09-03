@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import instance from "../../../api/instance";
-import { TableBody, Paper, Container, Box, Typography } from "@mui/material";
+import { TableBody, Paper, Box, Typography } from "@mui/material";
 import Modal from "../../../components/Modal";
 import * as Styled from "./style";
 

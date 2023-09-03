@@ -34,7 +34,7 @@ const Admin = () => {
 
 	return (
 		<Box sx={{ width: "100%", mb: "100px" }}>
-			<Box sx={{ position: "relative", width: "100%" }}>
+			<Box textAlign={"end"} sx={{ position: "relative", width: "100%" }}>
 				<Styled.StyledTextarea
 					resize={"none"}
 					value={text}

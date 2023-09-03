@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const pageVariants = {
@@ -32,7 +33,13 @@ const pageTransition = {
 };
 
 const PageTransition = ({ children }) => {
+	const { pathname } = useLocation();
 	const isMobile = window.innerWidth <= 1000;
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+
 	return (
 		<motion.div
 			initial="initial"

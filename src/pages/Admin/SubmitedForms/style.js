@@ -9,7 +9,7 @@ import {
 import { styled } from "@mui/material/styles";
 
 export const StyledTableContainer = styled(TableContainer)(({ theme }) => ({
-	borderRadius: "20px",
+	borderRadius: "5px",
 	margin: "28px 10px",
 	backgroundColor: "#000",
 	[theme.breakpoints.down("md")]: {

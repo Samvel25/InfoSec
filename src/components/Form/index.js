@@ -34,6 +34,7 @@ const Form = () => {
 	const {
 		handleSubmit,
 		control,
+		reset,
 		setValue,
 		formState: { errors },
 	} = useForm({
@@ -61,7 +62,15 @@ const Form = () => {
 			.post("saveFormData", data)
 			.then((res) => {
 				console.log({ res });
-				// Reset the form or any other logic after successful form submission.
+				// Reset the form after successful form submission.
+				reset({
+					name: "",
+					surname: "",
+					email: "",
+					phoneNumber: "",
+					description: "",
+					acceptConditions: false,
+				});
 			})
 			.catch((err) => {
 				console.log(err);
