@@ -10,6 +10,7 @@ import {
 	DialogTitle,
 } from "@mui/material";
 import * as Styled from "./style";
+import instance from "../../../api/instance";
 
 const Admin = () => {
 	const [text, setText] = useState("");
@@ -25,6 +26,11 @@ const Admin = () => {
 
 	const handleConfirmSend = () => {
 		setText("");
+		try {
+			instance.post("send-email-to-subscribers", { content: text });
+		} catch (err) {
+			console.log({ err });
+		}
 		setShowConfirm(false);
 	};
 
@@ -34,7 +40,7 @@ const Admin = () => {
 
 	return (
 		<Box sx={{ width: "100%", mb: "100px" }}>
-			<Box textAlign={"end"} sx={{ position: "relative", width: "100%" }}>
+			<Box sx={{ position: "relative", width: "100%" }}>
 				<Styled.StyledTextarea
 					resize={"none"}
 					value={text}
