@@ -1,6 +1,5 @@
-// import { styled } from "@mui/material/styles";
-import { Box, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
+import { Box, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
 import GradientButton from "../../components/Buttons/MainButton";
@@ -21,9 +20,16 @@ import Form from "../../components/Form";
 import ModalReadMore from "../../components/ModalReadMore";
 import CustomHidden from "../../components/Hidden";
 import ServicesCard from "../../components/Card/Services";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
-function Home() {
+const Home = () => {
 	const { ismenuopen } = useMenuOpen();
+	const [alertOpen, setAlertOpen] = useState(false);
+	const handleFormSubmit = () => {
+		setAlertOpen(true); // Open the snackbar
+		setIsModalOpen(false); // Close the modal
+	};
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [childComponent, setChildComponent] = useState(<></>);
 
@@ -41,7 +47,11 @@ function Home() {
 					childComponent={childComponent}
 				/>
 
-				<ModalButton onClick={() => handleModalButtonClick(<Form />)} />
+				<ModalButton
+					onClick={() =>
+						handleModalButtonClick(<Form onSubmit={handleFormSubmit} />)
+					}
+				/>
 			</Styled.Modal>
 			<PageTransition>
 				{/* ///1 section/////// */}
@@ -412,8 +422,18 @@ function Home() {
 					</Box>
 				</Box>
 			</PageTransition>
+			<Snackbar
+				anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+				open={alertOpen}
+				autoHideDuration={6000}
+				onClose={() => setAlertOpen(false)}
+			>
+				<Alert onClose={() => setAlertOpen(false)} severity="success">
+					Your incident report has been received. We'll look into it ASAP!
+				</Alert>
+			</Snackbar>
 		</Styled.Home>
 	);
-}
+};
 
 export default Home;

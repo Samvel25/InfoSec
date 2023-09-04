@@ -25,9 +25,12 @@ const Admin = () => {
 	};
 
 	const handleConfirmSend = () => {
-		setText("");
 		try {
-			instance.post("send-email-to-subscribers", { content: text });
+			instance
+				.post("send-email-to-subscribers", { content: text })
+				.then((data) => {
+					setText("");
+				});
 		} catch (err) {
 			console.log({ err });
 		}

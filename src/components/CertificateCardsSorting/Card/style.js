@@ -24,6 +24,7 @@ export const CertificateImg = styled("img")(({ theme }) => ({
 	margin: "0 0px 50px",
 }));
 export const ButtonText = styled(Typography)(({ theme }) => ({
+	margin: "0",
 	textTransform: "uppercase",
 	a: {
 		background:

@@ -44,6 +44,7 @@ const ClientsReview = () => {
 				<Styled.Wrapper>
 					<CarouselCard
 						sx={{
+							maxWidth: { xs: "300px", sm: "none" },
 							p: {
 								xs: "30px 20px",
 								sm: "45px 30px",
@@ -83,6 +84,7 @@ const ClientsReview = () => {
 				<Styled.Wrapper>
 					<CarouselCard
 						sx={{
+							maxWidth: { xs: "300px", sm: "none" },
 							p: {
 								sm: "45px 30px",
 								xs: "30px 20px",
@@ -121,6 +123,7 @@ const ClientsReview = () => {
 				<Styled.Wrapper>
 					<CarouselCard
 						sx={{
+							maxWidth: { xs: "300px", sm: "none" },
 							p: {
 								sm: "45px 30px",
 								xs: "30px 20px",

@@ -13,7 +13,7 @@ import * as yup from "yup";
 import * as Styled from "./style";
 import instance from "../../api/instance";
 
-const Form = () => {
+const Form = ({ onSubmit }) => {
 	const validationSchema = yup.object().shape({
 		name: yup.string().required("Name is required"),
 		surname: yup.string().required("Surname is required"),
@@ -57,12 +57,11 @@ const Form = () => {
 		);
 	};
 
-	const onSubmit = (data) => {
+	const handleSubmitSuccess = (data) => {
 		instance
 			.post("saveFormData", data)
 			.then((res) => {
 				console.log({ res });
-				// Reset the form after successful form submission.
 				reset({
 					name: "",
 					surname: "",
@@ -71,6 +70,7 @@ const Form = () => {
 					description: "",
 					acceptConditions: false,
 				});
+				onSubmit();
 			})
 			.catch((err) => {
 				console.log(err);
@@ -80,7 +80,7 @@ const Form = () => {
 	return (
 		<Container>
 			<Styled.StyledForm
-				onSubmit={handleSubmit(onSubmit)}
+				onSubmit={handleSubmit(handleSubmitSuccess)}
 				sx={{
 					p: { md: "35px", sm: "25px 15px", xs: "20px 10px" },
 					background: "rgba(0, 0, 0, 0.64)",

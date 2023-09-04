@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { Box, TextField } from "@mui/material";
 import { Height } from "@mui/icons-material";
-import LoginForm from "../../components/Layout/Header/LogIn";
+import LoginForm from "../../components/Layout/Header/LogIn/SignIn";
 
 export const SignInWrapper = styled(Box)(({ theme }) => ({
 	display: "flex",

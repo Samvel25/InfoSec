@@ -81,6 +81,9 @@ export const RedCard = styled(CarouselCard)(({ theme }) => ({
 export const Card = styled(CarouselCard)(({ theme }) => ({
 	width: "100%",
 	padding: "52px 52px 80px 60px",
+	[theme.breakpoints.down("sm")]: {
+		padding: "52px 52px 80px 25px",
+	},
 	[theme.breakpoints.down(1250)]: {
 		padding: "52px 52px 80px 20px",
 	},

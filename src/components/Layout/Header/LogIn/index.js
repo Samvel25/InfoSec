@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useForm, Controller } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import {
 	IconButton,
 	InputAdornment,
@@ -16,75 +19,66 @@ import instance from "../../../../api/instance";
 import useAuth from "../../../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 
-const LoginForm = ({ setIsModalOpen, onLoginSuccess, className }) => {
-	const setUser = useAuth((state) => state.setUser);
-	const [showPassword, setShowPassword] = useState(false);
-	const [username, setUsername] = useState("");
-	const [password, setPassword] = useState("");
-	const [usernameError, setUsernameError] = useState(false);
-	const [passwordError, setPasswordError] = useState(false);
-	const [keepLoggedIn, setKeepLoggedIn] = useState(false);
-	const [loginError, setLoginError] = useState(false);
+// Validation Schema
+const schema = yup.object().shape({
+	username: yup.string().required("Username is required"),
+	password: yup.string().required("Password is required"),
+	twoFactorCode: yup.string().required("Two-Factor Code is required"),
+});
 
+const LoginForm = ({ setIsModalOpen, onLoginSuccess, className }) => {
+	const {
+		control,
+		handleSubmit,
+		setError,
+		formState: { errors },
+	} = useForm({
+		resolver: yupResolver(schema),
+	});
+
+	const [showPassword, setShowPassword] = useState(false);
+	const [keepLoggedIn, setKeepLoggedIn] = useState(false);
+	const setUser = useAuth((state) => state.setUser);
 	const navigate = useNavigate();
 
 	const handlePasswordVisibility = () => {
 		setShowPassword(!showPassword);
 	};
 
-	const handleLogin = (event) => {
-		event.preventDefault();
-		setUsernameError(false);
-		setPasswordError(false);
-		setLoginError(false);
+	const onSubmit = (data) => {
+		instance
+			.post("auth/login", {
+				userName: data.username,
+				password: data.password,
+			})
+			.then((res) => {
+				setUser(res.data);
+				if (onLoginSuccess && setIsModalOpen) {
+					onLoginSuccess();
+					setIsModalOpen((prev) => !prev);
+				}
+				return navigate("/admin");
+			})
+			.catch((err) => {
+				// Assuming your server returns a 400 or 401 status code for incorrect login
+				if (err.response.status === 400 || err.response.status === 401) {
+					const errorMessage = err.response.data.message || "Login failed";
 
-		if (username === "") {
-			setUsernameError(true);
-		}
-
-		if (password === "") {
-			setPasswordError(true);
-		}
-
-		if (username && password) {
-			instance
-				.post("auth/login", {
-					userName: username,
-					password,
-				})
-				.then((res) => {
-					setUser(res.data);
-					setUsername("");
-					setPassword("");
-					setShowPassword(false);
-					if (onLoginSuccess && setIsModalOpen) {
-						onLoginSuccess();
-						setIsModalOpen((prev) => !prev);
+					// Assuming the server returns specific error keys
+					if (errorMessage === "Incorrect username") {
+						setError("username", { message: "Incorrect username" });
+					} else if (errorMessage === "Incorrect password") {
+						setError("password", { message: "Incorrect password" });
+					} else if (errorMessage === "Incorrect two-factor code") {
+						setError("twoFactorCode", { message: "Incorrect two-factor code" });
+					} else {
+						setError("username", { message: "Login failed" });
+						setError("password", { message: "Login failed" });
+						setError("twoFactorCode", { message: "Login failed" });
 					}
-					return navigate("/admin");
-				})
-				.catch((err) => {
-					setLoginError(true);
-				});
-		}
+				}
+			});
 	};
-
-	const handleUsernameChange = (e) => {
-		setUsername(e.target.value);
-		if (usernameError) setUsernameError(false);
-		if (loginError) setLoginError(false);
-	};
-
-	const handlePasswordChange = (e) => {
-		setPassword(e.target.value);
-		if (passwordError) setPasswordError(false);
-		if (loginError) setLoginError(false);
-	};
-
-	const handleKeepLoggedIn = (event) => {
-		setKeepLoggedIn(event.target.checked);
-	};
-
 	return (
 		<Styled.Form
 			className={className}
@@ -93,53 +87,62 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess, className }) => {
 			<Styled.LogoContainer>
 				<Logo width={"100%"} height={"100%"} />
 			</Styled.LogoContainer>
-			{/* <Typography m={0} variant="CardHead" component={"h5"}>
-				Welcome Back
-			</Typography>
-			<Typography component={"p"}>
-				Please enter your details to sign in.
-			</Typography> */}
-			{/* <Divider
-				sx={{ width: "100%", background: "rgba(255, 255, 255, 0.1)" }}
-				variant="middle"
-			/> */}
-			<form onSubmit={handleLogin}>
-				<Styled.Input
-					label="Username"
-					variant="outlined"
-					value={username}
-					onChange={handleUsernameChange}
-					error={usernameError || loginError}
-					helperText={usernameError ? "Username cannot be empty" : ""}
+			<form onSubmit={handleSubmit(onSubmit)}>
+				<Controller
+					name="username"
+					control={control}
+					defaultValue=""
+					render={({ field }) => (
+						<Styled.Input
+							{...field}
+							label="Username"
+							variant="outlined"
+							error={!!errors.username}
+							helperText={errors.username?.message}
+						/>
+					)}
 				/>
-
-				<Styled.Input
-					label="Password"
-					type={showPassword ? "text" : "password"}
-					variant="outlined"
-					value={password}
-					onChange={handlePasswordChange}
-					InputProps={{
-						endAdornment: (
-							<InputAdornment position="end">
-								<IconButton
-									sx={{ color: "#FFF" }}
-									onClick={handlePasswordVisibility}
-								>
-									{showPassword ? <VisibilityOff /> : <Visibility />}
-								</IconButton>
-							</InputAdornment>
-						),
-					}}
-					error={passwordError || loginError}
-					helperText={passwordError ? "Password cannot be empty" : ""}
+				<Controller
+					name="password"
+					control={control}
+					defaultValue=""
+					render={({ field }) => (
+						<Styled.Input
+							{...field}
+							label="Password"
+							type={showPassword ? "text" : "password"}
+							variant="outlined"
+							InputProps={{
+								endAdornment: (
+									<InputAdornment position="end">
+										<IconButton
+											sx={{ color: "#FFF" }}
+											onClick={handlePasswordVisibility}
+										>
+											{showPassword ? <VisibilityOff /> : <Visibility />}
+										</IconButton>
+									</InputAdornment>
+								),
+							}}
+							error={!!errors.password}
+							helperText={errors.password?.message}
+						/>
+					)}
 				/>
-				{loginError && (
-					<FormHelperText error>
-						Username or password is incorrect
-					</FormHelperText>
-				)}
-
+				<Controller
+					name="twoFactorCode"
+					control={control}
+					defaultValue=""
+					render={({ field }) => (
+						<Styled.Input
+							{...field}
+							label="Two-Factor Code"
+							variant="outlined"
+							error={!!errors.twoFactorCode}
+							helperText={errors.twoFactorCode?.message}
+						/>
+					)}
+				/>
 				<FormControlLabel
 					control={
 						<Checkbox
@@ -150,20 +153,18 @@ const LoginForm = ({ setIsModalOpen, onLoginSuccess, className }) => {
 								},
 							}}
 							checked={keepLoggedIn}
-							onChange={handleKeepLoggedIn}
+							onChange={(e) => setKeepLoggedIn(e.target.checked)}
 							color="primary"
 						/>
 					}
 					label="Keep me logged in"
 				/>
-
 				<GradientButton
 					sx={{
 						alignSelf: "end",
 						width: "100%",
 						marginTop: "20px",
 						background: "transparent",
-						p: { xs: "14px 30px", xl: "14px 30px", xxl: "16px 30px" },
 					}}
 					variant="contained"
 					color="primary"
