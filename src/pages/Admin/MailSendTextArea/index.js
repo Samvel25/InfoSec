@@ -14,23 +14,29 @@ import instance from "../../../api/instance";
 
 const Admin = () => {
 	const [text, setText] = useState("");
+	const [subject, setSubject] = useState("");
 	const [showConfirm, setShowConfirm] = useState(false);
 
 	const handleTextChange = (e) => {
 		setText(e.target.value);
 	};
 
+	const handleSubjectChange = (e) => {
+		setSubject(e.target.value);
+	};
+
 	const handleSendClick = () => {
 		setShowConfirm(true);
 	};
 
-	const handleConfirmSend = () => {
+	const handleConfirmSend = async () => {
 		try {
-			instance
-				.post("send-email-to-subscribers", { content: text })
-				.then((data) => {
-					setText("");
-				});
+			await instance.post("send-email-to-subscribers", {
+				content: text,
+				subject,
+			});
+			setText("");
+			setSubject("");
 		} catch (err) {
 			console.log({ err });
 		}
@@ -44,6 +50,14 @@ const Admin = () => {
 	return (
 		<Box sx={{ width: "100%", mb: "100px" }}>
 			<Box textAlign={"end"} sx={{ position: "relative", width: "100%" }}>
+				<Styled.StyledTextarea
+					sx={{ mb: "20px" }}
+					resize={"none"}
+					value={subject}
+					onChange={handleSubjectChange}
+					minRows={2}
+					placeholder="Add your email subject here..."
+				/>
 				<Styled.StyledTextarea
 					resize={"none"}
 					value={text}
