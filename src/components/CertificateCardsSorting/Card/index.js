@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import * as Styled from "./style";
 import pdfFile from "../../../media/pdf/sample.pdf";
-import CertificateButton from "../../Buttons/CertificateButton";
+import CertificateButton from "../../Buttons/MainButton";
 
 const CardItem = ({ title, content, certificateimg, className }) => {
 	return (
@@ -30,17 +30,17 @@ const CardItem = ({ title, content, certificateimg, className }) => {
 			>
 				{content}
 			</Typography>
-			<CertificateButton
+			<Styled.Button
 				onClick={() => window.open(pdfFile)}
 				backgroundtype="backgroundOne"
-				sx={{ padding: "14px auto", mt: "0", width: "100%" }}
+				sx={{ mt: "0", width: "100%" }}
 			>
 				<pre></pre>
 				<pre></pre>
 				<Styled.ButtonText variant="ButtonNew" component={"h5"}>
 					dOWNLOAD <Typography component={"a"}>PDF</Typography>
 				</Styled.ButtonText>
-			</CertificateButton>
+			</Styled.Button>
 		</Styled.SortingCard>
 	);
 };

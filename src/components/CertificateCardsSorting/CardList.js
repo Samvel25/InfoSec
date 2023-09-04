@@ -53,7 +53,7 @@ const CardList = ({ activeSort, setActiveSort }) => {
 							item
 							xs={6}
 							md={4}
-							lg={4}
+							lg={3}
 							xl={3}
 							xxl={2}
 							display={"flex"}
