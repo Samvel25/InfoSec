@@ -11,6 +11,9 @@ export const StyledDialog = styled(Dialog)(({ theme }) => ({
 			padding: "1rem",
 			borderRadius: "8px",
 		},
+		[theme.breakpoints.up("xl")]: {
+			maxWidth: "670px",
+		},
 	},
 }));
 
@@ -53,6 +56,9 @@ export const StyledButton = styled(Button)(({ theme }) => ({
 	[theme.breakpoints.down("xs")]: {
 		padding: "6px 10px",
 		fontSize: "0.8rem",
+	},
+	"&:hover": {
+		backgroundColor: "#00308F",
 	},
 }));
 

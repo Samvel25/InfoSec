@@ -34,35 +34,35 @@ export const Card = styled(CarouselCard)(({ theme }) => {
 			"& p": {
 				color: "#FFFFFF",
 				transformOrigin: "left center",
-				animation: `${bounceFontSize} 0.7s forwards`,
+				animation: `${bounceFontSize} 0.1s forwards`,
 			},
-			"& h5": {
-				color: "#C0C1C2",
-				transformOrigin: "left center",
-				animation: `${headBounceFontSize} 0.7s forwards`,
-			},
-			"& svg": {
-				color: "#C0C1C2",
-				transformOrigin: "left center",
-				animation: `${svgBounceFontSize} 0.7s forwards`,
-			},
-			"& abbr": {
-				animation: `${svgBounceFontSize} 0.7s forwards`,
-				"& svg": {
-					animation: `none`,
-				},
-			},
+			// "& h5": {
+			// 	color: "#C0C1C2",
+			// 	transformOrigin: "left center",
+			// 	animation: `${headBounceFontSize} 0.1s forwards`,
+			// },
+			// "& svg": {
+			// 	color: "#C0C1C2",
+			// 	transformOrigin: "left center",
+			// 	animation: `${svgBounceFontSize} 0.1s forwards`,
+			// },
+			// "& abbr": {
+			// 	animation: `${svgBounceFontSize} 0.1s forwards`,
+			// 	"& svg": {
+			// 		animation: `none`,
+			// 	},
+			// },
 		},
 		"&:not(:hover)": {
 			"& p": {
-				animation: `${mouseoutAnimation} 0.7s forwards`,
+				animation: `${mouseoutAnimation} 0.1s forwards`,
 			},
-			"& h5": {
-				animation: `${headMouseoutAnimation} 0.7s forwards`,
-			},
-			"& svg": {
-				animation: `${svgMouseoutAnimation} 0.7s forwards`,
-			},
+			// "& h5": {
+			// 	animation: `${headMouseoutAnimation} 0.1s forwards`,
+			// },
+			// "& svg": {
+			// 	animation: `${svgMouseoutAnimation} 0.1s forwards`,
+			// },
 		},
 	};
 });

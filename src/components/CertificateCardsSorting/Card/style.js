@@ -9,7 +9,7 @@ export const SortingCard = styled(CarouselCard)(({ theme, scale }) => ({
 	maxWidth: "340px",
 
 	[theme.breakpoints.up("xl")]: {
-		maxWidth: "370px",
+		maxWidth: "380px",
 		padding: "55px 17px 35px",
 	},
 	[theme.breakpoints.up("xxl")]: {

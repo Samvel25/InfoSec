@@ -2,34 +2,34 @@ import { keyframes } from "@mui/material/styles";
 
 export const bounceFontSize = keyframes`
 0% {
-  font-size: calc(var(--dynamic-font-size) * 1.2);
-    transform: scale(1.1);
+  font-size: calc(var(--dynamic-font-size) * 1);
+    transform: scale(1);
 }
-10% { 
-    font-size: calc(var(--dynamic-font-size) * 1.4);
-    transform: scale(1.2);
-}    
+// 50% { 
+//     font-size: calc(var(--dynamic-font-size) * 1.2);
+//     transform: scale(1.2);
+// }    
 
-50% { 
-    font-size: calc(var(--dynamic-font-size) * 1.4);
-    transform: scale(1);
-}   
-63% { 
-    font-size: calc(var(--dynamic-font-size) * 1.4);
-    transform: scale(1.1);
-}   
-75% { 
-    font-size: calc(var(--dynamic-font-size) * 1.4);
-    transform: scale(1);
-}  
-90% { 
-    font-size: calc(var(--dynamic-font-size) * 1.4);
-    transform: scale(1.05);
-}  
 100% { 
     font-size: calc(var(--dynamic-font-size) * 1.4);
-    transform: scale(1);
-} 
+    transform: scale(1.2);
+}   
+// 63% { 
+//     font-size: calc(var(--dynamic-font-size) * 1.4);
+//     transform: scale(1.1);
+// }   
+// 75% { 
+//     font-size: calc(var(--dynamic-font-size) * 1.4);
+//     transform: scale(1);
+// }  
+// 90% { 
+//     font-size: calc(var(--dynamic-font-size) * 1.4);
+//     transform: scale(1.05);
+// }  
+// 100% { 
+//     font-size: calc(var(--dynamic-font-size) * 1.4);
+//     transform: scale(1);
+// } 
 `;
 
 export const mouseoutAnimation = keyframes`

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import ProgreeBar from "../../components/ProgressBar";
@@ -11,10 +12,16 @@ import Form from "../../components/Form";
 import PageTransition from "../../components/PageTransition";
 import { useMenuOpen } from "../../components/context/MenuOpenContext";
 import { useTranslation } from "react-i18next";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 const Services = () => {
 	const { t } = useTranslation();
 	const { ismenuopen } = useMenuOpen();
+	const [alertOpen, setAlertOpen] = useState(false);
+	const handleFormSubmit = () => {
+		setAlertOpen(true); // Open the snackbar
+	};
 
 	return (
 		<PageTransition>
@@ -140,10 +147,20 @@ const Services = () => {
 				{/* ///4 section/////// */}
 
 				<Styled.FormBackgroundBox sx={{ mb: "100px" }}>
-					<Form />
+					<Form onSubmit={handleFormSubmit} />
 				</Styled.FormBackgroundBox>
 				{/* </Container> */}
 			</Box>
+			<Snackbar
+				anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+				open={alertOpen}
+				autoHideDuration={6000}
+				onClose={() => setAlertOpen(false)}
+			>
+				<Alert onClose={() => setAlertOpen(false)} severity="success">
+					Your incident report has been received. We'll look into it ASAP!
+				</Alert>
+			</Snackbar>
 		</PageTransition>
 	);
 };
