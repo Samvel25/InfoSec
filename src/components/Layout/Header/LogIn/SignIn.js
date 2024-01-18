@@ -10,7 +10,7 @@ import {
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import * as Styled from "./style";
-import GradientButton from "../../../Buttons/MainButton";
+import GradientButton from "../../../buttons/MainButton";
 import { ReactComponent as Logo } from "../../../../media/logo/Logo.svg";
 import instance from "../../../../api/instance";
 import useAuth from "../../../../hooks/useAuth";

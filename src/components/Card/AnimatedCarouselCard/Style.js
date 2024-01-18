@@ -14,55 +14,19 @@ export const Card = styled(CarouselCard)(({ theme }) => {
 		"& p": {
 			transformOrigin: "left center",
 		},
-
-		"& h5": {
-			transformOrigin: "left center",
-		},
-
-		"& svg": {
-			transformOrigin: "left bottom",
-		},
-
-		"& abbr": {
-			transformOrigin: "left bottom",
-		},
-
-		"&:hover": {
-			display: "flex",
-			flexDirection: "column",
-			justifyContent: "space-around",
-			"& p": {
-				color: "#FFFFFF",
-				transformOrigin: "left center",
-				animation: `${bounceFontSize} 0.1s forwards`,
+		[theme.breakpoints.up("sm")]: {
+			"&:hover": {
+				"& p": {
+					color: "#FFFFFF",
+					transformOrigin: "left center",
+					animation: `${bounceFontSize} 0.2s forwards`,
+				},
 			},
-			// "& h5": {
-			// 	color: "#C0C1C2",
-			// 	transformOrigin: "left center",
-			// 	animation: `${headBounceFontSize} 0.1s forwards`,
-			// },
-			// "& svg": {
-			// 	color: "#C0C1C2",
-			// 	transformOrigin: "left center",
-			// 	animation: `${svgBounceFontSize} 0.1s forwards`,
-			// },
-			// "& abbr": {
-			// 	animation: `${svgBounceFontSize} 0.1s forwards`,
-			// 	"& svg": {
-			// 		animation: `none`,
-			// 	},
-			// },
-		},
-		"&:not(:hover)": {
-			"& p": {
-				animation: `${mouseoutAnimation} 0.1s forwards`,
+			"&:not(:hover)": {
+				"& p": {
+					animation: `${mouseoutAnimation} 0.15s forwards`,
+				},
 			},
-			// "& h5": {
-			// 	animation: `${headMouseoutAnimation} 0.1s forwards`,
-			// },
-			// "& svg": {
-			// 	animation: `${svgMouseoutAnimation} 0.1s forwards`,
-			// },
 		},
 	};
 });

@@ -14,11 +14,16 @@ import instance from "../../../api/instance";
 
 const Admin = () => {
 	const [text, setText] = useState("");
+	const [htmlContent, setHtmlContent] = useState("");
 	const [subject, setSubject] = useState("");
 	const [showConfirm, setShowConfirm] = useState(false);
 
 	const handleTextChange = (e) => {
 		setText(e.target.value);
+	};
+
+	const handleHtmlContentChange = (e) => {
+		setHtmlContent(e.target.value);
 	};
 
 	const handleSubjectChange = (e) => {
@@ -32,11 +37,13 @@ const Admin = () => {
 	const handleConfirmSend = async () => {
 		try {
 			await instance.post("send-email-to-subscribers", {
-				content: text,
-				subject,
+				subject: subject,
+				text: text,
+				html: htmlContent,
 			});
 			setText("");
 			setSubject("");
+			setHtmlContent("");
 		} catch (err) {
 			console.log({ err });
 		}
@@ -51,7 +58,7 @@ const Admin = () => {
 		<Box sx={{ width: "100%", mb: "100px" }}>
 			<Box textAlign={"end"} sx={{ position: "relative", width: "100%" }}>
 				<Styled.StyledTextarea
-					sx={{ mb: "20px" }}
+					// sx={{ mb: "20px" }}
 					resize={"none"}
 					value={subject}
 					onChange={handleSubjectChange}
@@ -64,6 +71,14 @@ const Admin = () => {
 					onChange={handleTextChange}
 					minRows={5}
 					placeholder="Add your comments here..."
+				/>
+				<Styled.StyledTextarea
+					label="HTML Content"
+					minRows={8}
+					value={htmlContent}
+					onChange={handleHtmlContentChange}
+					fullWidth
+					placeholder="Add your HTML here..."
 				/>
 				<Styled.SendButton onClick={handleSendClick}>Send</Styled.SendButton>
 			</Box>

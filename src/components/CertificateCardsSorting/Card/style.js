@@ -1,7 +1,7 @@
 import CarouselCard from "../../Card/CarouselCard";
 import { styled } from "@mui/material/styles";
 import { Typography } from "@mui/material";
-import CertificateButton from "../../Buttons/MainButton";
+import CertificateButton from "../../buttons/MainButton";
 
 export const SortingCard = styled(CarouselCard)(({ theme, scale }) => ({
 	width: "auto",

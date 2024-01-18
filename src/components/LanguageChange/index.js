@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Typography } from "@mui/material";
 import { Stack } from "@mui/system";
-import GradientButton from "../Buttons/MainButton";
+import GradientButton from "../buttons/MainButton";
 import * as Styled from "./style";
 import CustomHidden from "../Hidden";
 import CheckDoneIcon from "@mui/icons-material/Done";

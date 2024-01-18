@@ -5,7 +5,7 @@ import Grid from "@mui/material/Grid";
 import { Box, Stack, Typography } from "@mui/material";
 import ClientsImg from "../../media/png/clientsImg.png";
 import ClientsSlide from "../../components/Carousel/Clients";
-import GradientButton from "../../components/Buttons/MainButton";
+import GradientButton from "../../components/buttons/MainButton";
 import PageTransition from "../../components/PageTransition";
 import GoalCards from "../../components/Card/CardItems/DecisionCard";
 import ClientsReview from "../../components/Carousel/ClientsReview";

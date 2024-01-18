@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import CarouselCard from "../../components/Card/CarouselCard";
-import GradientButton from "../../components/Buttons/MainButton";
+import GradientButton from "../../components/buttons/MainButton";
 
 export const SubmitedForm = styled(Box)(({ theme }) => ({
 	position: "relative",

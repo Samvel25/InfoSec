@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import instance from "../../../api/instance";
-import { TableBody, Paper, Box, Typography } from "@mui/material";
+import { TableBody, Paper, Box, Typography, Stack } from "@mui/material";
 import Modal from "../../../components/Modal";
 import * as Styled from "./style";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const Admin = () => {
 	const [formsData, setFormsData] = useState([]);
@@ -20,6 +21,21 @@ const Admin = () => {
 			setFormsData(reversedData);
 		});
 	}, []);
+
+	const deleteFormData = (id) => {
+		instance
+			.delete(`deleteFormData/${id}`)
+			.then((response) => {
+				if (response.status === 200) {
+					setFormsData(formsData.filter((form) => form._id !== id));
+				} else {
+					console.error("Failed to delete form data");
+				}
+			})
+			.catch((error) => {
+				console.error("Error deleting form data:", error);
+			});
+	};
 
 	return (
 		<Box>
@@ -91,7 +107,7 @@ const Admin = () => {
 					<TableBody>
 						{formsData.length
 							? formsData.map((card, index) => (
-									<Styled.StyledTableRow key={index}>
+									<Styled.StyledTableRow key={card._id}>
 										<Styled.StyledTableCell>
 											<Typography>{card.name}</Typography>
 										</Styled.StyledTableCell>
@@ -129,14 +145,25 @@ const Admin = () => {
 											<Typography>{card.timestamp}</Typography>
 										</Styled.StyledTableCell>
 										<Styled.StyledTableCell>
-											<Typography></Typography>
-											<Styled.CopyRowButton
-												onClick={() => {
-													handleCopyRow(card);
-												}}
+											<Stack
+												direction={"row"}
+												alignItems={"center"}
+												justifyContent={"space-between"}
 											>
-												Copy
-											</Styled.CopyRowButton>
+												<Styled.CopyRowButton
+													onClick={() => {
+														handleCopyRow(card);
+													}}
+												>
+													Copy
+												</Styled.CopyRowButton>
+												<Box
+													sx={{ cursor: "pointer" }}
+													onClick={() => deleteFormData(card._id)}
+												>
+													<DeleteIcon />
+												</Box>
+											</Stack>
 										</Styled.StyledTableCell>{" "}
 									</Styled.StyledTableRow>
 							  ))

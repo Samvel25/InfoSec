@@ -1,4 +1,4 @@
-import GradientButton from "../../Buttons/MainButton";
+import GradientButton from "../../buttons/MainButton";
 import { styled } from "@mui/system";
 
 export const ActiveButton = styled(GradientButton)(({ theme, disabled }) => ({

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import * as Styled from "./style";
 import pdfFile from "../../../media/pdf/sample.pdf";
-import CertificateButton from "../../Buttons/MainButton";
+// import CertificateButton from "../../buttons/MainButton";
 
 const CardItem = ({ title, content, certificateimg, className }) => {
 	return (

@@ -4,7 +4,7 @@ import { Alert } from "@mui/material";
 import { Menu as MenuIcon } from "@mui/icons-material";
 import { useMenuOpen } from "../../context/MenuOpenContext";
 import Navigation from "./Navigation";
-import GradientButton from "../../Buttons/MainButton";
+import GradientButton from "../../buttons/MainButton";
 import DropdownButton from "../../LanguageChange";
 import DrawerNavigation from "./Navigation/DrowerNavigation";
 import * as Styled from "./style";
